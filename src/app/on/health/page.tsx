@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function OnHealth() {
     useEffect(() => {
-      document.title = 'Ontario Health Cards | I.D. Guide';
+      document.title = 'Ontario health cards | I.D. Guide';
     }, []);
   return (
     <div className="page">
@@ -51,7 +51,7 @@ export default function OnHealth() {
             <ul>
               <li><Link href="/on/name">Ontario legal name changes</Link></li>
               <li><Link href="/on/birth">Ontario birth certificates</Link></li>
-              <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
+              <li><Link href="/on/id">Ontario driver&#39;s licenses & I.D. cards</Link></li>
             </ul>
           </div>
         </div>

@@ -1,12 +1,12 @@
 "use client";
+
 import Link from 'next/link';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 
-
 export default function Passport() {
     useEffect(() => {
-      document.title = 'Canadian Passports | I.D. Guide';
+      document.title = 'Canadian passports | I.D. Guide';
     }, []);
   return (
     <div className="page">
@@ -57,16 +57,6 @@ export default function Passport() {
             <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/change-sex" target="_blank" rel="norefferer">Government of Canada - Choose or update the gender identifier on your passport or travel document</Link></li>
             <li><Link href="https://travel.gc.ca/travelling/health-safety/lgbt-travel" target="_blank" rel="norefferer">Government of Canada - Travel and your sexual orientation, gender identity, gender expression and sex characteristics</Link></li>
           </ul>
-          <hr />
-
-          <div className="pageNav">
-            <p>See also: </p>
-            <ul>
-              <li><Link href="/on/birth">Ontario birth certificates</Link></li>
-              <li><Link href="/on/health">Ontario health cards</Link></li>
-              <li><Link href="/on/id">Ontario driver&apos;s licenses & photo cards</Link></li>
-            </ul>
-          </div>
         </div>
         <div className="stacks"></div>
       </main>

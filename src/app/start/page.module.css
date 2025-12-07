@@ -5,7 +5,7 @@
 .start .main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   background: var(--semiwhite);
   color: var(--black);
   font-size: 1.15rem;
@@ -18,14 +18,14 @@
   font-family: var(--font-special-gothic-expanded-one);
 }
 
-.start div ul {
+.start div .startList {
   padding: 0;
   list-style-type: none;
 }
 
-.start div ul li {
+.start div .startList li {
   display: flex;
-  gap: 15px;
+  gap: 0.85rem;
   padding-bottom: 10px;
   cursor: pointer;
 }

@@ -30,7 +30,20 @@ const downloadSections = [
         description: "5349e",
       },
     ],
-    more: { href: "/on/name", label: "More about Ontario name changes" },
+    more: { href: "/on/name" },
+  },
+  {
+    id: "ab-name",
+    title: "Alberta name changes",
+    links: [
+      {
+        id: "dvs3132",
+        href: "/dvs3132.pdf",
+        label: "Alberta Name Change Application",
+        description: "DVS3132",
+      }
+    ],
+    more: { href: "/ab/name" },
   },
   {
     id: "on-birth",
@@ -49,7 +62,7 @@ const downloadSections = [
         description: "11324e",
       },
     ],
-    more: { href: "/on/birth", label: "More about Ontario birth certificates" },
+    more: { href: "/on/birth" },
   },
   {
     id: "on-health",
@@ -62,7 +75,7 @@ const downloadSections = [
         description: "0280-82e",
       },
     ],
-    more: { href: "/on/health", label: "More about Ontario health cards" },
+    more: { href: "/on/health" },
   },
   {
     id: "passport",
@@ -81,7 +94,7 @@ const downloadSections = [
         description: "pptc-643",
       },
     ],
-    more: { href: "/passport", label: "More about Canadian passports" },
+    more: { href: "/passport" },
   },
   {
     id: "presentation-materials",
@@ -89,9 +102,9 @@ const downloadSections = [
     links: [
       {
         id: "tg-id-1025-pdf",
-        href: "/dattg-id-1025.pdf",
+        href: "/tg-id-1025.pdf",
         label: "Ontario TG I.D. slideshow",
-        descrption: "PDF format",
+        description: "PDF format",
       },
       {
         id: "tg-id-1025-odp",
@@ -123,10 +136,16 @@ export default function Downloads() {
           <p>
             Here you&#39;ll find official forms, guides, and presentation materials to help with name changes, gender marker updates, and more. All files are free to download. If you need help finding the right document, check the related guide or <Link href="mailto:contact@idguide.ca">contact us</Link> for support.
           </p>
+          
+          <hr/>
           {downloadSections.map(section => (
             <section key={section.id}>
-              <h3 id={section.id}>
-                {section.title}
+              <h3 id={section.id} style={{paddingBottom: '0.5rem'}}>
+                {section.more ? (
+                  <Link href={section.more.href} style={{textDecoration: 'none'}}>{section.title}</Link>
+                ) : (
+                  section.title
+                )}
               </h3>
               <ul>
                 {section.links.map(link => (
@@ -146,17 +165,7 @@ export default function Downloads() {
                   </li>
                 ))}
               </ul>
-              
-              {section.more && (
-                <>
-                  <hr style={{marginTop: '2rem'}}/>
-                  <div style={{marginTop: '1rem', marginBottom: '1rem'}}>
-                    <Link href={section.more.href} className="link" style={{display: 'inline-flex', alignItems: 'center', gap: '0.5em'}}>
-                      <span className="button-label">{section.more.label}</span>
-                    </Link>
-                  </div>
-                </>
-              )}
+              {section.id !== 'presentation-materials' && <hr style={{marginTop: '2rem'}}/>}
             </section>
           ))}
         </div>

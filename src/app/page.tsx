@@ -18,7 +18,7 @@ export default function Home() {
               You deserve identity documents that reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
             </p>
             <p>
-              Navigating name and gender marker changes can feel overwhelming, but <strong>I.D. Guide</strong> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
+              Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
             </p>
             <p>
               Ready to begin? <Link href="/start">Start your journey here</Link>.
@@ -27,21 +27,22 @@ export default function Home() {
           <div className={styles.group}>
             <div className="stacks flipped"></div>
             <div className={styles.guides}>
+              <h3>We can help with your:</h3>
               <ul>
                 <li>
-                  <Link href="/on/name">Change your legal name</Link>
+                  <Link href="/name">Legal name change</Link>
                 </li>
                 <li>
-                  <Link href="/on/birth">Update your birth certificate</Link>
+                  <Link href="/health">Health card updates</Link>
                 </li>
                 <li>
-                  <Link href="/on/health">Update your health card</Link>
+                  <Link href="/id">Driver&#39;s license or I.D. card updates</Link>
                 </li>
                 <li>
-                  <Link href="/on/id">Update your driver&#39;s license or photo card</Link>
+                  <Link href="/passport">Canadian passport updates</Link>
                 </li>
                 <li>
-                  <Link href="/passport">Update your passport</Link>
+                  <Link href="/pr">Permanent resident card updates</Link>
                 </li>
                 <li>
                   <Link href="/guides">and more...</Link>

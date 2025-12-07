@@ -5,7 +5,7 @@
 .health .main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   background: var(--semiwhite);
   color: var(--black);
   font-size: 1.15rem;

@@ -19,16 +19,16 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                     </Link>
                     <ul className={styles.subNav}>
                         <li>
-                            <Link href="/on/name">Ontario name changes</Link>
+                            <Link href="/name">Name changes</Link>
                         </li>
                         <li>
-                            <Link href="/on/birth">Ontario birth certificates</Link>
+                            <Link href="/birth">Birth certificates</Link>
                         </li>
                         <li>
-                            <Link href="/on/health">Ontario health cards</Link>
+                            <Link href="/health">Health cards</Link>
                         </li>
                         <li>
-                            <Link href="/on/id">Ontario driver&apos;s licenses and photo cards</Link>
+                            <Link href="/id">Driver&apos;s licenses & I.D. cards</Link>
                         </li>
                         <li>
                             <Link href="/passport">Canadian passports</Link>

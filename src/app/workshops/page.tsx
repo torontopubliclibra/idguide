@@ -14,10 +14,9 @@ export default function Workshops() {
         <h2 className="page-title">Workshops</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>This project is led by <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, a designer and web/software developer based in Toronto. Since 2021, Dana has been delivering engaging and practical workshops on name and gender marker changes for organizations across Ontario. Dana has presented for groups including <Link href="https://www.youthline.ca/" target="_blank">LGBT YouthLine</Link>, <Link href="http://hackf.org/" target="_blank">Windsor Hackforge</Link>, <Link href="https://www.cupe3902.org/" target="_blank">CUPE 3902</Link>, <Link href="https://cupe3903.org/" target="_blank">CUPE 3903</Link>, and <Link href="https://www.camh.ca/" target="_blank">CAMH</Link>.</p>
+          <p>The <span className={styles.strong}>I.D. Guide</span> project is led by <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, a designer and web/software developer based in Toronto. Since 2021, Dana has been delivering engaging and practical workshops on name and gender marker changes for organizations across Ontario. Dana has presented for groups including <Link href="https://www.youthline.ca/" target="_blank">LGBT YouthLine</Link>, <Link href="http://hackf.org/" target="_blank">Windsor Hackforge</Link>, <Link href="https://www.cupe3902.org/" target="_blank">CUPE 3902</Link>, <Link href="https://cupe3903.org/" target="_blank">CUPE 3903</Link>, and <Link href="https://www.camh.ca/" target="_blank">CAMH</Link>.</p>
           <p>To book a workshop or discuss your group&#39;s needs, please <Link href="mailto:contact@idguide.ca">reach out by email</Link>.</p>
 
-          <br/>
           <hr/>
 
           <h3>Workshop topics</h3>

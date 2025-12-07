@@ -27,24 +27,23 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <div className={styles.footerTitle}>Other resources</div>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="https://egale.ca/" target="_blank" rel="noopener noreferrer">Egale Canada</Link></li>
-                        <li><Link href="https://justicetrans.org/" target="_blank" rel="noopener noreferrer">Justice Trans</Link></li>
-                        <li><Link href="https://www.foriaclinic.com/" target="_blank" rel="noopener noreferrer">Foria Clinic</Link></li>
                         <li><Link href="https://www.translifeline.org/" target="_blank" rel="noopener noreferrer">Trans Lifeline</Link></li>
+                        <li><Link href="https://justicetrans.org/" target="_blank" rel="noopener noreferrer">Justice Trans</Link></li>
+                        <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Juritrans</Link></li>
+                        <li><Link href="https://egale.ca/" target="_blank" rel="noopener noreferrer">Egale Canada</Link></li>
                     </ul>
                 </div>
             </div>
-                <div className={styles.footerBottom}>
-                    <div className={styles.footerBottomLinks}>
-                        <Link href="/privacy">Privacy Policy</Link>
-                    </div>
-                    <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
-                        I.D. Guide, 2025
-                        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
-                            <Image src='/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25}/>
-                        </a>
-                    </div>
+            <div className={styles.footerBottom}>
+                <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
+                    I.D. Guide, 2025  | <Link href="/privacy">Privacy Policy</Link>
                 </div>
+                <div>
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
+                        <Image src='/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25}/>
+                    </a>
+                </div>
+            </div>
         </footer>
     );
 }

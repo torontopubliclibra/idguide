@@ -11,7 +11,7 @@ export default function Guides() {
   return (
     <div className="page">
       <main className={styles.guides}>
-        <h2 className="page-title">Guides</h2>
+        <h2 className="page-title">All guides</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div>
@@ -27,9 +27,17 @@ export default function Guides() {
                 <Link href="/on/health">Health card updates</Link>
               </li>
               <li>
-                <Link href="/on/id">Driver&apos;s license and photo card updates</Link>
+                <Link href="/on/id">Driver&apos;s license and I.D. card updates</Link>
               </li>
             </ul>
+            <hr style={{marginBottom: '2rem'}}/>
+            <h3>Alberta</h3>
+            <ul>
+              <li>
+                <Link href="/ab/name">Legal name changes</Link>
+              </li>
+            </ul>
+            <hr style={{marginBottom: '2rem'}}/>
             <h3>Canada-wide</h3>
             <ul>
               <li>

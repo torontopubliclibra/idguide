@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function PR() {
     useEffect(() => {
-      document.title = 'Permanent Resident Cards | I.D. Guide';
+      document.title = 'Permanent resident cards | I.D. Guide';
     }, []);
   return (
     <div className="page">

@@ -103,6 +103,10 @@ ul, ol {
   padding-left: 20px;
 }
 
+ul li {
+  margin: 0.5rem 0;
+}
+
 .top-bar {
   z-index: 200;
   background-color: var(--semiblack);

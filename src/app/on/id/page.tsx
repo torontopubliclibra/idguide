@@ -6,12 +6,12 @@ import styles from "./page.module.css";
 
 export default function OnID() {
     useEffect(() => {
-      document.title = "Ontario Driver's Licenses & Photo Cards | I.D. Guide";
+      document.title = "Ontario driver's licenses & I.D. cards | I.D. Guide";
     }, []);
   return (
     <div className="page">
       <main className={styles.id}>
-        <h2 className="page-title">Ontario driver&apos;s licenses &amp; photo cards</h2>
+        <h2 className="page-title">Ontario driver&apos;s licenses &amp; I.D. cards</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
 

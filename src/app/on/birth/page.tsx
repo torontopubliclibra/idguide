@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function BirthPage() {
   useEffect(() => {
-    document.title = 'Ontario Birth Certificates | I.D. Guide';
+    document.title = 'Ontario birth certificates | I.D. Guide';
   }, []);
 
   return (
@@ -73,7 +73,7 @@ export default function BirthPage() {
             <ul>
               <li><Link href="/on/name">Ontario name changes</Link></li>
               <li><Link href="/on/health">Ontario health cards</Link></li>
-              <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
+              <li><Link href="/on/id">Ontario driver&#39;s licenses & I.D. cards</Link></li>
             </ul>
           </div>
         </div>

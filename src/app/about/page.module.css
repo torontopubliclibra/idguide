@@ -5,13 +5,18 @@
 .about .main {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1rem;
   background: var(--semiwhite);
   color: var(--black);
   font-size: 1.15rem;
   padding: 50px;
   max-width: 1500px;
   width: 100%;
+}
+
+.about .strong {
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 1rem;
 }
 
 .sitemap, .sitemap ul {

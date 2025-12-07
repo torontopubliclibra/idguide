@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 
 export default function OnName() {
     useEffect(() => {
-      document.title = 'Ontario Name Changes | I.D. Guide';
+      document.title = 'Ontario name changes | I.D. Guide';
     }, []);
   return (
     <div className="page">
@@ -31,12 +31,12 @@ export default function OnName() {
           <p>The application is 19 pages and split into seven sections, but you may not need to complete every part. A fee of $137 is required.</p>
 
           <h3 id='requirements'>Requirements</h3>
-          <h4>Information youll need to provide</h4>
+          <h4>Information you&#39;ll need to provide</h4>
           <p>The application asks for detailed personal information, including:</p>
           <ol>
             <li>Full current legal name</li>
             <li>New chosen name</li>
-            <li>Mailing address</li>
+            <li>Mailing address and contact information</li>
             <li>Date and location of birth</li>
             <li>Marital/relationship status</li>
             <li>Parental information</li>
@@ -84,7 +84,8 @@ export default function OnName() {
 
           <h4>Delivery time</h4>
           <p>If your application is complete and accurate, you should receive your name change certificate in 6-8 weeks. It may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate.</p>
-          <h4>Next steps and tips</h4>
+
+          <h4>Important considerations</h4>
           <p>Give yourself plenty of time to gather information and complete the forms. It may take several weeks to get everything ready.</p>
           <p>Print clearly with blue or black ink. Don&#39;t use correction fluid. If you make a mistake or need to change information:</p>
           <ul>
@@ -107,7 +108,7 @@ export default function OnName() {
             <ul>
               <li><Link href="/on/birth">Ontario birth certificates</Link></li>
               <li><Link href="/on/health">Ontario health cards</Link></li>
-              <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
+              <li><Link href="/on/id">Ontario driver&#39;s licenses & I.D. cards</Link></li>
             </ul>
           </div>
         </div>

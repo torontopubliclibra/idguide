@@ -30,6 +30,12 @@
   max-width: 45vw;
 }
 
+.intro .strong {
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 1.4rem;
+  margin: 0 5px;
+}
+
 .intro p {
   font-size: 1.5rem;
   line-height: 1.5;
@@ -97,7 +103,7 @@ a.secondary {
     padding-top: 5px;
     padding-bottom: 20px;
   }
-  
+
   .intro {
     flex-direction: column;
     align-items: center;
@@ -105,6 +111,12 @@ a.secondary {
     gap: 30px;
     margin-bottom: 5px;
     padding-top: 0;
+  }
+
+  .intro .strong {
+    font-family: var(--font-special-gothic-expanded-one);
+    font-size: 1.15rem;
+    margin: 0 5px;
   }
 
   .intro div {

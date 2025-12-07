@@ -5,7 +5,7 @@
 .name .main {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
   background: var(--semiwhite);
   color: var(--black);
   font-size: 1.15rem;
