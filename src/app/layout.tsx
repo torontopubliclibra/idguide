@@ -17,21 +17,21 @@ const specialGothicExpanded = Special_Gothic_Expanded_One({
 });
 
 export const metadata: Metadata = {
-  title: "I.D. Guide | Name & Gender Marker Change Resources for Ontario & Canada",
+  title: "I.D. Guide | Helping you navigate name and gender marker changes",
   description:
     "Free, step-by-step guides, official forms, and resources for updating legal names, gender markers, and identity documents in Ontario and across Canada. Accessible, community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
   keywords: [
     "name change", "gender marker", "identity documents", "Ontario", "Canada", "trans", "non-binary", "Two-Spirit", "legal forms", "passport", "health card", "birth certificate", "driver's license", "permanent resident", "social insurance", "CRA", "LGBTQ", "step-by-step guides", "accessible resources"
   ],
   openGraph: {
-    title: "I.D. Guide | Name & Gender Marker Change Resources for Ontario & Canada",
+    title: "I.D. Guide | Helping you navigate name and gender marker changes",
     description:
       "Step-by-step guides, official forms, and resources for updating identity documents in Ontario and Canada. Community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
-    url: "https://tg-id.ca/",
+    url: "https://idguide.ca/",
     siteName: "I.D. Guide",
     images: [
       {
-        url: "https://tg-id.ca/og-image.png",
+        url: "https://idguide.ca/og-image.png",
         width: 1200,
         height: 630,
         alt: "I.D. Guide logo and tagline",
@@ -42,15 +42,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "I.D. Guide | Name & Gender Marker Change Resources for Ontario & Canada",
+    title: "I.D. Guide | Helping you navigate name and gender marker changes",
     description:
       "Step-by-step guides, official forms, and resources for updating identity documents in Ontario and Canada. Community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
     site: "@danateagle",
     creator: "@danateagle",
-    images: ["https://tg-id.ca/og-image.png"],
+    images: ["https://idguide.ca/og-image.png"],
   },
   alternates: {
-    canonical: "https://tg-id.ca/",
+    canonical: "https://idguide.ca/",
   },
   robots: {
     index: true,

@@ -15,14 +15,7 @@ export default function Footer() {
                 </p>
                 <br/>
                 <p>
-                    <Link href="/about#changelog">v1.0.0</Link> | Last updated: Nov 2025 | <Link href="/about#sitemap">Sitemap</Link>
-                </p>
-            </div>
-            <div className={styles.legal}>
-                <p>
-                    <small>
-                        No legal advice is provided. Content is for informational purposes only. Developed and maintained by <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Teagle</Link>.
-                    </small>
+                    <Link href="/about#changelog">v1.0.0</Link> | Last updated: Dec 2025 | <Link href="/about#sitemap">Sitemap</Link>
                 </p>
             </div>
         </footer>
