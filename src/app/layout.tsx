@@ -4,14 +4,14 @@ import TopBar from "./components/topBar";
 import Footer from "./components/footer";
 
 export const metadata: Metadata = {
-  title: "I.D. Guide | Helping you navigate name and gender marker changes",
+  title: "I.D. Guide",
   description:
     "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
   keywords: [
     "name change", "gender marker", "sex marker", "legal name change", "identity documents", "Canada", "Ontario", "Alberta", "British Columbia", "Quebec", "Saskatchewan", "Manitoba", "Nova Scotia", "New Brunswick", "trans", "trans technology", "non-binary", "Two-Spirit", "legal forms", "passport", "health card", "birth certificate", "driver's license", "permanent resident", "permanent residency", "social insurance", "CRA", "LGBTQ", "step-by-step guides", "accessible resources"
   ],
   openGraph: {
-    title: "I.D. Guide | Helping you navigate name and gender marker changes",
+    title: "I.D. Guide",
     description:
       "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
     url: "https://idguide.ca/",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "I.D. Guide | Helping you navigate name and gender marker changes",
+    title: "I.D. Guide",
     description:
       "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
     site: "https://danateagle.com",

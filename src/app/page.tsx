@@ -9,7 +9,7 @@ import "./skip-link.css";
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'I.D. Guide | Helping you navigate name and gender marker changes';
+    document.title = "I.D. Guide";
   }, []);
   return (
     <div className={`page ${styles.page}`}>
