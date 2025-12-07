@@ -27,16 +27,6 @@ export default function AbName() {
           <h3 id='process'>Process</h3>
           <p>To legally change your name in Albert, fill out the <Link href="/downloads#ab-name" target="_blank" rel="noreferrer">Application for Change of Name (DVS3132)</Link>.</p>
           <p>The application is 16 pages and split into five sections, but you may not need to complete every part. A fee of $120 is required.</p>
-          <p>To legally change your name in Alberta, you must:</p>
-          <ol>
-            <li>Read the <Link href="https://open.alberta.ca/publications/change-of-name-information-guide" target="_blank" rel="noreferrer">Change of Name Information Guide</Link>.</li>
-            <li>Complete the <Link href="https://open.alberta.ca/publications/application-for-change-of-name" target="_blank" rel="noreferrer">Application for Change of Name</Link> form.</li>
-            <li>Gather required documents (ID, proof of name, fingerprint confirmation, criminal record check, and any other supporting documents).</li>
-            <li>Get electronic fingerprints for each person 12+ changing their name (confirmation letter from RCMP required).</li>
-            <li>Get a criminal record check or police information check (must be from a recognized law enforcement agency, not a third-party provider, and submitted within 30 days of issue).</li>
-            <li>Surrender all Alberta birth certificates for anyone whose name is being changed (they will be replaced free of charge).</li>
-            <li>Take your completed application and all documents to a registry agent office for review and submission to Vital Statistics.</li>
-          </ol>
           <h3 id='requirements'>Requirements</h3>
           <h4>Information you&apos;ll need to provide</h4>
           <p>The application asks for detailed personal information, including:</p>
@@ -55,7 +45,7 @@ export default function AbName() {
           </ol>
 
           <h4>Previous identity documents</h4>
-            <p>All Alberta birth certificates issued before your legal name change must be surrendered with your application. These will be replaced free of charge with new certificates showing your new name. If you were born outside Alberta, you must contact the vital statistics office in your birth jurisdiction for new birth certificates after your name change is processed.</p>
+          <p>All Alberta birth certificates issued before your legal name change must be surrendered with your application. These will be replaced free of charge with new certificates showing your new name. If you were born outside Alberta, you must contact the vital statistics office in your birth jurisdiction for new birth certificates after your name change is processed.</p>
 
           <h4>Commissioning</h4>
           <p>You must swear or affirm the affidavit in your application in front of a Commissioner for Oaths or Notary Public in Alberta. The commissioner will verify your identity and the accuracy of your information, and will stamp or seal the document. The commissioner does not need to know you personally. Many notary/commissioner offices in Ontario will commission these documents for trans individuals for free; otherwise, the typical fee is $20-40.</p>
