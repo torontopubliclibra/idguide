@@ -116,7 +116,7 @@ export default function Downloads() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>
-            Here you&#39;ll find official forms, guides, and presentation materials to help with name changes, gender marker updates, and more. All files are free to download. If you need help finding the right document, check the related guide or <Link href="mailto:danar.teagle@gmail.com">contact us</Link> for support.
+            Here you&#39;ll find official forms, guides, and presentation materials to help with name changes, gender marker updates, and more. All files are free to download. If you need help finding the right document, check the related guide or <Link href="mailto:contact@idguide.ca">contact us</Link> for support.
           </p>
           {downloadSections.map(section => (
             <section key={section.id}>
@@ -136,7 +136,6 @@ export default function Downloads() {
                     >
                       <span className="link-title" style={{display: 'flex', alignItems: 'center', gap: '0.5em'}}>
                         <span className="button-label">{link.label} ({link.description})</span>
-                        <Image src="/download.svg" alt="download icon" width={18} height={18} />
                       </span>
                     </Link>
                   </li>
