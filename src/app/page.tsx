@@ -24,7 +24,7 @@ export default function Home() {
               Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
             </p>
             <p>
-              Ready to begin? <Link href="/start" title="Get started">Start</Link> your journey here.
+              Ready to begin? <Link href="/start">Get started</Link>.
             </p>
           </div>
           <div className={styles.group}>

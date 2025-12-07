@@ -32,7 +32,7 @@ export default function Guides() {
           <div className="pageNav">
             <p>See also:</p>
             <ul>
-              <li><Link href="/start" title="Get started">Start</Link></li>
+              <li><Link href="/start">Get started</Link></li>
               <li><Link href="/guides">Guides</Link></li>
             </ul>
           </div>
