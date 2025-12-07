@@ -94,10 +94,21 @@
     justify-content: space-between;
     width: 100%;
   }
+  .nav {
+    padding-bottom: 1.5rem;
+  }
   .nav li a {
     flex-direction: row-reverse;
     padding-left: 20px;
     font-size: 1.1rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .nav li, .nav li:hover {
+    background-color: var(--dark5);
+  }
+  .nav li:nth-child(odd), .nav li:nth-child(odd):hover {
+    background-color: var(--dark2);
   }
   .desktopOnly {
     display: none;

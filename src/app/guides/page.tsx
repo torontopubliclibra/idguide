@@ -14,7 +14,7 @@ export default function Guides() {
     <div className="page">
       <a href="#main" className="skip-link">Skip to main content</a>
       <main id="main" className={styles.guides}>
-        <h2 className="page-title">All guides</h2>
+        <h2 className="page-title">Guides</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div>

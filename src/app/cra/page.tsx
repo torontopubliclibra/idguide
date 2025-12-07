@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 
-
 export default function CRA() {
     useEffect(() => {
       document.title = 'Canada Revenue Agency | I.D. Guide';
