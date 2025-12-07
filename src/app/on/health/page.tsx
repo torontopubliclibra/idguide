@@ -29,8 +29,8 @@ export default function OnHealth() {
           <p>There is no fee to get a new Ontario health card.</p>
           <p>To change your name, visit a ServiceOntario location and bring a completed <Link href="/downloads#on-health">Change of Information form (0280-82e)</Link> plus an original copy of one of the following:</p>
           <ol>
-            <li><Link href="/birth-certificates">Canadian birth certificate</Link></li>
-            <li>Canadian change of name certificate (such as the one you get after an <Link href="/name-changes">Ontario name change</Link>)</li>
+            <li><Link href="/birth">Canadian birth certificate</Link></li>
+            <li>Canadian <Link href="/name">Ochange of name</Link> certificate</li>
             <li>Citizenship or immigration status document in your new name</li>
           </ol>
           <p>Since June 2016, Ontario health cards no longer display sex designation.</p>

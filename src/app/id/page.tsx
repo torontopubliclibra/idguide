@@ -18,7 +18,7 @@ export default function Guides() {
             <p>The process for updating your driver&apos;s license or I.D. card will vary depending on your province or territory of residency:</p>
             <ul style={{margin: '1.5rem 0'}}>
               <li>
-                <Link href="/on/health">Ontario driver&apos;s licenses &amp; I.D. cards</Link>
+                <Link href="/on/id">Ontario driver&apos;s licenses &amp; I.D. cards</Link>
               </li>
             </ul>
             <p>
