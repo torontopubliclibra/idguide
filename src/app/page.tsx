@@ -15,7 +15,7 @@ export default function Home() {
         <div className={styles.intro}>
           <div>
             <p className={styles.headline}>
-              You deserve identity documents that truly reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
+              You deserve identity documents that reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
             </p>
             <p>
               Navigating name and gender marker changes can feel overwhelming, but <strong>I.D. Guide</strong> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
