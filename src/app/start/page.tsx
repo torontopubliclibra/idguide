@@ -165,7 +165,7 @@ export default function Start() {
               ) : null
             }
             {
-              (toggles.gender)? (
+              (toggles.gender) && ((toggles.alberta || toggles.ontario)) ? (
                 <li>
                   <Link href="/birth">Update the gender marker on your birth certificate</Link>
                 </li>
