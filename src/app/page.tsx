@@ -10,7 +10,7 @@ export default function Home() {
       document.title = 'I.D. Guide | Helping you navigate name and gender marker changes';
     }, []);
   return (
-    <div className="page">
+    <div className={`page ${styles.page}`}>
       <main className={styles.main}>
         <div className={styles.intro}>
           <div>
