@@ -63,11 +63,10 @@ export default function Start() {
   return (
     <div className="page">
       <main className={styles.start}>
-        <h2 className="page-title">Get Started</h2>
+        <h2 className="page-title">Star</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>Your action plan for updating identity documents will depend on your situation and what you want to change.</p>
-          <p>Use the checkboxes below to customize your plan. The steps will update automatically based on your selections.</p>
+          <p>To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.</p>
           <br />
           <p><span className={styles.strong}>I want to:</span></p>
           <ul>
