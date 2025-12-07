@@ -109,7 +109,7 @@ export default function Start() {
               )
             }
           </ul>
-          <h3>Your personalized action plan:</h3>
+          <h3>Your action plan:</h3>
           <ol>
             {
               (toggles.name) ? (

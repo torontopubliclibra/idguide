@@ -28,7 +28,7 @@
 
 @media (max-width: 1200px) {
   .guides {
-    padding-top: 20px;
+    padding-top: 0;
   }
   .guides .main {
     padding: 30px;

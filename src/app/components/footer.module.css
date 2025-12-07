@@ -19,6 +19,7 @@
 
 @media (max-width: 1200px) {
   .footer {
-    padding: 3rem 5vw;
+    padding: 35px 5vw;
+    padding-top: 20px;
   }
 }
