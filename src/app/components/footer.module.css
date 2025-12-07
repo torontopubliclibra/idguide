@@ -68,7 +68,7 @@
 
 .footerBottom {
   margin: 0 auto;
-  margin-top: 32px;
+  margin-top: 20px;
   padding: 24px 40px 24px 40px;
   display: flex;
   flex-wrap: wrap;
@@ -84,9 +84,9 @@
   flex-wrap: wrap;
 }
 
-.footerBottomLinks a {
+.footerBottom a {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .footerBottomLinks a:hover {
