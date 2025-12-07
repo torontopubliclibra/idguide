@@ -56,18 +56,19 @@ export default function RootLayout({
       <head>
         <link
           rel="preload"
-          href="/fonts/SpecialGothic.ttf"
+          href="/Special_Gothic/SpecialGothic.ttf"
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/SpecialGothicExpandedOne.ttf"
+          href="/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf"
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        <link rel="canonical" href="https://idguide.ca/" />
       </head>
       <body> 
         <a href="#main" className="skip-link" style={{position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden'}}>Skip to main content</a>

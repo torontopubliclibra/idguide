@@ -1,16 +1,19 @@
 "use client";
 
+
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import "../skip-link.css";
 
 export default function Guides() {
-    useEffect(() => {
-      document.title = 'Guides | I.D. Guide';
-    }, []);
+  useEffect(() => {
+    document.title = 'Guides | I.D. Guide';
+  }, []);
   return (
     <div className="page">
-      <main className={styles.guides}>
+      <a href="#main" className="skip-link">Skip to main content</a>
+      <main id="main" className={styles.guides}>
         <h2 className="page-title">All guides</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>

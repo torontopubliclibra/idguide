@@ -18,7 +18,7 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <div className={styles.footerTitle}>Quick links</div>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="/start">Start</Link></li>
+                        <li><Link href="/start" title="Get started">Start</Link></li>
                         <li><Link href="/guides">Guides</Link></li>
                         <li><Link href="/downloads">Downloads</Link></li>
                         <li><Link href="/workshops">Workshops</Link></li>

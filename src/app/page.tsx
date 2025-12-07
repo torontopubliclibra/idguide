@@ -1,17 +1,20 @@
 "use client";
+
 import Link from "next/link";
 import { useEffect } from "react";
 import "./globals.css";
 import styles from "./page.module.css";
+import "./skip-link.css";
 
 
 export default function Home() {
-    useEffect(() => {
-      document.title = 'I.D. Guide | Helping you navigate name and gender marker changes';
-    }, []);
+  useEffect(() => {
+    document.title = 'I.D. Guide | Helping you navigate name and gender marker changes';
+  }, []);
   return (
     <div className={`page ${styles.page}`}>
-      <main className={styles.main}>
+      <a href="#main" className="skip-link">Skip to main content</a>
+      <main id="main" className={styles.main}>
         <div className={styles.intro}>
           <div>
             <p className={styles.headline}>
@@ -21,13 +24,13 @@ export default function Home() {
               Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
             </p>
             <p>
-              Ready to begin? <Link href="/start">Start your journey here</Link>.
+              Ready to begin? <Link href="/start" title="Get started">Start</Link> your journey here.
             </p>
           </div>
           <div className={styles.group}>
             <div className="stacks flipped"></div>
             <div className={styles.guides}>
-              <h3>We can help with your:</h3>
+              <h2>We can help with your:</h2>
               <ul>
                 <li>
                   <Link href="/name">Legal name change</Link>
