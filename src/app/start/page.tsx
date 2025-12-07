@@ -25,7 +25,7 @@ const Checkbox = ({ id, label, checked, onChange, disabled }: CheckboxProps) => 
 
 export default function Start() {
     useEffect(() => {
-      document.title = 'Start | I.D. Guide';
+      document.title = 'Get started | I.D. Guide';
     }, []);
   const [toggles, setToggles] = useState({
     name: true,
@@ -77,7 +77,7 @@ export default function Start() {
   return (
     <div className="page">
       <main className={styles.start}>
-        <h2 className="page-title">Get Started</h2>
+        <h2 className="page-title">Get started</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.</p>
