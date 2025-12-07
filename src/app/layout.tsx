@@ -6,14 +6,14 @@ import Footer from "./components/footer";
 export const metadata: Metadata = {
   title: "I.D. Guide | Helping you navigate name and gender marker changes",
   description:
-    "Free, step-by-step guides, official forms, and resources for updating legal names, gender markers, and identity documents in Ontario and across Canada. Accessible, community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
+    "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
   keywords: [
     "name change", "gender marker", "identity documents", "Ontario", "Canada", "trans", "non-binary", "Two-Spirit", "legal forms", "passport", "health card", "birth certificate", "driver's license", "permanent resident", "social insurance", "CRA", "LGBTQ", "step-by-step guides", "accessible resources"
   ],
   openGraph: {
     title: "I.D. Guide | Helping you navigate name and gender marker changes",
     description:
-      "Step-by-step guides, official forms, and resources for updating identity documents in Ontario and Canada. Community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
+      "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
     url: "https://idguide.ca/",
     siteName: "I.D. Guide",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "I.D. Guide | Helping you navigate name and gender marker changes",
     description:
-      "Step-by-step guides, official forms, and resources for updating identity documents in Ontario and Canada. Community-driven support for trans, non-binary, Two-Spirit, and gender-diverse people.",
+      "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
     site: "@danateagle",
     creator: "@danateagle",
     images: ["https://idguide.ca/og-image.png"],
