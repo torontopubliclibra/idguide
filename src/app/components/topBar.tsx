@@ -24,9 +24,34 @@ export default function TopBar() {
                 </h1>
             </Link>
             <Nav mobileOpen={isMobileNavOpen} closeMobileNav={closeMobileNav}/>
-            <button onClick={toggleMobileNav}>
-                <Image src="/menu.svg" alt="Menu icon" width={40} height={40} style={{filter: 'invert(1)'}}/>
-            </button>
+                <button
+                    onClick={toggleMobileNav}
+                    style={{
+                        background: 'none',
+                        border: 'none',
+                        padding: 0,
+                        cursor: 'pointer',
+                        outline: 'none',
+                    }}
+                    aria-label={isMobileNavOpen ? 'Close menu' : 'Open menu'}
+                >
+                    <span
+                        style={{
+                            display: 'inline-block',
+                            transition: 'transform 0.3s ease',
+                            marginRight: '20px',
+                            transform: isMobileNavOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+                        }}
+                    >
+                        <Image
+                            src={isMobileNavOpen ? '/menu-open.svg' : '/menu.svg'}
+                            alt="Menu icon"
+                            width={40}
+                            height={40}
+                            style={{ filter: 'invert(1)', transition: 'filter 0.3s' }}
+                        />
+                    </span>
+                </button>
         </div>
     );
 }

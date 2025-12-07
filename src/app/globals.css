@@ -217,10 +217,10 @@ hr {
     padding: 20px;
   }
   h2 {
-    padding-left: 15px;
+    padding-left: 0;
   }
   .top-bar h1 {
-    padding-left: 15px;
+    padding-left: 20px;
   }
   .top-bar button, .top-bar .button {
     display: block;
