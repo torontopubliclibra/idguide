@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function SIN() {
   return (
     <div className="page">
-      <main className={styles.about}>
+      <main className={styles.sin}>
         <h2 className="page-title">Social Insurance Registry</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>

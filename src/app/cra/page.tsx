@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function CRA() {
   return (
     <div className="page">
-      <main className={styles.about}>
+      <main className={styles.cra}>
         <h2 className="page-title">Canada Revenue Agency</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>

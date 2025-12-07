@@ -8,10 +8,10 @@ export default function About() {
         <h2 className="page-title">About I.D. Guide</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>I.D. Guide is a free, community-driven resource for anyone navigating legal name, gender marker, and identity document changes in Canada. Our goal is to make these processes clearer, less stressful, and more accessible for trans, non-binary, Two-Spirit, and gender non-conforming people—as well as for allies and service providers. Our current focus is on Ontario and Canada-wide processes, with future expansion planned to provide comprehensive guidance for all provinces and territories.</p>
+          <p>I.D. Guide is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities. Right now, we focus on Ontario and Canada-wide processes, with plans to expand and offer guidance for more provinces and territories in the future.</p>
 
           <h3>Mission</h3>
-          <p>We believe everyone deserves access to accurate, up-to-date information, so this site serves as a resource of practical step-by-step instructions and forms all in one place. Please note: This site does not provide legal advice, but aims to empower you to make informed decisions and advocate for yourself.</p>
+          <p>Everyone deserves clear, accurate, and current information. This site brings together practical, step-by-step instructions and forms in one place to help you navigate these processes confidently. While we do not provide legal advice, our goal is to empower you to make informed choices and advocate for yourself.</p>
 
           <h3>Who runs this site?</h3>
           <p>This project is led by <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, a designer and web/software developer based in Toronto. Since 2021, Dana has delivered workshops on name and gender marker changes for organizations across Ontario. To learn more or book a presentation, visit our <Link href="/workshops">workshops page</Link>. If you would like to help support Dana and her work, you can send her a tip <Link href="https://danateagle.com/paypal" target='_blank'>via PayPal</Link>.</p>
