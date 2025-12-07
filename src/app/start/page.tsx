@@ -67,8 +67,7 @@ export default function Start() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.</p>
-          <br />
-          <p><span className={styles.strong}>I want to:</span></p>
+          <p style={{marginTop: 10}}><span className={styles.strong}>I want to:</span></p>
           <ul>
             <li>
               <Checkbox id="name" label="Change my legal name in Ontario" checked={toggles.name} onChange={handleToggleChange} />
