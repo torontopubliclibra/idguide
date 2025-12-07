@@ -63,7 +63,7 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>
-                    <Link href="https://www.google.com">
+                    <Link href="https://en.wikipedia.org/wiki/Main_Page">
                         Quick Exit
                         <Image src="/close.svg" alt="Exit icon" width={20} height={20} />
                     </Link>
