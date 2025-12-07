@@ -52,12 +52,14 @@
 .subNav li {
   padding: 0;
   width: 100%;
+  margin: 0;
   font-style: normal;
 }
 
 .subNav li a {
   justify-content: flex-start;
   color: var(--white);
+  padding: 20px 30px;
 }
 
 .subNav li:hover {
