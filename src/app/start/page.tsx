@@ -61,19 +61,19 @@ export default function Start() {
         <h2 className="page-title">Get Started</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>The identity documents you can update will vary depending on your given circumstances and what information you&apos;re updating.</p>
-          <p>Toggle the checkboxes and the sequence below will update to give you an action plan.</p>
+          <p>Your action plan for updating identity documents will depend on your situation and what you want to change.</p>
+          <p>Use the checkboxes below to customize your plan. The steps will update automatically based on your selections.</p>
           <br />
-          <p><strong>Looking to:</strong></p>
+          <p><span className={styles.strong}>I want to:</span></p>
           <ul>
             <li>
-              <Checkbox id="name" label="change your legal name in Ontario" checked={toggles.name} onChange={handleToggleChange} />
+              <Checkbox id="name" label="Change my legal name in Ontario" checked={toggles.name} onChange={handleToggleChange} />
             </li>
             <li>
-              <Checkbox id="gender" label="update your gender markers" checked={toggles.gender} onChange={handleToggleChange} />
+              <Checkbox id="gender" label="Update my gender marker" checked={toggles.gender} onChange={handleToggleChange} />
             </li>
           </ul>
-          <p><strong>Citizenship status:</strong></p>
+          <p><span className={styles.strong}>My citizenship status:</span></p>
           <ul>
             {
               ((toggles.name) || (toggles.gender)) && !(toggles.pr) ? (
@@ -109,8 +109,7 @@ export default function Start() {
               )
             }
           </ul>
-          
-          <h3>Your action plan:</h3>
+          <h3>Your personalized action plan:</h3>
           <ol>
             {
               (toggles.name) ? (
@@ -173,11 +172,11 @@ export default function Start() {
             !(toggles.name) && !(toggles.gender) ? (
               <ul>
                 <li>
-                  Please select the checkboxes above to see your action plan.
+                  Please select one or both checkboxes above to see your action plan.
                 </li>
               </ul>
             ) : <p>
-                Each of the guides above provide step-by-step instructions, the required forms, and recommendations to make the process as smooth as possible.
+                Each guide above provides step-by-step instructions, required forms, and tips to help make the process as smooth as possible.
               </p>
           }
         </div>

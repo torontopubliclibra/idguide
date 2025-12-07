@@ -9,37 +9,33 @@ export default function Home() {
         <div className={styles.intro}>
           <div>
             <p className={styles.headline}>
-              We all deserve identity documents that reflect our lives <em><small>(and don&apos;t make them any more difficult)</small></em>.
+              You deserve identity documents that truly reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
             </p>
             <p>
-              Changing your legal name and gender marker across all of your I.D.s is a complex and frustrating process. <strong>I.D. Guide</strong> is here to help make it easier by providing <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources to support you</Link> through the journey.
+              Navigating name and gender marker changes can feel overwhelming, but <strong>I.D. Guide</strong> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
             </p>
             <p>
-              Let&apos;s make I.D. changes accessible to everyone.
+              Ready to begin? <Link href="/start">Start your journey here</Link>.
             </p>
           </div>
           <div className={styles.group}>
             <div className="stacks flipped"></div>
             <div className={styles.guides}>
-              <h2 className="page-title">Walking you through:</h2>
               <ul>
                 <li>
-                  <Link href="/on/name">Ontario legal name changes</Link>
+                  <Link href="/on/name">Change your legal name</Link>
                 </li>
                 <li>
-                  <Link href="/on/birth">Ontario birth certificate updates</Link>
+                  <Link href="/on/birth">Update your birth certificate</Link>
                 </li>
                 <li>
-                  <Link href="/on/health">Ontario health card updates</Link>
+                  <Link href="/on/health">Update your health card</Link>
                 </li>
                 <li>
-                  <Link href="/on/id">Ontario driver&apos;s license and photo card updates</Link>
+                  <Link href="/on/id">Update your driver&#39;s license or photo card</Link>
                 </li>
                 <li>
-                  <Link href="/passport">Canadian passport updates</Link>
-                </li>
-                <li>
-                  <Link href="/pr">Permanent resident card updates</Link>
+                  <Link href="/passport">Update your passport</Link>
                 </li>
                 <li>
                   <Link href="/guides">and more...</Link>

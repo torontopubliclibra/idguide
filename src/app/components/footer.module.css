@@ -9,6 +9,10 @@
   padding-bottom: 50px;
 }
 
+.footer * {
+  font-family: var(--font-special-gothic-expanded-one);
+}
+
 .footer a:hover {
   color: var(--color2);
 }
@@ -16,6 +20,6 @@
 @media (max-width: 1200px) {
   .footer {
     font-size: 0.85rem;
-    padding-bottom: 30px;
+    padding: 3rem 5vw;
   }
 }

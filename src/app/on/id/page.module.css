@@ -1,8 +1,8 @@
-.about {
+.id {
   width: 100%;
 }
 
-.about .main {
+.id .main {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -14,27 +14,11 @@
   width: 100%;
 }
 
-.sitemap, .sitemap ul {
-  list-style-type: disclosure-closed;
-}
-
-.about li {
-  padding-bottom: 10px;
-}
-
-.about li ul {
-  padding-top: 10px;
-}
-
-.about li ul li:last-child {
-  padding-bottom: 0;
-}
-
 @media (max-width: 1200px) {
-  .about {
+  .id {
     padding-top: 20px;
   }
-  .about .main {
+  .id .main {
     padding: 40px;
   }
 }

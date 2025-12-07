@@ -20,13 +20,12 @@ export default function TopBar() {
         <div className="top-bar">
             <Link href="/" onClick={closeMobileNav}>
                 <h1>
-                    <Image src="/logo-222.png" alt="I.D. Guide logo" width={90} height={45}/>
-                    {/* I.D. guide */}
+                    I.D. Guide
                 </h1>
             </Link>
             <Nav mobileOpen={isMobileNavOpen} closeMobileNav={closeMobileNav}/>
             <button onClick={toggleMobileNav}>
-                <Image src="/menu-3.svg" alt="Menu icon" width={30} height={30}/>
+                <Image src="/menu.svg" alt="Menu icon" width={40} height={40} style={{filter: 'invert(1)'}}/>
             </button>
         </div>
     );

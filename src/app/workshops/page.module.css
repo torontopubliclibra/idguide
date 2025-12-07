@@ -18,8 +18,7 @@
   .workshops {
     padding-top: 20px;
   }
-
   .workshops .main {
-    width: 100%;
+    padding: 40px;
   }
 }

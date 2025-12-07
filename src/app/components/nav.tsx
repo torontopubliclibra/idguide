@@ -12,12 +12,6 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                         <Image src="/start.svg" alt="Start icon" width={20} height={20} />
                     </Link>
                 </li>
-                <li>
-                    <Link href="/about">
-                        About
-                        <Image src="/info.svg" alt="About icon" width={20} height={20} />
-                    </Link>
-                </li>
                 <li className={`${styles.dropdown}`}>
                     <Link href="/guides">
                         Guides
@@ -49,6 +43,12 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                             <Link href="/cra">Canada Revenue Agency</Link>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <Link href="/about">
+                        About
+                        <Image src="/info.svg" alt="About icon" width={20} height={20} />
+                    </Link>
                 </li>
                 <li>
                     <Link href="/workshops">

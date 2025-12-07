@@ -14,6 +14,10 @@
   width: 100%;
 }
 
+.start .strong {
+  font-family: var(--font-special-gothic-expanded-one);
+}
+
 .start div ul {
   padding: 0;
   list-style-type: none;

@@ -1,8 +1,8 @@
-.health {
+.pr {
   width: 100%;
 }
 
-.health .main {
+.pr .main {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,10 +15,10 @@
 }
 
 @media (max-width: 1200px) {
-  .health {
+  .about {
     padding-top: 20px;
   }
-  .health .main {
+  .about .main {
     padding: 40px;
   }
 }

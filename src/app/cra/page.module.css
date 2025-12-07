@@ -1,8 +1,8 @@
-.health {
+.cra {
   width: 100%;
 }
 
-.health .main {
+.cra .main {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,10 +15,10 @@
 }
 
 @media (max-width: 1200px) {
-  .health {
+  .cra {
     padding-top: 20px;
   }
-  .health .main {
+  .cra .main {
     padding: 40px;
   }
 }

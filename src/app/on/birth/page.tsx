@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 export default function OnBirth() {
   return (
     <div className="page">
-      <main className={styles.about}>
+      <main className={styles.birth}>
         <h2 className="page-title">Ontario birth certificates</h2>
         <div className="stacks flipped"></div>
 
@@ -21,54 +21,52 @@ export default function OnBirth() {
           <hr />
 
           <h3 id='process'>Process</h3>
-          <p>To update the sex designation on your Ontario birth registration or certificate, you will need to complete the Ontario Application for Change of Sex Designation on a Birth Registration of an Adult (11325e) as well as the Statutory Declaration for a Change of Sex Designation on a Birth Registration of an Adult (11324e). This part of the presentation is based on the application and declaration updated as of November 2022. Please make sure you are filling out the most recent version of these forms.</p>
-          <p>The application is two pages long, and the declaration is a single page. They can be submitted at the same time as your Ontario name change, if applicable.</p>
-          <p>When changing your sex designation, you have the options of M (male), F (female), or X (gender neutral). You also have the option to choose not to display the sex designation field at all. Any person with an Ontario birth registration has this option, regardless of their gender identity. Depending on your chosen designation, your process will be different.</p>
+          <p>To update the sex designation on your Ontario birth registration or certificate, complete the <Link href="/downloads#on-birth">Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)</Link> and the <Link href="/downloads#on-birth">Statutory Declaration for a Change of Sex Designation (11324e)</Link>. Make sure you use the most recent versions of these forms.</p>
+          <p>The application is two pages, and the declaration is one page. You can submit them together with your Ontario name change if needed.</p>
+          <p>When changing your sex designation, you can choose M (male), F (female), X (gender neutral), or opt to have no sex designation displayed. Anyone with an Ontario birth registration can make this change, regardless of gender identity. The process may differ depending on your choice.</p>
 
           <h3 id="requirements">Requirements</h3>
-          <p>You must be born in Ontario, and 16 years of age or older to complete this application. Along with the forms, you must provide:</p>
+          <p>You must be born in Ontario and be at least 16 years old to apply. Along with your forms, you&#39;ll need:</p>
           <ol>
-            <li>A letter from a licensed doctor or psychologist in good-standing, written on the doctor&apos;s letterhead, stating that the doctor has examined or treated you and they can attest that the updated designation is appropriate, and signed by the doctor</li>
-            <li>All previously issued short- and long-form Ontario birth certificates and certified copies of your birth registration</li>
-            <li>A completed application form and declaration, along with any applicable fees</li>
+            <li>A letter from a licensed doctor or psychologist (on their letterhead) stating they have examined or treated you and that the updated sex designation is appropriate. The letter must be signed by the doctor.</li>
+            <li>All previously issued Ontario birth certificates (short and long form) and certified copies of your birth registration.</li>
+            <li>Your completed application and declaration, plus any applicable fees.</li>
           </ol>
 
           <h4>Commissioning</h4>
-          <p>Just like the name change application, you must sign the statutory declaration of this application in front of a commissioner for taking affidavits, so please factor that into your plan as you begin to work through your documents.</p>
+          <p>As with the name change application, you must sign the statutory declaration in front of a commissioner for taking affidavits. Plan ahead to include this step in your process.</p>
 
           <h3 id="submitting-your-application">Submitting your application</h3>
-
           <h4>Fees</h4>
-          <p>While there used to be a fee for changing your sex designation, ServiceOntario began waiving this fee back in 2021. They have continued to periodically extend the window for free applications, and currently do not list a fee, however please make sure to double-check this policy is still in standing at the time of submission. There also may be fees applicable for copies of short- or long-form Ontario birth certificates or registrations (unless submitting at the same time as an Ontario name change for an individual born in Ontario, which will be included in that fee).</p>
+          <p>ServiceOntario has waived the fee for changing your sex designation since 2021, and currently does not list a fee. Please double-check this policy before submitting, as it may change. There may be fees for copies of birth certificates or registrations (unless you&#39;re submitting with a name change, which covers those fees).</p>
 
           <h4>By mail</h4>
-          <p>Send your completed form, payment, and required documents to:</p>
+          <p>Mail your completed form, any payment, and required documents to:</p>
           <textarea readOnly name="address" id="address" value={
             `Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
           />
 
-          <p>If mailing at the same time as a name change, you can mail all documents in one envelope to the address listed under that section.</p> 
-          <p>If being filed without a name change, we recommend a tracked envelope as with that application. Photocopied, faxed, or e-signed documents will not be accepted.</p>
+          <p>If you&#39;re mailing at the same time as a name change, you can send all documents together in one envelope. If you&#39;re filing without a name change, we recommend using a tracked envelope. Photocopied, faxed, or e-signed documents are not accepted.</p>
 
           <h4>Important considerations</h4>
-          <p>Ontario birth certificates with a sex designation of X or no sex displayed are recognized by the Government of Ontario, who claim they do not endorse any rejection of valid Ontario Ontario birth certificates by any official body. However, unfortunately they also claim they cannot guarantee that these documents will be accepted by organizations in Ontario or in other jurisdictions.</p>
+          <p>Ontario birth certificates with an X or no sex designation are recognized by the Government of Ontario. However, they cannot guarantee that all organizations in Ontario or other jurisdictions will accept these documents.</p>
           
           <h4>Delivery time</h4>
-          <p>If your application is complete and all requirements are met, you should receive your new birth certificate or registration in 6-8 weeks.</p>
+          <p>If your application is complete and meets all requirements, you should receive your new birth certificate or registration in 6-8 weeks.</p>
 
           <hr />
           <h3 id="sources">Sources</h3>
           <ul>
-            <li><a href="https://www.ontario.ca/page/changing-your-sex-designation-your-birth-registration-and-birth-certificate" target="_blank" rel="norefferer">ServiceOntario - Changing your sex designation on your birth registration and birth certificate</a></li>
+            <li><Link href="https://www.ontario.ca/page/changing-your-sex-designation-your-birth-registration-and-birth-certificate" target="_blank" rel="noreferrer">ServiceOntario - Changing your sex designation on your birth registration and birth certificate</Link></li>
           </ul>
           <hr />
 
           <div className="pageNav">
-            <p>See also: </p>
+            <p>See also:</p>
             <ul>
               <li><Link href="/on/name">Ontario name changes</Link></li>
               <li><Link href="/on/health">Ontario health cards</Link></li>
-              <li><Link href="/on/id">Ontario driver&apos;s licenses & photo cards</Link></li>
+              <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
             </ul>
           </div>
         </div>

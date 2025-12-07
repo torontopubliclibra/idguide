@@ -23,6 +23,7 @@
 .intro div {
   display: flex;
   flex-direction: column;
+  text-align: right;
   gap: 20px;
   width: 100%;
   max-width: 45vw;
@@ -35,12 +36,13 @@
 }
 
 .intro .headline {
-  font-size: 3.25rem;
+  font-size: 2.5rem;
   text-wrap: balance;
-  /* font-family: var(--font-merriweather); */
+  font-family: var(--font-special-gothic-expanded-one);
 }
 
 .intro .guides {
+  text-align: left;
   background: var(--semiwhite);
   color: var(--black);
   padding: 50px;
@@ -62,9 +64,14 @@
   padding-bottom: 10px;
 }
 
+.title {
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 1.3rem;
+}
+
 .intro .guides ul li {
   margin-bottom: 15px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   text-decoration: underline;
   transition: color 0.3s;
   color: var(--black);
@@ -101,13 +108,17 @@ a.secondary {
   .intro .headline {
     text-align: left;
     font-size: 2.25rem;
-    padding: 0 15px;
+    padding: 0;
   }
 
   .intro p {
     text-align: left;
     font-size: 1.25rem;
-    padding: 0 15px;
+    padding: 0;
+  }
+
+  .intro a {
+    font-size: 1.25rem;
   }
 
   .intro .guides {
