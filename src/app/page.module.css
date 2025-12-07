@@ -6,7 +6,8 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 0;
-  margin-top: 40px;
+  margin: 20px 0;
+  margin-bottom: 40px;
 }
 
 .intro {
@@ -15,7 +16,7 @@
   padding-top: 15px;
   margin: 0 auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   text-align: left;
   gap: 50px;
 }
@@ -71,7 +72,7 @@
 
 .intro .guides ul li {
   margin-bottom: 15px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   text-decoration: underline;
   transition: color 0.3s;
   color: var(--black);
@@ -108,7 +109,7 @@ a.secondary {
 
   .intro .headline {
     text-align: left;
-    font-size: 2.25rem;
+    font-size: 2rem;
     padding: 0;
   }
 

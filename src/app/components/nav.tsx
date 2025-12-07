@@ -8,7 +8,7 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
             <ul className={styles.nav}>
                 <li>
                     <Link href="/start">
-                        Get Started
+                        Start
                         <Image src="/start.svg" alt="Start icon" width={20} height={20} />
                     </Link>
                 </li>
@@ -34,37 +34,37 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                             <Link href="/passport">Canadian passports</Link>
                         </li>
                         <li>
-                            <Link href="/pr">Permanent resident cards</Link>
+                            <Link href="/pr" title='Permanent resident cards'>Permanent resident cards</Link>
                         </li>
                         <li>
-                            <Link href="/sin">Social Insurance Registry</Link>
+                            <Link href="/sin" title='Social Insurance Registry'>Social Insurance Registry</Link>
                         </li>
                         <li>
-                            <Link href="/cra">Canada Revenue Agency</Link>
+                            <Link href="/cra" title='Canada Revenue Agency'>Canada Revenue Agency</Link>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <Link href="/about">
+                    <Link href="/about" title='About'>
                         About
                         <Image src="/info.svg" alt="About icon" width={20} height={20} />
                     </Link>
                 </li>
                 <li>
-                    <Link href="/workshops">
+                    <Link href="/workshops" title='Workshops'>
                         Workshops
                         <Image src="/workshop.svg" alt="Workshop icon" width={20} height={20} />
                     </Link>
                 </li>
                 <li>
-                    <Link href="/downloads">
+                    <Link href="/downloads" title='Downloads'>
                         Downloads
                         <Image src="/download.svg" alt="Download icon" width={20} height={20} />
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>
-                    <Link href="https://en.wikipedia.org/wiki/Main_Page">
-                        Quick Exit
+                    <Link href="https://en.wikipedia.org/wiki/Main_Page" title='Quick exit to Wikipedia.org'>
+                        Exit
                         <Image src="/close.svg" alt="Exit icon" width={20} height={20} />
                     </Link>
                 </li>

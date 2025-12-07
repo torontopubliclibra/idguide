@@ -1,25 +1,120 @@
 .footer {
+  background: var(--dark3);
+  color: #fff;
+  padding: 48px 0 0 0;
+  font-size: 1.1rem;
+  font-family: var(--font-special-gothic);
+}
+
+.footerInner {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.85rem;
-  color: var(--white);
-  padding-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 48px;
+  padding: 0 40px;
 }
 
-.footer * {
+.footerCol {
+  min-width: 220px;
+  flex: 1 1 220px;
+  margin-bottom: 15px;
+}
+
+.footerLogo {
+  font-size: 2.25rem;
   font-family: var(--font-special-gothic-expanded-one);
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
-.footer a:hover {
+.footerTitle {
+  font-family: var(--font-special-gothic-expanded-one);
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #c6c6e3;
+  letter-spacing: 0.5px;
+}
+
+.footerContact {
+  margin-bottom: 24px;
+}
+
+.footerContact a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.footerContact a:hover {
   color: var(--color2);
 }
 
-@media (max-width: 1200px) {
-  .footer {
-    padding: 35px 5vw;
-    padding-top: 20px;
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 10px;
+}
+
+.footerLinks a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerLinks a:hover {
+  color: var(--color2);
+  text-decoration: underline;
+}
+
+.footerBottom {
+  border-top: 2px solid #e6e6e6;
+  margin-top: 32px;
+  padding: 24px 40px 24px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footerBottomLinks {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.footerBottomLinks a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footerBottomLinks a:hover {
+  color: var(--color2);
+}
+
+@media (max-width: 900px) {
+  .footerInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  .footerCol {
+    min-width: 220px;
+    margin-bottom: 0;
+    flex: none;
+  }
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 16px 24px 16px;
   }
 }

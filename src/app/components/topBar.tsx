@@ -3,10 +3,24 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from "react";
+import { useEffect, useRef } from "react";
 import Nav from "./nav";
 
 export default function TopBar() {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+    const topBarRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        if (!isMobileNavOpen) return;
+        function handleClickOutside(event: MouseEvent) {
+            if (topBarRef.current && !topBarRef.current.contains(event.target as Node)) {
+                setIsMobileNavOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMobileNavOpen]);
 
     function toggleMobileNav() {
         setIsMobileNavOpen(!isMobileNavOpen);
@@ -17,7 +31,7 @@ export default function TopBar() {
     }
 
     return (
-        <div className="top-bar">
+        <div className="top-bar" ref={topBarRef}>
             <Link href="/" onClick={closeMobileNav}>
                 <h1>
                     I.D. Guide

@@ -1,0 +1,29 @@
+.privacy {
+  width: 100%;
+}
+
+.privacy .main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--semiwhite);
+  color: var(--black);
+  font-size: 1.15rem;
+  padding: 50px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.privacy .strong {
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .privacy {
+    padding-top: 20px;
+  }
+  .privacy .main {
+    padding: 30px;
+  }
+}

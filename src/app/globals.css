@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Special Gothic';
+  src: url('/Special_Gothic/SpecialGothic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Special Gothic Expanded One';
+  src: url('/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --black: #1b1b1e;
   --semiblack: #1b1b1ee4;
@@ -10,6 +26,8 @@
   --dark5: #684a62;
   --color1: #bda2bf;
   --color2: #c6c6e3;
+  --font-special-gothic: 'Special Gothic', Arial, sans-serif;
+  --font-special-gothic-expanded-one: 'Special Gothic Expanded One', Arial, sans-serif;
 }
 
 @keyframes gradient {
@@ -163,7 +181,7 @@ h2.page-title {
   margin-bottom: 15px;
   color: var(--white);
   font-weight: 400;
-  padding-top: 30px;
+  margin-top: -10px;
   padding-bottom: 80px;
 }
 
@@ -183,10 +201,11 @@ hr {
 
 .page {
   display: flex;
-  min-height: calc(100vh - 160px);
-  margin: 40px auto;
+  min-height: 400px;
+  margin: 80px auto;
   margin-bottom: 0;
   padding: 50px;
+  padding-bottom: 70px;
   max-width: 1400px;
   align-items: center;
   justify-content: center;
@@ -202,7 +221,7 @@ hr {
 }
 
 .pageNav p {
-  font-weight: 600;;
+  font-family: var(--font-special-gothic-expanded-one);
 }
 
 .page * {
@@ -215,6 +234,7 @@ hr {
   }
   .page {
     padding: 20px;
+    padding-bottom: 50px;
   }
   h2 {
     padding-left: 0;

@@ -8,6 +8,10 @@
   margin: 0 auto;
 }
 
+.nav {
+  padding-bottom: 1px;
+}
+
 .navContainer {
   display: flex;
 }

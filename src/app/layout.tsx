@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import { Special_Gothic, Special_Gothic_Expanded_One } from "next/font/google";
 import "./globals.css";
 import TopBar from "./components/topBar";
 import Footer from "./components/footer";
-
-const specialGothic = Special_Gothic({
-  variable: "--font-special-gothic",
-  subsets: ["latin"],
-  weight: "variable",
-});
-
-const specialGothicExpanded = Special_Gothic_Expanded_One({
-  variable: "--font-special-gothic-expanded-one",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 export const metadata: Metadata = {
   title: "I.D. Guide | Helping you navigate name and gender marker changes",
@@ -66,7 +53,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="ltr">
-      <body className={`${specialGothic.variable} ${specialGothicExpanded.variable}`}> 
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/SpecialGothic.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/SpecialGothicExpandedOne.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body> 
         <a href="#main" className="skip-link" style={{position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden'}}>Skip to main content</a>
         <TopBar/>
         {children}

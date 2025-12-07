@@ -19,7 +19,7 @@ export default function About() {
 
           <p>The project is led by <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, a designer and web/software developer based in Toronto. Since 2021, Dana has delivered workshops on name and gender marker changes for organizations across Ontario. To learn more or book a presentation, visit our <Link href="/workshops">workshops page</Link>. If you would like to help support Dana and her work, you can send her a tip <Link href="https://danateagle.com/paypal" target='_blank'>via PayPal</Link>.</p>
 
-          <p>If you spot an error, have a suggestion, or need information in a different format, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone.</p>
+          <p>If you spot an error, have a suggestion, or need information in a different format, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone. For details about how your information is handled, see our <Link href="/privacy">Privacy Policy</Link>.</p>
           <h3 id='changelog'>Changelog</h3>
           <ul>
             <li>v1.0.0 - Initial launch</li>
@@ -43,6 +43,7 @@ export default function About() {
             </li>
             <li><Link href="/workshops">Workshops</Link></li>
             <li><Link href="/downloads">Downloads</Link></li>
+            <li><Link href="/privacy">Privacy Policy</Link></li>
           </ul>
         </div>
         <div className="stacks"></div>
