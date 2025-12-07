@@ -1,7 +1,13 @@
+"use client";
 import Link from 'next/link';
+import { useEffect } from "react";
 import styles from "./page.module.css";
 
+
 export default function SIN() {
+    useEffect(() => {
+      document.title = 'Social Insurance Registry | I.D. Guide';
+    }, []);
   return (
     <div className="page">
       <main className={styles.sin}>

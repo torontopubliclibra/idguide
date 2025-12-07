@@ -1,7 +1,13 @@
+"use client";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { useEffect } from "react";
+
 
 export default function Workshops() {
+    useEffect(() => {
+      document.title = 'Workshops | I.D. Guide';
+    }, []);
   return (
     <div className="page">
       <main className={styles.workshops}>

@@ -1,8 +1,14 @@
+"use client";
 import Link from "next/link";
+import { useEffect } from "react";
 import "./globals.css";
 import styles from "./page.module.css";
 
+
 export default function Home() {
+    useEffect(() => {
+      document.title = 'I.D. Guide | Helping you navigate name and gender marker changes';
+    }, []);
   return (
     <div className="page">
       <main className={styles.main}>

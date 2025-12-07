@@ -1,7 +1,13 @@
+"use client";
 import Link from 'next/link';
+import { useEffect } from "react";
 import styles from "./page.module.css";
 
+
 export default function OnID() {
+    useEffect(() => {
+      document.title = "Ontario Driver's Licenses & Photo Cards | I.D. Guide";
+    }, []);
   return (
     <div className="page">
       <main className={styles.id}>

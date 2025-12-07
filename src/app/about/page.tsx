@@ -1,7 +1,14 @@
+"use client";
 import Link from 'next/link';
+import { useEffect } from "react";
+import { Metadata } from 'next';
 import styles from "./page.module.css";
 
+
 export default function About() {
+    useEffect(() => {
+      document.title = 'About | I.D. Guide';
+    }, []);
   return (
     <div className="page">
       <main className={styles.about}>

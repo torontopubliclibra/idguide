@@ -1,7 +1,8 @@
 'use client'
 
-import Link from "next/link";
 import { useState } from "react";
+import { useEffect } from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 interface CheckboxProps {
@@ -21,7 +22,11 @@ const Checkbox = ({ id, label, checked, onChange, disabled }: CheckboxProps) => 
   );
 };
 
+
 export default function Start() {
+    useEffect(() => {
+      document.title = 'Start | I.D. Guide';
+    }, []);
   const [toggles, setToggles] = useState({
     name: true,
     gender: true,

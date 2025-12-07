@@ -1,7 +1,14 @@
+"use client";
 import Link from 'next/link';
+import { useEffect } from "react";
 import styles from "./page.module.css";
 
-export default function OnBirth() {
+
+export default function BirthPage() {
+  useEffect(() => {
+    document.title = 'Ontario Birth Certificates | I.D. Guide';
+  }, []);
+
   return (
     <div className="page">
       <main className={styles.birth}>

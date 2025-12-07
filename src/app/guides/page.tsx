@@ -1,13 +1,18 @@
+"use client";
+"use client";
 import Link from "next/link";
+import { useEffect } from "react";
 import styles from "./page.module.css";
 
 export default function Guides() {
+    useEffect(() => {
+      document.title = 'Guides | I.D. Guide';
+    }, []);
   return (
     <div className="page">
       <main className={styles.guides}>
         <h2 className="page-title">Guides</h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
           <h3>Ontario</h3>
           <ul>
             <li>
