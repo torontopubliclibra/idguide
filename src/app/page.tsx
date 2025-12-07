@@ -30,10 +30,10 @@ export default function Home() {
           <div className={styles.group}>
             <div className="stacks flipped"></div>
             <div className={styles.guides}>
-              <h2>We can help with your:</h2>
+              <h2>Assisting with:</h2>
               <ul>
                 <li>
-                  <Link href="/name">Legal name change</Link>
+                  <Link href="/name">Legal name changes</Link>
                 </li>
                 <li>
                   <Link href="/health">Health card updates</Link>

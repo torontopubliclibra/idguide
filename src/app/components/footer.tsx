@@ -9,8 +9,8 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <div className={styles.footerLogo}>I.D. Guide</div>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="/about">About</Link></li>
-                        <li><Link href="mailto:contact@idguide.ca">Contact us</Link></li>
+                        <li><Link href="/about">About the project</Link></li>
+                        <li><Link href="mailto:contact@idguide.ca">Get in touch</Link></li>
                         <li><Link href="/about#sitemap">Sitemap</Link></li>
                         <li><Link href="/about#changelog">Version 1.0.0</Link></li>
                     </ul>
@@ -30,6 +30,8 @@ export default function Footer() {
                         <li><Link href="https://www.translifeline.org/" target="_blank" rel="noopener noreferrer">Trans Lifeline</Link></li>
                         <li><Link href="https://justicetrans.org/" target="_blank" rel="noopener noreferrer">Justice Trans</Link></li>
                         <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Juritrans</Link></li>
+                        <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Connect Fund</Link></li>
+                        <li><Link href="https://namesake.fyi/" target="_blank" rel="noopener noreferrer">Namesake (U.S.)</Link></li>
                     </ul>
                 </div>
             </div>
