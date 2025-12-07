@@ -35,7 +35,7 @@ export default function Workshops() {
           </ul>
 
           <h3>Get in touch</h3>
-          <p>To book a workshop or discuss your group&#39;s needs, please <Link href="mailto:danar.teagle@gmail.com">reach out by email</Link>.</p>
+          <p>To book a workshop or discuss your group&#39;s needs, please <Link href="mailto:contact@idguide.ca">reach out by email</Link>.</p>
         </div>
         <div className="stacks"></div>
       </main>

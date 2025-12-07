@@ -11,7 +11,7 @@ export default function Footer() {
                 </p>
                 <br/>
                 <p>
-                    <Link href="/about">About</Link> | <Link href="/guides">Guides</Link> | <Link href="/downloads">Downloads</Link> | <Link href="/workshops">Workshops</Link> | <Link href="mailto:danar.teagle@gmail.com">Contact</Link>
+                    <Link href="/about">About</Link> | <Link href="/guides">Guides</Link> | <Link href="/downloads">Downloads</Link> | <Link href="/workshops">Workshops</Link> | <Link href="mailto:contact@idguide.ca">Contact</Link>
                 </p>
                 <br/>
                 <p>
