@@ -8,7 +8,7 @@ export default function About() {
         <h2 className="page-title">About I.D. Guide</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>I.D. Guide is a free, community-driven resource for anyone navigating legal name, gender marker, and identity document changes in Ontario, Canada. Our goal is to make these processes clearer, less stressful, and more accessible for trans, non-binary, Two-Spirit, and gender non-conforming people—as well as for allies and service providers. </p>
+          <p>I.D. Guide is a free, community-driven resource for anyone navigating legal name, gender marker, and identity document changes in Canada. Our goal is to make these processes clearer, less stressful, and more accessible for trans, non-binary, Two-Spirit, and gender non-conforming people—as well as for allies and service providers. Our current focus is on Ontario and Canada-wide processes, with future expansion planned to provide comprehensive guidance for all provinces and territories.</p>
 
           <h3>Mission</h3>
           <p>We believe everyone deserves access to accurate, up-to-date information, so this site serves as a resource of practical step-by-step instructions and forms all in one place. Please note: This site does not provide legal advice, but aims to empower you to make informed decisions and advocate for yourself.</p>
