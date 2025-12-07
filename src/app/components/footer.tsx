@@ -30,7 +30,6 @@ export default function Footer() {
                         <li><Link href="https://www.translifeline.org/" target="_blank" rel="noopener noreferrer">Trans Lifeline</Link></li>
                         <li><Link href="https://justicetrans.org/" target="_blank" rel="noopener noreferrer">Justice Trans</Link></li>
                         <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Juritrans</Link></li>
-                        <li><Link href="https://egale.ca/" target="_blank" rel="noopener noreferrer">Egale Canada</Link></li>
                     </ul>
                 </div>
             </div>
