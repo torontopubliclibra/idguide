@@ -11,7 +11,7 @@ export default function Footer() {
                     <ul className={styles.footerLinks}>
                         <li><Link href="/about">About the project</Link></li>
                         <li><Link href="/about#disclaimers">Disclaimers</Link></li>
-                        <li><Link href="/about#disclaimers">Privacy policy</Link></li>
+                        <li><Link href="/privacy">Privacy policy</Link></li>
                         <li><Link href="mailto:contact@idguide.ca">Get in touch</Link></li>
                     </ul>
                 </div>
