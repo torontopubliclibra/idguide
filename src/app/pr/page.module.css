@@ -15,10 +15,10 @@
 }
 
 @media (max-width: 1200px) {
-  .about {
+  .pr {
     padding-top: 20px;
   }
-  .about .main {
+  .pr .main {
     padding: 30px;
   }
 }
