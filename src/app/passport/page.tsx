@@ -26,12 +26,7 @@ export default function Passport() {
           <hr />
 
           <h3 id="options">Options for gender/sex identifier</h3>
-          <p>There are 3 options for gender/sex identification on Canadian passports:</p>
-          <ol>
-            <li>F (female)</li>
-            <li>M (male)</li>
-            <li>X (another gender)</li>
-          </ol>
+          <p>There are 3 options for gender/sex identification on Canadian passports: F, M, and X.</p>
 				  <p>Depending on whether your supporting documents have the gender/sex identifier you want, the application process for your passport will vary.</p>
 
           <h3 id="process">Process</h3>

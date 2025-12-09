@@ -25,16 +25,16 @@ export default function OnID() {
           </div>
           <hr />
           
-          <p>When updating the sex designation on your Ontario driver&apos;s license or photo card, you can choose M (male), F (female), or X (gender neutral). The process depends on which designation you select.</p>
+          <p>When updating the sex designation on your Ontario driver&apos;s license or photo card, you can choose F, M, or X. The process depends on which designation you select.</p>
 
           <h3 id="process">Process</h3>
           <p>Updating your driver&apos;s license is free if you already have one. If you don&apos;t drive, you can get an Ontario photo card for $35.</p>
           <p>We highly recommend the photo card for trans and non-binary people who don&apos;t have a driver&apos;s license. It&apos;s a helpful piece of I.D. for proving your legal name, sex designation, and address, and can make other document changes, voting, and bureaucratic processes easier.</p>
 
-          <h4 id="to-x">M to X and F to X changes</h4>
+          <h4 id="to-x">M to X or F to X</h4>
           <p>To change your sex designation to X (gender neutral), just visit a ServiceOntario location. No supporting documents are required.</p>
 
-          <h4 id="to-f-or-m">M to F and F to M changes</h4>
+          <h4 id="to-f-or-m">M to F or F to M</h4>
           <p>For binary sex designation changes (M to F or F to M), go to ServiceOntario and bring an original document showing your updated sex designation. This can be a short or long-form birth certificate or a certified copy of your birth registration.</p>
           <p>If you don&apos;t have a birth certificate or registration with the desired sex designation, bring these two documents:</p>
           <ol>

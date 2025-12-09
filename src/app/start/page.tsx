@@ -172,9 +172,16 @@ export default function Start() {
               ) : null
             }
             {
-              (toggles.name) ? (
+              (toggles.name) && !((toggles.ontario)) ? (
                 <li>
                   <Link href="/health">Update the name on your health card</Link>
+                </li>
+              ) : null
+            }
+            {
+              (toggles.name) && ((toggles.ontario)) ? (
+                <li>
+                  <Link href="/on/health">Update the name on your Ontario health card</Link>
                 </li>
               ) : null
             }
