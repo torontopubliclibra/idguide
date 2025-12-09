@@ -106,11 +106,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  .nav li, .nav li:hover {
-    background-color: var(--dark5);
+  .navContainer.mobileOpen li:nth-child(1), .navContainer.mobileOpen li:nth-child(1):hover {
+    background-color: var(--dark1);
   }
-  .nav li:nth-child(odd), .nav li:nth-child(odd):hover {
-    background-color: var(--dark2);
+  .navContainer.mobileOpen li:nth-child(2), .navContainer.mobileOpen li:nth-child(2):hover {
+    background-color: var(--dark5)
+  }
+  .navContainer.mobileOpen li:nth-child(3), .navContainer.mobileOpen li:nth-child(3):hover {
+    background-color: var(--dark4)
+  }
+  .navContainer.mobileOpen li:nth-child(4), .navContainer.mobileOpen li:nth-child(4):hover {
+    background-color: var(--dark2)
+  }
+  .navContainer.mobileOpen li:nth-child(5), .navContainer.mobileOpen li:nth-child(5):hover {
+    background-color: var(--dark3);
   }
   .desktopOnly {
     display: none;
