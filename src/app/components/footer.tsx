@@ -9,7 +9,7 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <div className={styles.footerLogo}>I.D. Guide</div>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="/about#changelog">v1.0.0</Link> (<small><Link href="/about#sitemap">Sitemap</Link></small>)</li>
+                        <li><Link href="/about#changelog">v1.0.0</Link></li>
                         <li><Link href="/about">About the project</Link></li>
                         <li><Link href="mailto:contact@idguide.ca">Get in touch</Link></li>
                     </ul>
