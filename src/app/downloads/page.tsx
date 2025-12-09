@@ -134,7 +134,7 @@ export default function Downloads() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>
-            Here you&#39;ll find official forms, guides, and presentation materials to help with name changes, gender marker updates, and more. All files are free to download. If you need help finding the right document, check the related guide or <Link href="mailto:contact@idguide.ca">contact us</Link> for support.
+            Here you&#39;ll find the forms to help with name changes and gender marker updates, as well as presentation materials for past workshops. If you need help finding the right document, please check the sources at the bototm of the related guide, or <Link href="mailto:contact@idguide.ca">contact us</Link> for support.
           </p>
           
           <hr/>
