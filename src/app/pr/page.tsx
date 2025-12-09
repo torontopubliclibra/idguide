@@ -31,7 +31,7 @@ export default function PR() {
           <p>Along with the identity documents listed in Step 1 of the PR Card Application, you&#39;ll also need:</p>
           <ul>
             <li>A copy of your Record of Landing (IMM 1000) or Confirmation of Permanent Residence (IMM 5292 or IMM 5688)</li>
-            <li>A legal document proving your name change (such as an Ontario Change of Name certificate)</li>
+            <li>A legal document proving your name change (such as a Canadian <Link href="/name">change of name</Link> certificate)</li>
           </ul>
           <p>If your name change document was issued outside of Canada, you must also provide a provincial ID in your new name (such as a driver&#39;s license, photo card, or health card).</p>
         <hr/>
