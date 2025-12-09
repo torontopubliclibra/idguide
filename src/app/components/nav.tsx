@@ -8,7 +8,7 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
             <ul className={styles.nav}>
                 <li>
                     <Link href="/start">
-                        Get started
+                        Start
                         <Image src="/start.svg" alt="Start icon" width={20} height={20} />
                     </Link>
                 </li>
