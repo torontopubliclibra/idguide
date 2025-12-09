@@ -9,8 +9,9 @@ export default function Footer() {
                 <div className={styles.footerCol}>
                     <div className={styles.footerLogo}>I.D. Guide</div>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="/about#changelog">v1.0.0</Link></li>
                         <li><Link href="/about">About the project</Link></li>
+                        <li><Link href="/about#disclaimers">Disclaimers</Link></li>
+                        <li><Link href="/about#disclaimers">Privacy policy</Link></li>
                         <li><Link href="mailto:contact@idguide.ca">Get in touch</Link></li>
                     </ul>
                 </div>
@@ -20,6 +21,7 @@ export default function Footer() {
                         <li><Link href="/start">Get started</Link></li>
                         <li><Link href="/guides">All guides</Link></li>
                         <li><Link href="/downloads">Download links</Link></li>
+                        <li><Link href="/workshops">Workshops</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>
@@ -33,7 +35,7 @@ export default function Footer() {
             </div>
             <div className={styles.footerBottom}>
                 <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
-                    <span>I.D. Guide</span> | <Link href="/privacy">Privacy Policy</Link>
+                    I.D. Guide <span>(<Link href="/about#changelog">v1.0.0</Link>)</span> | <Link href="/about#sitemap">Sitemap</Link>
                 </div>
                 <div>
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
