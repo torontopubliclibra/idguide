@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "I.D. Guide",
     images: [
       {
-        url: "https://idguide.ca/stacks.jpg",
+        url: "https://idguide.ca/idguide.png",
         width: 1200,
         height: 630,
         alt: "Stacks of paperwork with colourful paperclips",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
       "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
     site: "https://danateagle.com",
     creator: "Dana Rosamund Teagle",
-    images: ["https://idguide.ca/stacks.jpg"],
+    images: ["https://idguide.ca/idguide.png"],
   },
   alternates: {
     canonical: "https://idguide.ca/",
