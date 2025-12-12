@@ -24,7 +24,6 @@ export default function Workshops() {
             <li>Step-by-step guidance on legal name and gender marker changes in Ontario</li>
             <li>Designing considerate and informed technologies for trans communities</li>
             <li>Imagining futures beyond gender markers and legal recognition</li>
-            <li>Q&A and troubleshooting for unique or complex situations</li>
             <li>Custom topics by request</li>
           </ul>
 
@@ -39,7 +38,7 @@ export default function Workshops() {
           <h3>Booking & honourarium</h3>
           <ul>
             <li>Honourarium rates are flexible and can be adjusted to fit your organization&#39;s budget</li>
-            <li>Workshops are available for community groups, schools, unions, health providers, and more</li>
+            <li>Workshops are available for community groups, labour unions, schools, health providers, and more...</li>
             <li>While commissioning services are not provided, Dana is happy to recommend supportive notaries or resources</li>
           </ul>
         </div>
