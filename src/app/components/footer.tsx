@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className={styles.footerTitle}>Other resources</div>
                     <ul className={styles.footerLinks}>
                         <li><Link href="https://justicetrans.org/" target="_blank" rel="noopener noreferrer">Justice Trans</Link></li>
-                        <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Juritrans</Link></li>
+                        <li><Link href="https://juritrans.ca" target="_blank" rel="noopener noreferrer">Juritrans (Québec)</Link></li>
                         <li><Link href="https://namesake.fyi/" target="_blank" rel="noopener noreferrer">Namesake (U.S.)</Link></li>
                     </ul>
                 </div>
