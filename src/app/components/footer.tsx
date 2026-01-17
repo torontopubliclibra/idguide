@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div className={styles.footerBottom}>
                 <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
-                    I.D. Guide <span>(<Link href="/about#changelog">v1.0.0</Link>)</span> | <Link href="/about#sitemap">Sitemap</Link>
+                    I.D. Guide <span>(<Link href="/about#changelog">v1.0.1</Link>)</span> | <Link href="/about#sitemap">Sitemap</Link>
                 </div>
                 <div>
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>

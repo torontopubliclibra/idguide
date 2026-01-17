@@ -34,6 +34,7 @@ export default function About() {
 
           <h3 id='changelog'>Changelog</h3>
           <ul style={{marginBottom: "-1rem"}}>
+            <li>v1.0.1 - Fixed links for Alberta guides in Start menu</li>
             <li>v1.0.0 - Initial launch</li>
           </ul>
           

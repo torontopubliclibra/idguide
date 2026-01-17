@@ -160,7 +160,7 @@ export default function Start() {
             {
               (toggles.name) && (toggles.alberta) ? (
                 <li>
-                  <Link href="/on/name">Change your legal name with the Alberta government</Link>
+                  <Link href="/ab/name">Change your legal name with the Alberta government</Link>
                 </li>
               ) : null
             }
@@ -186,9 +186,16 @@ export default function Start() {
               ) : null
             }
             {
-               ((toggles.name) || (toggles.gender)) ? (
+               (((toggles.name) || (toggles.gender)))  && ((toggles.ontario)) ? (
                 <li>
                   <Link href="/on/id">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your driver&apos;s license or I.D. card</Link>
+                </li>
+              ) : null
+            }
+            {
+              (((toggles.name) || (toggles.gender)))  && ((toggles.alberta)) ? (
+                <li>
+                  <Link href="/id">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your driver&apos;s license or I.D. card</Link>
                 </li>
               ) : null
             }
