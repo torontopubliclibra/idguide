@@ -44,22 +44,44 @@ export default function About() {
           <ul className={styles.sitemap}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link> <small>(you are here)</small></li>
+            <li><Link href="/start">Get started</Link></li>
+            <li><Link href="/workshops">Workshops</Link></li>
+            <li><Link href="/downloads">Downloads</Link></li>
             <li>
               <Link href="/guides">Guides</Link>
               <ul>
-                <li><Link href="/on/name">Ontario legal name changes</Link></li>
-                <li><Link href="/on/birth">Ontario birth certificates</Link></li>
-                <li><Link href="/on/health">Ontario health cards</Link></li>
-                <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
+                <li>
+                  <Link href="/name">Name changes</Link>
+                  <ul>
+                    <li><Link href="/on/name">Ontario name changes</Link></li>
+                    <li><Link href="/ab/name">Alberta name changes</Link></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/birth">Birth certificates</Link>
+                  <ul>
+                    <li><Link href="/on/birth">Ontario birth certificates</Link></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/birth">Health cards</Link>
+                  <ul>
+                    <li><Link href="/on/health">Ontario health cards</Link></li>
+                  </ul>
+                </li>
+                <li>
+                  <Link href="/id">Driver&#39;s licenses & photo cards</Link>
+                  <ul>
+                    <li><Link href="/on/id">Ontario driver&#39;s licenses & photo cards</Link></li>
+                  </ul>
+                </li>
                 <li><Link href="/passport">Canadian passports</Link></li>
                 <li><Link href="/pr">Permanent resident cards</Link></li>
                 <li><Link href="/sin">Social Insurance Registry</Link></li>
                 <li><Link href="/cra">Canada Revenue Agency</Link></li>
               </ul>
             </li>
-            <li><Link href="/workshops">Workshops</Link></li>
-            <li><Link href="/downloads">Downloads</Link></li>
-            <li><Link href="/privacy">Privacy Policy</Link></li>
+            <li><Link href="/privacy">Privacy policy</Link></li>
           </ul>
         </div>
         <div className="stacks"></div>
