@@ -52,6 +52,9 @@ export default function AbName() {
           <p>
             <strong>Note:</strong> If there are any changes or additions to the affidavit, the commissioner must initial each change. Unless changes are authenticated, the affidavit will not be accepted by Vital Statistics.
           </p>
+          <blockquote>
+            <p>For trans I.D. clinics and commissioning services, see <Link href="/ab/resources" target='blank'>Alberta resources</Link> for a list of local and province-wide organizations.</p>
+          </blockquote>
           
           <h3 id='submitting-your-application'>Submitting your application</h3>
             <h4>In person</h4>

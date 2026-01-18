@@ -21,7 +21,7 @@ export default function Home() {
               You deserve identity documents that reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
             </p>
             <p>
-              Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/workshops">resources</Link> to support you every step of the way.
+              Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/resources">resources</Link> to support you every step of the way.
             </p>
             <p>
               Let&#39;s <Link href="/start">get started</Link>.

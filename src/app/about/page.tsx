@@ -13,7 +13,7 @@ export default function About() {
         <h2 className="page-title">About</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p><span className={styles.strong}>I.D. Guide</span> is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities. Right now, we focus on Ontario and Canada-wide processes, with plans to expand and offer guidance for more provinces and territories in the future.</p>
+          <p><span className={styles.strong}>I.D. Guide</span> is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities.</p>
 
           <p>Everyone deserves clear, accurate, and up-to-date information—but government agencies often make these processes confusing or hard to access. I.D. Guide brings together practical, step-by-step instructions and forms in one place to help you navigate these changes confidently. While we do not provide legal advice, our goal is to empower you to make informed choices and advocate for yourself.</p>
 
@@ -53,8 +53,9 @@ export default function About() {
                 <li>
                   <Link href="/name">Name changes</Link>
                   <ul>
-                    <li><Link href="/on/name">Ontario name changes</Link></li>
                     <li><Link href="/ab/name">Alberta name changes</Link></li>
+                    <li><Link href="/on/name">Ontario name changes</Link></li>
+                    <li><Link href="/mb/name">Manitoba name changes</Link></li>
                   </ul>
                 </li>
                 <li>
@@ -79,6 +80,14 @@ export default function About() {
                 <li><Link href="/pr">Permanent resident cards</Link></li>
                 <li><Link href="/sin">Social Insurance Registry</Link></li>
                 <li><Link href="/cra">Canada Revenue Agency</Link></li>
+              </ul>
+            </li>
+            <li>
+              <Link href="/resources">Resources</Link>
+              <ul>
+                <li><Link href="/ab/resources">Alberta resources</Link></li>
+                <li><Link href="/on/resources">Ontario resources</Link></li>
+                <li><Link href="/mb/resources">Manitoba resources</Link></li>
               </ul>
             </li>
             <li><Link href="/privacy">Privacy policy</Link></li>

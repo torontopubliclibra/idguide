@@ -18,6 +18,13 @@ export default function Guides() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div>
+            <h3>Alberta</h3>
+            <ul>
+              <li>
+                <Link href="/ab/name">Legal name changes</Link>
+              </li>
+            </ul>
+            <hr style={{marginBottom: '2rem'}}/>
             <h3>Ontario</h3>
             <ul>
               <li>
@@ -34,10 +41,10 @@ export default function Guides() {
               </li>
             </ul>
             <hr style={{marginBottom: '2rem'}}/>
-            <h3>Alberta</h3>
+            <h3>Manitoba</h3>
             <ul>
               <li>
-                <Link href="/ab/name">Legal name changes</Link>
+                <Link href="/mb/name">Legal name changes</Link>
               </li>
             </ul>
             <hr style={{marginBottom: '2rem'}}/>

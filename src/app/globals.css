@@ -232,6 +232,14 @@ hr {
   animation: fadeIn 0.75s;
 }
 
+blockquote {
+  border-left: 4px solid var(--black);
+  margin-left: 0;
+  padding-left: 1rem;
+  color: var(--darkgray);
+  background: var(--lightblue);
+}
+
 @media (max-width: 1200px) {
   textarea {
     min-height: 90px;

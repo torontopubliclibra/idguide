@@ -8,6 +8,19 @@ import Link from "next/link";
 
 const downloadSections = [
   {
+    id: "ab-name",
+    title: "Alberta name changes",
+    links: [
+      {
+        id: "dvs3132",
+        href: "/dvs3132.pdf",
+        label: "Alberta Name Change Application",
+        description: "DVS3132",
+      }
+    ],
+    more: { href: "/ab/name" },
+  },
+  {
     id: "on-name",
     title: "Ontario name changes",
     links: [
@@ -33,17 +46,17 @@ const downloadSections = [
     more: { href: "/on/name" },
   },
   {
-    id: "ab-name",
-    title: "Alberta name changes",
+    id: "mb-name",
+    title: "Manitoba name changes",
     links: [
       {
-        id: "dvs3132",
-        href: "/dvs3132.pdf",
-        label: "Alberta Name Change Application",
-        description: "DVS3132",
+        id: "application_change_of_name_adult",
+        href: "/mb-application_change_of_name_adult.en.pdf",
+        label: "Manitoba Name Change Application",
+        description: ""
       }
     ],
-    more: { href: "/ab/name" },
+    more: { href: "/mb/name" },
   },
   {
     id: "on-birth",
@@ -159,7 +172,10 @@ export default function Downloads() {
                       style={{display: 'block'}}
                     >
                       <span className="link-title" style={{display: 'flex', alignItems: 'center', gap: '0.5em'}}>
-                        <span className="button-label">{link.label} ({link.description})</span>
+                        <span className="button-label">
+                          {link.label}
+                          {link.description ? ` (${link.description})` : ''}
+                        </span>
                       </span>
                     </Link>
                   </li>

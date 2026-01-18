@@ -23,6 +23,9 @@ export default function Guides() {
               <li>
                 <Link href="/ab/name">Alberta legal name changes</Link>
               </li>
+              <li>
+                <Link href="/mb/name">Manitoba legal name changes</Link>
+              </li>
             </ul>
             <p>
               <small>We&apos;re working to add more provinces and territories. Check back soon for expanded support across Canada.</small>
