@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import TopBar from "./components/topBar";
 import Footer from "./components/footer";
+import Analytics from "./components/Analytics";
 
 export const metadata: Metadata = {
   title: "I.D. Guide",
@@ -54,6 +56,18 @@ export default function RootLayout({
   return (
     <html lang="en" dir="ltr">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-Y8RN4Q791P"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Y8RN4Q791P', { page_path: window.location.pathname });
+          `}
+        </Script>
         <link
           rel="preload"
           href="/Special_Gothic/SpecialGothic.ttf"
@@ -78,6 +92,7 @@ export default function RootLayout({
       </head>
       <body> 
         <a href="#main" className="skip-link" style={{position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden'}}>Skip to main content</a>
+        <Analytics />
         <TopBar/>
         {children}
         <Footer/>
