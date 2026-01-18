@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "./components/topBar";
 import Footer from "./components/footer";
 import Analytics from "./components/Analytics";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "I.D. Guide",
@@ -92,7 +93,9 @@ export default function RootLayout({
       </head>
       <body> 
         <a href="#main" className="skip-link" style={{position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden'}}>Skip to main content</a>
-        <Analytics />
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <TopBar/>
         {children}
         <Footer/>
