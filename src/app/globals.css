@@ -88,6 +88,8 @@ textarea {
   min-width: 100%;
 }
 
+
+
 button, .button {
   background: none;
   border: none;
@@ -217,11 +219,11 @@ hr {
 }
 
 .pageNav {
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
 }
 
 .pageNav ul {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 
 .pageNav p {
@@ -238,6 +240,36 @@ blockquote {
   padding-left: 1rem;
   color: var(--darkgray);
   background: var(--lightblue);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-bottom: 1.5rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border: 1px solid var(--dark2);
+  word-break: break-word;
+}
+
+th {
+  background-color: var(--dark4);
+  color: var(--white);
+  font-family: var(--font-special-gothic-expanded-one);
+  font-weight: 400;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--semiwhite);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--white);
 }
 
 @media (max-width: 1200px) {

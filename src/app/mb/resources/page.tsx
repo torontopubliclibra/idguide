@@ -17,44 +17,49 @@ export default function MbResources() {
           <p className={styles.intro}>
             This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.
           </p>
+          <h3>Province-wide</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
                 <th>Organization</th>
                 <th>Service</th>
-                <th>Region</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.manitobahumanrights.ca/">Manitoba Human Rights Commission</a></td>
+                <td>Human rights advocacy and support</td>
+              </tr>
+              <tr>
+                <td><a href="https://justicetrans.org/projects/2s-trans-self-advocacy-workbook/">JusticeTrans 2S Trans+ Self Advocacy Workbook</a></td>
+                <td>Self-advocacy workbook</td>
+              </tr>
+              <tr>
+                <td><a href="https://klinic.mb.ca/all-services/trans-health-trans-health-klinic/" target="_blank" rel="noreferrer">Trans Health Klinic Community Health</a></td>
+                <td>Medical, psychosocial, and peer supports</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Winnipeg</h3>
+          <table className={styles.resourceTable}>
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Service</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><a href="https://rainbowresourcecentre.org/" target="_blank" rel="noreferrer">Rainbow Resource Centre</a></td>
                 <td>I.D. clinics, support programs, and drop-ins</td>
-                <td>Winnipeg & province-wide</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.manitobahumanrights.ca/">Manitoba Human Rights Commission</a></td>
-                <td>Human rights advocacy and support</td>
-                <td>Province-wide</td>
-              </tr>
-              <tr>
-                <td><a href="https://justicetrans.org/projects/2s-trans-self-advocacy-workbook/">JusticeTrans 2S Trans+ Self Advocacy Workbook</a></td>
-                <td>Self-advocacy workbook</td>
-                <td>Province-wide</td>
               </tr>
               <tr>
                 <td><a href="https://www.sunshinehousewpg.org/" target="_blank" rel="noreferrer">Sunshine House</a></td>
                 <td>Peer support, drop-ins, and community resources</td>
-                <td>Winnipeg</td>
               </tr>
               <tr>
                 <td><a href="https://www.sunshinehousewpg.org/2s-trans-id-peer-support" target="_blank" rel="noreferrer">Sunshine House 2S/Trans ID Peer Support</a></td>
                 <td>I.D. peer support</td>
-                <td>Winnipeg</td>
-              </tr>
-              <tr>
-                <td><a href="https://klinic.mb.ca/all-services/trans-health-trans-health-klinic/" target="_blank" rel="noreferrer">Trans Health Klinic Community Health</a></td>
-                <td>Medical, psychosocial, and peer supports</td>
-                <td>Province-wide</td>
               </tr>
             </tbody>
           </table>

@@ -18,59 +18,72 @@ export default function AbResources() {
           <p className={styles.intro}>
             This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You&apos;ll find options for major cities, province-wide services, and online support.
           </p>
+          <h3>Province-wide</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
                 <th>Organization</th>
                 <th>Services</th>
-                <th>Region</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://albertahumanrights.ab.ca/">Alberta Human Rights Commission</a></td>
+                <td>Human rights advocacy and support</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.transwellnessinitiative.ca/" target="_blank" rel="noreferrer">Trans Wellness Initiative</a></td>
+                <td>Medical and community resources</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.connectfund.org/" target="_blank" rel="noreferrer">Connect Fund</a></td>
+                <td>Medical funding support</td>
+              </tr>
+              <tr>
+                <td><a href="https://www.foriaclinic.com/" target="_blank" rel="noreferrer">Foria Clinic</a></td>
+                <td>Virtual healthcare services</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Edmonton</h3>
+          <table className={styles.resourceTable}>
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Services</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><a href="https://www.slsedmonton.com/trans-id-project" target="_blank" rel="noreferrer">Student Legal Services of Edmonton Trans I.D. Clinic</a></td>
                 <td>Legal support for I.D. changes</td>
-                <td>Edmonton</td>
-              </tr>
-              <tr>
-                <td><a href="https://albertahumanrights.ab.ca/">Alberta Human Rights Commission</a></td>
-                <td>Human rights advocacy and support</td>
-                <td>Province-wide</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.transwellnessinitiative.ca/" target="_blank" rel="noreferrer">Trans Wellness Initiative</a></td>
-                <td>Medical and community resources</td>
-                <td>Province-wide</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.skippingstone.ca/" target="_blank" rel="noreferrer">Skipping Stone</a></td>
-                <td>Peer support, drop-ins</td>
-                <td>Calgary</td>
-              </tr>
-              <tr>
-                <td><a href="https://clg.ab.ca/">Calgary Legal Guidance</a></td>
-                <td>Legal services and support</td>
-                <td>Calgary</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.calgaryoutlink.ca/" target="_blank" rel="noreferrer">Calgary Outlink</a></td>
-                <td>Peer support, groups, and community resources</td>
-                <td>Calgary</td>
               </tr>
               <tr>
                 <td><a href="https://pridecentreofedmonton.ca/" target="_blank" rel="noreferrer">Pride Centre of Edmonton</a></td>
                 <td>Peer support, groups, and community resources</td>
-                <td>Edmonton</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Calgary</h3>
+          <table className={styles.resourceTable}>
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Services</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="https://www.skippingstone.ca/" target="_blank" rel="noreferrer">Skipping Stone</a></td>
+                <td>Peer support, drop-ins</td>
               </tr>
               <tr>
-                <td><a href="https://www.connectfund.org/" target="_blank" rel="noreferrer">Connect Fund</a></td>
-                <td>Medical funding support</td>
-                <td>Province-wide</td>
+                <td><a href="https://clg.ab.ca/">Calgary Legal Guidance</a></td>
+                <td>Legal services and support</td>
               </tr>
               <tr>
-                <td><a href="https://www.foriaclinic.com/" target="_blank" rel="noreferrer">Foria Clinic</a></td>
-                <td>Virtual healthcare services</td>
-                <td>Province-wide</td>
+                <td><a href="https://www.calgaryoutlink.ca/" target="_blank" rel="noreferrer">Calgary Outlink</a></td>
+                <td>Peer support, groups, and community resources</td>
               </tr>
             </tbody>
           </table>
