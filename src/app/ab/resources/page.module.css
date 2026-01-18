@@ -23,3 +23,12 @@
   padding-top: 1rem;
   line-height: 2rem;
 }
+
+@media (max-width: 1200px) {
+  .resources {
+    padding-top: 20px;
+  }
+  .resources .main {
+    padding: 30px;
+  }
+}
