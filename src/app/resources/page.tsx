@@ -33,6 +33,10 @@ export default function Resources() {
                   <td><a href="https://egale.ca/" target="_blank" rel="noreferrer">Egale Canada</a></td>
                   <td>Advocacy and research for 2SLGBTQI rights</td>
                 </tr>
+                <tr>
+                  <td><a href="https://translifeline.org/">Trans Lifeline</a></td>
+                  <td>Peer support hotline</td>
+                </tr>
               </tbody>
             </table>
           <hr />
