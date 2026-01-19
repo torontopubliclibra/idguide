@@ -13,19 +13,24 @@ export default function Footer({ locale }: { locale: string }) {
                 <div className={styles.footerCol}>
                     <div className={styles.footerLogo}>{t("Site.name", "I.D. Guide", locale)}</div>
                     <ul className={styles.footerLinks}>
+                        <li><Link href="/about">{t("Site.aboutTheProject", "About the project", locale)}</Link></li>
                         <li><Link href="/start">{t("Pages.start", "Get started", locale)}</Link></li>
-                        <li><Link href="/guides">{t("Pages.guides", "Guides", locale)}</Link></li>
-                        <li><Link href="/downloads">{t("Pages.downloads", "Downloads", locale)}</Link></li>
-                        <li><Link href="mailto:contact@idguide.ca">{t("Site.getInTouch", "Get in touch", locale)}</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>
                     <ul className={styles.footerLinks}>
-                        <li><Link href="/about">{t("Site.aboutTheProject", "About the project", locale)}</Link></li>
+                        <li><Link href="/guides">{t("Pages.guides", "Guides", locale)}</Link></li>
+                        <li><Link href="/downloads">{t("Pages.downloads", "Downloads", locale)}</Link></li>
                         <li><Link href="/resources">{t("Pages.resources", "Resources", locale)}</Link></li>
                         <li><Link href="/workshops">{t("Pages.workshops", "Workshops", locale)}</Link></li>
+                    </ul>
+                </div>
+                <div className={styles.footerCol}>
+                    <ul className={styles.footerLinks}>
+                        <li><Link href="/about#sitemap">{t("Pages.sitemap", "Sitemap", locale)}</Link></li>
                         <li><Link href="/about#disclaimers">{t("Pages.disclaimers", "Disclaimers", locale)}</Link></li>
                         <li><Link href="/privacy">{t("Pages.privacy", "Privacy policy", locale)}</Link></li>
+                        <li><Link href="mailto:contact@idguide.ca">{t("Site.getInTouch", "Get in touch", locale)}</Link></li>
                     </ul>
                 </div>
             </div>
