@@ -88,8 +88,6 @@ textarea {
   min-width: 100%;
 }
 
-
-
 button, .button {
   background: none;
   border: none;
@@ -275,6 +273,9 @@ tbody tr:nth-child(odd) {
 @media (max-width: 1200px) {
   table *{
     font-size: 0.95rem;
+  }
+  table th {
+    font-size: 0.85rem;
   }
 }
 
