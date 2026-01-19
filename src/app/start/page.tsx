@@ -180,7 +180,7 @@ export default function Start() {
             )}
             {(toggles.name || toggles.gender) && toggles.ontario && (
               <li>
-                <Link href="/on/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+                <Link href="/on/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your Ontario driver&apos;s license or I.D. card</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && !toggles.ontario && (
@@ -190,7 +190,7 @@ export default function Start() {
             )}
             {(toggles.name || toggles.gender) && toggles.citizen && (
               <li>
-                <Link href="/passport" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your passport</Link>
+                <Link href="/passport" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your Canadian passport</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.pr && (
