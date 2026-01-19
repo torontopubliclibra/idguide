@@ -43,7 +43,8 @@ export default function About() {
           <hr />
           
           <h3 id='sitemap'>Sitemap</h3>
-          <ul className={styles.sitemap}>
+          <div className={styles.sitemapContainer}>
+            <ul className={styles.sitemap}>
             <li><Link href="/">Home</Link></li>
             <li><Link href="/about">About</Link> <small>(you are here)</small></li>
             <li><Link href="/start">Get started</Link></li>
@@ -93,7 +94,8 @@ export default function About() {
               </ul>
             </li>
             <li><Link href="/privacy">Privacy policy</Link></li>
-          </ul>
+            </ul>
+          </div>
         </div>
         <div className="stacks"></div>
       </main>

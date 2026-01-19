@@ -179,7 +179,7 @@ export default function Downloads() {
           <hr/>
           {downloadSections.map(section => (
             <section key={section.id}>
-              <h3 id={section.id} style={{paddingBottom: '0.5rem'}}>
+              <h3 id={section.id} className={styles.h4} style={{paddingBottom: '0.5rem'}}>
                 {section.more ? (
                   <Link href={section.more.href} style={{textDecoration: 'none'}}>{section.title}</Link>
                 ) : (
