@@ -1,34 +1,44 @@
 
 "use client";
+
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { t } from "../../lib/i18n";
 
 export default function AbResources() {
+  let pageLocale = "en";
+  if (typeof window !== "undefined") {
+    const subdomain = window.location.hostname.split('.')[0];
+    if (subdomain === "fr") pageLocale = "fr";
+    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
+  }
+
   useEffect(() => {
-    document.title = "Alberta resources | I.D. Guide";
-  }, []);
+    document.title = `${t("Pages.albertaResources", "Alberta resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
+  }, [pageLocale]);
+
   return (
     <div className="page">
       <main className={styles.resources}>
-        <h2 className="page-title">Alberta resources</h2>
+        <h2 className="page-title">{t("Pages.albertaResources", "Alberta resources", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p className={styles.intro}>
-            This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You&apos;ll find options for major cities, province-wide services, and online support.
+            {t("ResourcesPage.albertaIntro", "This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You&apos;ll find options for major cities, province-wide services, and online support.", pageLocale)}
           </p>
-          <p>If you have a suggestion for this page, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>.</p>
+          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <hr />
           <div className="pageNav">
-            <p>Jump to: </p>
+            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
             <ul>
-              <li><Link href="#province-wide">Province-wide</Link></li>
+              <li><Link href="#province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</Link></li>
               <li><Link href="#edmonton">Edmonton</Link></li>
               <li><Link href="#calgary">Calgary</Link></li>
             </ul>
           </div>
           <hr />
-          <h3 id="province-wide">Province-wide</h3>
+          <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -98,14 +108,14 @@ export default function AbResources() {
             </tbody>
           </table>
           <hr />
-          <p>If you have a suggestion for a resource to add, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone.</p>
+          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <hr />
           <div className="pageNav">
-            <p>See also:</p>
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
-              <li><Link href="/start">Get started</Link></li>
-              <li><Link href="/ab/name">Alberta name change guide</Link></li>
-              <li><Link href="/resources">Canada-wide resources</Link></li>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</Link></li>
+              <li><Link href="/resources">{t("Pages.canadaWideResources", "Canada-wide resources", pageLocale)}</Link></li>
             </ul>
           </div>
         </div>

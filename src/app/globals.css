@@ -129,6 +129,21 @@ ul li {
   display: none;
 }
 
+.fr-disclaimer-bar {
+  background: var(--dark3);
+  color: var(--white);
+  text-align: left;
+  font-size: 1rem;
+  padding: 16px 30px;
+  padding-top: 100px;
+  margin-bottom: -80px;
+}
+@media (max-width: 900px) {
+  .fr-disclaimer-bar {
+    padding: 15px 20px;
+  }
+}
+
 .stacks {
   box-shadow:
     0 1px 1px rgba(0,0,0,0.15),

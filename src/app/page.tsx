@@ -1,61 +1,10 @@
-"use client";
+import Home from "./Home";
+import { getLocaleFromHost } from "./lib/getLocale";
+import { headers as nextHeaders } from "next/headers";
 
-import Link from "next/link";
-import { useEffect } from "react";
-import "./globals.css";
-import styles from "./page.module.css";
-import "./skip-link.css";
-
-
-export default function Home() {
-  useEffect(() => {
-    document.title = "I.D. Guide";
-  }, []);
-  return (
-    <div className={`page ${styles.page}`}>
-      <a href="#main" className="skip-link">Skip to main content</a>
-      <main id="main" className={styles.main}>
-        <div className={styles.intro}>
-          <div>
-            <p className={styles.headline}>
-              You deserve identity documents that reflect your life <em><small>(and don&#39;t make it more difficult)</small></em>.
-            </p>
-            <p>
-              Navigating name and gender marker changes can feel overwhelming, but <span className={styles.strong}>I.D. Guide</span> is here to help—offering <Link href="/guides">step-by-step guides</Link>, <Link href="/downloads">downloadable forms</Link>, and <Link href="/resources">resources</Link> to support you every step of the way.
-            </p>
-            <p>
-              Let&#39;s <Link href="/start">get started</Link>.
-            </p>
-          </div>
-          <div className={styles.group}>
-            <div className="stacks flipped"></div>
-            <div className={styles.guides}>
-              <h2>Assisting with:</h2>
-              <ul>
-                <li>
-                  <Link href="/name">Legal name changes</Link>
-                </li>
-                <li>
-                  <Link href="/health">Health card updates</Link>
-                </li>
-                <li>
-                  <Link href="/id">Driver&#39;s license or I.D. card updates</Link>
-                </li>
-                <li>
-                  <Link href="/passport">Canadian passport updates</Link>
-                </li>
-                <li>
-                  <Link href="/pr">Permanent resident card updates</Link>
-                </li>
-                <li>
-                  <Link href="/guides">and more...</Link>
-                </li>
-              </ul>
-            </div>
-            <div className="stacks"></div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
+export default async function Page() {
+  const hdrs = await nextHeaders();
+  const host = hdrs.get("host") || "";
+  const locale = getLocaleFromHost(host);
+  return <Home locale={locale} />;
 }

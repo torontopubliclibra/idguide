@@ -1,34 +1,44 @@
 
 "use client";
+
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { t } from "../../lib/i18n";
 
 export default function MbResources() {
+  let pageLocale = "en";
+  if (typeof window !== "undefined") {
+    const subdomain = window.location.hostname.split('.')[0];
+    if (subdomain === "fr") pageLocale = "fr";
+    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
+  }
+
   useEffect(() => {
-    document.title = "Manitoba resources | I.D. Guide";
-  }, []);
+    document.title = `${t("Pages.manitobaResources", "Manitoba resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
+  }, [pageLocale]);
+  
   return (
     <div className="page">
       <main className={styles.resources}>
-        <h2 className="page-title">Manitoba resources</h2>
+        <h2 className="page-title">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p className={styles.intro}>
-            This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.
+            {t("ResourcesPage.manitobaIntro", "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.", pageLocale)}
           </p>
-          <p>If you have a suggestion for this page, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>.</p>
+          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <hr />
           <div className="pageNav">
-            <p>Jump to: </p>
+            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
             <ul>
-              <li><Link href="#province-wide">Province-wide</Link></li>
+              <li><Link href="#province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</Link></li>
               <li><Link href="#winnipeg">Winnipeg</Link></li>
             </ul>
           </div>
           <hr />
 
-          <h3 id="province-wide">Province-wide</h3>
+          <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -76,11 +86,11 @@ export default function MbResources() {
           </table>
           <hr />
           <div className="pageNav">
-            <p>See also:</p>
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
-              <li><Link href="/start">Get started</Link></li>
-              <li><Link href="/mb/name">Manitoba name change guide</Link></li>
-              <li><Link href="/resources">Canada-wide resources</Link></li>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/mb/name">{t("Pages.manitobaNameChanges", "Manitoba name change guide", pageLocale)}</Link></li>
+              <li><Link href="/resources">{t("Pages.canadaWideResources", "Canada-wide resources", pageLocale)}</Link></li>
             </ul>
           </div>
         </div>

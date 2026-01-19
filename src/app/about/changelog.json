@@ -1,0 +1,40 @@
+[
+  {
+    "version": "1.0.4",
+    "date": "2026-01-19",
+    "changes": [
+      "Added French translation beta"
+    ]
+  },
+  {
+    "version": "1.0.3",
+    "date": "2026-01-18",
+    "changes": [
+      "Added Manitoba to start menu",
+      "Updated permanent resident card, Canada Revenue Agency, SIN, and Canadian passport pages",
+      "Updated privacy policy"
+    ]
+  },
+  {
+    "version": "1.0.2",
+    "date": "2026-01-18",
+    "changes": [
+      "Added Manitoba name changes",
+      "Added Alberta, Ontario, Manitoba, and Canada-wide resources"
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "date": "2026-01-17",
+    "changes": [
+      "Fixed links for Alberta guides in start menu"
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "date": "2025-12-14",
+    "changes": [
+      "Initial launch"
+    ]
+  }
+]

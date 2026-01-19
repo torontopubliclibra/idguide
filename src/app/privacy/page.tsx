@@ -3,15 +3,25 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { t } from "../lib/i18n";
 
 export default function Privacy() {
-    useEffect(() => {
-          document.title = 'Privacy policy | I.D. Guide';
-        }, []);
+
+  let pageLocale = "en";
+  if (typeof window !== "undefined") {
+    const subdomain = window.location.hostname.split('.')[0];
+    if (subdomain === "fr") pageLocale = "fr";
+    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
+  }
+
+  useEffect(() => {
+    document.title = `${t("Pages.privacy", "Privacy policy", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
+  }, [pageLocale]);
+  
   return (
     <div className="page">
       <main className={styles.privacy}>
-        <h2 className="page-title">Privacy Policy</h2>
+        <h2 className="page-title">{t("Pages.privacy", "Privacy policy", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
             <p className={styles.strong}>Last Revised: January 18, 2026</p>

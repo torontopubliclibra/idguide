@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { t } from "../lib/i18n";
 
 interface CheckboxProps {
   id: string;
@@ -23,9 +23,16 @@ const Checkbox = ({ id, label, checked, onChange, disabled }: CheckboxProps) => 
 };
 
 export default function Start() {
+  let pageLocale = "en";
+  if (typeof window !== "undefined") {
+    const subdomain = window.location.hostname.split('.')[0];
+    if (subdomain === "fr") pageLocale = "fr";
+    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
+  }
+
   useEffect(() => {
-    document.title = 'Get started | I.D. Guide';
-  }, []);
+    document.title = `${t("Pages.start", undefined, pageLocale)} | ${t("Site.name", undefined, pageLocale)}`;
+  }, [pageLocale]);
 
   const [toggles, setToggles] = useState(() => {
     if (typeof window !== 'undefined') {
@@ -106,106 +113,106 @@ export default function Start() {
   return (
     <div className="page">
       <main className={styles.start}>
-        <h2 className="page-title">Get started</h2>
+        <h2 className="page-title">{t("Pages.start", undefined, pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <p>To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.</p>
+          <p>{t("StartPage.intro", undefined, pageLocale)}</p>
           <hr/>
-          <p style={{marginTop: 10}}><span className={styles.strong}>You want to:</span></p>
+          <p style={{marginTop: 10}}><span className={styles.strong}>{t("StartPage.youWantTo", "You want to", pageLocale)}:</span></p>
           <ul className={styles.startList}>
             <li>
-              <Checkbox id="name" label="Change your legal name" checked={toggles.name} onChange={handleToggleChange} />
+              <Checkbox id="name" label={t("StartPage.changeLegalName", "Change your legal name", pageLocale)} checked={toggles.name} onChange={handleToggleChange} />
             </li>
             <li>
-              <Checkbox id="gender" label="Update your gender marker" checked={toggles.gender} onChange={handleToggleChange} />
+              <Checkbox id="gender" label={t("StartPage.updateGenderMarker", "Update your gender marker", pageLocale)} checked={toggles.gender} onChange={handleToggleChange} />
             </li>
           </ul>
-          <p><span className={styles.strong}>You live in:</span></p>
+          <p><span className={styles.strong}>{t("StartPage.youLiveIn", "You live in", pageLocale)}:</span></p>
           <ul className={styles.startList}>
               <li>
-                <Checkbox id="alberta" label="Alberta" checked={toggles.alberta} onChange={handleToggleChange} />
+                <Checkbox id="alberta" label={t("Site.alberta", "Alberta", pageLocale)} checked={toggles.alberta} onChange={handleToggleChange} />
               </li>
               <li>
-                <Checkbox id="manitoba" label="Manitoba" checked={toggles.manitoba} onChange={handleToggleChange} />
+                <Checkbox id="manitoba" label={t("Site.manitoba", "Manitoba", pageLocale)} checked={toggles.manitoba} onChange={handleToggleChange} />
               </li>
               <li>
-                <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
+                <Checkbox id="ontario" label={t("Site.ontario", "Ontario", pageLocale)} checked={toggles.ontario} onChange={handleToggleChange} />
               </li>
           </ul>
-          <p><span className={styles.strong}>Your citizenship status is:</span></p>
+          <p><span className={styles.strong}>{t("StartPage.citizenshipStatus", "Your citizenship status is", pageLocale)}:</span></p>
           <ul className={styles.startList}>
               <li>
-                <Checkbox id="citizen" label="Canadian citizen" checked={toggles.citizen} onChange={handleToggleChange} />
+                <Checkbox id="citizen" label={t("StartPage.canadianCitizen", "Canadian citizen", pageLocale)} checked={toggles.citizen} onChange={handleToggleChange} />
               </li>
               <li>
-                <Checkbox id="pr" label="Permanent resident" checked={toggles.pr} onChange={handleToggleChange} />
+                <Checkbox id="pr" label={t("StartPage.permanentResident", "Permanent resident", pageLocale)} checked={toggles.pr} onChange={handleToggleChange} />
               </li>
           </ul>
-          <h3>Your action plan:</h3>
+          <h3>{t("StartPage.actionPlan", "Your action plan", pageLocale)}:</h3>
           <ol>
             {toggles.name && !toggles.ontario && !toggles.alberta && !toggles.manitoba && (
               <li>
-                <Link href="/name" target="_blank">Change your legal name</Link>
+                <Link href="/name" target="_blank">{t("StartPage.action.changeLegalName", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.name && toggles.ontario && (
               <li>
-                <Link href="/on/name" target="_blank">Change your legal name with the Ontario Office of the Registrar General</Link>
+                <Link href="/on/name" target="_blank">{t("StartPage.action.changeLegalNameOntario", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.name && toggles.alberta && (
               <li>
-                <Link href="/ab/name" target="_blank">Change your legal name with the Alberta Vital Statistics Agency</Link>
+                <Link href="/ab/name" target="_blank">{t("StartPage.action.changeLegalNameAlberta", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.name && toggles.manitoba && (
               <li>
-                <Link href="/mb/name" target="_blank">Change your legal name with the Manitoba Vital Statistics Agency</Link>
+                <Link href="/mb/name" target="_blank">{t("StartPage.action.changeLegalNameManitoba", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.gender && (toggles.citizen) && (
               <li>
-                <Link href="/birth" target="_blank">Update the gender marker on your birth certificate</Link>
+                <Link href="/birth" target="_blank">{t("StartPage.action.updateGenderBirthCertificate", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.name && !toggles.ontario && (
               <li>
-                <Link href="/health" target="_blank">Update the name on your health card</Link>
+                <Link href="/health" target="_blank">{t("StartPage.action.updateNameHealthCard", undefined, pageLocale)}</Link>
               </li>
             )}
             {toggles.name && toggles.ontario && (
               <li>
-                <Link href="/on/health" target="_blank">Update the name on your Ontario health card</Link>
+                <Link href="/on/health" target="_blank">{t("StartPage.action.updateNameOntarioHealthCard", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.ontario && (
               <li>
-                <Link href="/on/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your Ontario driver&apos;s license or I.D. card</Link>
+                <Link href="/on/id" target="_blank">{t("StartPage.action.updateNameGenderOntarioID", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && !toggles.ontario && (
               <li>
-                <Link href="/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+                <Link href="/id" target="_blank">{t("StartPage.action.updateNameGenderID", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.citizen && (
               <li>
-                <Link href="/passport" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your Canadian passport</Link>
+                <Link href="/passport" target="_blank">{t("StartPage.action.updateNameGenderPassport", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.pr && (
               <li>
-                <Link href="/pr" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your permanent residency card</Link>
+                <Link href="/pr" target="_blank">{t("StartPage.action.updateNameGenderPR", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && (
               <li>
-                <Link href="/sin" target="_blank">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Social Insurance registry</Link>
+                <Link href="/sin" target="_blank">{t("StartPage.action.updateNameGenderSIN", undefined, pageLocale)}</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && (
               <li>
-                <Link href="/cra" target="_blank">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Canada Revenue Agency</Link>
+                <Link href="/cra" target="_blank">{t("StartPage.action.updateNameGenderCRA", undefined, pageLocale)}</Link>
               </li>
             )}
           </ol>
@@ -213,21 +220,21 @@ export default function Start() {
           {!(toggles.name) && !(toggles.gender) ? (
             <ul className={styles.startList}>
               <li>
-                Please select one or both checkboxes above to see your action plan.
+                {t("StartPage.selectCheckboxes", undefined, pageLocale)}
               </li>
             </ul>
           ) : (
             <p>
-              Each guide above provides step-by-step instructions, required forms, and tips to help make the process as smooth as possible.
+              {t("StartPage.guidesHelp", undefined, pageLocale)}
             </p>
           )}
           <hr />
           <div className="pageNav">
-            <p>See also:</p>
+            <p>{t("Site.seeAlso", undefined, pageLocale)}:</p>
             <ul>
-              <li><Link href="/guides">Guides</Link></li>
-              <li><Link href="/downloads">Downloads</Link></li>
-              <li><Link href="/resources">Resources</Link></li>
+              <li><Link href="/guides">{t("Pages.guides", undefined, pageLocale)}</Link></li>
+              <li><Link href="/downloads">{t("Pages.downloads", undefined, pageLocale)}</Link></li>
+              <li><Link href="/resources">{t("Pages.resources", undefined, pageLocale)}</Link></li>
             </ul>
           </div>
         </div>

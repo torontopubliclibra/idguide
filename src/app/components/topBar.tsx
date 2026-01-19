@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from "react";
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Nav from "./nav";
+import { t } from "../lib/i18n";
 
-export default function TopBar() {
+export default function TopBar({ locale }: { locale: string }) {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
     const topBarRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
@@ -31,13 +31,14 @@ export default function TopBar() {
     }
 
     return (
-        <div className="top-bar" ref={topBarRef}>
-            <Link href="/" onClick={closeMobileNav}>
-                <h1>
-                    I.D. Guide
-                </h1>
-            </Link>
-            <Nav mobileOpen={isMobileNavOpen} closeMobileNav={closeMobileNav}/>
+        <>
+            <div className="top-bar" ref={topBarRef}>
+                <Link href="/" onClick={closeMobileNav}>
+                    <h1>
+                        {t("Site.name", "I.D. Guide", locale)}
+                    </h1>
+                </Link>
+                <Nav mobileOpen={isMobileNavOpen} closeMobileNav={closeMobileNav} locale={locale} />
                 <button
                     onClick={toggleMobileNav}
                     style={{
@@ -47,7 +48,7 @@ export default function TopBar() {
                         cursor: 'pointer',
                         outline: 'none',
                     }}
-                    aria-label={isMobileNavOpen ? 'Close menu' : 'Open menu'}
+                    aria-label={isMobileNavOpen ? t("TopBar.closeMenu", "Close menu", locale) : t("TopBar.openMenu", "Open menu", locale)}
                 >
                     <span
                         style={{
@@ -59,13 +60,19 @@ export default function TopBar() {
                     >
                         <Image
                             src={isMobileNavOpen ? '/menu-open.svg' : '/menu.svg'}
-                            alt="Menu icon"
+                            alt={t("TopBar.menuIconAlt", "Menu icon", locale)}
                             width={40}
                             height={40}
                             style={{ filter: 'invert(1)', transition: 'filter 0.3s' }}
                         />
                     </span>
                 </button>
-        </div>
+            </div>
+            {locale === "fr" && (
+                <div className="fr-disclaimer-bar">
+                    La traduction française est actuellement une fonctionnalité bêta. Certaines sections du site peuvent être incomplètes ou mal traduites.
+                </div>
+            )}
+        </>
     );
 }

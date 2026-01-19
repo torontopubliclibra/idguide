@@ -1,71 +1,73 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from "./nav.module.css";
+import { t } from "../lib/i18n";
 
-export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => void}) {
+export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => void, locale: string}) {
+    const { locale } = props;
     return (
         <nav className={props.mobileOpen ? `${styles.mobileOpen} ${styles.navContainer}` : `${styles.navContainer}`} onClick={props.closeMobileNav}>
             <ul className={styles.nav}>
                 <li>
                     <Link href="/start">
-                        Start
-                        <Image src="/start.svg" alt="Start icon" width={20} height={20} />
+                        {t("Pages.start", "Start", locale)}
+                        <Image src="/start.svg" alt={t("Nav.startIconAlt", "Start icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li className={`${styles.dropdown}`}>
                     <Link href="/guides">
-                        Guides
-                        <Image src="/guide.svg" alt="Guide icon" width={20} height={20} />
+                        {t("Pages.guides", "Guides", locale)}
+                        <Image src="/guide.svg" alt={t("Nav.guidesIconAlt", "Guides icon", locale)} width={20} height={20} />
                     </Link>
                     <ul className={styles.subNav}>
                         <li>
-                            <Link href="/name">Name changes</Link>
+                            <Link href="/name">{t("Pages.nameChanges", "Name changes", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/birth">Birth certificates</Link>
+                            <Link href="/birth">{t("Pages.birthCertificates", "Birth certificates", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/health">Health cards</Link>
+                            <Link href="/health">{t("Pages.healthCards", "Health cards", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/id">Driver&apos;s licenses & I.D. cards</Link>
+                            <Link href="/id">{t("Pages.idCards", "Driver's licenses & I.D. cards", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/passport">Canadian passports</Link>
+                            <Link href="/passport">{t("Pages.passports", "Passports", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/pr" title='Permanent resident cards'>Permanent resident cards</Link>
+                            <Link href="/pr" title={t("Pages.prCards", "Permanent resident cards", locale)}>{t("Pages.prCards", "Permanent resident cards", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/sin" title='Social Insurance Registry'>Social Insurance Registry</Link>
+                            <Link href="/sin" title={t("Pages.sin", "SIN", locale)}>{t("Pages.sin", "SIN", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/cra" title='Canada Revenue Agency'>Canada Revenue Agency</Link>
+                            <Link href="/cra" title={t("Pages.cra", "CRA", locale)}>{t("Pages.cra", "CRA", locale)}</Link>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <Link href="/resources" title='Resources'>
-                        Resources
-                        <Image src="/resources.svg" alt="Resources icon" width={20} height={20} />
+                    <Link href="/resources" title={t("Pages.resources", "Resources", locale)}>
+                        {t("Pages.resources", "Resources", locale)}
+                        <Image src="/resources.svg" alt={t("Nav.resourcesIconAlt", "Resources icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li>
-                    <Link href="/downloads" title='Downloads'>
-                        Downloads
-                        <Image src="/download.svg" alt="Download icon" width={20} height={20} />
+                    <Link href="/downloads" title={t("Pages.downloads", "Downloads", locale)}>
+                        {t("Pages.downloads", "Downloads", locale)}
+                        <Image src="/download.svg" alt={t("Nav.downloadsIconAlt", "Downloads icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li>
-                    <Link href="/about" title='About'>
-                        About
-                        <Image src="/info.svg" alt="About icon" width={20} height={20} />
+                    <Link href="/about" title={t("Pages.about", "About", locale)}>
+                        {t("Pages.about", "About", locale)}
+                        <Image src="/info.svg" alt={t("Nav.aboutIconAlt", "About icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>
-                    <Link href="https://en.wikipedia.org/wiki/Main_Page" title='Quick exit to Wikipedia.org'>
-                        Exit
-                        <Image src="/close.svg" alt="Exit icon" width={20} height={20} />
+                    <Link href="https://en.wikipedia.org/wiki/Main_Page" title={t("Nav.exitTitle", "Exit", locale)}>
+                        {t("Site.exit", "Exit", locale)}
+                        <Image src="/close.svg" alt={t("Site.exitIconAlt", "Exit icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
             </ul>

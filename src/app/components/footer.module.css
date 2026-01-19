@@ -88,8 +88,9 @@
   text-decoration: none;
 }
 
-.footerBottomLinks a:hover {
+.footerBottom a:hover {
   color: var(--color2);
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {

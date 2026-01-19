@@ -3,32 +3,41 @@
 import Link from 'next/link';
 import { useEffect } from "react";
 import styles from "./page.module.css";
+import { t } from "../lib/i18n";
 
 export default function PR() {
-    useEffect(() => {
-      document.title = 'Permanent resident cards | I.D. Guide';
-    }, []);
+  let pageLocale = "en";
+  if (typeof window !== "undefined") {
+    const subdomain = window.location.hostname.split('.')[0];
+    if (subdomain === "fr") pageLocale = "fr";
+    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
+  }
+
+  useEffect(() => {
+    document.title = `${t("Pages.prCards", "Permanent resident cards", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
+  }, [pageLocale]);
+
   return (
     <div className="page">
       <main className={styles.pr}>
-        <h2 className="page-title">Permanent resident cards</h2>
+        <h2 className="page-title">{t("Pages.prCards", "Permanent resident cards", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div className="pageNav">
-            <p>Jump to:</p>
+            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
             <ul>
-              <li><Link href="#process">Process</Link></li>
-              <li><Link href="#requirements">Requirements</Link></li>
-              <li><Link href="#important-considerations">Important considerations</Link></li>
-              <li><Link href="#sources">Sources</Link></li>
+              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
+              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
+              <li><Link href="#important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
+              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
             </ul>
           </div>
           <hr />
 
-          <h3 id="process">Process</h3>
+          <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the <Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">PR Card Application (IMM-5445)</Link> to start the process. The fee is $50.00.</p>
 
-          <h3 id="requirements">Requirements</h3>
+          <h3 id="requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
           <p>Use the <Link href="/downloads#pr">Permanent Resident Card Document Checklist (IMM-5644)</Link> to confirm which documents you need. Include the completed checklist with your application</p>
           <ul>
             <li>Copy of the receipt showing the fees paid</li>
@@ -51,7 +60,7 @@ export default function PR() {
             <li><Link href="/name">Change of name certificate</Link></li>
             <li>If your PR card was lost, include a copy of a police report or incident number</li>
           </ul>
-          <h4>In exceptional cases</h4>
+          <h4>{t("Subheadings.inExceptionalCases", "In exceptional cases", pageLocale)}</h4>
           <ul>
             <li>If you cannot obtain a primary identity document, provide:
               <ul>
@@ -69,7 +78,7 @@ export default function PR() {
             All statutory declarations must be certified by an accredited commissioner of oaths. If submitting a statutory declaration, also provide a letter explaining the exceptional circumstances and why you cannot obtain identity documents.
           </blockquote>
           <br/>
-          <h4>Translations</h4>
+          <h4>{t("Subheadings.translations", "Translations", pageLocale)}</h4>
           <ul>
             <li>Any document not in English or French must be accompanied by:
               <ul>
@@ -79,23 +88,23 @@ export default function PR() {
             </li>
             <li>Translations must not be done by the applicant or their family members</li>
           </ul>
-          <h3 id="important-considerations">Important considerations</h3>
+          <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <ul>
             <li>Temporary Residence Permits cannot be amended to reflect changes made in Canada (e.g., a name change completed in Ontario). Your temporary residence permit must match your passport.</li>
             <li>If your name change document was issued outside of Canada, you must also provide a provincial ID in your new name (such as a driver&#39;s license, photo card, or health card).</li>
           </ul>
           <hr/>
-          <h3 id="sources">Sources</h3>
+          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>
             <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">Government of Canada - Applying for a permanent resident card</Link></li>
             <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5530-request-reissue-permanent-resident-card-card" target="_blank" rel="noreferrer">Government of Canada - Request to Reissue a Permanent Resident Card</Link></li>
           </ul>
           <hr/>
           <div className="pageNav">
-            <p>See also:</p>
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
-              <li><Link href="/sin">Social Insurance Registry</Link></li>
-              <li><Link href="/cra">Canada Revenue Agency</Link></li>
+              <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
+              <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
             </ul>
           </div>
         </div>

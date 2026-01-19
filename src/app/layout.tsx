@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
@@ -5,6 +6,9 @@ import TopBar from "./components/topBar";
 import Footer from "./components/footer";
 import Analytics from "./components/Analytics";
 import { Suspense } from "react";
+import { getLocaleFromHost } from "./lib/getLocale";
+import { headers as nextHeaders } from "next/headers";
+import { t } from "./lib/i18n";
 
 export const metadata: Metadata = {
   title: "I.D. Guide",
@@ -49,13 +53,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const hdrs = await nextHeaders();
+  const host = hdrs.get("host") || "";
+  const locale = getLocaleFromHost(host);
+  
   return (
-    <html lang="en" dir="ltr">
+    <html lang={locale} dir="ltr">
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Y8RN4Q791P"
@@ -91,14 +99,27 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
         <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
       </head>
-      <body> 
-        <a href="#main" className="skip-link" style={{position: 'absolute', left: '-9999px', top: 'auto', width: '1px', height: '1px', overflow: 'hidden'}}>Skip to main content</a>
+      <body>
+        <a
+          href="#main"
+          className="skip-link"
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            top: "auto",
+            width: "1px",
+            height: "1px",
+            overflow: "hidden",
+          }}
+        >
+          {t('HomePage.skipToMain', 'Skip to main content', locale)}
+        </a>
         <Suspense>
           <Analytics />
         </Suspense>
-        <TopBar/>
+        <TopBar locale={locale} />
         {children}
-        <Footer/>
+        <Footer locale={locale} />
       </body>
     </html>
   );
