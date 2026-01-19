@@ -12,12 +12,7 @@ export function LanguageToggle({ locale }: { locale: string }) {
 
   if (typeof window !== "undefined") {
     const { protocol, hostname, port, pathname, search, hash } = window.location;
-    let baseHost = hostname;
-
-    if (hostname.startsWith("fr.")) {
-      baseHost = hostname.replace(/^fr\./, "");
-    }
-
+    const baseHost = hostname.replace(/^fr\./, "");
     const portPart = port ? `:${port}` : "";
 
     toEnglish = `${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`;
