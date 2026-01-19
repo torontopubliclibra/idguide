@@ -14,7 +14,6 @@ export default function OnName() {
         <h2 className="page-title">Ontario name changes</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-
           <div className="pageNav">
             <p>Jump to: </p>
             <ul>
@@ -25,10 +24,8 @@ export default function OnName() {
             </ul>
           </div>
           <hr />
-
           <h3 id='process'>Process</h3>
           <p>To legally change your name in Ontario, you must complete the <Link href="/downloads#on-name">Application to Change an Adult&#39;s Name (11155e)</Link>. The fee is $137.00.</p>
-
           <h3 id='requirements'>Requirements</h3>
           <h4>Information you&#39;ll need to provide</h4>
           <p>The application asks for detailed personal information, including:</p>
@@ -44,7 +41,6 @@ export default function OnName() {
             <li>Information about any current or past financial judgments, fines, or bankruptcy</li>
           </ol>
           <p>You must also provide supporting documents, such as your birth certificate (original or certified copy), and translations if not in English or French.</p>
-
           <h4>Extra sections and documents</h4>
           <ul>
             <li>If you are married or in a conjugal relationship, you must notify your partner or spouse and complete Part 2.</li>
@@ -52,10 +48,8 @@ export default function OnName() {
             <li>If you have any law enforcement orders, criminal convictions, or pending charges, you&#39;ll need a police record check. Download the <Link href="/downloads#on-name">Requirements for a Police Record Check for a Change of Name form (5349e)</Link> to ensure the check meets all requirements.</li>
             <li>If you were born elsewhere in Canada and want a new birth certificate, contact the province or territory where you were born after you get your change of name certificate.</li>
           </ul>
-
           <h4>Guarantor statement</h4>
           <p>You&#39;ll need a guarantor who can confirm you&#39;ve lived in Ontario for the past 12 months. Most people use a medical professional, but other options include provincial judges, justices of the peace, chiefs of Indian bands, marriage officiants, medical practitioners, lawyers, municipal heads/clerks, school principals, and bank managers/signing officers. If you can&#39;t find someone who meets the requirements, you can use a non-relative who has known you for at least five years and can confirm your Ontario residency. Have your guarantor complete and sign the statement before you submit your application.</p>
-
           <h4>Previous identity documents</h4>
           <ul>
             <li>If you were born in Ontario and have a valid birth certificate, include the originals (or certified copies) of all previously issued short- or long-form certificates.</li>
@@ -63,7 +57,6 @@ export default function OnName() {
             <li>If you don&#39;t have a birth certificate, you&#39;ll likely need to apply for one before submitting your name change application.</li>
             <li>If any supporting documents are not in English or French, you must provide a translation. See page 13 for translator requirements.</li>
           </ul>
-
           <h4>Request for non-publication</h4>
           <p>By default, all name changes in Ontario are published in The Ontario Gazette (online and in print). If you are transgender, First Nations, Inuit, or Métis, you can request non-publication by submitting a <Link href="/downloads#on-name">Request for Non-Publication form (11320e)</Link> with your application. If you do not want your previous name published, we strongly recommend including this form. Fill out the request and submit it with your application.</p>
           <h4>Commissioning</h4>
@@ -71,7 +64,6 @@ export default function OnName() {
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/on/resources" target='blank'>Ontario resources</Link> for a list of local and province-wide organizations.</p>
           </blockquote>
-
           <h3 id="submitting-your-application">Submitting your application</h3>
           <h4>By mail</h4>
           <p>Mail your completed form, payment, and required documents to:</p>
@@ -84,10 +76,8 @@ export default function OnName() {
           <textarea readOnly name="address" id="address" value={
             `ServiceOntario, 47 Sheppard Avenue East, Unit 417, 4th Floor, Toronto, ON, M2N 5N1 `}
           />
-
           <h4>Delivery time</h4>
           <p>If your application is complete and accurate, you should receive your name change certificate in 6-8 weeks. It may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 8 weeks.</p>
-
           <h4>Important considerations</h4>
           <p>Give yourself plenty of time to gather information and complete the forms. It may take several weeks to get everything ready.</p>
           <p>Print clearly with blue or black ink. Don&#39;t use correction fluid. If you make a mistake or need to change information:</p>
@@ -99,14 +89,12 @@ export default function OnName() {
           </ul>
           <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/on/id">driver&#39;s license, photo card</Link>, or <Link href="/on/health">health card</Link>. By law, you must notify the Ministry of Transportation within 6 days of legally changing your name if you have a driver&#39;s license.</p>
           <p>If you want to update your gender marker and were born in Ontario, you can submit the <Link href="/downloads#on-birth">Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)</Link> along with your name change application. For details, see the <Link href="/on/birth">birth certificates guide</Link>.</p>
-
           <hr />
           <h3 id="sources">Sources</h3>
           <ul>
             <li><Link href="https://www.ontario.ca/page/change-name" target="_blank" rel="noreferrer">ServiceOntario - Change of name</Link></li>
           </ul>
           <hr />
-
           <div className="pageNav">
             <p>See also:</p>
             <ul>

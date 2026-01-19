@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 
-
 export default function AbName() {
     useEffect(() => {
       document.title = 'Alberta name changes | I.D. Guide';
@@ -43,10 +42,8 @@ export default function AbName() {
             <li>Criminal record check or police information check (for applicants 18+)</li>
             <li>All Alberta birth certificates for anyone whose name is being changed</li>
           </ol>
-
           <h4>Previous identity documents</h4>
           <p>All Alberta birth certificates issued before your legal name change must be surrendered with your application. These will be replaced free of charge with new certificates showing your new name. If you were born outside Alberta, you must contact the vital statistics office in your birth jurisdiction for new birth certificates after your name change is processed.</p>
-
           <h4>Commissioning</h4>
           <p>You must swear or affirm the affidavit in your application in front of a Commissioner for Oaths or Notary Public in Alberta. The commissioner will verify your identity and the accuracy of your information, and will stamp or seal the document. The commissioner does not need to know you personally. Many notary/commissioner offices in Ontario will commission these documents for trans individuals for free; otherwise, the typical fee is $20-40.</p>
           <p>
@@ -55,7 +52,6 @@ export default function AbName() {
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/ab/resources" target='blank'>Alberta resources</Link> for a list of local and province-wide organizations.</p>
           </blockquote>
-          
           <h3 id='submitting-your-application'>Submitting your application</h3>
             <h4>In person</h4>
             <p>Applications for a legal change of name in Alberta must be submitted in person at a registry agent office. Photocopies, faxes, and emails are not accepted. If you have questions about mail service disruptions, contact the registry agent or Vital Statistics for guidance.</p>

@@ -1,5 +1,5 @@
-
 "use client";
+
 import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
@@ -15,8 +15,10 @@ export default function Resources() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p className={styles.intro}>
-            This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people across Canada. You&#39;ll also find links below to province-specific resources.
+            This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people across Canada. You&#39;ll also find links below to our lists of region-specific resources.
           </p>
+          <p>If you have a suggestion for this page, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>.</p>
+          <br/>
             <table className={styles.resourceTable}>
               <thead>
                 <tr>
@@ -34,7 +36,7 @@ export default function Resources() {
                   <td>Advocacy and research for 2SLGBTQI rights</td>
                 </tr>
                 <tr>
-                  <td><a href="https://translifeline.org/">Trans Lifeline</a></td>
+                  <td><a href="https://translifeline.org/" target="_blank" rel="noreferrer">Trans Lifeline</a></td>
                   <td>Peer support hotline</td>
                 </tr>
               </tbody>
@@ -51,8 +53,6 @@ export default function Resources() {
               <Link href="/mb/resources">Manitoba resources</Link>
             </li>
           </ul>
-          <hr />
-          <p>If you have a suggestion for a resource to add, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone.</p>
         </div>
         <div className="stacks"></div>
       </main>

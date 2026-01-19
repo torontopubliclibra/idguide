@@ -45,21 +45,21 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                     </ul>
                 </li>
                 <li>
-                    <Link href="/about" title='About'>
-                        About
-                        <Image src="/info.svg" alt="About icon" width={20} height={20} />
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/workshops" title='Workshops'>
-                        Workshops
-                        <Image src="/workshop.svg" alt="Workshop icon" width={20} height={20} />
+                    <Link href="/resources" title='Resources'>
+                        Resources
+                        <Image src="/resources.svg" alt="Resources icon" width={20} height={20} />
                     </Link>
                 </li>
                 <li>
                     <Link href="/downloads" title='Downloads'>
                         Downloads
                         <Image src="/download.svg" alt="Download icon" width={20} height={20} />
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/about" title='About'>
+                        About
+                        <Image src="/info.svg" alt="About icon" width={20} height={20} />
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>

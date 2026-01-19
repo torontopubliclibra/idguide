@@ -18,13 +18,13 @@ export default function Guides() {
             <p>The process for changing your legal name will vary depending on your province or territory of residency:</p>
             <ul style={{margin: '1.5rem 0'}}>
               <li>
-                <Link href="/on/name">Ontario legal name changes</Link>
-              </li>
-              <li>
                 <Link href="/ab/name">Alberta legal name changes</Link>
               </li>
               <li>
                 <Link href="/mb/name">Manitoba legal name changes</Link>
+              </li>
+              <li>
+                <Link href="/on/name">Ontario legal name changes</Link>
               </li>
             </ul>
             <p>

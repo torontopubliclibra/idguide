@@ -17,7 +17,18 @@ export default function MbResources() {
           <p className={styles.intro}>
             This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.
           </p>
-          <h3>Province-wide</h3>
+          <p>If you have a suggestion for this page, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>.</p>
+          <hr />
+          <div className="pageNav">
+            <p>Jump to: </p>
+            <ul>
+              <li><Link href="#province-wide">Province-wide</Link></li>
+              <li><Link href="#winnipeg">Winnipeg</Link></li>
+            </ul>
+          </div>
+          <hr />
+
+          <h3 id="province-wide">Province-wide</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -27,11 +38,11 @@ export default function MbResources() {
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://www.manitobahumanrights.ca/">Manitoba Human Rights Commission</a></td>
+                <td><a href="https://www.manitobahumanrights.ca/" target="_blank" rel="noreferrer">Manitoba Human Rights Commission</a></td>
                 <td>Human rights advocacy and support</td>
               </tr>
               <tr>
-                <td><a href="https://justicetrans.org/projects/2s-trans-self-advocacy-workbook/">JusticeTrans 2S Trans+ Self Advocacy Workbook</a></td>
+                <td><a href="https://justicetrans.org/projects/2s-trans-self-advocacy-workbook/" target="_blank" rel="noreferrer">JusticeTrans 2S Trans+ Self Advocacy Workbook</a></td>
                 <td>Self-advocacy workbook</td>
               </tr>
               <tr>
@@ -40,7 +51,7 @@ export default function MbResources() {
               </tr>
             </tbody>
           </table>
-          <h3>Winnipeg</h3>
+          <h3 id="winnipeg">Winnipeg</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -63,8 +74,6 @@ export default function MbResources() {
               </tr>
             </tbody>
           </table>
-          <hr />
-          <p>If you have a suggestion for a resource to add, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone.</p>
           <hr />
           <div className="pageNav">
             <p>See also:</p>

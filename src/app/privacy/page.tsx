@@ -14,7 +14,7 @@ export default function Privacy() {
         <h2 className="page-title">Privacy Policy</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-            <p className={styles.strong}>Last Revised: December 7, 2025</p>
+            <p className={styles.strong}>Last Revised: January 18, 2026</p>
             <section>
             <p>
                 I.D. Guide values your privacy. This page explains what information we collect, how we use it, and your choices. We aim to keep things simple and transparent. Our website may link to other sites for your convenience. We are not responsible for the privacy practices or content of those external sites.
@@ -29,7 +29,7 @@ export default function Privacy() {
             <h4>How We Use Information</h4>
             <section>
             <p>
-                We use the information you provide (such as through our email) only to respond to your inquiry or improve our site. We do not sell, rent, or share your personal information with third parties. Analytics and cookies help us understand site traffic and usage, but do not identify you personally.
+                We use the information you provide (such as through our email) only to respond to your inquiry or improve our site. We do not sell, rent, or share your personal information with third parties. Analytics and cookies help us understand site traffic and usage, but do not identify you personally. You can disable cookies through your browser settings, but this may affect your experience on our site.
             </p>
             </section>
             <h4>Security</h4>

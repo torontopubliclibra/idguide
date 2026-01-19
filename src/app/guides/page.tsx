@@ -25,6 +25,13 @@ export default function Guides() {
               </li>
             </ul>
             <hr style={{marginBottom: '2rem'}}/>
+            <h3>Manitoba</h3>
+            <ul>
+              <li>
+                <Link href="/mb/name">Legal name changes</Link>
+              </li>
+            </ul>
+            <hr style={{marginBottom: '2rem'}}/>
             <h3>Ontario</h3>
             <ul>
               <li>
@@ -38,13 +45,6 @@ export default function Guides() {
               </li>
               <li>
                 <Link href="/on/id">Driver&apos;s license and I.D. card updates</Link>
-              </li>
-            </ul>
-            <hr style={{marginBottom: '2rem'}}/>
-            <h3>Manitoba</h3>
-            <ul>
-              <li>
-                <Link href="/mb/name">Legal name changes</Link>
               </li>
             </ul>
             <hr style={{marginBottom: '2rem'}}/>

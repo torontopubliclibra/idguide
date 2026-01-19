@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 import styles from "./page.module.css";
 
-
 export default function AbResources() {
   useEffect(() => {
     document.title = "Alberta resources | I.D. Guide";
@@ -18,7 +17,18 @@ export default function AbResources() {
           <p className={styles.intro}>
             This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You&apos;ll find options for major cities, province-wide services, and online support.
           </p>
-          <h3>Province-wide</h3>
+          <p>If you have a suggestion for this page, or you spot an error, please <Link href="mailto:contact@idguide.ca">contact us</Link>.</p>
+          <hr />
+          <div className="pageNav">
+            <p>Jump to: </p>
+            <ul>
+              <li><Link href="#province-wide">Province-wide</Link></li>
+              <li><Link href="#edmonton">Edmonton</Link></li>
+              <li><Link href="#calgary">Calgary</Link></li>
+            </ul>
+          </div>
+          <hr />
+          <h3 id="province-wide">Province-wide</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -28,7 +38,7 @@ export default function AbResources() {
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://albertahumanrights.ab.ca/">Alberta Human Rights Commission</a></td>
+                <td><a href="https://albertahumanrights.ab.ca/" target="_blank" rel="noreferrer">Alberta Human Rights Commission</a></td>
                 <td>Human rights advocacy and support</td>
               </tr>
               <tr>
@@ -45,7 +55,7 @@ export default function AbResources() {
               </tr>
             </tbody>
           </table>
-          <h3>Edmonton</h3>
+          <h3 id="edmonton">Edmonton</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>
@@ -64,7 +74,7 @@ export default function AbResources() {
               </tr>
             </tbody>
           </table>
-          <h3>Calgary</h3>
+          <h3 id="calgary">Calgary</h3>
           <table className={styles.resourceTable}>
             <thead>
               <tr>

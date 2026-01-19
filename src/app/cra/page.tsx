@@ -25,16 +25,17 @@ export default function CRA() {
           <hr />
 
           <h3 id="process">Process</h3>
-          <p>You are currently able to update your information by phone, mail, or fax.</p>
-          <p>For information on the different processes for submission via phone, or mail/fax, we recommend visiting the online portal for addresses and phone numbers relevant to your area.</p>
+          <p>You must notify the Canada Revenue Agency (CRA) of any name changes.</p>
+          <p>If you have changed both your first and last name, you must send a letter by mail or fax. If you have only changed either your first or last name (and have not previously changed your name), you may also notify the CRA by phone.</p>
+          <p>For information on the different processes for submission via phone, mail, or fax, and to find the location of your tax centre, we recommend visiting <Link href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/should-you-tell-cra-about-your-change-name" target="_blank" rel="noreferrer">the online portal</Link> for addresses and phone numbers relevant to your area.</p>
 
           <h3 id="requirements">Requirements</h3>
-          <p>You will need to provide the CRA with a letter containing the following:</p>
+          <p>If you are notifying the CRA by mail or fax, your letter should include:</p>
           <ul>
-            <li>An original or certified true copy of one of the following documents:
+            <li>Original or certified true copy of one of the following documents:
               <ul>
-                <li>A name change certificate from a provincial/territorial vital statistics department</li>
-                <li>A court order issued under an act on change of name</li>
+                <li>Name change certificate from a provincial/territorial vital statistics department</li>
+                <li>Court order issued under an act on change of name</li>
               </ul>
             </li>
             <li>Your old and new names</li>

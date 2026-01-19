@@ -22,23 +22,42 @@ const Checkbox = ({ id, label, checked, onChange, disabled }: CheckboxProps) => 
   );
 };
 
-
 export default function Start() {
-    useEffect(() => {
-      document.title = 'Get started | I.D. Guide';
-    }, []);
-  const [toggles, setToggles] = useState({
-    name: true,
-    gender: true,
-    ontario: false,
-    alberta: false,
-    citizen: false,
-    pr: false,
+  useEffect(() => {
+    document.title = 'Get started | I.D. Guide';
+  }, []);
+
+  const [toggles, setToggles] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = window.localStorage.getItem('idguide-toggles');
+      if (saved) {
+        try {
+          return JSON.parse(saved);
+        } catch {
+          // ignore parse error, fall back to default
+        }
+      }
+    }
+    return {
+      name: true,
+      gender: true,
+      alberta: false,
+      manitoba: false,
+      ontario: false,
+      citizen: true,
+      pr: false,
+    };
   });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.localStorage.setItem('idguide-toggles', JSON.stringify(toggles));
+    }
+  }, [toggles]);
 
   function handleToggleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, checked } = event.target;
-    setToggles((prevToggles) => {
+    setToggles((prevToggles: typeof toggles) => {
       if (name === 'citizen' && checked) {
         return {
           ...prevToggles,
@@ -58,6 +77,7 @@ export default function Start() {
           ...prevToggles,
           [name]: checked,
           alberta: false,
+          manitoba: false,
         };
       }
       if (name === 'alberta' && checked) {
@@ -65,6 +85,15 @@ export default function Start() {
           ...prevToggles,
           [name]: checked,
           ontario: false,
+          manitoba: false,
+        };
+      }
+      if (name === 'manitoba' && checked) {
+        return {
+          ...prevToggles,
+          [name]: checked,
+          ontario: false,
+          alberta: false,
         };
       }
       return {
@@ -93,153 +122,105 @@ export default function Start() {
           </ul>
           <p><span className={styles.strong}>I live in:</span></p>
           <ul className={styles.startList}>
-            {
-              !(toggles.ontario) ? (
               <li>
                 <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
               </li>
-            ) : (
-              <li>
-                <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
-              </li>
-              )
-            }
-            {
-              !(toggles.alberta) ? (
               <li>
                 <Checkbox id="alberta" label="Alberta" checked={toggles.alberta} onChange={handleToggleChange} />
               </li>
-            ) : (
               <li>
-                <Checkbox id="alberta" label="Alberta" checked={toggles.alberta} onChange={handleToggleChange} />
+                <Checkbox id="manitoba" label="Manitoba" checked={toggles.manitoba} onChange={handleToggleChange} />
               </li>
-              )
-            }
           </ul>
-          <p><span className={styles.strong}>My citizenship status:</span></p>
+          <p><span className={styles.strong}>My citizenship status is:</span></p>
           <ul className={styles.startList}>
-            {
-              ((toggles.name) || (toggles.gender)) && !(toggles.pr) ? (
               <li>
                 <Checkbox id="citizen" label="Canadian citizen" checked={toggles.citizen} onChange={handleToggleChange} />
               </li>
-            ) : (
-              <li>
-                <Checkbox id="citizen" label="Canadian citizen" checked={toggles.citizen} onChange={handleToggleChange} />
-              </li>
-              )
-            }
-            {
-              ((toggles.name) || (toggles.gender)) && !(toggles.citizen) ? (
               <li>
                 <Checkbox id="pr" label="Permanent resident" checked={toggles.pr} onChange={handleToggleChange} />
               </li>
-            ) : (
-              <li>
-                <Checkbox id="pr" label="Permanent resident" checked={toggles.pr} onChange={handleToggleChange} />
-              </li>
-              )
-            }
           </ul>
           <h3>Your action plan:</h3>
           <ol>
-            {
-              (toggles.name) && (!toggles.ontario && !toggles.alberta) ? (
+            {toggles.name && !toggles.ontario && !toggles.alberta && (
               <li>
                 <Link href="/name">Change your legal name</Link>
               </li>
-              ) : null
-            }
-            {
-              (toggles.name) && (toggles.ontario) ? (
-                <li>
-                  <Link href="/on/name">Change your legal name with the Ontario government</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name) && (toggles.alberta) ? (
-                <li>
-                  <Link href="/ab/name">Change your legal name with the Alberta government</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.gender) && ((toggles.alberta || toggles.ontario)) ? (
-                <li>
-                  <Link href="/birth">Update the gender marker on your birth certificate</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name) && !((toggles.ontario)) ? (
-                <li>
-                  <Link href="/health">Update the name on your health card</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name) && ((toggles.ontario)) ? (
-                <li>
-                  <Link href="/on/health">Update the name on your Ontario health card</Link>
-                </li>
-              ) : null
-            }
-            {
-               (((toggles.name) || (toggles.gender)))  && ((toggles.ontario)) ? (
-                <li>
-                  <Link href="/on/id">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your driver&apos;s license or I.D. card</Link>
-                </li>
-              ) : null
-            }
-            {
-              (((toggles.name) || (toggles.gender)))  && ((toggles.alberta)) ? (
-                <li>
-                  <Link href="/id">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your driver&apos;s license or I.D. card</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name || toggles.gender) && (toggles.citizen) ? (
-                <li>
-                  <Link href="/passport">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your passport</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name || toggles.gender) && (toggles.pr) ? (
-                <li>
-                  <Link href="/pr">Update the { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } on your permanent residency card</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name || toggles.gender) ? (
-                <li>
-                  <Link href="/sin">Update your { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } with the Social Insurance registry</Link>
-                </li>
-              ) : null
-            }
-            {
-              (toggles.name || toggles.gender) ? (
-                <li>
-                  <Link href="/cra">Update your { toggles.name && toggles.gender ? 'name and gender marker' : '' }{ toggles.name && !toggles.gender ? 'name' : '' }{ !toggles.name && toggles.gender ? 'gender marker' : '' } with the Canada Revenue Agency</Link>
-                </li>
-              ) : null
-            }
+            )}
+            {toggles.name && toggles.ontario && (
+              <li>
+                <Link href="/on/name">Change your legal name with the Ontario government</Link>
+              </li>
+            )}
+            {toggles.name && toggles.alberta && (
+              <li>
+                <Link href="/ab/name">Change your legal name with the Alberta government</Link>
+              </li>
+            )}
+            {toggles.name && toggles.manitoba && (
+              <li>
+                <Link href="/mb/name">Change your legal name with the Manitoba government</Link>
+              </li>
+            )}
+            {toggles.gender && (toggles.citizen) && (
+              <li>
+                <Link href="/birth">Update the gender marker on your birth certificate</Link>
+              </li>
+            )}
+            {toggles.name && !toggles.ontario && (
+              <li>
+                <Link href="/health">Update the name on your health card</Link>
+              </li>
+            )}
+            {toggles.name && toggles.ontario && (
+              <li>
+                <Link href="/on/health">Update the name on your Ontario health card</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.ontario && (
+              <li>
+                <Link href="/on/id">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.alberta && (
+              <li>
+                <Link href="/id">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.citizen && (
+              <li>
+                <Link href="/passport">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your passport</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.pr && (
+              <li>
+                <Link href="/pr">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your permanent residency card</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && (
+              <li>
+                <Link href="/sin">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Social Insurance registry</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && (
+              <li>
+                <Link href="/cra">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Canada Revenue Agency</Link>
+              </li>
+            )}
           </ol>
           <hr/>
-          {
-            !(toggles.name) && !(toggles.gender) ? (
-              <ul className={styles.startList}>
-                <li>
-                  Please select one or both checkboxes above to see your action plan.
-                </li>
-              </ul>
-            ) : <p>
-                Each guide above provides step-by-step instructions, required forms, and tips to help make the process as smooth as possible.
-              </p>
-          }
+          {!(toggles.name) && !(toggles.gender) ? (
+            <ul className={styles.startList}>
+              <li>
+                Please select one or both checkboxes above to see your action plan.
+              </li>
+            </ul>
+          ) : (
+            <p>
+              Each guide above provides step-by-step instructions, required forms, and tips to help make the process as smooth as possible.
+            </p>
+          )}
           <hr />
           <div className="pageNav">
             <p>See also:</p>

@@ -24,20 +24,21 @@ export default function About() {
           <h3 id='disclaimers'>Disclaimers</h3>
           <p>I.D. Guide is an independent project and is not affiliated with any government agency or official body. All information is provided in good faith, but users should always verify details with the relevant authorities.</p>
 
-          <p>While we strive to keep all information up to date, laws and procedures can change. Please check official sources or contact the appropriate agency for the most current requirements.</p>
-
-          <p>The content on this site is for informational purposes only and does not constitute legal advice. For legal advice specific to your situation, consult a qualified legal professional.</p>
+          <p>While we strive to keep all information up to date, laws and procedures can change. Please check official sources or contact the appropriate agency for the most current requirements. The content on this site is for informational purposes only and does not constitute legal advice. For legal advice specific to your situation, consult a qualified legal professional.</p>
 
           <p>If you spot an error, have a suggestion, or need information in a different format, please <Link href="mailto:contact@idguide.ca">contact us</Link>. Your feedback helps keep this resource accurate and useful for everyone. For details about how your information is handled, see our <Link href="/privacy">privacy policy</Link>.</p>
 
           <hr />
 
           <h3 id='changelog'>Changelog</h3>
-          <ul style={{marginBottom: "-1rem"}}>
-            <li>v1.0.2 - Added Manitoba name changes; Alberta, Ontario, Manitoba, and Canada-wide resources</li>
-            <li>v1.0.1 - Fixed links for Alberta guides in Start menu</li>
-            <li>v1.0.0 - Initial launch</li>
-          </ul>
+          <div className={styles.changelogContainer}>
+            <ul className={styles.changelogList}>
+              <li>v1.0.3 - Added Manitoba to start menu; updated permanent resident card, Canada Revenue Agency, SIN, and Canadian passport pages; updated privacy policy</li>
+              <li>v1.0.2 - Added Manitoba name changes; Alberta, Ontario, Manitoba, and Canada-wide resources</li>
+              <li>v1.0.1 - Fixed links for Alberta guides in start menu</li>
+              <li>v1.0.0 - Initial launch</li>
+            </ul>
+          </div>
           
           <hr />
           
@@ -55,8 +56,8 @@ export default function About() {
                   <Link href="/name">Name changes</Link>
                   <ul>
                     <li><Link href="/ab/name">Alberta name changes</Link></li>
-                    <li><Link href="/on/name">Ontario name changes</Link></li>
                     <li><Link href="/mb/name">Manitoba name changes</Link></li>
+                    <li><Link href="/on/name">Ontario name changes</Link></li>
                   </ul>
                 </li>
                 <li>
@@ -87,8 +88,8 @@ export default function About() {
               <Link href="/resources">Resources</Link>
               <ul>
                 <li><Link href="/ab/resources">Alberta resources</Link></li>
-                <li><Link href="/on/resources">Ontario resources</Link></li>
                 <li><Link href="/mb/resources">Manitoba resources</Link></li>
+                <li><Link href="/on/resources">Ontario resources</Link></li>
               </ul>
             </li>
             <li><Link href="/privacy">Privacy policy</Link></li>

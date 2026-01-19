@@ -1,10 +1,8 @@
 "use client";
 
-"use client";
 import styles from "./page.module.css";
 import { useEffect } from "react";
 import Link from "next/link";
-
 
 const downloadSections = [
   {
@@ -19,6 +17,19 @@ const downloadSections = [
       }
     ],
     more: { href: "/ab/name" },
+  },
+  {
+    id: "mb-name",
+    title: "Manitoba name changes",
+    links: [
+      {
+        id: "application_change_of_name_adult",
+        href: "/mb-application_change_of_name_adult.en.pdf",
+        label: "Manitoba Name Change Application",
+        description: ""
+      }
+    ],
+    more: { href: "/mb/name" },
   },
   {
     id: "on-name",
@@ -44,19 +55,6 @@ const downloadSections = [
       },
     ],
     more: { href: "/on/name" },
-  },
-  {
-    id: "mb-name",
-    title: "Manitoba name changes",
-    links: [
-      {
-        id: "application_change_of_name_adult",
-        href: "/mb-application_change_of_name_adult.en.pdf",
-        label: "Manitoba Name Change Application",
-        description: ""
-      }
-    ],
-    more: { href: "/mb/name" },
   },
   {
     id: "on-birth",
@@ -98,16 +96,29 @@ const downloadSections = [
         id: "pptc-153",
         href: "/pptc153.pdf",
         label: "Adult General Passport Application",
-        description: "pptc-153",
+        description: "PPTC-153",
       },
       {
         id: "pptc-643",
         href: "/pptc643.pdf",
         label: "Canadian Passport Sex Identifier Update Form",
-        description: "pptc-643",
+        description: "PPTC-643",
       },
     ],
     more: { href: "/passport" },
+  },
+  {
+    id: "pr",
+    title: "Permanent resident cards",
+    links: [
+      {
+        id: "imm5644e",
+        href: "/imm5644e.pdf",
+        label: "Permanent Resident Card Document Checklist",
+        description: "IMM-5644",
+      },
+    ],
+    more: { href: "/pr" },
   },
   {
     id: "presentation-materials",
@@ -149,6 +160,21 @@ export default function Downloads() {
           <p>
             Here you&#39;ll find the forms to help with name changes and gender marker updates, as well as presentation materials for past workshops. If you need help finding the right document, please check the sources at the bottom of the related guide, or <Link href="mailto:contact@idguide.ca">contact us</Link> for support.
           </p>
+
+          <hr />
+          <div className="pageNav">
+            <p>Jump to: </p>
+            <ul>
+              <li><Link href="#ab-name">Alberta name changes</Link></li>
+              <li><Link href="#mb-name">Manitoba name changes</Link></li>
+              <li><Link href="#on-name">Ontario name changes</Link></li>
+              <li><Link href="#on-birth">Ontario birth certificates</Link></li>
+              <li><Link href="#on-health">Ontario health cards</Link></li>
+              <li><Link href="#passport">Canadian passports</Link></li>
+              <li><Link href="#pr">Permanent resident cards</Link></li>
+              <li><Link href="#presentation-materials">Presentation materials</Link></li>
+            </ul>
+          </div>
           
           <hr/>
           {downloadSections.map(section => (
