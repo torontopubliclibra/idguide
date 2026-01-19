@@ -22,7 +22,7 @@ export function ReturnToEnglish() {
 
   return (
     <a href={getEnglishUrl()} onClick={handleClick}>
-      Retour à la version anglaise
+      Cliquez ici pour revenir à la version anglaise
     </a>
   );
 }
