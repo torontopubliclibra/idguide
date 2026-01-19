@@ -63,7 +63,7 @@ export default async function RootLayout({
   const locale = getLocaleFromHost(host);
   
   return (
-    <html lang={locale} dir="ltr">
+    <html lang={locale} dir="ltr" className={locale}>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Y8RN4Q791P"
