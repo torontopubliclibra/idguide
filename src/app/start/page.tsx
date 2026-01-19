@@ -150,17 +150,17 @@ export default function Start() {
             )}
             {toggles.name && toggles.ontario && (
               <li>
-                <Link href="/on/name" target="_blank">Change your legal name with the Ontario government</Link>
+                <Link href="/on/name" target="_blank">Change your legal name with the Ontario Office of the Registrar General</Link>
               </li>
             )}
             {toggles.name && toggles.alberta && (
               <li>
-                <Link href="/ab/name" target="_blank">Change your legal name with the Alberta government</Link>
+                <Link href="/ab/name" target="_blank">Change your legal name with the Alberta Vital Statistics Agency</Link>
               </li>
             )}
             {toggles.name && toggles.manitoba && (
               <li>
-                <Link href="/mb/name" target="_blank">Change your legal name with the Manitoba government</Link>
+                <Link href="/mb/name" target="_blank">Change your legal name with the Manitoba Vital Statistics Agency</Link>
               </li>
             )}
             {toggles.gender && (toggles.citizen) && (

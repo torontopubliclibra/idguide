@@ -24,7 +24,7 @@ export default function AbName() {
           </div>
           <hr />
           <h3 id='process'>Process</h3>
-          <p>To legally change your name in Albert, fill out the <Link href="/downloads#ab-name" target="_blank" rel="noreferrer">Application for Change of Name (DVS3132)</Link>.</p>
+          <p>To legally change your name in Alberta, fill out the <Link href="/downloads#ab-name" target="_blank" rel="noreferrer">Application for Change of Name (DVS3132)</Link>.</p>
           <p>The application is 16 pages and split into five sections, but you may not need to complete every part. A fee of $120 is required.</p>
           <h3 id='requirements'>Requirements</h3>
           <h4>Information you&apos;ll need to provide</h4>
