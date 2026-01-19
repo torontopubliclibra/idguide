@@ -90,7 +90,7 @@ export default function About() {
                   </ul>
                 </li>
                 <li>
-                  <Link href="/birth">{t("Pages.healthCards", "Health cards", pageLocale)}</Link>
+                  <Link href="/health">{t("Pages.healthCards", "Health cards", pageLocale)}</Link>
                   <ul>
                     <li><Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link></li>
                   </ul>
