@@ -111,16 +111,16 @@ export default function Start() {
         <div className={styles.main}>
           <p>To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.</p>
           <hr/>
-          <p style={{marginTop: 10}}><span className={styles.strong}>I want to:</span></p>
+          <p style={{marginTop: 10}}><span className={styles.strong}>You want to:</span></p>
           <ul className={styles.startList}>
             <li>
-              <Checkbox id="name" label="Change my legal name" checked={toggles.name} onChange={handleToggleChange} />
+              <Checkbox id="name" label="Change your legal name" checked={toggles.name} onChange={handleToggleChange} />
             </li>
             <li>
-              <Checkbox id="gender" label="Update my gender marker" checked={toggles.gender} onChange={handleToggleChange} />
+              <Checkbox id="gender" label="Update your gender marker" checked={toggles.gender} onChange={handleToggleChange} />
             </li>
           </ul>
-          <p><span className={styles.strong}>I live in:</span></p>
+          <p><span className={styles.strong}>You live in:</span></p>
           <ul className={styles.startList}>
               <li>
                 <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
@@ -132,7 +132,7 @@ export default function Start() {
                 <Checkbox id="manitoba" label="Manitoba" checked={toggles.manitoba} onChange={handleToggleChange} />
               </li>
           </ul>
-          <p><span className={styles.strong}>My citizenship status is:</span></p>
+          <p><span className={styles.strong}>Your citizenship status is:</span></p>
           <ul className={styles.startList}>
               <li>
                 <Checkbox id="citizen" label="Canadian citizen" checked={toggles.citizen} onChange={handleToggleChange} />
@@ -143,69 +143,69 @@ export default function Start() {
           </ul>
           <h3>Your action plan:</h3>
           <ol>
-            {toggles.name && !toggles.ontario && !toggles.alberta && (
+            {toggles.name && !toggles.ontario && !toggles.alberta && !toggles.manitoba && (
               <li>
-                <Link href="/name">Change your legal name</Link>
+                <Link href="/name" target="_blank">Change your legal name</Link>
               </li>
             )}
             {toggles.name && toggles.ontario && (
               <li>
-                <Link href="/on/name">Change your legal name with the Ontario government</Link>
+                <Link href="/on/name" target="_blank">Change your legal name with the Ontario government</Link>
               </li>
             )}
             {toggles.name && toggles.alberta && (
               <li>
-                <Link href="/ab/name">Change your legal name with the Alberta government</Link>
+                <Link href="/ab/name" target="_blank">Change your legal name with the Alberta government</Link>
               </li>
             )}
             {toggles.name && toggles.manitoba && (
               <li>
-                <Link href="/mb/name">Change your legal name with the Manitoba government</Link>
+                <Link href="/mb/name" target="_blank">Change your legal name with the Manitoba government</Link>
               </li>
             )}
             {toggles.gender && (toggles.citizen) && (
               <li>
-                <Link href="/birth">Update the gender marker on your birth certificate</Link>
+                <Link href="/birth" target="_blank">Update the gender marker on your birth certificate</Link>
               </li>
             )}
             {toggles.name && !toggles.ontario && (
               <li>
-                <Link href="/health">Update the name on your health card</Link>
+                <Link href="/health" target="_blank">Update the name on your health card</Link>
               </li>
             )}
             {toggles.name && toggles.ontario && (
               <li>
-                <Link href="/on/health">Update the name on your Ontario health card</Link>
+                <Link href="/on/health" target="_blank">Update the name on your Ontario health card</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.ontario && (
               <li>
-                <Link href="/on/id">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+                <Link href="/on/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
               </li>
             )}
-            {(toggles.name || toggles.gender) && toggles.alberta && (
+            {(toggles.name || toggles.gender) && !toggles.ontario && (
               <li>
-                <Link href="/id">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
+                <Link href="/id" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your driver&apos;s license or I.D. card</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.citizen && (
               <li>
-                <Link href="/passport">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your passport</Link>
+                <Link href="/passport" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your passport</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && toggles.pr && (
               <li>
-                <Link href="/pr">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your permanent residency card</Link>
+                <Link href="/pr" target="_blank">Update the {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} on your permanent residency card</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && (
               <li>
-                <Link href="/sin">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Social Insurance registry</Link>
+                <Link href="/sin" target="_blank">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Social Insurance registry</Link>
               </li>
             )}
             {(toggles.name || toggles.gender) && (
               <li>
-                <Link href="/cra">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Canada Revenue Agency</Link>
+                <Link href="/cra" target="_blank">Update your {toggles.name && toggles.gender ? 'name and gender marker' : toggles.name ? 'name' : 'gender marker'} with the Canada Revenue Agency</Link>
               </li>
             )}
           </ol>
