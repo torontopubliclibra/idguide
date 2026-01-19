@@ -1,24 +1,27 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export function LanguageToggle({ locale }: { locale: string }) {
+  const [toEnglish, setToEnglish] = useState("/");
+  const [toFrench, setToFrench] = useState("/");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const { protocol, hostname, port, pathname, search, hash } = window.location;
+      const baseHost = hostname.replace(/^(fr\.)+/, "");
+      const portPart = port ? `:${port}` : "";
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setToEnglish(`${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`);
+      setToFrench(`${protocol}//fr.${baseHost}${portPart}${pathname}${search}${hash}`);
+    }
+  }, []);
+
   const handleLanguageClick = (lang: string) => {
     if (typeof window !== "undefined") {
       localStorage.setItem("preferredLanguage", lang);
     }
   };
-
-  let toEnglish = "/";
-  let toFrench = "/";
-
-  if (typeof window !== "undefined") {
-    const { protocol, hostname, port, pathname, search, hash } = window.location;
-    // Remove all leading fr. subdomains (handles fr., fr.fr., etc.)
-    const baseHost = hostname.replace(/^(fr\.)+/, "");
-    const portPart = port ? `:${port}` : "";
-
-    toEnglish = `${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`;
-    toFrench = `${protocol}//fr.${baseHost}${portPart}${pathname}${search}${hash}`;
-  }
 
   return (
     <span>
