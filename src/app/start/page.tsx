@@ -227,6 +227,7 @@ export default function Start() {
             <ul>
               <li><Link href="/guides">Guides</Link></li>
               <li><Link href="/downloads">Downloads</Link></li>
+              <li><Link href="/resources">Resources</Link></li>
             </ul>
           </div>
         </div>

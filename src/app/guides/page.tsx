@@ -26,7 +26,7 @@ export default function Guides() {
               <li><Link href="#canada-wide">Canada-wide</Link></li>
             </ul>
           </div>
-          <hr style={{margin: '1rem 0'}}/>
+          <hr style={{margin: '0.5rem 0', marginTop: '1rem'}}/>
           <div>
             <h3 id="alberta">Alberta</h3>
             <ul>
@@ -72,6 +72,15 @@ export default function Guides() {
               <li>
                 <Link href="/cra">Canada Revenue Agency updates</Link>
               </li>
+            </ul>
+          </div>
+          <hr style={{margin: '1rem 0'}}/>
+          <div className="pageNav">
+            <p>See also:</p>
+            <ul>
+              <li><Link href="/start">Get started</Link></li>
+              <li><Link href="/resources">Resources</Link></li>
+              <li><Link href="/downloads">Downloads</Link></li>
             </ul>
           </div>
         </div>

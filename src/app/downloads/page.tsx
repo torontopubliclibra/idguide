@@ -210,6 +210,15 @@ export default function Downloads() {
               {section.id !== 'presentation-materials' && <hr style={{marginTop: '2rem'}}/>}
             </section>
           ))}
+          <hr />
+          <div className="pageNav">
+            <p>See also:</p>
+            <ul>
+              <li><Link href="/start">Get started</Link></li>
+              <li><Link href="/guides">Guides</Link></li>
+              <li><Link href="/resources">Resources</Link></li>
+            </ul>
+          </div>
         </div>
         <div className="stacks"></div>
       </main>

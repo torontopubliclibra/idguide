@@ -54,6 +54,15 @@ export default function Resources() {
               <Link href="/mb/resources">Manitoba resources</Link>
             </li>
           </ul>
+          <hr />
+          <div className="pageNav">
+            <p>See also:</p>
+            <ul style={{fontSize: '1.1rem', lineHeight: '1.5rem'}}>
+              <li><Link href="/start">Get started</Link></li>
+              <li><Link href="/guides">Guides</Link></li>
+              <li><Link href="/downloads">Downloads</Link></li>
+            </ul>
+          </div>
         </div>
         <div className="stacks"></div>
       </main>
