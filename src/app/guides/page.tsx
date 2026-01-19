@@ -17,22 +17,32 @@ export default function Guides() {
         <h2 className="page-title">Guides</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
+          <div className="pageNav">
+            <p>Jump to: </p>
+            <ul>
+              <li><Link href="#alberta">Alberta</Link></li>
+              <li><Link href="#manitoba">Manitoba</Link></li>
+              <li><Link href="#ontario">Ontario</Link></li>
+              <li><Link href="#canada-wide">Canada-wide</Link></li>
+            </ul>
+          </div>
+          <hr style={{margin: '1rem 0'}}/>
           <div>
-            <h3>Alberta</h3>
+            <h3 id="alberta">Alberta</h3>
             <ul>
               <li>
                 <Link href="/ab/name">Legal name changes</Link>
               </li>
             </ul>
-            <hr style={{marginBottom: '2rem'}}/>
-            <h3>Manitoba</h3>
+            <hr/>
+            <h3 id="manitoba">Manitoba</h3>
             <ul>
               <li>
                 <Link href="/mb/name">Legal name changes</Link>
               </li>
             </ul>
-            <hr style={{marginBottom: '2rem'}}/>
-            <h3>Ontario</h3>
+            <hr/>
+            <h3 id="ontario">Ontario</h3>
             <ul>
               <li>
                 <Link href="/on/name">Legal name changes</Link>
@@ -47,8 +57,8 @@ export default function Guides() {
                 <Link href="/on/id">Driver&apos;s license and I.D. card updates</Link>
               </li>
             </ul>
-            <hr style={{marginBottom: '2rem'}}/>
-            <h3>Canada-wide</h3>
+            <hr/>
+            <h3 id="canada-wide">Canada-wide</h3>
             <ul>
               <li>
                 <Link href="/passport">Passport updates</Link>

@@ -44,6 +44,7 @@ export default function MbName() {
           <h3 id='submitting-your-application'>Submitting your application</h3>
           <p>Forms can be submitted in person at the <a href="https://www.google.com/maps/place/254+Portage+Ave,+Winnipeg,+MB+R3C+0B6" target="_blank" rel="noreferrer">Vital Statistics Branch (254 Portage Ave, Winnipeg)</a>, or by mail/fax. In-person submission is recommended for faster processing and support.</p>
           <p>If mailing or faxing, expect a 2-8 month backlog. Fees can be paid by cash, debit, or credit. As of 2024, trans individuals are exempt from the publication fee in the Manitoba Gazette and can request this exemption on the form. Fingerprinting may be required. The Vital Statistics Agency will provide instructions and an information sheet if so.</p>
+          <hr />
           <h3 id='sources'>Sources</h3>
           <ul>
             <li><a href="https://queerwinnipeg.ca/posts/how-to-change-your-legal-name-or-sex-in-manitoba/" target="_blank" rel="noreferrer">Queer Winnipeg - How to Change Your Legal Name or Sex in Manitoba</a></li>

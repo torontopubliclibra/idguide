@@ -42,6 +42,7 @@ export default function Resources() {
               </tbody>
             </table>
           <hr />
+          <h3>By region</h3>
           <ul>
             <li>
               <Link href="/ab/resources">Alberta resources</Link>
