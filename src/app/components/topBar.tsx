@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect, useRef } from "react";
 import Nav from "./nav";
 import { t } from "../lib/i18n";
+import { ReturnToEnglish } from './ReturnToEnglish';
 
 export default function TopBar({ locale }: { locale: string }) {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -70,7 +71,7 @@ export default function TopBar({ locale }: { locale: string }) {
             </div>
             {locale === "fr" && (
                 <div className="fr-disclaimer-bar">
-                    La traduction française est actuellement une fonctionnalité bêta. Certaines sections du site peuvent être incomplètes ou mal traduites.
+                    La traduction française est actuellement une fonctionnalité bêta. Certaines sections du site peuvent être incomplètes ou mal traduites. <ReturnToEnglish />.
                 </div>
             )}
         </>
