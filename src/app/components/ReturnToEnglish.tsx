@@ -1,22 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
 export function ReturnToEnglish() {
-  const [toEnglish, setToEnglish] = useState("/");
-
-  useEffect(() => {
+  const getEnglishUrl = () => {
     if (typeof window !== "undefined") {
       const { protocol, hostname, port, pathname, search, hash } = window.location;
       const baseHost = hostname.replace(/^(fr\.)+/, "");
       const portPart = port ? `:${port}` : "";
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setToEnglish(`${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`);
+      return `${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`;
     }
-  }, []);
+    return "/";
+  };
+
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    if (typeof window !== "undefined") {
+      localStorage.setItem("preferredLanguage", "en");
+      const url = getEnglishUrl();
+      window.location.assign(url);
+    }
+  };
 
   return (
-    <a href={toEnglish}>
+    <a href={getEnglishUrl()} onClick={handleClick}>
       Retour à la version anglaise
     </a>
   );
