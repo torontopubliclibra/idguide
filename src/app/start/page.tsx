@@ -72,14 +72,6 @@ export default function Start() {
           citizen: false,
         };
       }
-      if (name === 'ontario' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          alberta: false,
-          manitoba: false,
-        };
-      }
       if (name === 'alberta' && checked) {
         return {
           ...prevToggles,
@@ -94,6 +86,14 @@ export default function Start() {
           [name]: checked,
           ontario: false,
           alberta: false,
+        };
+      }
+      if (name === 'ontario' && checked) {
+        return {
+          ...prevToggles,
+          [name]: checked,
+          alberta: false,
+          manitoba: false,
         };
       }
       return {
@@ -123,13 +123,13 @@ export default function Start() {
           <p><span className={styles.strong}>You live in:</span></p>
           <ul className={styles.startList}>
               <li>
-                <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
-              </li>
-              <li>
                 <Checkbox id="alberta" label="Alberta" checked={toggles.alberta} onChange={handleToggleChange} />
               </li>
               <li>
                 <Checkbox id="manitoba" label="Manitoba" checked={toggles.manitoba} onChange={handleToggleChange} />
+              </li>
+              <li>
+                <Checkbox id="ontario" label="Ontario" checked={toggles.ontario} onChange={handleToggleChange} />
               </li>
           </ul>
           <p><span className={styles.strong}>Your citizenship status is:</span></p>
