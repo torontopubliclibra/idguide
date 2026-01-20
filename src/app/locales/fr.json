@@ -103,9 +103,9 @@
     "actionPlan": "Votre plan d'action",
     "action": {
       "changeLegalName": "Changer votre nom légal",
-      "changeLegalNameOntario": "Changer votre nom légal auprès du Bureau du registraire général de l'Ontario",
-      "changeLegalNameAlberta": "Changer votre nom légal auprès de l'Agence de la statistique vitale de l'Alberta",
-      "changeLegalNameManitoba": "Changer votre nom légal auprès de l'Agence de la statistique vitale du Manitoba",
+      "changeLegalNameOntario": "Changer votre nom légal auprès du bureau du registraire général de l'Ontario",
+      "changeLegalNameAlberta": "Changer votre nom légal auprès du bureau de l'état civil de l'Alberta",
+      "changeLegalNameManitoba": "Changer votre nom légal auprès du bureau de l'état civil de Manitoba",
       "updateGenderBirthCertificate": "Mettre à jour le marqueur de genre sur votre certificat de naissance",
       "updateNameHealthCard": "Mettre à jour le nom sur votre carte santé",
       "updateNameOntarioHealthCard": "Mettre à jour le nom sur votre carte santé de l'Ontario",
