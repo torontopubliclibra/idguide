@@ -31,14 +31,13 @@ export default function MbName() {
               <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
               <li><Link href="#commissioning">{t("Subheadings.commissioning", "Commissioning", pageLocale)}</Link></li>
               <li><Link href="#submitting">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</Link></li>
-              <li><Link href="#fees">{t("Subheadings.fees", "Fees", pageLocale)}</Link></li>
               <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
             </ul>
           </div>
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <ol>
-            <li>Complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link> and gather all required documents and fees.</li>
+            <li>Complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link> and gather all required documents and the $100 fee.</li>
             <li>Submit your application to the Vital Statistics Branch (254 Portage Avenue, Winnipeg MB R3C 0B6) in person (by appointment: 204-945-3701 or 866-949-9296) or by mail.</li>
             <li>Wait for review. If accepted, you will receive instructions for a <b>certified criminal record check</b> (if 18+). <i>Do not undergo a criminal record check until instructed.</i></li>
             <li>Complete the certified criminal record check and submit results as instructed.</li>
@@ -86,17 +85,6 @@ export default function MbName() {
           } />
           <p>To book an appointment: 204-945-3701 or 866-949-9296</p>
           <p>If mailing, use a tracked service if possible. Fees can be paid by cash, debit, or credit in person.</p>
-          <hr />
-          <h3 id="fees">{t("Subheadings.fees", "Fees", pageLocale)}</h3>
-          <ul>
-            <li>Legal Change of Name: <b>$100.00</b></li>
-            <li>Manitoba Gazette Fee: <b>$20.07</b> (not required for trans, non-binary, gender-diverse, or Two-Spirit Indigenous applicants)</li>
-            <li>Total: <b>$120.07</b></li>
-            <li>Additional family member(s) (submitted together): <b>$70.07 each</b></li>
-            <li>Birth/Marriage Certificate (if event in Manitoba): <b>$30.00 each</b></li>
-            <li><b>Fee exemptions:</b> Indigenous name reclamation, trans/non-binary/gender-diverse/2S Indigenous (see form for details)</li>
-            <li>Certified criminal record check fees are set by the agency and paid directly (not by Vital Statistics Branch)</li>
-          </ul>
           <hr />
           <h3 id="sources">Sources</h3>
           <ul>
