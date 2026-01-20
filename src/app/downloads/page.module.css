@@ -73,6 +73,16 @@
   border-radius: 4px;
   overflow: hidden;
   background: #fff;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .pdfPreview {
+    max-height: 200px;
+  }
+  .pdfPreview iframe {
+    height: 200px;
+    width: 100%;
+  }
 }
 .pdfPreview.single {
   max-width: calc(50% - 1rem);
