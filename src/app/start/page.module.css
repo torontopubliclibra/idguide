@@ -14,6 +14,18 @@
   width: 100%;
 }
 
+.actionPlanContainer {
+  overflow-y: auto;
+  background-color: var(--grey);
+  border: solid 1px var(--black);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+  color: var(--black);
+  padding: 1rem 2rem;
+  padding-bottom: 0.75rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+}
+
 .start .strong {
   font-family: var(--font-special-gothic-expanded-one);
 }

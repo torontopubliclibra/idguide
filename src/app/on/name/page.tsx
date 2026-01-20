@@ -34,7 +34,7 @@ export default function OnName() {
           </div>
           <hr />
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <p>To legally change your name in Ontario, you must complete the <Link href="/downloads#on-name">Application to Change an Adult&#39;s Name (11155e)</Link>. The fee is $137.00.</p>
+          <p>To legally change your name in Ontario, you must complete the <Link href="/downloads#on-name">{t("NameChanges.ontarioApplicationName", "Ontario application to change an adult's name", pageLocale)}</Link>. The fee is $137.00.</p>
           <h3 id='requirements'>{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
           <h4>{t("Subheadings.informationYoullNeedToProvide", "Information you'll need to provide", pageLocale)}</h4>
           <p>The application asks for detailed personal information, including:</p>

@@ -29,6 +29,10 @@
   line-height: 2rem;
 }
 
+.resources, .resources ul {
+  list-style-type: disclosure-closed;
+}
+
 @media (max-width: 1200px) {
   .resources {
     padding-top: 20px;

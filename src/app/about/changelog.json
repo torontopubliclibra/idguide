@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.0.5",
+    "date": "2026-01-19",
+    "changes": [
+      "Updated Downloads page to include PDF previews, fix layout issues on smaller screens, and add French documents"
+    ]
+  },
+  {
     "version": "1.0.4",
     "date": "2026-01-19",
     "changes": [

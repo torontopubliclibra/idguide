@@ -23,6 +23,10 @@
   margin-top: 1.5rem;
 }
 
+.guides, .guides ul {
+  list-style-type: disclosure-closed;
+}
+
 .guides hr {
   margin: 2rem 0;
 }

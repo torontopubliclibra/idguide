@@ -19,6 +19,7 @@
   --semiblack: #1b1b1ee4;
   --white: #f4f2f9;
   --semiwhite: #f4f2f9f7;
+  --grey: #e4e4f0;
   --dark1: #5d3850;
   --dark2: #3b4a62;
   --dark3: #2c3a50;
@@ -80,10 +81,16 @@ p, input, label, textarea, li, button, .button {
 }
 
 textarea {
+  background-color: var(--grey);
+  color: var(--black);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+  border: 1px solid var(--black);
+  font-family: inherit;
+  font-size: 1rem;
   padding: 10px;
-  height: 45px;
-  min-height: 45px;
-  max-height: 90px;
+  height: 75px;
+  min-height: 75px;
+  max-height: 150px;
   max-width: 100%;
   min-width: 100%;
 }
@@ -210,7 +217,7 @@ h3 {
   margin-top: 10px;
 }
 
-h2, h3, h4 {
+h2, h3, h4, .accordionBtn {
   scroll-margin-top: 120px;
 
   @media (max-width: 900px) {
@@ -218,7 +225,7 @@ h2, h3, h4 {
   }
 }
 
-.fr h2, .fr h3, .fr h4 {
+.fr h2, .fr h3, .fr h4, .fr .accordionBtn {
   scroll-margin-top: 100px;
 
   @media (max-width: 900px) {
@@ -250,6 +257,7 @@ hr {
 
 .pageNav ul {
   margin-top: 15px;
+  list-style-type: square !important;
 }
 
 .pageNav p {
@@ -269,17 +277,23 @@ blockquote {
 }
 
 table {
+  background-color: var(--grey);
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   margin-bottom: 1rem;
 }
 
+tbody {
+  background-color: var(--grey);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+}
+
 th, td {
   text-align: left;
   vertical-align: top;
   padding: 10px 12px;
-  border: 1px solid var(--dark2);
+  border: 1px solid var(--black);
   word-break: break-word;
 }
 
@@ -288,14 +302,6 @@ th {
   color: var(--white);
   font-family: var(--font-special-gothic-expanded-one);
   font-weight: 400;
-}
-
-tbody tr:nth-child(even) {
-  background-color: var(--semiwhite);
-}
-
-tbody tr:nth-child(odd) {
-  background-color: var(--white);
 }
 
 @media (max-width: 1200px) {

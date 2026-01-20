@@ -12,7 +12,8 @@
     "getInTouch": "Get in touch",
     "aboutTheProject": "About the project",
     "workInProgress": "We're working to add more provinces and territories. Check back soon for expanded support across Canada.",
-    "youAreHere": "you are here"
+    "youAreHere": "you are here",
+    "moreOn": "More on "
   },
   "Pages": {
     "home": "Home",
@@ -169,7 +170,9 @@
     "about-5": "If you would like to help support Dana and her work, you can send her a tip"
   },
   "NameChanges": {
-    "process": "The process for changing your legal name will vary depending on your province or territory of residency"
+    "process": "The process for changing your legal name will vary depending on your province or territory of residency",
+    "manitobaApplicationName": "Manitoba application for an adult legal change of name",
+    "ontarioApplicationName": "Ontario application to change an adult's name"
   },
   "birthCertificates": {
     "process": "The process for updating your birth certificate will vary depending on the province or territory in which you were born"

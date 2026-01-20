@@ -149,7 +149,7 @@ export default function Start() {
               </li>
           </ul>
           <h3>{t("StartPage.actionPlan", "Your action plan", pageLocale)}:</h3>
-          <ol>
+          <ol className={styles.actionPlanContainer}>
             {toggles.name && !toggles.ontario && !toggles.alberta && !toggles.manitoba && (
               <li>
                 <Link href="/name" target="_blank">{t("StartPage.action.changeLegalName", undefined, pageLocale)}</Link>
@@ -216,7 +216,6 @@ export default function Start() {
               </li>
             )}
           </ol>
-          <hr/>
           {!(toggles.name) && !(toggles.gender) ? (
             <ul className={styles.startList}>
               <li>

@@ -1,3 +1,100 @@
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  width: 100%;
+  max-width: calc(50% - 1rem);
+  font-weight: 400;
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 0.8rem;
+  background: var(--dark1);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.linkTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+  min-width: 100%;
+}
+.linkGroup {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.linkGroup.fr {
+  flex-flow: row-reverse;
+}
+.accordionSection {
+  background-color: var(--dark2);
+  border: solid 1px var(--black);
+  color: var(--black);
+}
+.accordionPanel {
+  background-color: var(--grey);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+  color: var(--black);
+}
+.accordionButton {
+  color: var(--white);
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 12px 15px;
+  font-family: var(--font-special-gothic-expanded-one);
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .downloadButton {
+    max-width: 100%;
+  }
+  .linkGroup {
+    flex-direction: column;
+  }
+  .linkGroup.fr {
+    flex-direction: column-reverse;
+  }
+}
+.pdfPreview {
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.pdfPreview.single {
+  max-width: calc(50% - 1rem);
+}
+@media (max-width: 800px) {
+  .pdfPreview.single {
+    max-width: 100%;
+  }
+}
+.downloadButton:hover {
+  background: var(--dark4);
+}
+@media (max-width: 600px) {
+  .downloadButton:hover {
+    background: var(--dark1);
+  }
+}
+.downloadIcon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
 .downloads h3 {
   font-size: 1.2rem;
   font-weight: 600;
