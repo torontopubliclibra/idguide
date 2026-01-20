@@ -31,6 +31,17 @@ export default function Downloads() {
     }
   }, [pageLocale]);
 
+  useEffect(() => {
+    if (!openSection) return;
+    const timeout = setTimeout(() => {
+      const el = document.getElementById(openSection);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 200);
+    return () => clearTimeout(timeout);
+  }, [openSection]);
+
   const downloadSections = [
     {
       id: "ab-name",
