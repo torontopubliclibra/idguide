@@ -14,6 +14,33 @@
   width: 100%;
 }
 
+.imageContainer {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--grey);
+  color: var(--black);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+  border: 1px solid var(--black);
+  padding: 15px;
+  max-width: fit-content;
+}
+
+.imageContainer img {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 800px) {
+  .imageContainer {
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+  }
+  .imageContainer img {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .id {
     padding-top: 10px;

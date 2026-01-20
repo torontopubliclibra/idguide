@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
@@ -40,10 +41,13 @@ export default function OnHealth() {
             <li>Canadian <Link href="/name">change of name</Link> certificate</li>
             <li>Citizenship or immigration status document in your new name</li>
           </ol>
-          <p>Since June 2016, Ontario health cards no longer display sex designation.</p>
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <h4>{t("Subheadings.frenchLanguageCharacters", "French language characters", pageLocale)}</h4>
           <p>Since August 2022, you can add French language characters to your name on your Ontario health card. To do this, visit ServiceOntario with documents that show your legal name with those characters. If your citizenship or immigration document doesn&#39;t show your name with French characters, you may be able to use another proof of residency or identity document.</p>
+          <p>Since June 2016, Ontario health cards no longer display sex designation.</p>
+          <div className={styles.imageContainer}>
+            <Image src="/on-health-example.jpeg" alt="Sample Ontario health card showing no sex designation" width={400} height={500} />
+          </div>
           <hr />
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>

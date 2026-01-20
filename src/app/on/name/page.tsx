@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
@@ -85,8 +86,6 @@ export default function OnName() {
           <textarea readOnly name="address" id="address" value={
             `ServiceOntario, 47 Sheppard Avenue East, Unit 417, 4th Floor, Toronto, ON, M2N 5N1 `}
           />
-          <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
-          <p>If your application is complete and accurate, you should receive your name change certificate in 6-8 weeks. It may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 8 weeks.</p>
           <h4>{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h4>
           <p>Give yourself plenty of time to gather information and complete the forms. It may take several weeks to get everything ready.</p>
           <p>Print clearly with blue or black ink. Don&#39;t use correction fluid. If you make a mistake or need to change information:</p>
@@ -98,6 +97,11 @@ export default function OnName() {
           </ul>
           <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/on/id">driver&#39;s license, photo card</Link>, or <Link href="/on/health">health card</Link>. By law, you must notify the Ministry of Transportation within 6 days of legally changing your name if you have a driver&#39;s license.</p>
           <p>If you want to update your gender marker and were born in Ontario, you can submit the <Link href="/downloads#on-birth">Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)</Link> along with your name change application. For details, see the <Link href="/on/birth">birth certificates guide</Link>.</p>
+          <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
+          <p>If your application is complete and accurate, you should receive your change of name certificate in 6-8 weeks. It may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 8 weeks.</p>
+          <div className={styles.imageContainer}>
+            <Image src="/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
+          </div>
           <hr />
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>

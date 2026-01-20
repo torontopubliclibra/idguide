@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
@@ -62,6 +63,10 @@ export default function OnID() {
           <p>You do not need to have undergone surgery in order to update your gender marker. However, if you have had surgery, you can present documentation from a recognized specialist (such as the Centre for Addiction and Mental Health or other comparable institutions) instead of a letter from a doctor or psychologist.</p>
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <p>By law in Ontario, if you have a driver&apos;s license, you must notify the Ministry of Transportation within 6 days of legally changing your name. Be sure to include this step when updating your documents.</p>
+          <div className={styles.imageContainer}>
+            <Image src="/on-driveid-example.jpeg" alt="Sample Ontario driver's license" width={300} height={500} />
+            <Image src="/on-photoid-example.jpeg" alt="Sample Ontario photo ID card" width={300} height={500} />
+          </div>
           <hr />
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>

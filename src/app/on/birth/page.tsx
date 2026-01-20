@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
@@ -59,6 +60,9 @@ export default function BirthPage() {
           <p>Ontario birth certificates with an X or no sex designation are recognized by the Government of Ontario. However, they cannot guarantee that all organizations in Ontario or other jurisdictions will accept these documents.</p>
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
           <p>If your application is complete and meets all requirements, you should receive your new birth certificate or registration in 6-8 weeks.</p>
+          <div className={styles.imageContainer}>
+            <Image src="/on-birth-example.jpeg" alt="Sample Ontario birth certificate showing updated name and gender marker" width={350} height={500} />
+          </div>
           <hr />
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>
