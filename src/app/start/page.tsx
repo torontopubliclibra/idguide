@@ -196,16 +196,6 @@ export default function Start() {
                 <Link href="/id" target="_blank">{t("StartPage.action.updateNameGenderID", undefined, pageLocale)}</Link>
               </li>
             )}
-            {(toggles.name || toggles.gender) && toggles.citizen && (
-              <li>
-                <Link href="/passport" target="_blank">{t("StartPage.action.updateNameGenderPassport", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && toggles.pr && (
-              <li>
-                <Link href="/pr" target="_blank">{t("StartPage.action.updateNameGenderPR", undefined, pageLocale)}</Link>
-              </li>
-            )}
             {(toggles.name || toggles.gender) && (
               <li>
                 <Link href="/sin" target="_blank">{t("StartPage.action.updateNameGenderSIN", undefined, pageLocale)}</Link>
@@ -214,6 +204,16 @@ export default function Start() {
             {(toggles.name || toggles.gender) && (
               <li>
                 <Link href="/cra" target="_blank">{t("StartPage.action.updateNameGenderCRA", undefined, pageLocale)}</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.citizen && (
+              <li>
+                <Link href="/passport" target="_blank">{t("StartPage.action.updateNameGenderPassport", undefined, pageLocale)}</Link>
+              </li>
+            )}
+            {(toggles.name || toggles.gender) && toggles.pr && (
+              <li>
+                <Link href="/pr" target="_blank">{t("StartPage.action.updateNameGenderPR", undefined, pageLocale)}</Link>
               </li>
             )}
           </ol>
