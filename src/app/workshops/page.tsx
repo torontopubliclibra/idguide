@@ -2,16 +2,17 @@
 
 import styles from "./page.module.css";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { t } from "../lib/i18n";
 
 export default function Workshops() {
-  let pageLocale = "en";
-  if (typeof window !== "undefined") {
+  const pageLocale = useMemo(() => {
+    if (typeof window === "undefined") return "en";
     const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") pageLocale = "fr";
-    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
-  }
+    if (subdomain === "fr") return "fr";
+    if (window.navigator.language.startsWith("fr")) return "fr";
+    return "en";
+  }, []);
   
   useEffect(() => {
     document.title = `${t("Pages.workshops", "Workshops", pageLocale)} | ${t("Site.name", "Resources", pageLocale)}`;

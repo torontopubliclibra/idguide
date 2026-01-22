@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
@@ -23,12 +23,13 @@ const Checkbox = ({ id, label, checked, onChange, disabled }: CheckboxProps) => 
 };
 
 export default function Start() {
-  let pageLocale = "en";
-  if (typeof window !== "undefined") {
+  const pageLocale = useMemo(() => {
+    if (typeof window === "undefined") return "en";
     const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") pageLocale = "fr";
-    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
-  }
+    if (subdomain === "fr") return "fr";
+    if (window.navigator.language.startsWith("fr")) return "fr";
+    return "en";
+  }, []);
 
   useEffect(() => {
     document.title = `${t("Pages.start", undefined, pageLocale)} | ${t("Site.name", undefined, pageLocale)}`;

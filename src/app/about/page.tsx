@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import changelogData from './changelog.json';
@@ -15,12 +15,14 @@ type ChangelogEntry = {
 const changelog: ChangelogEntry[] = changelogData as ChangelogEntry[];
 
 export default function About() {
-  let pageLocale = "en";
-  if (typeof window !== "undefined") {
+  
+  const pageLocale = useMemo(() => {
+    if (typeof window === "undefined") return "en";
     const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") pageLocale = "fr";
-    else if (window.navigator.language.startsWith("fr")) pageLocale = "fr";
-  }
+    if (subdomain === "fr") return "fr";
+    if (window.navigator.language.startsWith("fr")) return "fr";
+    return "en";
+  }, []);
   
   useEffect(() => {
     document.title = `${t("Pages.about", "About", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;

@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-
 import styles from "./page.module.css";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { t } from "../lib/i18n";
@@ -12,7 +11,7 @@ import { useState } from "react";
 export default function Downloads() {
   const [openSection, setOpenSection] = useState<string | null>(null);
 
-  const pageLocale = React.useMemo(() => {
+  const pageLocale = useMemo(() => {
     if (typeof window === "undefined") return "en";
     const subdomain = window.location.hostname.split('.')[0];
     if (subdomain === "fr") return "fr";
