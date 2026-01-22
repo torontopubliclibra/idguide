@@ -57,7 +57,7 @@ export default function AbName() {
           <h4>{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h4>
           <p>You must swear or affirm the affidavit in your application in front of a Commissioner for Oaths or Notary Public in Alberta. The commissioner will verify your identity and the accuracy of your information, and will stamp or seal the document. The commissioner does not need to know you personally. Many notary/commissioner offices in Ontario will commission these documents for trans individuals for free; otherwise, the typical fee is $20-40.</p>
           <p>
-            <strong>Note:</strong> If there are any changes or additions to the affidavit, the commissioner must initial each change. Unless changes are authenticated, the affidavit will not be accepted by Vital Statistics.
+            Note: If there are any changes or additions to the affidavit, the commissioner must initial each change. Unless changes are authenticated, the affidavit will not be accepted by Vital Statistics.
           </p>
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/ab/resources" target='blank'>Alberta resources</Link> for a list of local and province-wide organizations.</p>
@@ -71,9 +71,16 @@ export default function AbName() {
 
             <h4>{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h4>
             <p>Carefully review the Information Guide and gather all required documents before applying. Only electronic fingerprints are accepted, and all supporting documents must be originals. If you are changing a child’s or represented adult’s name, ensure you have all required consents or court orders. If you have questions, contact your registry agent or Alberta Vital Statistics for help.</p>
+          <h4 id="reclaiming-indigenous-names">Reclaiming Indigenous names</h4>
+          <p>
+            If you are a residential school survivor, a person who was part of the Sixties Scoop, or a descendant (child, grandchild, great-grandchild) or spouse/partner of a survivor, you may be eligible to reclaim your Indigenous name at no cost through Alberta Vital Statistics.
+          </p>
           <ul>
-            <li>Residential school and Sixties Scoop survivors, their descendants, and spouses/partners may reclaim Indigenous names at no cost. Contact <a href="mailto:sa.vitalstatisticslcn@gov.ab.ca">sa.vitalstatisticslcn@gov.ab.ca</a> for details.</li>
+            <li>Applicants must be Alberta residents.</li>
+            <li>There is no government fee for eligible applicants reclaiming an Indigenous name.</li>
+            <li>Certificates like birth certificates surrendered with an amendment request will be cancelled and replaced with the Indigenous name free of charge.</li>
           </ul>
+          <p>To apply, request a Legal Change of Name (LCN) directly through the Vital Statistics office by emailing <a href="mailto:sa.vitalstatisticslcn@gov.ab.ca">sa.vitalstatisticslcn@gov.ab.ca</a>. Do not submit your application through a registry agent. Vital Statistics will issue an LCN certificate. Using the LCN certificate and a completed Fee Waiver Application Form, you may apply to amend any Alberta Vital Statistics record that reflects your name. If you have questions about reclaiming an Indigenous name, contact Alberta Vital Statistics directly for guidance and support.</p>
           <hr />
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
           <ul>

@@ -37,6 +37,9 @@ export default function OnName() {
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>To legally change your name in Ontario, you must complete the <Link href="/downloads#on-name">{t("NameChanges.ontarioApplicationName", "Ontario application to change an adult's name", pageLocale)}</Link>. The fee is $137.00.</p>
           <h3 id='requirements'>{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
+          <h4>Birth certificate details</h4>
+          <p>If your name change is approved and you were born in Ontario, you will automatically receive a new birth certificate in your new name.</p>
+          <blockquote>Note: The default birth certificate issued does not include parental information. If you want a birth certificate with parental information or a certified copy of your birth registration, you must apply separately and pay the required fee.</blockquote>
           <h4>{t("Subheadings.informationYoullNeedToProvide", "Information you'll need to provide", pageLocale)}</h4>
           <p>The application asks for detailed personal information, including:</p>
           <ol>
@@ -65,10 +68,13 @@ export default function OnName() {
             <li>If you were born in Ontario and have a valid birth certificate, include the originals (or certified copies) of all previously issued short- or long-form certificates.</li>
             <li>If you were born elsewhere in Canada, submit either an original birth certificate or a certified copy from your province or territory of birth.</li>
             <li>If you don&#39;t have a birth certificate, you&#39;ll likely need to apply for one before submitting your name change application.</li>
-            <li>If any supporting documents are not in English or French, you must provide a translation. See page 13 for translator requirements.</li>
+            <li>If any supporting documents are not in English or French, you must provide a translation. <b>Translation requirements:</b> Include a complete photocopy of the original document, a complete photocopy of the translation, and an original written declaration from the translator. The translator must state they understand both languages and that the translation is complete and correct. If the translator is not a professional, the declaration must be sworn before a commissioner for taking affidavits. If the declaration appears on the translation, submit the original translation (not a photocopy).</li>
           </ul>
           <h4>{t("Subheadings.requestForNonPublication", "Request for non-publication", pageLocale)}</h4>
-          <p>By default, all name changes in Ontario are published in The Ontario Gazette (online and in print). If you are transgender, First Nations, Inuit, or Métis, you can request non-publication by submitting a <Link href="/downloads#on-name">Request for Non-Publication form (11320e)</Link> with your application. If you do not want your previous name published, we strongly recommend including this form. Fill out the request and submit it with your application.</p>
+          <p>By default, all name changes in Ontario are published in The Ontario Gazette (online only). If you are transgender, First Nations, Inuit, or Métis, you can request non-publication by submitting a <Link href="/downloads#on-name">Request for Non-Publication form (11320e)</Link> with your application. If you do not want your previous name published, we strongly recommend including this form. Fill out the request and submit it with your application.</p>
+          <h4>Indigenous applicants and single name changes</h4>
+          <p>If you are First Nations, Inuit, or Métis, you may be eligible to have ServiceOntario fees waived when reclaiming a traditional Indigenous name or changing to a single name as part of your culture. You can also request non-publication of your name change in The Ontario Gazette. For more information and forms, see the ServiceOntario website or contact ServiceOntario directly.</p>
+          <p>You can apply to change your name (or your child&#39;s name) to a single name if it is part of your or your child&#39;s traditional culture. Indigenous applicants may also reclaim a traditional name at no cost. You must submit the Request for a Name Change with a Single Name form along with your application. Follow all instructions on the forms and provide any required supporting documents.</p>
           <h4>{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h4>
           <p>You must sign the statutory declaration (page 16) in front of a commissioner for taking affidavits, who will stamp or seal the document to verify your identity and the accuracy of your information. The commissioner does not need to know you personally. Many notary/commissioner offices in Ontario will commission these documents for trans individuals for free; otherwise, the typical fee is $30-45. If submitting in person, ServiceOntario can commission for free.</p>
           <blockquote>
@@ -78,7 +84,7 @@ export default function OnName() {
           <h4>{t("Subheadings.byMail", "By mail", pageLocale)}</h4>
           <p>Mail your completed form, payment, and required documents to:</p>
           <textarea readOnly name="address" id="address" value={
-            `Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
+            `ServiceOntario, Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
           />
           <p>Tip: Use a registered or tracked mail service to avoid lost applications.</p>
           <h4>{t("Subheadings.inPerson", "In person", pageLocale)}</h4>
@@ -98,7 +104,7 @@ export default function OnName() {
           <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/on/id">driver&#39;s license, photo card</Link>, or <Link href="/on/health">health card</Link>. By law, you must notify the Ministry of Transportation within 6 days of legally changing your name if you have a driver&#39;s license.</p>
           <p>If you want to update your gender marker and were born in Ontario, you can submit the <Link href="/downloads#on-birth">Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)</Link> along with your name change application. For details, see the <Link href="/on/birth">birth certificates guide</Link>.</p>
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
-          <p>If your application is complete and accurate, you should receive your change of name certificate in 6-8 weeks. It may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 8 weeks.</p>
+          <p>As of 2026, change of name applications are taking 18-24 weeks to process. It also may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 24 weeks.</p>
           <div className={styles.imageContainer}>
             <Image src="/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
           </div>

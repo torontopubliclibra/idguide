@@ -38,8 +38,8 @@ export default function MbName() {
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <ol>
             <li>Complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link> and gather all required documents and the $100 fee.</li>
-            <li>Submit your application to the Vital Statistics Branch (254 Portage Avenue, Winnipeg MB R3C 0B6) in person (by appointment: 204-945-3701 or 866-949-9296) or by mail.</li>
-            <li>Wait for review. If accepted, you will receive instructions for a <b>certified criminal record check</b> (if 18+). <i>Do not undergo a criminal record check until instructed.</i></li>
+            <li>Submit your application to the Vital Statistics Branch (254 Portage Avenue, Winnipeg MB R3C 0B6) in person or by mail.</li>
+            <li>Wait for review. If accepted, you will receive instructions for a certified criminal record check (if 18+). Do not undergo a criminal record check until instructed.</li>
             <li>Complete the certified criminal record check and submit results as instructed.</li>
             <li>If approved, you will receive your legal change of name certificate by mail.</li>
           </ol>
@@ -50,7 +50,7 @@ export default function MbName() {
             <li>Must have lived in Manitoba for at least 3 months before applying.</li>
             <li>Applicants must be 18+ (or under 18 and married/in a common-law relationship, or a parent with custody).</li>
             <li>To change a child&#39;s name, you must be the parent or legal guardian (with proper documentation and consents).</li>
-            <li><b>You cannot apply if you:</b>
+            <li>You cannot apply if you:
               <ul>
                 <li>Have been convicted of a primary offence as defined in subsection 490.011(1) of the Criminal Code (Canada)</li>
                 <li>Are designated a dangerous offender (s.753) or long-term offender (s.753.1) under the Criminal Code</li>
@@ -83,7 +83,7 @@ export default function MbName() {
           <textarea readOnly name="address" id="address" value={
             `Vital Statistics Branch\nAttn: Legal Change of Name\n254 Portage Avenue\nWinnipeg MB   R3C 0B6`
           } />
-          <p>To book an appointment: 204-945-3701 or 866-949-9296</p>
+          <p>To book an appointment: <a href="tel:204-945-3701">204-945-3701</a> or <a href="tel:866-949-9296">866-949-9296</a></p>
           <p>If mailing, use a tracked service if possible. Fees can be paid by cash, debit, or credit in person.</p>
           <hr />
           <h3 id="sources">Sources</h3>
