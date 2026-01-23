@@ -77,6 +77,8 @@ export default function OnName() {
           <h4>Indigenous applicants and single name changes</h4>
           <p>If you are First Nations, Inuit, or Métis, you may be eligible to have ServiceOntario fees waived when reclaiming a traditional Indigenous name or changing to a single name as part of your culture. You can also request non-publication of your name change in The Ontario Gazette. For more information and forms, see the ServiceOntario website or contact ServiceOntario directly.</p>
           <p>You can apply to change your name (or your child&#39;s name) to a single name if it is part of your or your child&#39;s traditional culture. Indigenous applicants may also reclaim a traditional name at no cost. You must submit the Request for a Name Change with a Single Name form along with your application. Follow all instructions on the forms and provide any required supporting documents.</p>
+          <h4>Refugees and permanent residents</h4>
+          <p>You must be a legal resident to change your name in Ontario. It&#39;s easiest to do this when you apply for permanent residency, so your new name appears on your Permanent Resident card. If you change your name later, you&#39;ll need to <Link href="/pr">update your PR card</Link>.</p>
           <h4>{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h4>
           <p>You must sign the statutory declaration (page 16) in front of a commissioner for taking affidavits, who will stamp or seal the document to verify your identity and the accuracy of your information. The commissioner does not need to know you personally. Many notary/commissioner offices in Ontario will commission these documents for trans individuals for free; otherwise, the typical fee is $30-45. If submitting in person, ServiceOntario can commission for free.</p>
           <blockquote>
@@ -89,6 +91,13 @@ export default function OnName() {
             `ServiceOntario, Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
           />
           <p>Tip: Use a registered or tracked mail service to avoid lost applications.</p>
+          <p>To contact the Office of the Registrar General for more information or to get forms:<br />
+              <ul style={{marginTop: '0.5em'}}>
+                <li>1-800-461-2156 (outside Toronto but within North America)</li>
+                <li>416-325-8305 (in Toronto or outside North America)</li>
+                <li>TTY/Teletypewriter (for the hearing impaired): 416-325-3408</li>
+              </ul>
+            </p>
           <h4>{t("Subheadings.inPerson", "In person", pageLocale)}</h4>
           <p>If you prefer to submit in person and are in Toronto, bring your completed form, payment, and documents to:</p>
           <textarea readOnly name="address" id="address" value={
