@@ -15,7 +15,8 @@ export const metadata: Metadata = {
   description:
     "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
   keywords: [
-    "name change", "gender marker", "sex marker", "legal name change", "identity documents", "Canada", "Ontario", "Alberta", "British Columbia", "Quebec", "Saskatchewan", "Manitoba", "Nova Scotia", "New Brunswick", "trans", "trans technology", "non-binary", "Two-Spirit", "legal forms", "passport", "health card", "birth certificate", "driver's license", "permanent resident", "permanent residency", "social insurance", "CRA", "LGBTQ", "step-by-step guides", "accessible resources"
+    "I.D. Guide", "ID Guide", "name change", "legal name change", "change of name", "name change Ontario", "name change Alberta", "name change Manitoba", "change name Ontario", "change name Alberta", "change name Manitoba", "how to change name Ontario", "how to change name Alberta", "how to change name Manitoba", "gender marker", "sex marker", "gender marker change", "identity documents", "ID", "Canada", "Ontario", "Alberta", "Manitoba", "British Columbia", "Quebec", "Saskatchewan", "Nova Scotia", "New Brunswick", "trans", "transgender", "trans technology", "non-binary", "Two-Spirit", "legal forms", "passport", "health card", "birth certificate", "driver's license", "photo I.D.", "permanent resident", "PR card", "permanent residency", "social insurance", "CRA", "LGBTQ", "step-by-step guides", "accessible resources", "French name change", "French resources", "Francophone", "French language forms", "name change French", "changer de nom", "changer de nom Ontario", "changer de nom Alberta", "changer de nom Manitoba", "comment changer de nom Ontario", "comment changer de nom Alberta", "comment changer de nom Manitoba", "documents d'identité", "transgenre", "non-binaire", "Deux-Esprits", "ressources accessibles", "formulaires juridiques", "guide étape par étape",
+    "Newfoundland and Labrador", "Prince Edward Island", "Yukon", "Northwest Territories", "Nunavut", "legal gender change", "gender change Canada", "gender change Ontario", "gender change Alberta", "gender change Manitoba", "change gender marker", "change sex designation", "driver's licence", "photo ID", "provincial ID", "citizenship card", "immigration documents", "status card", "Indian status", "birth registration", "LGBTQ2S", "LGBTQIA", "queer", "gender diverse", "gender nonconforming", "intersex", "ally", "support", "advocacy", "legal help", "legal support", "accessible guides", "plain language", "easy read", "step-by-step instructions", "printable forms", "downloadable guides", "legal transition", "transition documents", "document update", "update ID", "update documents", "update records", "update legal name", "update gender marker"
   ],
   openGraph: {
     title: "I.D. Guide",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     title: "I.D. Guide",
     description:
       "Navigating name and gender marker changes can feel overwhelming, but I.D. Guide is here to help—offering step-by-step guides, downloadable forms, and resources to support you every step of the way.",
-    site: "https://danateagle.com",
+    site: "https://idguide.ca/",
     creator: "Dana Rosamund Teagle",
     images: ["https://idguide.ca/idguide.png"],
   },
