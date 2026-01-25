@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://idguide.ca
+
+# Sitemaps
+Sitemap: https://idguide.ca/sitemap.xml
