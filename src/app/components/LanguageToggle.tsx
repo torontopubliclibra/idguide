@@ -1,35 +1,33 @@
 "use client";
-
-import { usePathname, useRouter } from 'next/navigation';
 import React from 'react';
 
 export function LanguageToggle({ locale }: { locale: string }) {
-  const pathname = usePathname();
-  const router = useRouter();
-
-  // Helper to swap locale in path (assumes /fr/ or /en/ or no prefix)
-  const getLocalePath = (lang: string) => {
-    if (pathname.startsWith('/fr/')) {
-      return lang === 'en' ? pathname.replace(/^\/fr/, '') || '/' : pathname;
-    }
+  const getLocaleUrl = (lang: string) => {
+    if (typeof window === 'undefined') return '#';
+    const { host, pathname, search, hash } = window.location;
+    let newHost = host;
     if (lang === 'fr') {
-      return '/fr' + (pathname === '/' ? '' : pathname);
+      if (!host.startsWith('fr.')) {
+        newHost = 'fr.' + host.replace(/^en\./, '');
+      }
+    } else {
+      newHost = host.replace(/^fr\./, '');
     }
-    return pathname;
+    return `${window.location.protocol}//${newHost}${pathname}${search}${hash}`;
   };
 
   const handleLanguageClick = (lang: string, event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
     if (typeof window !== 'undefined') {
       localStorage.setItem('preferredLanguage', lang);
-      router.push(getLocalePath(lang));
+      window.location.href = getLocaleUrl(lang);
     }
   };
 
   return (
     <span>
       <a
-        href={getLocalePath('en')}
+        href="#"
         style={{ textDecoration: locale === 'en' ? 'underline' : undefined }}
         onClick={e => handleLanguageClick('en', e)}
       >
@@ -37,7 +35,7 @@ export function LanguageToggle({ locale }: { locale: string }) {
       </a>
       {" / "}
       <a
-        href={getLocalePath('fr')}
+        href="#"
         style={{ textDecoration: locale === 'fr' ? 'underline' : undefined }}
         onClick={e => handleLanguageClick('fr', e)}
       >
