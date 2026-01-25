@@ -96,13 +96,13 @@ export default function Search() {
           "/about"
         ];
         if (routes1.includes(item.route)) {
-          score += 1.5;
+          score += 1;
         }
         const routes2 = [
           "/downloads"
         ];
         if (routes2.includes(item.route)) {
-          score += 1;
+          score += 0.5;
         }
 
         // Lower score for regional pages
