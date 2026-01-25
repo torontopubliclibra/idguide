@@ -35,10 +35,10 @@ export default function SIN() {
           </div>
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <p>Permanent and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents’ names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful.</p>
+          <p>Citizens, permanent residents, and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents&apos; names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful.</p>
           <p>Apply to update your SIN when you change your name and/or gender marker. You can submit your application:</p>
           <ul>
-            <li><strong>{t("Subheadings.inPerson", "In person", pageLocale)}:</strong> Service Canada Centre, 559 College Street, Suite 100, Toronto ON M6G 1A9</li>
+            <li><strong>{t("Subheadings.inPerson", "In person", pageLocale)}:</strong>Service Canada Centre, 559 College Street, Suite 100, Toronto ON M6G 1A9</li>
             <li><strong>{t("Subheadings.online", "Online", pageLocale)}:</strong> <Link href="https://sin-nas.canada.ca/en/Sin/" target="_blank" rel="noreferrer">SIN Online Portal</Link></li>
             <li><strong>{t("Subheadings.byMail", "By mail", pageLocale)}:</strong> Service Canada, Social Insurance Registration Office, PO Box 7000, Bathurst, NB E2A 4T1</li>
           </ul>

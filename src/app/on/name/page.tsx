@@ -128,6 +128,8 @@ export default function OnName() {
           <div className="pageNav">
             <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/on/resources">Ontario resources</Link></li>
               <li><Link href="/on/birth">Ontario birth certificates</Link></li>
               <li><Link href="/on/health">Ontario health cards</Link></li>
               <li><Link href="/on/id">Ontario driver&#39;s licenses & I.D. cards</Link></li>

@@ -74,6 +74,8 @@ export default function BirthPage() {
           <div className="pageNav">
             <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/on/resources">Ontario resources</Link></li>
               <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link></li>
               <li><Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link></li>
               <li><Link href="/on/id">{t("Pages.ontarioDriversLicensesAndIDCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link></li>

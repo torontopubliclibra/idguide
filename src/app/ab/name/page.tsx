@@ -88,6 +88,14 @@ export default function AbName() {
           <ul>
             <li><Link href="https://www.alberta.ca/legal-name-change" target="_blank" rel="noreferrer">Government of Alberta - Legal name change</Link></li>
           </ul>
+          <hr />
+          <div className="pageNav">
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
+            <ul>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/mb/resources">Manitoba resources</Link></li>
+            </ul>
+          </div>
         </div>
         <div className="stacks"></div>
       </main>

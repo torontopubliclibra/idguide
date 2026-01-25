@@ -86,9 +86,25 @@ export default function Search() {
         const keywordMatch = words.every(word => keywordsString.includes(word));
         const summaryMatch = words.every(word => summary.includes(word));
         let score = 0;
-        if (titleMatch) score = 3;
-        else if (keywordMatch) score = 2;
-        else if (summaryMatch) score = 1;
+        if (titleMatch) score = 4;
+        else if (keywordMatch) score = 3;
+        else if (summaryMatch) score = 2;
+
+        const routes1 = [
+          "/resources",
+          "/guides",
+          "/about"
+        ];
+        if (routes1.includes(item.route)) {
+          score += 1.5;
+        }
+        const routes2 = [
+          "/downloads"
+        ];
+        if (routes2.includes(item.route)) {
+          score += 1;
+        }
+
         // Lower score for regional pages
         if (score > 0 && isRegional(item)) score -= 0.5;
         return score > 0 ? { ...item, _score: score } : null;
@@ -129,11 +145,11 @@ export default function Search() {
                   <div style={{color: '#888', marginTop: '2rem', marginBottom: '1.5rem'}}>{t("Search.noResults", "No results for ", pageLocale)}&quot;{searchInput}&quot;{t("Search.noResults-2", " found", pageLocale)}.</div>
                 </>
               )}
-              {results.map((item) => (
+              {results.map((item, index) => (
                 <div key={item.route} style={{margin: '1.5rem 0'}}>
-                  <hr style={{marginBottom: '1.5rem'}}/>
-                  <Link href={item.route} style={{fontWeight: 'bold', fontSize: '1.1em'}}>{item.title}</Link>
-                  <div style={{marginTop: '0.2em', fontSize: '0.9em'}}>{item.summary}</div>
+                  <hr className={styles.resultSeparator} style={{marginBottom: '1.5rem', opacity: index === 0 ? 1 : 0.3}}/>
+                  <Link href={item.route} style={{fontFamily: 'var(--font-special-gothic-expanded-one)', fontSize: '1.5rem'}}>{item.title}</Link>
+                  <div style={{marginTop: '0.5rem', fontSize: '0.9em'}}>{item.summary}</div>
                   {Array.isArray(item.images) && item.images.length > 0 && (
                     <div style={{
                       display: 'flex',

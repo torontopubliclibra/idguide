@@ -27,10 +27,6 @@
   list-style-type: disclosure-closed;
 }
 
-.guides hr {
-  margin: 2rem 0;
-}
-
 @media (max-width: 1200px) {
   .guides {
     padding-top: 20px;

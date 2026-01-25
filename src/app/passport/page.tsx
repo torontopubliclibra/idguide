@@ -68,6 +68,7 @@ export default function Passport() {
           <div className="pageNav">
             <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
+              <li><Link href="/pr">{t("Pages.prCards", "Permanent resident cards", pageLocale)}</Link></li>
               <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
               <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
             </ul>

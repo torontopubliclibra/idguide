@@ -37,7 +37,7 @@ export default function Workshops() {
           <h3>Format & accessibility</h3>
           <ul>
             <li>Workshops are typically 45-90 minutes, with flexible timing to fit your needs</li>
-            <li>Available in-person (Ontario), virtually, or hybrid</li>
+            <li>Available in-person (Toronto), virtually, or hybrid</li>
             <li>Interactive Q&A can be included</li>
             <li>Materials can be provided in advance or in accessible formats upon request</li>
           </ul>
@@ -47,6 +47,18 @@ export default function Workshops() {
             <li>Workshops are available for community groups, labour unions, schools, health providers, and more...</li>
             <li>While commissioning services are not provided, Dana is happy to recommend supportive notaries or resources</li>
           </ul>
+          <hr />
+          <div className="pageNav">
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
+            <ul style={{ fontSize: "1.1rem", lineHeight: "1.5rem" }}>
+              <li>
+                <Link href="/about">{t("Pages.about", "About", pageLocale)}</Link>
+              </li>
+              <li>
+                <Link href="/downloads">{t("Pages.downloads", "Downloads", pageLocale)}</Link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="stacks"></div>
       </main>

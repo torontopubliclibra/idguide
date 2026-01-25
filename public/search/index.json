@@ -1,10 +1,41 @@
 [
   {
+    "route": "/ab",
+    "title": "Alberta",
+    "summary": "This is a full list of pages specific to Alberta.",
+    "keywords": [
+      "Alberta"
+    ],
+    "images": []
+  },
+  {
+    "route": "/on",
+    "title": "Ontario",
+    "summary": "This is a full list of pages specific to Ontario.",
+    "keywords": [
+      "Ontario"
+    ],
+    "images": []
+  },
+  {
+    "route": "/mb",
+    "title": "Manitoba",
+    "summary": "This is a full list of pages specific to Manitoba.",
+    "keywords": [
+      "Manitoba"
+    ],
+    "images": []
+  },
+  {
     "route": "/ab/name",
     "title": "Alberta name changes",
     "summary": "To legally change your name in Alberta, fill out the Application for Change of Name (DVS3132). The application is 16 pages and split into five sections, but you may not need to complete every part. A fee of $120 is required.",
     "keywords": [
-      "Alberta"
+      "Alberta",
+      "name changes",
+      "legal name changes",
+      "change of name",
+      "Application for Change of Name (DVS3132)"
     ],
     "images": []
   },
@@ -13,7 +44,12 @@
     "title": "Alberta resources",
     "summary": "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Alberta.",
     "keywords": [
-      "Alberta"
+      "Alberta",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
     ],
     "images": []
   },
@@ -22,7 +58,15 @@
     "title": "About",
     "summary": "I.D. Guide is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities. Everyone deserves clear, accurate, and up-to-date information—but government agencies often make these processes confusing or hard to access. I.D. Guide brings together practical, step-by-step instructions and forms in one place to help you navigate these changes confidently.",
     "keywords": [
-      "Canada"
+      "Canada",
+      "I.D. Guide",
+      "identity documents",
+      "name changes",
+      "gender marker changes",
+      "trans",
+      "non-binary",
+      "Two-Spirit",
+      "Dana Rosamund Teagle"
     ],
     "images": []
   },
@@ -32,7 +76,11 @@
     "summary": "The process for updating your birth certificate will vary depending on the province or territory in which you were born:",
     "keywords": [
       "Birth",
-      "certificates"
+      "certificates",
+      "birth registration",
+      "birth record",
+      "birth certificate update",
+      "parental information"
     ],
     "images": []
   },
@@ -41,7 +89,12 @@
     "title": "Canada Revenue Agency",
     "summary": "You must notify the Canada Revenue Agency (CRA) of any name changes. If you have changed both your first and last name, you must send a letter by mail or fax. If you have only changed either your first or last name (and have not previously changed your name), you may also notify the CRA by phone.",
     "keywords": [
-      "Canada"
+      "Canada",
+      "taxes",
+      "revenue",
+      "T4",
+      "T1",
+      "CRA"
     ],
     "images": []
   },
@@ -50,7 +103,16 @@
     "title": "Downloads",
     "summary": "Here you'll find the forms to help with name changes and gender marker updates, as well as presentation materials for past workshops. If you need help finding the right document, please check the sources at the bottom of the related guide, or contact us for support.",
     "keywords": [
-      "Downloads"
+      "Downloads",
+      "forms",
+      "workshops",
+      "presentation materials",
+      "applications",
+      "legal name changes",
+      "Ontario",
+      "Alberta",
+      "Manitoba",
+      "Canada"
     ],
     "images": [
     ]
@@ -110,7 +172,9 @@
     "summary": "The process for changing your legal name will vary depending on your province or territory of residency:",
     "keywords": [
       "Name",
-      "changes"
+      "changes",
+      "legal name changes",
+      "change of name"
     ],
     "images": []
   },
@@ -120,7 +184,15 @@
     "summary": "To update the sex designation on your Ontario birth registration or certificate, complete the Application for Change of Sex Designation on a Birth Registration of an Adult (11325e) and the Statutory Declaration for a Change of Sex Designation (11324e).",
     "keywords": [
       "Ontario",
-      "Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)"
+      "Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)",
+      "Statutory Declaration for a Change of Sex Designation (11324e)",
+      "birth certificates",
+      "birth registration",
+      "parental information",
+      "Service Ontario",
+      "ServiceOntario",
+      "Healthcare",
+      "Registrar General"
     ],
     "images": [
       "/on-birth-example.jpeg"
@@ -131,7 +203,14 @@
     "title": "Ontario health cards",
     "summary": "There is no fee to get a new Ontario health card. To change your name, visit a ServiceOntario location and bring a completed Change of Information form (0280-82e) plus an original copy of one of the following: Canadian birth certificate, Canadian change of name certificate, Citizenship or immigration status document in your new name.",
     "keywords": [
-      "Ontario"
+      "Ontario",
+      "Service Ontario",
+      "ServiceOntario",
+      "health cards",
+      "OHIP",
+      "Ontario health insurance plan",
+      "change of information form",
+      "Healthcare"
     ],
     "images": [
       "/on-health-example.jpeg"
@@ -142,7 +221,18 @@
     "title": "Ontario driver's licenses & I.D. cards",
     "summary": "When updating the sex designation on your Ontario driver's license or photo card, you can choose F, M, or X. The process depends on which designation you select. Updating your driver's license is free if you already have one. If you don't drive, you can get an Ontario photo card for $35. We highly recommend the photo card for trans and non-binary people who don't have a driver's license. It's a helpful piece of I.D. for proving your legal name, sex designation, and address, and can make other document changes, voting, and bureaucratic processes easier.",
     "keywords": [
-      "Ontario"
+      "Ontario",
+      "driver's licenses",
+      "I.D. cards",
+      "photo I.D.",
+      "ID cards",
+      "X marker",
+      "photo ID",
+      "driving",
+      "Ontario photo card",
+      "transportation",
+      "ServiceOntario",
+      "Service Ontario"
     ],
     "images": [
       "/on-driveid-example.jpeg",
@@ -155,7 +245,14 @@
     "summary": "To legally change your name in Ontario, you must complete the Ontario application to change an adult's name. The fee is $137.00.",
     "keywords": [
       "Ontario",
-      "Ontario application to change an adult's name"
+      "name changes",
+      "legal name changes",
+      "change of name",
+      "application to change an adult's name",
+      "Ontario name change application",
+      "Service Ontario",
+      "ServiceOntario",
+      "Registrar General"
     ],
     "images": [
       "/on-name-example.jpeg"
@@ -166,7 +263,12 @@
     "title": "Ontario resources",
     "summary": "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Ontario.",
     "keywords": [
-      "Ontario"
+      "Ontario",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
     ],
     "images": []
   },
@@ -183,7 +285,14 @@
     "summary": "There are 3 options for gender/sex identification on Canadian passports: F, M, and X. Depending on whether your supporting documents have the gender/sex identifier you want, the application process for your passport will vary.",
     "keywords": [
       "Canadian",
-      "passports"
+      "passports",
+      "travel documents",
+      "Government of Canada",
+      "Passport Canada",
+      "passport office",
+      "X marker",
+      "passport application",
+      "passport renewal"
     ],
     "images": []
   },
@@ -192,7 +301,14 @@
     "title": "Permanent resident cards",
     "summary": "If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the PR Card Application (IMM-5445) to start the process. The fee is $50.",
     "keywords": [
-      "Complete the PR Card Application (IMM-5445)"
+      "PR cards",
+      "permanent residence",
+      "permanent resident cards",
+      "temporary resident",
+      "temporary residence",
+      "Canada",
+      "immigration",
+      "Government of Canada"
     ],
     "images": []
   },
@@ -202,7 +318,12 @@
     "summary": "I.D. Guide values your privacy. This page explains what information we collect, how we use it, and your choices. We aim to keep things simple and transparent. Our website may link to other sites for your convenience. We are not responsible for the privacy practices or content of those external sites.",
     "keywords": [
       "Privacy",
-      "policy"
+      "policy",
+      "data",
+      "information",
+      "collection",
+      "use",
+      "terms of service"
     ],
     "images": []
   },
@@ -211,7 +332,12 @@
     "title": "Resources",
     "summary": "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people across Canada. You'll also find links below to our lists of region-specific resources.",
     "keywords": [
-      "Resources"
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+",
+      "Canada"
     ],
     "images": []
   },
@@ -227,9 +353,20 @@
   {
     "route": "/sin",
     "title": "Social Insurance Registry",
-    "summary": "Permanent and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents’ names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful. Apply to update your SIN when you change your name and/or gender marker.",
+    "summary": "Citizens, permanent residents, and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents' names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful. Apply to update your SIN when you change your name and/or gender marker.",
     "keywords": [
-      "Canada"
+      "Canada",
+      "SIN",
+      "Social Insurance Number",
+      "Social Security Number",
+      "citizen",
+      "permanent resident",
+      "temporary resident",
+      "work",
+      "government programs",
+      "benefits",
+      "Service Canada",
+      "ServiceCanada"
     ],
     "images": []
   },
@@ -252,7 +389,19 @@
     "title": "Workshops",
     "summary": "The I.D. Guide project is led by Dana Rosamund Teagle, a designer and web/software developer based in Toronto. Since 2021, Dana has been delivering engaging and practical workshops on name and gender marker changes for organizations across Ontario. Dana has presented for groups including LGBT YouthLine, Windsor Hackforge, CUPE 3902, CUPE 3903, and CAMH.",
     "keywords": [
-      "Ontario"
+      "Ontario",
+      "workshops",
+      "presentations",
+      "Dana Rosamund Teagle",
+      "facilitation",
+      "2SLGBTQ+",
+      "advocacy",
+      "education",
+      "training",
+      "workplaces",
+      "unions",
+      "community organizations",
+      "organizing"
     ],
     "images": []
   }

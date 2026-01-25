@@ -87,6 +87,14 @@ export default function MbName() {
             <li><a href="https://rainbowresourcecentre.org/" target="_blank" rel="noreferrer">Rainbow Resource Centre</a></li>
             <li><a href="https://www.sunshinehousewpg.org/2s-trans-id-peer-support" target="_blank" rel="noreferrer">Sunshine House 2S/Trans ID Peer Support</a></li>
           </ul>
+          <hr />
+          <div className="pageNav">
+            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
+            <ul>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/mb/resources">Manitoba resources</Link></li>
+            </ul>
+          </div>
         </div>
       </main>
     </div>

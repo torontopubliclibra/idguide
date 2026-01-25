@@ -34,7 +34,6 @@ export default function About() {
         <h2 className="page-title">{t("Pages.about", "About", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <h3 id='about'>{t("Pages.about", "About the site", pageLocale)}</h3>
           <p><span className={styles.strong}>{t("Site.name", "I.D. Guide", pageLocale)}</span> {t("AboutPage.about-1", "is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities.", pageLocale)}</p>
 
           <p>{t("AboutPage.about-2", "Everyone deserves clear, accurate, and up-to-date information—but government agencies often make these processes confusing or hard to access. I.D. Guide brings together practical, step-by-step instructions and forms in one place to help you navigate these changes confidently. While we do not provide legal advice, our goal is to empower you to make informed choices and advocate for yourself.", pageLocale)}</p>
@@ -118,6 +117,9 @@ export default function About() {
                 <li><Link href="/on/resources">{t("Pages.ontarioResources", "Ontario", pageLocale)}</Link></li>
               </ul>
             </li>
+            <li><Link href="/ab">{t("Pages.alberta", "Alberta", pageLocale)}</Link></li>
+            <li><Link href="/mb">{t("Pages.manitoba", "Manitoba", pageLocale)}</Link></li>
+            <li><Link href="/on">{t("Pages.ontario", "Ontario", pageLocale)}</Link></li>
             <li><Link href="/privacy">{t("Pages.privacy", "Privacy policy", pageLocale)}</Link></li>
             </ul>
           </div>

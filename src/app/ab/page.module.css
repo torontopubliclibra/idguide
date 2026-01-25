@@ -1,0 +1,46 @@
+.alberta {
+  width: 100%;
+}
+
+.alberta .main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--semiwhite);
+  color: var(--black);
+  font-size: 1.15rem;
+  padding: 50px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.alberta .content ul {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.alberta .content ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.alberta .content ul li {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  text-decoration: underline;
+  transition: all 0.3s;
+  color: var(--black);
+}
+
+.alberta .content ul li:hover {
+  color: var(--dark3);
+}
+
+@media (max-width: 1200px) {
+  .alberta {
+    padding-top: 20px;
+  }
+  .alberta .main {
+    padding: 30px;
+  }
+}

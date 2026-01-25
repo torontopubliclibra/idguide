@@ -1,0 +1,46 @@
+.ontario {
+  width: 100%;
+}
+
+.ontario .main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--semiwhite);
+  color: var(--black);
+  font-size: 1.15rem;
+  padding: 50px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.ontario .content ul {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.ontario .content ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.ontario .content ul li {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  text-decoration: underline;
+  transition: all 0.3s;
+  color: var(--black);
+}
+
+.ontario .content ul li:hover {
+  color: var(--dark3);
+}
+
+@media (max-width: 1200px) {
+  .ontario {
+    padding-top: 20px;
+  }
+  .ontario .main {
+    padding: 30px;
+  }
+}

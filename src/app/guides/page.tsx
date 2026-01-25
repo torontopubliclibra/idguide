@@ -38,23 +38,29 @@ export default function Guides() {
               <li><Link href="#canada-wide">{t("Site.canadaWide", "Canada-wide", pageLocale)}</Link></li>
             </ul>
           </div>
-          <hr style={{margin: '0.5rem 0', marginTop: '1rem'}}/>
+          <hr style={{margin: '0.5rem 0'}}/>
           <div>
-            <h3 id="alberta">{t("Site.alberta", "Alberta", pageLocale)}</h3>
+            <Link href="/ab" style={{textDecoration: 'none'}}>
+              <h3 id="alberta">{t("Site.alberta", "Alberta", pageLocale)}</h3>
+            </Link>
             <ul>
               <li>
                 <Link href="/ab/name">{t("GuidesPage.legalNameChanges", "Legal name changes", pageLocale)}</Link>
               </li>
             </ul>
-            <hr/>
-            <h3 id="manitoba">{t("Site.manitoba", "Manitoba", pageLocale)}</h3>
+            <hr style={{margin: '2rem 0'}}/>
+            <Link href="/mb" style={{textDecoration: 'none'}}>
+              <h3 id="manitoba">{t("Site.manitoba", "Manitoba", pageLocale)}</h3>
+            </Link>
             <ul>
               <li>
                 <Link href="/mb/name">{t("GuidesPage.legalNameChanges", "Legal name changes", pageLocale)}</Link>
               </li>
             </ul>
-            <hr/>
-            <h3 id="ontario">{t("Site.ontario", "Ontario", pageLocale)}</h3>
+            <hr style={{margin: '2rem 0'}}/>
+            <Link href="/on" style={{textDecoration: 'none'}}>
+              <h3 id="ontario">{t("Site.ontario", "Ontario", pageLocale)}</h3>
+            </Link>
             <ul>
               <li>
                 <Link href="/on/name">{t("GuidesPage.legalNameChanges", "Legal name changes", pageLocale)}</Link>
@@ -69,7 +75,7 @@ export default function Guides() {
                 <Link href="/on/id">{t("GuidesPage.idCardUpdates", "ID card updates", pageLocale)}</Link>
               </li>
             </ul>
-            <hr/>
+            <hr style={{margin: '2rem 0'}}/>
             <h3 id="canada-wide">{t("Site.canadaWide", "Canada-wide", pageLocale)}</h3>
             <ul>
               <li>

@@ -59,6 +59,8 @@ export default function OnHealth() {
           <div className="pageNav">
             <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
             <ul>
+              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
+              <li><Link href="/on/resources">Ontario resources</Link></li>
               <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link></li>
               <li><Link href="/on/birth">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</Link></li>
               <li><Link href="/on/id">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link></li>
