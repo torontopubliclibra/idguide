@@ -37,7 +37,7 @@ export default function PR() {
           <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <p>If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the <Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">PR Card Application (IMM-5445)</Link> to start the process. The fee is $50.00.</p>
+          <p>If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the <Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">PR Card Application (IMM-5445)</Link> to start the process. The fee is $50.</p>
 
           <h3 id="requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
           <p>Use the <Link href="/downloads#pr">Permanent Resident Card Document Checklist (IMM-5644)</Link> to confirm which documents you need. Include the completed checklist with your application</p>

@@ -5,7 +5,7 @@ import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 
-export default function Guides() {
+export default function Name() {
   
   const pageLocale = useMemo(() => {
     if (typeof window === "undefined") return "en";

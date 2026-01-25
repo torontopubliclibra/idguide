@@ -58,6 +58,10 @@ export default function OnResources() {
             </thead>
             <tbody>
               <tr>
+                <td><a href="/workshops" target="_blank" rel="noreferrer">I.D. Guide Workshops</a></td>
+                <td>In-person and virtual workshops on name and gender marker changes</td>
+              </tr>
+              <tr>
                 <td><a href="https://www.legalaid.on.ca/legal-clinics/" target="_blank" rel="noreferrer">Legal Aid Ontario</a></td>
                 <td>Legal clinics and support</td>
               </tr>

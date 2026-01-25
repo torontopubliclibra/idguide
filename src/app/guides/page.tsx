@@ -27,6 +27,8 @@ export default function Guides() {
         <h2 className="page-title">{t("Pages.guides", "Guides", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
+          <p>{t("GuidesPage.intro", "This is a full list of our guides to legal name changes, birth certificate updates, health card updates, and more across different provinces and Canada-wide.", pageLocale)}</p>
+          <hr />
           <div className="pageNav">
             <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
             <ul>

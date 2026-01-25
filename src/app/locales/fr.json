@@ -26,6 +26,7 @@
     "canadaWideResources": "Ressources du Canada entier",
     "downloads": "Téléchargements",
     "about": "À propos",
+    "search": "Recherche",
     "changelog": "Journal des modifications (en anglais)",
     "sitemap": "Plan du site",
     "privacy": "Politique de confidentialité",
@@ -70,6 +71,11 @@
     "withoutSupportingDocuments": "Sans documents justificatifs",
     "translations": "Traductions",
     "inExceptionalCases": "Dans des cas exceptionnels"
+  },
+  "Search": {
+    "placeholder": "Tapez un mot-clé pour rechercher...",
+    "noResults": "Aucun résultat pour ",
+    "noResults-2": " trouvé"
   },
   "HomePage": {
     "skipToMain": "Aller au contenu principal",
@@ -206,7 +212,8 @@
     "downloadsIconAlt": "Icône de téléchargement",
     "aboutIconAlt": "Icône à propos",
     "exitTitle": "Sortie rapide vers Wikipedia.org",
-    "exitIconAlt": "Icône de sortie"
+    "exitIconAlt": "Icône de sortie",
+    "searchIconAlt": "Icône de recherche"
   },
   "Footer": {
     "version": "v1.0.3"

@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.0.7",
+    "date": "2026-01-25",
+    "changes": [
+      "Added search functionality"
+    ]
+  },
+  {
     "version": "1.0.6",
     "date": "2026-01-21",
     "changes": [

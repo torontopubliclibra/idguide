@@ -106,6 +106,10 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .nav li a img {
+    width: 25px;
+    height: 25px;
+  }
   .navContainer.mobileOpen li:nth-child(1), .navContainer.mobileOpen li:nth-child(1):hover {
     background-color: var(--dark1);
   }

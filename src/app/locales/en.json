@@ -26,6 +26,7 @@
     "canadaWideResources": "Canada-wide resources",
     "downloads": "Downloads",
     "about": "About",
+    "search": "Search",
     "changelog": "Changelog",
     "sitemap": "Sitemap",
     "privacy": "Privacy policy",
@@ -70,6 +71,11 @@
     "withoutSupportingDocuments": "Without supporting documents",
     "translations": "Translations",
     "inExceptionalCases": "In exceptional cases"
+  },
+  "Search": {
+    "placeholder": "Type any keyword to search...",
+    "noResults": "No results for ",
+    "noResults-2": " found"
   },
   "HomePage": {
     "headline": "You deserve identity documents that reflect your life",
@@ -203,6 +209,7 @@
     "resourcesIconAlt": "Resources icon",
     "downloadsIconAlt": "Download icon",
     "aboutIconAlt": "About icon",
+    "searchIconAlt": "Search icon",
     "exitTitle": "Quick exit to Wikipedia.org",
     "exitIconAlt": "Exit icon"
   },

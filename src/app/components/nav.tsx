@@ -14,6 +14,12 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                         <Image src="/start.svg" alt={t("Nav.startIconAlt", "Start icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
+                <li>
+                    <Link href="/about" title={t("Pages.about", "About", locale)}>
+                        {t("Pages.about", "About", locale)}
+                        <Image src="/info.svg" alt={t("Nav.aboutIconAlt", "About icon", locale)} width={20} height={20} />
+                    </Link>
+                </li>
                 <li className={`${styles.dropdown}`}>
                     <Link href="/guides">
                         {t("Pages.guides", "Guides", locale)}
@@ -53,15 +59,9 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                     </Link>
                 </li>
                 <li>
-                    <Link href="/downloads" title={t("Pages.downloads", "Downloads", locale)}>
-                        {t("Pages.downloads", "Downloads", locale)}
-                        <Image src="/download.svg" alt={t("Nav.downloadsIconAlt", "Downloads icon", locale)} width={20} height={20} />
-                    </Link>
-                </li>
-                <li>
-                    <Link href="/about" title={t("Pages.about", "About", locale)}>
-                        {t("Pages.about", "About", locale)}
-                        <Image src="/info.svg" alt={t("Nav.aboutIconAlt", "About icon", locale)} width={20} height={20} />
+                    <Link href="/search" title={t("Pages.search", "Search", locale)}>
+                        {t("Pages.search", "Search", locale)}
+                        <Image src="/search.svg" alt={t("Nav.searchIconAlt", "Search icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>

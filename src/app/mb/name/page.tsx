@@ -37,14 +37,7 @@ export default function MbName() {
           </div>
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <ol>
-            <li>Complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link> and gather all required documents and the $100 fee.</li>
-            <li>Submit your application to the Vital Statistics Branch (254 Portage Avenue, Winnipeg MB R3C 0B6) in person or by mail.</li>
-            <li>Wait for review. If accepted, you will receive instructions for a certified criminal record check (if 18+). Do not undergo a criminal record check until instructed.</li>
-            <li>Complete the certified criminal record check and submit results as instructed.</li>
-            <li>If approved, you will receive your legal change of name certificate by mail.</li>
-          </ol>
-          <hr />
+          <p>To legally change your name in Manitoba, you must complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link>. The fee is $100.</p>
           <h3 id="requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
           <h4>{t("Subheadings.eligibility", "Eligibility", pageLocale)}</h4>
           <ul>
@@ -72,13 +65,11 @@ export default function MbName() {
             <li>All documents must be originals or confirmed copies (by eligible witness)</li>
             <li>Documents in other languages must be translated by a certified translator</li>
           </ol>
-          <hr />
           <h3 id="commissioning">{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h3>
           <p>Affidavits must be signed by a Commissioner for Oaths, RCMP, lawyer, notary, judge, or other authorized person (see The Evidence Act of Manitoba). Witnesses can also confirm photocopies of your documents by comparing originals and signing the copies.</p>
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/mb/resources" target='blank'>Manitoba resources</Link> for a list of local and province-wide organizations.</p>
           </blockquote>
-          <hr />
           <h3 id="submitting">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
           <p>Submit your application and documents in person (by appointment) or by mail to:</p>
           <textarea readOnly name="address" id="address" value={
@@ -86,6 +77,8 @@ export default function MbName() {
           } />
           <p>To book an appointment: <a href="tel:204-945-3701">204-945-3701</a> or <a href="tel:866-949-9296">866-949-9296</a></p>
           <p>If mailing, use a tracked service if possible. Fees can be paid by cash, debit, or credit in person.</p>
+          <p>If accepted, you will receive instructions for a certified criminal record check. Do not undergo a criminal record check until instructed.</p>
+          <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/id">driver&#39;s license, photo card</Link>, or <Link href="/health">health card</Link>.</p>
           <hr />
           <h3 id="sources">Sources</h3>
           <ul>
