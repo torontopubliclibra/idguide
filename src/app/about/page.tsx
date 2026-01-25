@@ -66,7 +66,9 @@ export default function About() {
           
           <hr />
           
-          <h3 id='sitemap'>{t("Pages.sitemap", "Sitemap", pageLocale)}</h3>
+          <Link href="/sitemap.xml" style={{textDecoration: 'none'}}>
+            <h3 id='sitemap'>{t("Pages.sitemap", "Sitemap", pageLocale)}</h3>
+          </Link>
           <div className={styles.sitemapContainer}>
             <ul className={styles.sitemap}>
             <li><Link href="/">{t("Pages.home", "Home", pageLocale)}</Link></li>

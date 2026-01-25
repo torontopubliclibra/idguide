@@ -1,5 +1,6 @@
 export async function GET() {
-  const baseUrl = 'https://idguide.ca';
+  const base1 = 'https://'
+  const base2 = 'idguide.ca';
   const locales = ['en', 'fr'];
   const pagesWithPriority = [
     { page: '', priority: 1.0, changefreq: 'weekly' },
@@ -34,12 +35,13 @@ export async function GET() {
   const urls = pagesWithPriority.map(
     ({ page, priority, changefreq }) => {
       const alternates = locales.map(
-        (lang) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${baseUrl}${lang === 'en' ? '' : '/' + lang}/${page}" />`
+        (lang) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${base1}${lang === 'en' ? '' : lang + '.'}${base2}/${page}" />`
       ).join('');
-      return `<url><loc>${baseUrl}/${page}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority><changefreq>${changefreq}</changefreq>${alternates}</url>`;
+      return `<url><loc>${base1}${base2}/${page}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority><changefreq>${changefreq}</changefreq>${alternates}</url>`;
     }
   ).join('');
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`;
   return new Response(xml, {
     headers: {
