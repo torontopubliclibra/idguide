@@ -1,43 +1,45 @@
 "use client";
 
+import { usePathname, useRouter } from 'next/navigation';
+import React from 'react';
+
 export function LanguageToggle({ locale }: { locale: string }) {
-  const getRedirectUrl = (lang: string) => {
-    if (typeof window !== "undefined") {
-      const { protocol, hostname, port, pathname, search, hash } = window.location;
-      const baseHost = hostname.replace(/^(fr\.)+/, "");
-      const portPart = port ? `:${port}` : "";
-      if (lang === "en") {
-        return `${protocol}//${baseHost}${portPart}${pathname}${search}${hash}`;
-      } else {
-        return `${protocol}//fr.${baseHost}${portPart}${pathname}${search}${hash}`;
-      }
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Helper to swap locale in path (assumes /fr/ or /en/ or no prefix)
+  const getLocalePath = (lang: string) => {
+    if (pathname.startsWith('/fr/')) {
+      return lang === 'en' ? pathname.replace(/^\/fr/, '') || '/' : pathname;
     }
-    return "/";
+    if (lang === 'fr') {
+      return '/fr' + (pathname === '/' ? '' : pathname);
+    }
+    return pathname;
   };
 
   const handleLanguageClick = (lang: string, event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
-    if (typeof window !== "undefined") {
-      localStorage.setItem("preferredLanguage", lang);
-      const url = getRedirectUrl(lang);
-      window.location.assign(url);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('preferredLanguage', lang);
+      router.push(getLocalePath(lang));
     }
   };
 
   return (
     <span>
       <a
-        href={getRedirectUrl("en")}
-        style={{ textDecoration: locale === "en" ? "underline" : undefined }}
-        onClick={e => handleLanguageClick("en", e)}
+        href={getLocalePath('en')}
+        style={{ textDecoration: locale === 'en' ? 'underline' : undefined }}
+        onClick={e => handleLanguageClick('en', e)}
       >
         EN
       </a>
       {" / "}
       <a
-        href={getRedirectUrl("fr")}
-        style={{ textDecoration: locale === "fr" ? "underline" : undefined }}
-        onClick={e => handleLanguageClick("fr", e)}
+        href={getLocalePath('fr')}
+        style={{ textDecoration: locale === 'fr' ? 'underline' : undefined }}
+        onClick={e => handleLanguageClick('fr', e)}
       >
         FR
       </a>

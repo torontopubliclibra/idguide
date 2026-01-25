@@ -91,13 +91,12 @@ export default function OnName() {
             `ServiceOntario, Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
           />
           <p>Tip: Use a registered or tracked mail service to avoid lost applications.</p>
-          <p>To contact the Office of the Registrar General for more information or to get forms:<br />
-              <ul style={{marginTop: '0.5em'}}>
-                <li>1-800-461-2156 (outside Toronto but within North America)</li>
-                <li>416-325-8305 (in Toronto or outside North America)</li>
-                <li>TTY/Teletypewriter (for the hearing impaired): 416-325-3408</li>
-              </ul>
-            </p>
+          <p>To contact the Office of the Registrar General for more information or to get forms:</p><br />
+          <ul style={{marginTop: '0.5em'}}>
+            <li>1-800-461-2156 (outside Toronto but within North America)</li>
+            <li>416-325-8305 (in Toronto or outside North America)</li>
+            <li>TTY/Teletypewriter (for the hearing impaired): 416-325-3408</li>
+          </ul>
           <h4>{t("Subheadings.inPerson", "In person", pageLocale)}</h4>
           <p>If you prefer to submit in person and are in Toronto, bring your completed form, payment, and documents to:</p>
           <textarea readOnly name="address" id="address" value={
