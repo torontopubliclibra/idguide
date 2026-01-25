@@ -66,7 +66,46 @@
       "trans",
       "non-binary",
       "Two-Spirit",
-      "Dana Rosamund Teagle"
+      "Dana Rosamund Teagle",
+      "community",
+      "resource",
+      "sitemap",
+      "disclaimers",
+      "terms of service",
+      "accessibility",
+      "privacy policy",
+      "about",
+      "contact",
+      "support",
+      "donate",
+      "funding",
+      "sponsors",
+      "acknowledgements",
+      "contributors",
+      "updates",
+      "maintenance",
+      "website",
+      "project",
+      "2SLGBTQ+",
+      "LGBTQ+",
+      "LGBTQ2S+",
+      "LGBTQ2-Spirit",
+      "advocacy",
+      "education",
+      "resources",
+      "guides",
+      "workshops",
+      "presentations",
+      "facilitation",
+      "Dana Teagle",
+      "designer",
+      "web developer",
+      "software developer",
+      "Toronto",
+      "Ontario",
+      "Canada",
+      "name change workshops",
+      "gender marker workshops"
     ],
     "images": []
   },
@@ -75,12 +114,16 @@
     "title": "Birth certificates",
     "summary": "The process for updating your birth certificate will vary depending on the province or territory in which you were born:",
     "keywords": [
+      "Canada",
+      "Canadian",
       "Birth",
       "certificates",
       "birth registration",
       "birth record",
       "birth certificate update",
-      "parental information"
+      "parental information",
+      "Healthcare",
+      "health"
     ],
     "images": []
   },
@@ -94,7 +137,11 @@
       "revenue",
       "T4",
       "T1",
-      "CRA"
+      "CRA",
+      "Canada Revenue Agency",
+      "name changes",
+      "legal name changes",
+      "change of name"
     ],
     "images": []
   },
@@ -122,7 +169,19 @@
     "title": "Guides",
     "summary": "This is a full list of our guides to legal name changes, birth certificate updates, health card updates, and more across different provinces and Canada-wide.",
     "keywords": [
-      "Guides"
+      "Guides",
+      "name changes",
+      "birth certificates",
+      "health cards",
+      "driver's licenses",
+      "I.D. cards",
+      "passports",
+      "permanent resident cards",
+      "Social Insurance Registry",
+      "Canada",
+      "Ontario",
+      "Alberta",
+      "Manitoba"
     ],
     "images": []
   },
@@ -132,7 +191,14 @@
     "summary": "The process for updating your health card will vary depending on your province or territory of residency:",
     "keywords": [
       "Health",
-      "cards"
+      "cards",
+      "OHIP",
+      "health insurance",
+      "medical insurance",
+      "healthcare",
+      "hospital",
+      "doctor",
+      "medical"
     ],
     "images": []
   },
@@ -144,7 +210,13 @@
       "Driver's",
       "licenses",
       "I.D.",
-      "cards"
+      "cards",
+      "photo I.D.",
+      "ID cards",
+      "X marker",
+      "photo ID",
+      "driving",
+      "transportation"
     ],
     "images": []
   },
@@ -153,7 +225,11 @@
     "title": "Manitoba name changes",
     "summary": "To legally change your name in Manitoba, you must complete the Manitoba application for an adult legal change of name. The fee is $100.",
     "keywords": [
-      "Manitoba"
+      "Manitoba",
+      "name changes",
+      "legal name changes",
+      "change of name",
+      "application for an adult legal change of name"
     ],
     "images": []
   },
@@ -162,7 +238,12 @@
     "title": "Manitoba resources",
     "summary": "Here you'll find organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.",
     "keywords": [
-      "Manitoba"
+      "Manitoba",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
     ],
     "images": []
   },
@@ -174,7 +255,10 @@
       "Name",
       "changes",
       "legal name changes",
-      "change of name"
+      "change of name",
+      "application to change name",
+      "legal name",
+      "identity documents"
     ],
     "images": []
   },
@@ -192,6 +276,7 @@
       "Service Ontario",
       "ServiceOntario",
       "Healthcare",
+      "health",
       "Registrar General"
     ],
     "images": [
@@ -210,7 +295,12 @@
       "OHIP",
       "Ontario health insurance plan",
       "change of information form",
-      "Healthcare"
+      "health",
+      "Healthcare",
+      "hospital",
+      "doctor",
+      "medical",
+      "insurance"
     ],
     "images": [
       "/on-health-example.jpeg"
@@ -284,6 +374,7 @@
     "title": "Canadian passports",
     "summary": "There are 3 options for gender/sex identification on Canadian passports: F, M, and X. Depending on whether your supporting documents have the gender/sex identifier you want, the application process for your passport will vary.",
     "keywords": [
+      "Canada",
       "Canadian",
       "passports",
       "travel documents",
@@ -292,7 +383,10 @@
       "passport office",
       "X marker",
       "passport application",
-      "passport renewal"
+      "passport renewal",
+      "international travel",
+      "travel"
+      
     ],
     "images": []
   },
@@ -301,6 +395,9 @@
     "title": "Permanent resident cards",
     "summary": "If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the PR Card Application (IMM-5445) to start the process. The fee is $50.",
     "keywords": [
+      "Canada",
+      "Canadian",
+      "PR",
       "PR cards",
       "permanent residence",
       "permanent resident cards",
@@ -342,20 +439,12 @@
     "images": []
   },
   {
-    "route": "/search",
-    "title": "Search",
-    "summary": "This page allows you to search for information across the I.D. Guide website.",
-    "keywords": [
-      "Search"
-    ],
-    "images": []
-  },
-  {
     "route": "/sin",
     "title": "Social Insurance Registry",
     "summary": "Citizens, permanent residents, and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents' names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful. Apply to update your SIN when you change your name and/or gender marker.",
     "keywords": [
       "Canada",
+      "Canadian",
       "SIN",
       "Social Insurance Number",
       "Social Security Number",
@@ -380,7 +469,11 @@
       "Canada",
       "Ontario",
       "Alberta",
-      "Manitoba"
+      "Manitoba",
+      "name changes",
+      "gender marker changes",
+      "identity documents",
+      "2SLGBTQ+"
     ],
     "images": []
   },
@@ -401,7 +494,18 @@
       "workplaces",
       "unions",
       "community organizations",
-      "organizing"
+      "organizing",
+      "events",
+      "groups",
+      "LGBT YouthLine",
+      "Windsor Hackforge",
+      "CUPE 3902",
+      "CUPE 3903",
+      "CAMH",
+      "name changes",
+      "trans technology",
+      "trans",
+      "non-binary"
     ],
     "images": []
   }
