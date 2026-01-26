@@ -1,0 +1,308 @@
+[
+  {
+    "page": "",
+    "priority": 1.0,
+    "changefreq": "weekly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.home",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "about",
+    "priority": 0.8,
+    "changefreq": "weekly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.about",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "start",
+    "priority": 0.9,
+    "changefreq": "weekly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.getStarted",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "workshops",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.workshops",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "downloads",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.downloads",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "guides",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.guides",
+    "isSection": true,
+    "seoInclude": true,
+    "children": [
+      "name",
+      "birth",
+      "health",
+      "id",
+      "passport",
+      "pr",
+      "sin",
+      "cra"
+    ]
+  },
+  {
+    "page": "name",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.nameChanges",
+    "parent": "guides",
+    "isSection": true,
+    "seoInclude": true,
+    "children": [
+      "ab/name",
+      "mb/name",
+      "on/name"
+    ]
+  },
+  {
+    "page": "ab",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.alberta",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "ab/name",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.albertaNameChanges",
+    "parent": "name",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "mb",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.manitoba",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "mb/name",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.manitobaNameChanges",
+    "parent": "name",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "on",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontario",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "on/name",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontarioNameChanges",
+    "parent": "name",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "birth",
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.birthCertificates",
+    "parent": "guides",
+    "isSection": true,
+    "seoInclude": true,
+    "children": [
+      "on/birth"
+    ]
+  },
+  {
+    "page": "on/birth",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontarioBirthCertificates",
+    "parent": "birth",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "health",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.healthCards",
+    "parent": "guides",
+    "isSection": true,
+    "children": [
+      "on/health"
+    ]
+  },
+  {
+    "page": "on/health",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontarioHealthCards",
+    "parent": "health",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "id",
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.idCards",
+    "parent": "guides",
+    "isSection": true,
+    "seoInclude": true,
+    "children": [
+      "on/id"
+    ]
+  },
+  {
+    "page": "on/id",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontarioIdCards",
+    "parent": "id",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "passport",
+    "priority": 0.8,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.passports",
+    "parent": "guides",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "pr",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.prCards",
+    "parent": "guides",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "sin",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.sin",
+    "parent": "guides",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "cra",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.cra",
+    "parent": "guides",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "resources",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.canadaWideResources",
+    "isSection": true,
+    "children": [
+      "ab/resources",
+      "mb/resources",
+      "on/resources"
+    ],
+    "seoInclude": true
+  },
+  {
+    "page": "ab/resources",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.albertaResources",
+    "parent": "resources",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "mb/resources",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.manitobaResources",
+    "parent": "resources",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "on/resources",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.ontarioResources",
+    "parent": "resources",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "search",
+    "priority": 0.5,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.search",
+    "isSection": false,
+    "seoInclude": false
+  },
+  {
+    "page": "privacy",
+    "priority": 0.5,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-01-26",
+    "labelKey": "Pages.privacy",
+    "isSection": false,
+    "seoInclude": false
+  }
+]

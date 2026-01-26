@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import LastUpdated from "../components/LastUpdated";
+import SeeAlso from "../components/SeeAlso";
 
 export default function Manitoba() {
   
@@ -37,18 +39,10 @@ export default function Manitoba() {
             </ul>
           </div>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link></li>
-              <li><Link href="/resources">{t("Pages.resources", "Resources", pageLocale)}</Link></li>
-              <li><Link href="/ab">{t("Pages.alberta", "Alberta", pageLocale)}</Link></li>
-              <li><Link href="/on">{t("Pages.ontario", "Ontario", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "guides", "resources", "ab", "on"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="mb" pageLocale={pageLocale} />
       </main>
     </div>
   );

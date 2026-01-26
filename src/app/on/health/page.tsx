@@ -5,6 +5,11 @@ import Image from 'next/image';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from '../../components/SeeAlso';
+import SourcesList from '../../components/SourcesList';
 
 export default function OnHealth() {
   
@@ -26,14 +31,11 @@ export default function OnHealth() {
         <h2 className="page-title">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "process",
+            "important-considerations",
+            "sources"
+          ]} />
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>There is no fee to get a new Ontario health card.</p>
@@ -51,23 +53,12 @@ export default function OnHealth() {
             <Image src="/on-health-example.jpeg" alt="Sample Ontario health card showing no sex designation" width={400} height={500} />
           </div>
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.ontario.ca/page/replace-cancel-or-change-information-your-health-card#section-3" target="_blank" rel="noreferrer">ServiceOntario - Replace, cancel or change information on your health card</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/on/resources">Ontario resources</Link></li>
-              <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link></li>
-              <li><Link href="/on/birth">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</Link></li>
-              <li><Link href="/on/id">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "on/resources", "on/name", "on/birth", "on/id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="on/health" pageLocale={pageLocale} />
       </main>
     </div>
   );

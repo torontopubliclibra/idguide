@@ -128,11 +128,11 @@ export default function Search() {
             <div className={styles.searchBar}>
               <input
                 type="text"
-                placeholder={t("Search.placeholder", "Type any keyword to search...", pageLocale)}
+                placeholder={t("Search.placeholder", "Type any keyword...", pageLocale)}
                 className={styles.searchInput}
                 value={searchInput}
                 onChange={handleInputChange}
-                aria-label={t("Search.placeholder", "Type any keyword to search...", pageLocale)}
+                aria-label={t("Search.placeholder", "Type any keyword...", pageLocale)}
               />
               <button className={searchInput.length > 0 ? styles.active : styles.disabled} onClick={searchInput.length > 0 ? () => handleInputChange({target: {value: ""}}) : undefined} aria-label={t("Search.clear", "Clear search input", pageLocale)} title="Clear search input">
                 <Image src="/close.svg" alt="Site exit icon" width={30} height={30} />
@@ -176,14 +176,6 @@ export default function Search() {
             </div>
           </div>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link></li>
-              <li><Link href="/about">{t("Pages.about", "About", pageLocale)}</Link></li>
-            </ul>
-          </div>
         </div>
         <div className="stacks"></div>
       </main>

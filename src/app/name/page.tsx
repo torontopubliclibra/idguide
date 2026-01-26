@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import LastUpdated from "../components/LastUpdated";
+import SeeAlso from "../components/SeeAlso";
 
 export default function Name() {
   
@@ -43,15 +45,10 @@ export default function Name() {
             </p>
           </div>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "guides", "birth", "health", "id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="name" pageLocale={pageLocale} />
       </main>
     </div>
   );

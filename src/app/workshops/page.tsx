@@ -4,6 +4,8 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import { t } from "../lib/i18n";
+import LastUpdated from "../components/LastUpdated";
+import SeeAlso from "../components/SeeAlso";
 
 export default function Workshops() {
   const pageLocale = useMemo(() => {
@@ -48,19 +50,10 @@ export default function Workshops() {
             <li>While commissioning services are not provided, Dana is happy to recommend supportive notaries or resources</li>
           </ul>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.5rem" }}>
-              <li>
-                <Link href="/about">{t("Pages.about", "About", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/downloads">{t("Pages.downloads", "Downloads", pageLocale)}</Link>
-              </li>
-            </ul>
-          </div>
+          <SeeAlso pages={["about", "downloads"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="workshops" pageLocale={pageLocale} />
       </main>
     </div>
   );

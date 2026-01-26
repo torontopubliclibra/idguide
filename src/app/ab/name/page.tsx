@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from "../../components/SeeAlso";
+import SourcesList from '../../components/SourcesList';
 
 export default function AbName() {
   
@@ -25,15 +30,7 @@ export default function AbName() {
         <h2 className="page-title">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#submitting-your-application">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo sections={["process", "requirements", "submitting", "sources"]} pageLocale={pageLocale} />
           <hr />
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>To legally change your name in Alberta, fill out the <Link href="/downloads#ab-name" target="_blank" rel="noreferrer">Application for Change of Name (DVS3132)</Link>.</p>
@@ -64,7 +61,7 @@ export default function AbName() {
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/ab/resources" target='blank'>Alberta resources</Link> for a list of local and province-wide organizations.</p>
           </blockquote>
-          <h3 id='submitting-your-application'>{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
+          <h3 id='submitting'>{t("Subheadings.submitting", "Submitting your application", pageLocale)}</h3>
             <h4>{t("Subheadings.inPerson", "In person", pageLocale)}</h4>
             <p>Applications for a legal change of name in Alberta must be submitted in person at a registry agent office. Photocopies, faxes, and emails are not accepted. If you have questions about mail service disruptions, contact the registry agent or Vital Statistics for guidance.</p>
 
@@ -84,20 +81,12 @@ export default function AbName() {
           </ul>
           <p>To apply, request a Legal Change of Name (LCN) directly through the Vital Statistics office by emailing <a href="mailto:sa.vitalstatisticslcn@gov.ab.ca">sa.vitalstatisticslcn@gov.ab.ca</a>. Do not submit your application through a registry agent. Vital Statistics will issue an LCN certificate. Using the LCN certificate and a completed Fee Waiver Application Form, you may apply to amend any Alberta Vital Statistics record that reflects your name. If you have questions about reclaiming an Indigenous name, contact Alberta Vital Statistics directly for guidance and support.</p>
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.alberta.ca/legal-name-change" target="_blank" rel="noreferrer">Government of Alberta - Legal name change</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/mb/resources">Manitoba resources</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "ab/resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="ab/name" pageLocale={pageLocale} />
       </main>
     </div>
   );

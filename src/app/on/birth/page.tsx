@@ -5,6 +5,11 @@ import Image from 'next/image';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from '../../components/SeeAlso';
+import sources from './sources.json';
+import SourcesList from '../../components/SourcesList';
 
 export default function BirthPage() {
   
@@ -26,15 +31,12 @@ export default function BirthPage() {
         <h2 className="page-title">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}: </p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#submitting-your-application">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "process",
+            "requirements",
+            "submitting",
+            "sources"
+          ]} />
           <hr />
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>To update the sex designation on your Ontario birth registration or certificate, complete the <Link href="/downloads#on-birth">Application for Change of Sex Designation on a Birth Registration of an Adult (11325e)</Link> and the <Link href="/downloads#on-birth">Statutory Declaration for a Change of Sex Designation (11324e)</Link>. Make sure you use the most recent versions of these forms.</p>
@@ -49,7 +51,7 @@ export default function BirthPage() {
           </ol>
           <h4>{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h4>
           <p>As with the name change application, you must sign the statutory declaration in front of a commissioner for taking affidavits. Plan ahead to include this step in your process.</p>
-          <h3 id="submitting-your-application">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
+          <h3 id="submitting">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
           <h4>{t("Subheadings.fees", "Fees", pageLocale)}</h4>
           <p>ServiceOntario has waived the fee for changing your sex designation since 2021, and currently does not list a fee. Please double-check this policy before submitting, as it may change. There may be fees for copies of birth certificates or registrations (unless you&#39;re submitting with a name change, which covers those fees).</p>
           <h4>{t("Subheadings.byMail", "By mail", pageLocale)}</h4>
@@ -66,23 +68,12 @@ export default function BirthPage() {
             <Image src="/on-birth-example.jpeg" alt="Sample Ontario birth certificate showing updated name and gender marker" width={350} height={500} />
           </div>
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.ontario.ca/page/changing-your-sex-designation-your-birth-registration-and-birth-certificate" target="_blank" rel="noreferrer">ServiceOntario - Changing your sex designation on your birth registration and birth certificate</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/on/resources">Ontario resources</Link></li>
-              <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link></li>
-              <li><Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link></li>
-              <li><Link href="/on/id">{t("Pages.ontarioDriversLicensesAndIDCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "on/resources", "on/name", "on/health", "on/id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="on/birth" pageLocale={pageLocale} />
       </main>
     </div>
   );

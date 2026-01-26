@@ -4,6 +4,10 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import resources from "../resources.json";
+import ResourceList from "../components/ResourceList";
+import LastUpdated from "../components/LastUpdated";
+import SeeAlso from "../components/SeeAlso";
 
 export default function Resources() {
   
@@ -33,40 +37,10 @@ export default function Resources() {
             <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.
           </p>
           <br />
-          <table className={styles.resourceTable}>
-            <thead>
-              <tr>
-                <th>{t("ResourcesPage.organization", "Organization", pageLocale)}</th>
-                <th>{t("ResourcesPage.service", "Service", pageLocale)}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <a href="https://justicetrans.org/" target="_blank" rel="noreferrer">
-                    JusticeTrans
-                  </a>
-                </td>
-                <td>{t("ResourcesPage.justicetrans", "legal rights and information", pageLocale)}</td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://egale.ca/" target="_blank" rel="noreferrer">
-                    Egale Canada
-                  </a>
-                </td>
-                <td>{t("ResourcesPage.egale", "Advocacy and research for 2SLGBTQI rights", pageLocale)}</td>
-              </tr>
-              <tr>
-                <td>
-                  <a href="https://translifeline.org/" target="_blank" rel="noreferrer">
-                    Trans Lifeline
-                  </a>
-                </td>
-                <td>{t("ResourcesPage.translifeline", "Peer support hotline", pageLocale)}</td>
-              </tr>
-            </tbody>
-          </table>
+          <ResourceList
+            resources={resources.resources.filter(r => typeof r.name === 'string' && (!('region' in r) || !r.region))}
+            pageLocale={pageLocale}
+          />
           <hr />
           <h3>{t("ResourcesPage.byRegion", "Resources by region", pageLocale)}</h3>
           <ul>
@@ -81,22 +55,10 @@ export default function Resources() {
             </li>
           </ul>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul style={{ fontSize: "1.1rem", lineHeight: "1.5rem" }}>
-              <li>
-                <Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/downloads">{t("Pages.downloads", "Downloads", pageLocale)}</Link>
-              </li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "guides", "downloads"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="resources" pageLocale={pageLocale} />
       </main>
     </div>
   );

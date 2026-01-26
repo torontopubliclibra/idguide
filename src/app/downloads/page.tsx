@@ -2,11 +2,14 @@
 
 import React from "react";
 import styles from "./page.module.css";
-import { useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { t } from "../lib/i18n";
-import { useState } from "react";
+import LastUpdated from "../components/LastUpdated";
+import SeeAlso from "../components/SeeAlso";
+import downloadData from '../downloads.json';
+import JumpTo from "../components/JumpTo";
 
 export default function Downloads() {
   const [openSection, setOpenSection] = useState<string | null>(null);
@@ -40,219 +43,13 @@ export default function Downloads() {
     return () => clearTimeout(timeout);
   }, [openSection]);
 
-  const downloadSections = [
-    {
-      id: "ab-name",
-      title: t("DownloadsPage.abName", "Alberta name changes", pageLocale),
-      links: [
-        {
-          id: "dvs3132",
-          href: "/dvs3132.pdf",
-          label: "Alberta Name Change Application",
-          description: "DVS3132 | English PDF download",
-        }
-      ],
-      more: { href: "/ab/name" },
-    },
-    {
-      id: "mb-name",
-      title: t("DownloadsPage.mbName", "Manitoba name changes", pageLocale),
-      links: [
-        {
-          id: "mbname",
-          href: "/mb-application_change_of_name_adult.en.pdf",
-          label: "Manitoba application for an adult legal change of name",
-          description: "English PDF download",
-        },
-        {
-          id: "mbname",
-          href: "/mb-application_change_of_name_adult.fr.pdf",
-          label: "Demande de changement légal de nom d'un adulte au Manitoba",
-          description: "Téléchargement PDF français"
-        }
-      ],
-      more: { href: "/mb/name" },
-    },
-    {
-      id: "on-name",
-      title: t("DownloadsPage.onName", "Ontario name changes", pageLocale),
-      links: [
-        {
-          id: "11155",
-          href: "/11155e.pdf",
-          label: "Ontario application to change an adult's name",
-          description: "11155e | English PDF download",
-        },
-        {
-          id: "11155",
-          href: "/11155f.pdf",
-          label: "Demande de changement de nom d'une personne adulte en Ontario",
-          description: "11155f | Téléchargement PDF français",
-        },
-        {
-          id: "11320",
-          href: "/11320e.pdf",
-          label: "Request for Non-Publication in The Ontario Gazette",
-          description: "11320e | English PDF download",
-        },
-        {
-          id: "11320",
-          href: "/11320f.pdf",
-          label: "Demande de non-publication dans la Gazette de l'Ontario",
-          description: "11320f | Téléchargement PDF français",
-        },
-        {
-          id: "5349",
-          href: "/5349e.pdf",
-          label: "Requirements for a Police Record Check for a Change of Name",
-          description: "5349e | English PDF download",
-        },
-        {
-          id: "5349",
-          href: "/5349f.pdf",
-          label: "Exigences relatives à une vérification de dossiers de police pour un changement de nom",
-          description: "5349f | Téléchargement PDF français",
-        },
-      ],
-      more: { href: "/on/name" },
-    },
-    {
-      id: "on-birth",
-      title: t("DownloadsPage.onBirth", "Ontario birth certificates", pageLocale),
-      links: [
-        {
-          id: "11325",
-          href: "/11325e.pdf",
-          label: "Ontario Application for a Change of Sex Designation on a Birth Registration of an Adult",
-          description: "11325e | English PDF download",
-        },
-        {
-          id: "11325",
-          href: "/11325f.pdf",
-          label: "Demande de changement de la désignation du sexe sur l'enregistrement de naissance d'un adulte en Ontario",
-          description: "11325f | Téléchargement PDF français",
-        },
-        {
-          id: "11324",
-          href: "/11324e.pdf",
-          label: "Ontario Statutory Declaration for a Change of Sex Designation on a Birth Registration of an Adult",
-          description: "11324e | English PDF download",
-        },
-        {
-          id: "11324",
-          href: "/11324f.pdf",
-          label: "Ontario Déclaration solennelle pour un changement de la désignation du sexe sur l'enregistrement de naissance d'un adulte",
-          description: "11324f | Téléchargement PDF français",
-        },
-      ],
-      more: { href: "/on/birth" },
-    },
-    {
-      id: "on-health",
-      title: t("DownloadsPage.onHealth", "Ontario health cards", pageLocale),
-      links: [
-        {
-          id: "0280-82",
-          href: "/0280-82e.pdf",
-          label: "Ontario Health Card Change of Information Form",
-          description: "0280-82e | English PDF download",
-        },
-        {
-          id: "0280-82",
-          href: "/0280-82f.pdf",
-          label: "Demande de modification de la carte santé de l'Ontario",
-          description: "0280-82f | Téléchargement PDF français",
-        },
-      ],
-      more: { href: "/on/health" },
-    },
-    {
-      id: "passport",
-      title: t("DownloadsPage.passport", "Canadian passports", pageLocale),
-      links: [
-        {
-          id: "pptc-153/4",
-          href: "/pptc153.pdf",
-          label: "Adult General Passport Application",
-          description: "PPTC-153 | English PDF download",
-        },
-        {
-          id: "pptc-153/4",
-          href: "/pptc154.pdf",
-          label: "Demande de passeport générale pour adulte",
-          description: "PPTC-154 | Téléchargement PDF français",
-        },
-        {
-          id: "pptc-643",
-          href: "/pptc643e.pdf",
-          label: "Canadian Passport Sex Identifier Update Form",
-          description: "PPTC-643 | English PDF download",
-        },
-        {
-          id: "pptc-643",
-          href: "/pptc643f.pdf",
-          label: "Demande de modification de l'identificateur de sexe sur le passeport canadien",
-          description: "PPTC-643 | Téléchargement PDF français",
-        },
-      ],
-      more: { href: "/passport" },
-    },
-    {
-      id: "pr",
-      title: t("DownloadsPage.pr", "Permanent resident cards", pageLocale),
-      links: [
-        {
-          id: "imm5644",
-          href: "/imm5644e.pdf",
-          label: "Permanent Resident Card Document Checklist",
-          description: "IMM-5644 | English PDF download",
-        },
-        {
-          id: "imm5644",
-          href: "/imm5644f.pdf",
-          label: "Liste de vérification des documents pour la carte de résident permanent",
-          description: "IMM-5644 | Téléchargement PDF français",
-        },
-      ],
-      more: { href: "/pr" },
-    },
-    {
-      id: "presentation-materials",
-      title: t("DownloadsPage.presentationMaterials", "Presentation materials", pageLocale),
-      links: [
-        {
-          id: "tg-id-1025",
-          href: "/tg-id-1025.pdf",
-          label: "Ontario TG I.D. slideshow",
-          description: "English PDF download",
-        },
-        {
-          id: "tg-id-1025-1",
-          href: "/tg-id-1025.odp",
-          label: "Ontario TG I.D. slideshow",
-          description: "English ODP",
-        },
-        {
-          id: "tg-id-1025-1",
-          href: "/tg-id-1025.pptx",
-          label: "Ontario TG I.D. slideshow",
-          description: "English PPTX",
-        },
-      ],
-      more: null,
-    },
-  ];
-
-  const jumpLinks = [
-    { id: "ab-name", label: t("DownloadsPage.abName", "Alberta name changes", pageLocale) },
-    { id: "mb-name", label: t("DownloadsPage.mbName", "Manitoba name changes", pageLocale) },
-    { id: "on-name", label: t("DownloadsPage.onName", "Ontario name changes", pageLocale) },
-    { id: "on-birth", label: t("DownloadsPage.onBirth", "Ontario birth certificates", pageLocale) },
-    { id: "on-health", label: t("DownloadsPage.onHealth", "Ontario health cards", pageLocale) },
-    { id: "passport", label: t("DownloadsPage.passport", "Canadian passports", pageLocale) },
-    { id: "pr", label: t("DownloadsPage.pr", "Permanent resident cards", pageLocale) },
-    { id: "presentation-materials", label: t("DownloadsPage.presentationMaterials", "Presentation materials", pageLocale) },
-  ];
+  const jumpLinks = useMemo(() =>
+    downloadData.map((section: { id: string; title: string }) => ({
+      id: section.id,
+      label: t(section.title, section.title, pageLocale)
+    })),
+    [pageLocale]
+  );
 
   function groupLinks(links: { id: string; href: string; description?: string; label?: string }[]) {
     const getIdPrefix = (id: string) => id.replace(/([a-zA-Z])$/, '');
@@ -284,27 +81,20 @@ export default function Downloads() {
             {t("DownloadsPage.forSupport", "for support.", pageLocale)}
           </p>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}: </p>
-            <ul>
-              {jumpLinks.map(link => (
-                <li key={link.id}>
-                  <Link
-                    href={`#${link.id}`}
-                    onClick={e => {
-                      e.preventDefault();
-                      setOpenSection(link.id);
-                      window.location.hash = link.id;
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <JumpTo
+            pageLocale={pageLocale}
+            sections={jumpLinks.map(link => link.id)}
+            onSectionClick={(id: string) => {
+              setOpenSection(id);
+            }}
+          />
           <hr />
-          {downloadSections.map(section => {
+          {downloadData.map((section: {
+            id: string;
+            title: string;
+            links: { id: string; href: string; description?: string; label?: string }[];
+            more?: { href: string } | null;
+          }) => {
             const isOpen = openSection === section.id;
             const groups = groupLinks(section.links);
             return (
@@ -316,7 +106,7 @@ export default function Downloads() {
                   aria-controls={`panel-${section.id}`}
                   onClick={() => setOpenSection(isOpen ? null : section.id)}
                 >
-                  <h3 style={{ color: 'var(--white)', fontSize: '1rem', margin: 0 }}>{section.title}</h3>
+                  <h3 style={{ color: 'var(--white)', fontSize: '1rem', margin: 0 }}>{t(section.title, "Ontario birth certificates", pageLocale)}</h3>
                   <span style={{ fontSize: '1.15em', transition: 'transform 0.2s', transform: isOpen ? 'rotate(90deg)' : 'rotate(180deg)' }}>&#9654;</span>
                 </button>
                 <div
@@ -330,7 +120,7 @@ export default function Downloads() {
                       {t("Site.moreAbout", "More about ", pageLocale)}
                       <Link href={section.more.href} target="_blank">
                         {pageLocale === "en"
-                          ? section.title
+                          ? t(section.title, undefined, pageLocale)
                           : section.title.charAt(0).toLowerCase() + section.title.slice(1)}
                       </Link>.
                       <br style={{ marginBottom: '0.75rem' }} />
@@ -424,16 +214,10 @@ export default function Downloads() {
             );
           })}
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link></li>
-              <li><Link href="/resources">{t("Pages.resources", "Resources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "guides", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="downloads" pageLocale={pageLocale} />
       </main>
     </div>
   );

@@ -2,41 +2,34 @@ export async function GET() {
   const base1 = 'https://'
   const base2 = 'idguide.ca';
   const locales = ['en', 'fr'];
-  const pagesWithPriority = [
-    { page: '', priority: 1.0, changefreq: 'weekly' },
-    { page: 'about', priority: 0.8, changefreq: 'weekly' },
-    { page: 'ab', priority: 0.7, changefreq: 'monthly' },
-    { page: 'ab/name', priority: 0.6, changefreq: 'monthly' },
-    { page: 'ab/resources', priority: 0.6, changefreq: 'monthly' },
-    { page: 'birth', priority: 0.8, changefreq: 'monthly' },
-    { page: 'cra', priority: 0.7, changefreq: 'monthly' },
-    { page: 'downloads', priority: 0.6, changefreq: 'monthly' },
-    { page: 'guides', priority: 0.7, changefreq: 'monthly' },
-    { page: 'health', priority: 0.7, changefreq: 'monthly' },
-    { page: 'id', priority: 0.8, changefreq: 'monthly' },
-    { page: 'mb', priority: 0.7, changefreq: 'monthly' },
-    { page: 'mb/name', priority: 0.6, changefreq: 'monthly' },
-    { page: 'mb/resources', priority: 0.6, changefreq: 'monthly' },
-    { page: 'name', priority: 0.7, changefreq: 'monthly' },
-    { page: 'on', priority: 0.7, changefreq: 'monthly' },
-    { page: 'on/birth', priority: 0.6, changefreq: 'monthly' },
-    { page: 'on/health', priority: 0.6, changefreq: 'monthly' },
-    { page: 'on/id', priority: 0.6, changefreq: 'monthly' },
-    { page: 'on/name', priority: 0.6, changefreq: 'monthly' },
-    { page: 'on/resources', priority: 0.6, changefreq: 'monthly' },
-    { page: 'passport', priority: 0.8, changefreq: 'monthly' },
-    { page: 'pr', priority: 0.7, changefreq: 'monthly' },
-    { page: 'search', priority: 0.5, changefreq: 'monthly' },
-    { page: 'sin', priority: 0.7, changefreq: 'monthly' },
-    { page: 'start', priority: 0.9, changefreq: 'weekly' },
-    { page: 'workshops', priority: 0.6, changefreq: 'monthly' },
-  ];
-  const lastmod = new Date().toISOString();
+  const { promises: fs } = await import('fs');
+  const path = await import('path');
+  const sitemapPath = path.join(process.cwd(), 'src', 'app', 'sitemap.json');
+  const sitemapRaw = await fs.readFile(sitemapPath, 'utf-8');
+  type SitemapItem = {
+    page: string;
+    priority: number;
+    changefreq: string;
+    isSection?: boolean;
+    lastUpdated?: string;
+    seoInclude?: boolean;
+  };
+  const sitemap: SitemapItem[] = JSON.parse(sitemapRaw);
+  const pagesWithPriority = sitemap
+    .filter((item: SitemapItem) => !item.isSection && item.seoInclude !== false)
+    .map(({ page, priority, changefreq }: { page: string; priority: number; changefreq: string }) => ({ page, priority, changefreq }));
+  const lastUpdatedMap = new Map<string, string>();
+  sitemap.forEach((item) => {
+    if (!item.isSection) {
+      lastUpdatedMap.set(item.page, item.lastUpdated || new Date().toISOString());
+    }
+  });
   const urls = pagesWithPriority.map(
-    ({ page, priority, changefreq }) => {
+    ({ page, priority, changefreq }: { page: string; priority: number; changefreq: string }) => {
       const alternates = locales.map(
         (lang) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${base1}${lang === 'en' ? '' : lang + '.'}${base2}/${page}" />`
       ).join('');
+      const lastmod = lastUpdatedMap.get(page) || new Date().toISOString();
       return `<url><loc>${base1}${base2}/${page}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority><changefreq>${changefreq}</changefreq>${alternates}</url>`;
     }
   ).join('');

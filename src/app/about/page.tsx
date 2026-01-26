@@ -4,13 +4,68 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
-import changelogData from './changelog.json';
+import changelogData from '../changelog.json';
+import sitemapData from '../sitemap.json';
+import LastUpdated from "../components/LastUpdated";
 
 type ChangelogEntry = {
   version: string;
   date?: string;
   changes: string[];
 };
+
+type SitemapEntry = {
+  page: string;
+  labelKey: string;
+  isSection: boolean;
+  children?: string[];
+  parent?: string;
+};
+
+function buildSitemapTree(entries: SitemapEntry[]) {
+  const map: Record<string, SitemapEntry & { childrenNodes?: SitemapEntry[] }> = {};
+  entries.forEach(e => {
+    map[e.page] = { ...e };
+  });
+  Object.values(map).forEach(e => {
+    if (e.children) {
+      e.childrenNodes = e.children
+        .map(child => map[child])
+        .filter((node): node is SitemapEntry => Boolean(node));
+    }
+  });
+  return Object.values(map).filter(e => !e.parent);
+}
+
+function SitemapList({ pageLocale }: { pageLocale: string }) {
+  const entries = sitemapData as SitemapEntry[];
+  const tree = buildSitemapTree(entries);
+
+  function renderNode(node: SitemapEntry & { childrenNodes?: SitemapEntry[] }) {
+    const isAbout = node.page === "about";
+    return (
+      <li key={node.page || 'home'}>
+        <Link href={node.page ? `/${node.page}` : "/"}>
+          {t(node.labelKey, node.page || 'Home', pageLocale)}
+        </Link>
+        {isAbout && (
+          <small> ({t("Site.youAreHere", "you are here", pageLocale)})</small>
+        )}
+        {node.childrenNodes && node.childrenNodes.length > 0 && (
+          <ul>
+            {node.childrenNodes.map(renderNode)}
+          </ul>
+        )}
+      </li>
+    );
+  }
+
+  return (
+    <ul className={styles.sitemap}>
+      {tree.map(renderNode)}
+    </ul>
+  );
+}
 
 const changelog: ChangelogEntry[] = changelogData as ChangelogEntry[];
 
@@ -57,7 +112,7 @@ export default function About() {
             <ul className={styles.changelogList}>
               {changelog.map((entry) => (
                 <li key={entry.version}>
-                  <div style={{fontWeight: 'bold', marginBottom: '0.5em'}}>{'v' + entry.version}{entry.date ? ` | ${entry.date}` : ""}</div>
+                  <div style={{fontWeight: 'bold', marginBottom: '0.5em'}}>{'v' + entry.version}{entry.date ? <small> ({entry.date})</small> : ""}</div>
                   {entry.changes.join("; ")}
                 </li>
               ))}
@@ -70,63 +125,11 @@ export default function About() {
             <h3 id='sitemap'>{t("Pages.sitemap", "Sitemap", pageLocale)}</h3>
           </Link>
           <div className={styles.sitemapContainer}>
-            <ul className={styles.sitemap}>
-            <li><Link href="/">{t("Pages.home", "Home", pageLocale)}</Link></li>
-            <li><Link href="/about">{t("Pages.about", "About", pageLocale)}</Link> <small>({t("Site.youAreHere", "you are here", pageLocale)})</small></li>
-            <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-            <li><Link href="/workshops">{t("Pages.workshops", "Workshops", pageLocale)}</Link></li>
-            <li><Link href="/downloads">{t("Pages.downloads", "Downloads", pageLocale)}</Link></li>
-            <li>
-              <Link href="/guides">{t("Pages.guides", "Guides", pageLocale)}</Link>
-              <ul>
-                <li>
-                  <Link href="/name">{t("Pages.nameChanges", "Name changes", pageLocale)}</Link>
-                  <ul>
-                    <li><Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta", pageLocale)}</Link></li>
-                    <li><Link href="/mb/name">{t("Pages.manitobaNameChanges", "Manitoba", pageLocale)}</Link></li>
-                    <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario", pageLocale)}</Link></li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/birth">{t("Pages.birthCertificates", "Birth certificates", pageLocale)}</Link>
-                  <ul>
-                    <li><Link href="/on/birth">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</Link></li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/health">{t("Pages.healthCards", "Health cards", pageLocale)}</Link>
-                  <ul>
-                    <li><Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link></li>
-                  </ul>
-                </li>
-                <li>
-                  <Link href="/id">{t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)}</Link>
-                  <ul>
-                    <li><Link href="/on/id">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link></li>
-                  </ul>
-                </li>
-                <li><Link href="/passport">{t("Pages.passports", "Canadian passports", pageLocale)}</Link></li>
-                <li><Link href="/pr">{t("Pages.prCards", "Permanent resident cards", pageLocale)}</Link></li>
-                <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
-                <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
-              </ul>
-            </li>
-            <li>
-              <Link href="/resources">{t("Pages.resources", "Resources", pageLocale)}</Link>
-              <ul>
-                <li><Link href="/ab/resources">{t("Pages.albertaResources", "Alberta", pageLocale)}</Link></li>
-                <li><Link href="/mb/resources">{t("Pages.manitobaResources", "Manitoba", pageLocale)}</Link></li>
-                <li><Link href="/on/resources">{t("Pages.ontarioResources", "Ontario", pageLocale)}</Link></li>
-              </ul>
-            </li>
-            <li><Link href="/ab">{t("Pages.alberta", "Alberta", pageLocale)}</Link></li>
-            <li><Link href="/mb">{t("Pages.manitoba", "Manitoba", pageLocale)}</Link></li>
-            <li><Link href="/on">{t("Pages.ontario", "Ontario", pageLocale)}</Link></li>
-            <li><Link href="/privacy">{t("Pages.privacy", "Privacy policy", pageLocale)}</Link></li>
-            </ul>
+            <SitemapList pageLocale={pageLocale} />
           </div>
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="about" pageLocale={pageLocale} />
       </main>
     </div>
   );

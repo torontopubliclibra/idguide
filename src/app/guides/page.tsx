@@ -5,6 +5,9 @@ import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import "../skip-link.css";
 import { t } from "../lib/i18n";
+import LastUpdated from "../components/LastUpdated";
+import JumpTo from "../components/JumpTo";
+import SeeAlso from "../components/SeeAlso";
 
 export default function Guides() {
   
@@ -29,15 +32,7 @@ export default function Guides() {
         <div className={styles.main}>
           <p>{t("GuidesPage.intro", "This is a full list of our guides to legal name changes, birth certificate updates, health card updates, and more across different provinces and Canada-wide.", pageLocale)}</p>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#alberta">{t("Site.alberta", "Alberta", pageLocale)}</Link></li>
-              <li><Link href="#manitoba">{t("Site.manitoba", "Manitoba", pageLocale)}</Link></li>
-              <li><Link href="#ontario">{t("Site.ontario", "Ontario", pageLocale)}</Link></li>
-              <li><Link href="#canada-wide">{t("Site.canadaWide", "Canada-wide", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={["alberta", "manitoba", "ontario", "canada-wide"]} />
           <hr style={{margin: '0.5rem 0'}}/>
           <div>
             <Link href="/ab" style={{textDecoration: 'none'}}>
@@ -93,16 +88,10 @@ export default function Guides() {
             </ul>
           </div>
           <hr style={{margin: '1rem 0'}}/>
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/resources">{t("Pages.resources", "Resources", pageLocale)}</Link></li>
-              <li><Link href="/downloads">{t("Pages.downloads", "Downloads", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "resources", "downloads"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="guides" pageLocale={pageLocale} />
       </main>
     </div>
   );

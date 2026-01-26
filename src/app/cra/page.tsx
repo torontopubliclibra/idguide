@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../components/LastUpdated";
+import JumpTo from "../components/JumpTo";
+import SeeAlso from "../components/SeeAlso";
+import SourcesList from '../components/SourcesList';
 
 export default function CRA() {
   
@@ -25,14 +30,7 @@ export default function CRA() {
         <h2 className="page-title">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={["process", "requirements", "sources"]} />
           <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
@@ -54,20 +52,12 @@ export default function CRA() {
             <li>Your signature</li>
           </ul>
         <hr/>
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/should-you-tell-cra-about-your-change-name" target="_blank" rel="noreferrer">Government of Canada - Should you tell the CRA about your change of name?</Link></li>
-          </ul>
-                    <hr/>
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
-              <li><Link href="/passport">{t("Pages.passports", "Canadian passports", pageLocale)}</Link></li>
-              <li><Link href="/pr">{t("Pages.prCards", "Permanent residency cards", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SourcesList sources={sources} />
+          <hr/>
+          <SeeAlso pages={["sin", "passport", "pr"]} pageLocale={pageLocale} />
         </div>
+        <div className="stacks"></div>
+        <LastUpdated page="cra" pageLocale={pageLocale} />
       </main>
     </div>
   );

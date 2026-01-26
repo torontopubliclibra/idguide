@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../components/LastUpdated";
+import JumpTo from '../components/JumpTo';
+import SeeAlso from '../components/SeeAlso';
+import SourcesList from '../components/SourcesList';
 
 export default function Passport() {
   
@@ -26,15 +31,12 @@ export default function Passport() {
         <div className="stacks flipped"></div>
         <div className={styles.main}>
 
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}: </p>
-            <ul>
-              <li><Link href="#options">{t("Subheadings.optionsForGenderSexIdentifier", "Options for gender/sex identifier", pageLocale)}</Link></li>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "options",
+            "process",
+            "important-considerations",
+            "sources"
+          ]} />
           <hr />
 
           <h3 id="options">{t("Subheadings.optionsForGenderSexIdentifier", "Options for gender/sex identifier", pageLocale)}</h3>
@@ -58,23 +60,12 @@ export default function Passport() {
 				  <p>Unfortunately, the Government of Canada states they cannot guarantee that other countries you visit or travel through will accept the sex or gender identifier on your Canadian passport, especially in regards to the X marker, and you may still be asked to provide your sex as either male or female when travelling. Find more information at <Link href="https://travel.gc.ca/travelling/health-safety/lgbt-travel" target="_blank" rel="norefferer">this link</Link> about travelling abroad as a 2SLGBTQI+ Canadian.</p>
 
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/new-adult-passport/required-documents-photos" target="_blank" rel="norefferer">Government of Canada - What you need to apply for a passport</Link></li>
-            <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/change-sex" target="_blank" rel="norefferer">Government of Canada - Choose or update the gender identifier on your passport or travel document</Link></li>
-            <li><Link href="https://travel.gc.ca/travelling/health-safety/lgbt-travel" target="_blank" rel="norefferer">Government of Canada - Travel and your sexual orientation, gender identity, gender expression and sex characteristics</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/pr">{t("Pages.prCards", "Permanent resident cards", pageLocale)}</Link></li>
-              <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
-              <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["pr", "sin", "cra"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="passport" pageLocale={pageLocale} />
       </main>
     </div>
   );

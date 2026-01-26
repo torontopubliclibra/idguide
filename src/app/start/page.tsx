@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import SeeAlso from "../components/SeeAlso";
 
 interface CheckboxProps {
   id: string;
@@ -229,14 +230,7 @@ export default function Start() {
             </p>
           )}
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", undefined, pageLocale)}:</p>
-            <ul>
-              <li><Link href="/guides">{t("Pages.guides", undefined, pageLocale)}</Link></li>
-              <li><Link href="/downloads">{t("Pages.downloads", undefined, pageLocale)}</Link></li>
-              <li><Link href="/resources">{t("Pages.resources", undefined, pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["guides", "downloads", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
       </main>

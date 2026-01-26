@@ -4,6 +4,11 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import resources from "../../resources.json";
+import ResourceList from "../../components/ResourceList";
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from "../../components/JumpTo";
+import SeeAlso from "../../components/SeeAlso";
 
 export default function AbResources() {
 
@@ -30,97 +35,30 @@ export default function AbResources() {
           </p>
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</Link></li>
-              <li><Link href="#edmonton">Edmonton</Link></li>
-              <li><Link href="#calgary">Calgary</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={["province-wide", "edmonton", "calgary"]} />
           <hr />
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
-          <table className={styles.resourceTable}>
-            <thead>
-              <tr>
-                <th>Organization</th>
-                <th>Services</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="https://albertahumanrights.ab.ca/" target="_blank" rel="noreferrer">Alberta Human Rights Commission</a></td>
-                <td>Human rights advocacy and support</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.transwellnessinitiative.ca/" target="_blank" rel="noreferrer">Trans Wellness Initiative</a></td>
-                <td>Medical and community resources</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.connectfund.org/" target="_blank" rel="noreferrer">Connect Fund</a></td>
-                <td>Medical funding support</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.foriaclinic.com/" target="_blank" rel="noreferrer">Foria Clinic</a></td>
-                <td>Virtual healthcare services</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 id="edmonton">Edmonton</h3>
-          <table className={styles.resourceTable}>
-            <thead>
-              <tr>
-                <th>Organization</th>
-                <th>Services</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="https://www.slsedmonton.com/trans-id-project" target="_blank" rel="noreferrer">Student Legal Services of Edmonton Trans I.D. Clinic</a></td>
-                <td>Legal support for I.D. changes</td>
-              </tr>
-              <tr>
-                <td><a href="https://pridecentreofedmonton.ca/" target="_blank" rel="noreferrer">Pride Centre of Edmonton</a></td>
-                <td>Peer support, groups, and community resources</td>
-              </tr>
-            </tbody>
-          </table>
-          <h3 id="calgary">Calgary</h3>
-          <table className={styles.resourceTable}>
-            <thead>
-              <tr>
-                <th>Organization</th>
-                <th>Services</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><a href="https://www.skippingstone.ca/" target="_blank" rel="noreferrer">Skipping Stone</a></td>
-                <td>Peer support, drop-ins</td>
-              </tr>
-              <tr>
-                <td><a href="https://clg.ab.ca/">Calgary Legal Guidance</a></td>
-                <td>Legal services and support</td>
-              </tr>
-              <tr>
-                <td><a href="https://www.calgaryoutlink.ca/" target="_blank" rel="noreferrer">Calgary Outlink</a></td>
-                <td>Peer support, groups, and community resources</td>
-              </tr>
-            </tbody>
-          </table>
+          <ResourceList
+            resources={resources.abResources.filter(r => typeof r.name === 'string' && !r.region)}
+            pageLocale={pageLocale}
+          />
+          <ResourceList
+            resources={[]}
+            pageLocale={pageLocale}
+            showRegionHeaders={true}
+            regionalResources={resources.abResources.filter(r => typeof r.region === 'string').map(region => ({
+              region: region.region || "",
+              id: region.id || '',
+              resources: region.resources || []
+            }))}
+          />
           <hr />
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</Link></li>
-              <li><Link href="/resources">{t("Pages.canadaWideResources", "Canada-wide resources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "mb/resources", "on/resources", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="ab/resources" pageLocale={pageLocale} />
       </main>
     </div>
   );

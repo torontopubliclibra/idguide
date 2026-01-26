@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import LastUpdated from "../components/LastUpdated";
 
 export default function Privacy() {
 
@@ -25,7 +26,6 @@ export default function Privacy() {
         <h2 className="page-title">{t("Pages.privacy", "Privacy policy", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-            <p className={styles.strong}>Last Revised: January 18, 2026</p>
             <section>
             <p>
                 I.D. Guide values your privacy. This page explains what information we collect, how we use it, and your choices. We aim to keep things simple and transparent. Our website may link to other sites for your convenience. We are not responsible for the privacy practices or content of those external sites.
@@ -63,6 +63,7 @@ export default function Privacy() {
             </section>
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="privacy" pageLocale={pageLocale} />
       </main>
     </div>
   );

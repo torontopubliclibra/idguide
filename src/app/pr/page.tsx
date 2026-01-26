@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../components/LastUpdated";
+import JumpTo from '../components/JumpTo';
+import SeeAlso from '../components/SeeAlso';
+import SourcesList from '../components/SourcesList';
 
 export default function PR() {
   
@@ -25,15 +30,7 @@ export default function PR() {
         <h2 className="page-title">{t("Pages.prCards", "Permanent resident cards", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={["process", "requirements", "important-considerations", "sources"]} />
           <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
@@ -98,21 +95,12 @@ export default function PR() {
             <li>If your name change document was issued outside of Canada, you must also provide a provincial ID in your new name (such as <Link href="/id">a driver&#39;s license, photo card</Link>, or <Link href="/health">health card</Link>).</li>
           </ul>
           <hr/>
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">Government of Canada - Applying for a permanent resident card</Link></li>
-            <li><Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5530-request-reissue-permanent-resident-card-card" target="_blank" rel="noreferrer">Government of Canada - Request to Reissue a Permanent Resident Card</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr/>
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/passport">{t("Pages.passports", "Canadian passports", pageLocale)}</Link></li>
-              <li><Link href="/sin">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</Link></li>
-              <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["passport", "sin", "cra"]} pageLocale={pageLocale} />
         </div>
+        <div className="stacks"></div>
+        <LastUpdated page="pr" pageLocale={pageLocale} />
       </main>
     </div>
   );

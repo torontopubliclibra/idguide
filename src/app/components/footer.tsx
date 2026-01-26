@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from "./footer.module.css";
 import { t } from "../lib/i18n";
-import changelogData from '../about/changelog.json';
+import changelogData from '../changelog.json';
 
 export default function Footer({ locale }: { locale: string }) {
 
@@ -14,7 +14,7 @@ export default function Footer({ locale }: { locale: string }) {
                     <div className={styles.footerLogo}>{t("Site.name", "I.D. Guide", locale)}</div>
                     <ul className={styles.footerLinks}>
                         <li><Link href="/about">{t("Site.aboutTheProject", "About the project", locale)}</Link></li>
-                        <li><Link href="/start">{t("Pages.start", "Get started", locale)}</Link></li>
+                        <li><Link href="/start">{t("Pages.getStarted", "Get started", locale)}</Link></li>
                     </ul>
                 </div>
                 <div className={styles.footerCol}>

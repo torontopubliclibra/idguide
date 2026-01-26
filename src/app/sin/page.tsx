@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../components/LastUpdated";
+import JumpTo from '../components/JumpTo';
+import SeeAlso from '../components/SeeAlso';
+import SourcesList from '../components/SourcesList';
 
 export default function SIN() {
   
@@ -25,14 +30,7 @@ export default function SIN() {
         <h2 className="page-title">{t("Pages.sin", "Social Insurance Registry", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={["process", "important-considerations", "sources"]} />
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>Citizens, permanent residents, and temporary residents need a Social Insurance Number (SIN) to work in Canada or access government programs and benefits. Your SIN is linked to your legal name, date of birth, place of birth, and parents&apos; names. Updating this information will not change your SIN itself; you will receive a confirmation letter in the mail once your update is successful.</p>
@@ -47,21 +45,13 @@ export default function SIN() {
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <p>If you are updating your sex designation, you may now choose an X marker or choose to not declare your gender. Service Canada will add a note to your record with your choice. However, until their computer systems are upgraded, &quot;male&quot; or &quot;female&quot; will still appear on your SIN record.</p>
           <p>After updating your SIN record, you must also notify the <Link href="/cra">Canada Revenue Agency</Link>.</p>
-        <hr/>
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.canada.ca/en/employment-social-development/services/sin/receiving-updating" target="_blank" rel="noreferrer">Government of Canada - Receiving and updating your SIN</Link></li>
-          </ul>
           <hr/>
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/cra">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</Link></li>
-              <li><Link href="/passport">{t("Pages.passport", "Canadian passports", pageLocale)}</Link></li>
-              <li><Link href="/pr">{t("Pages.prCards", "Permanent residency cards", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SourcesList sources={sources} />
+          <hr/>
+          <SeeAlso pages={["cra", "passport", "pr"]} pageLocale={pageLocale} />
         </div>
+        <div className="stacks"></div>
+        <LastUpdated page="sin" pageLocale={pageLocale} />
       </main>
     </div>
   );

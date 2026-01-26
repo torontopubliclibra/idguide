@@ -5,6 +5,11 @@ import Image from 'next/image';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from '../../components/SeeAlso';
+import SourcesList from '../../components/SourcesList';
 
 export default function OnID() {
   
@@ -26,14 +31,11 @@ export default function OnID() {
         <h2 className="page-title">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Pages.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "process",
+            "important-considerations",
+            "sources"
+          ]} />
           <hr />
           <p>When updating the sex designation on your Ontario driver&apos;s license or photo card, you can choose F, M, or X. The process depends on which designation you select.</p>
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
@@ -70,23 +72,12 @@ export default function OnID() {
             <Image src="/on-photoid-example.jpeg" alt="Sample Ontario photo ID card" width={300} height={500} />
           </div>
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.ontario.ca/page/change-sex-designation-your-government-ids" target="_blank" rel="noreferrer">ServiceOntario - Change the sex designation on your government IDs</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/on/resources">Ontario resources</Link></li>
-              <li><Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link></li>
-              <li><Link href="/on/birth">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</Link></li>
-              <li><Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "on/resources", "on/name", "on/birth", "on/health"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="on/id" pageLocale={pageLocale} />
       </main>
     </div>
   );

@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from '../../components/SeeAlso';
+import SourcesList from '../../components/SourcesList';
+import sources from './sources.json';
+import LastUpdated from "../../components/LastUpdated";
 
 export default function MbName() {
   
@@ -25,16 +30,13 @@ export default function MbName() {
         <h2 className="page-title">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#commissioning">{t("Subheadings.commissioning", "Commissioning", pageLocale)}</Link></li>
-              <li><Link href="#submitting">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "process",
+            "requirements",
+            "commissioning",
+            "submitting",
+            "sources"
+          ]} />
           <hr />
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>To legally change your name in Manitoba, you must complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link>. The fee is $100.</p>
@@ -80,22 +82,12 @@ export default function MbName() {
           <p>If accepted, you will receive instructions for a certified criminal record check. Do not undergo a criminal record check until instructed.</p>
           <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/id">driver&#39;s license, photo card</Link>, or <Link href="/health">health card</Link>.</p>
           <hr />
-          <h3 id="sources">Sources</h3>
-          <ul>
-            <li><a href="https://vitalstats.gov.mb.ca/change_of_name.html" target="_blank" rel="noreferrer">Manitoba Vital Statistics - Change of Name</a></li>
-            <li><a href="https://queerwinnipeg.ca/posts/how-to-change-your-legal-name-or-sex-in-manitoba/" target="_blank" rel="noreferrer">Queer Winnipeg - How to Change Your Legal Name or Sex in Manitoba</a></li>
-            <li><a href="https://rainbowresourcecentre.org/" target="_blank" rel="noreferrer">Rainbow Resource Centre</a></li>
-            <li><a href="https://www.sunshinehousewpg.org/2s-trans-id-peer-support" target="_blank" rel="noreferrer">Sunshine House 2S/Trans ID Peer Support</a></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/mb/resources">Manitoba resources</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "mb/resources"]} pageLocale={pageLocale}/>
         </div>
+        <div className="stacks"></div>
+        <LastUpdated page="mb/name" pageLocale={pageLocale} />
       </main>
     </div>
   );

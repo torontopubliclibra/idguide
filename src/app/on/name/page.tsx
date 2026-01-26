@@ -5,6 +5,11 @@ import Image from 'next/image';
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
+import sources from './sources.json';
+import LastUpdated from "../../components/LastUpdated";
+import JumpTo from '../../components/JumpTo';
+import SeeAlso from '../../components/SeeAlso';
+import SourcesList from '../../components/SourcesList';
 
 export default function OnName() {
   
@@ -26,15 +31,12 @@ export default function OnName() {
         <h2 className="page-title">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
-          <div className="pageNav">
-            <p>{t("Site.jumpTo", "Jump to", pageLocale)}:</p>
-            <ul>
-              <li><Link href="#process">{t("Subheadings.process", "Process", pageLocale)}</Link></li>
-              <li><Link href="#requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</Link></li>
-              <li><Link href="#submitting-your-application">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</Link></li>
-              <li><Link href="#sources">{t("Subheadings.sources", "Sources", pageLocale)}</Link></li>
-            </ul>
-          </div>
+          <JumpTo pageLocale={pageLocale} sections={[
+            "process",
+            "requirements",
+            "submitting",
+            "sources"
+          ]} />
           <hr />
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           <p>To legally change your name in Ontario, you must complete the <Link href="/downloads#on-name">{t("NameChanges.ontarioApplicationName", "Ontario application to change an adult's name", pageLocale)}</Link>. The fee is $137.00.</p>
@@ -84,7 +86,7 @@ export default function OnName() {
           <blockquote>
             <p>For trans I.D. clinics and commissioning services, see <Link href="/on/resources" target='blank'>Ontario resources</Link> for a list of local and province-wide organizations.</p>
           </blockquote>
-          <h3 id="submitting-your-application">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
+          <h3 id="submitting">{t("Subheadings.submittingYourApplication", "Submitting your application", pageLocale)}</h3>
           <h4>{t("Subheadings.byMail", "By mail", pageLocale)}</h4>
           <p>Mail your completed form, payment, and required documents to:</p>
           <textarea readOnly name="address" id="address" value={
@@ -119,23 +121,12 @@ export default function OnName() {
             <Image src="/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
           </div>
           <hr />
-          <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
-          <ul>
-            <li><Link href="https://www.ontario.ca/page/change-name" target="_blank" rel="noreferrer">ServiceOntario - Change of name</Link></li>
-          </ul>
+          <SourcesList sources={sources} />
           <hr />
-          <div className="pageNav">
-            <p>{t("Site.seeAlso", "See also", pageLocale)}:</p>
-            <ul>
-              <li><Link href="/start">{t("Pages.start", "Get started", pageLocale)}</Link></li>
-              <li><Link href="/on/resources">Ontario resources</Link></li>
-              <li><Link href="/on/birth">Ontario birth certificates</Link></li>
-              <li><Link href="/on/health">Ontario health cards</Link></li>
-              <li><Link href="/on/id">Ontario driver&#39;s licenses & I.D. cards</Link></li>
-            </ul>
-          </div>
+          <SeeAlso pages={["start", "on/resources", "on/birth", "on/health", "on/id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
+        <LastUpdated page="on/name" pageLocale={pageLocale} />
       </main>
     </div>
   );
