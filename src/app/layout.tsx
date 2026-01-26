@@ -81,14 +81,14 @@ export default async function RootLayout({
         </Script>
         <link
           rel="preload"
-          href="/Special_Gothic/SpecialGothic.ttf"
+          href="/font/Special_Gothic/SpecialGothic.ttf"
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf"
+          href="/font/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf"
           as="font"
           type="font/ttf"
           crossOrigin="anonymous"

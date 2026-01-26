@@ -11,19 +11,19 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                 <li>
                     <Link href="/start">
                         {t("Pages.start", "Start", locale)}
-                        <Image src="/start.svg" alt={t("Nav.startIconAlt", "Start icon", locale)} width={20} height={20} />
+                        <Image src="/icon/start.svg" alt={t("Nav.startIconAlt", "Start icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li>
                     <Link href="/about" title={t("Pages.about", "About", locale)}>
                         {t("Pages.about", "About", locale)}
-                        <Image src="/info.svg" alt={t("Nav.aboutIconAlt", "About icon", locale)} width={20} height={20} />
+                        <Image src="/icon/info.svg" alt={t("Nav.aboutIconAlt", "About icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li className={`${styles.dropdown}`}>
                     <Link href="/guides">
                         {t("Pages.guides", "Guides", locale)}
-                        <Image src="/guide.svg" alt={t("Nav.guidesIconAlt", "Guides icon", locale)} width={20} height={20} />
+                        <Image src="/icon/guide.svg" alt={t("Nav.guidesIconAlt", "Guides icon", locale)} width={20} height={20} />
                     </Link>
                     <ul className={styles.subNav}>
                         <li>
@@ -55,19 +55,19 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                 <li>
                     <Link href="/resources" title={t("Pages.resources", "Resources", locale)}>
                         {t("Pages.resources", "Resources", locale)}
-                        <Image src="/resources.svg" alt={t("Nav.resourcesIconAlt", "Resources icon", locale)} width={20} height={20} />
+                        <Image src="/icon/resources.svg" alt={t("Nav.resourcesIconAlt", "Resources icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li>
                     <Link href="/search" title={t("Pages.search", "Search", locale)}>
                         {t("Pages.search", "Search", locale)}
-                        <Image src="/search.svg" alt={t("Nav.searchIconAlt", "Search icon", locale)} width={20} height={20} />
+                        <Image src="/icon/search.svg" alt={t("Nav.searchIconAlt", "Search icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
                 <li className={styles.desktopOnly}>
                     <Link href="https://en.wikipedia.org/wiki/Main_Page" title={t("Nav.exitTitle", "Exit", locale)}>
                         {t("Site.exit", "Exit", locale)}
-                        <Image src="/close.svg" alt={t("Site.exitIconAlt", "Exit icon", locale)} width={20} height={20} />
+                        <Image src="/icon/close.svg" alt={t("Site.exitIconAlt", "Exit icon", locale)} width={20} height={20} />
                     </Link>
                 </li>
             </ul>

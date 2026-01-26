@@ -12,14 +12,14 @@ export async function GET() {
         <style>
         @font-face {
             font-family: 'Special Gothic';
-            src: url('/Special_Gothic/SpecialGothic.ttf') format('truetype');
+            src: url('/font/Special_Gothic/SpecialGothic.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
             }
         @font-face {
             font-family: 'Special Gothic Expanded One';
-            src: url('/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf') format('truetype');
+            src: url('/font/Special_Gothic_Expanded_One/SpecialGothicExpandedOne.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             font-display: swap;

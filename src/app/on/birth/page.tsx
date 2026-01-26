@@ -65,7 +65,7 @@ export default function BirthPage() {
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
           <p>If your application is complete and meets all requirements, you should receive your new birth certificate or registration in 6-8 weeks.</p>
           <div className={styles.imageContainer}>
-            <Image src="/on-birth-example.jpeg" alt="Sample Ontario birth certificate showing updated name and gender marker" width={350} height={500} />
+            <Image src="/asset/on-birth-example.jpeg" alt="Sample Ontario birth certificate showing updated name and gender marker" width={350} height={500} />
           </div>
           <hr />
           <SourcesList sources={sources} />

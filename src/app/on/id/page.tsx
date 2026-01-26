@@ -68,8 +68,8 @@ export default function OnID() {
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <p>By law in Ontario, if you have a driver&apos;s license, you must notify the Ministry of Transportation within 6 days of legally changing your name. Be sure to include this step when updating your documents.</p>
           <div className={styles.imageContainer}>
-            <Image src="/on-driveid-example.jpeg" alt="Sample Ontario driver's license" width={300} height={500} />
-            <Image src="/on-photoid-example.jpeg" alt="Sample Ontario photo ID card" width={300} height={500} />
+            <Image src="/asset/on-driveid-example.jpeg" alt="Sample Ontario driver's license" width={300} height={500} />
+            <Image src="/asset/on-photoid-example.jpeg" alt="Sample Ontario photo ID card" width={300} height={500} />
           </div>
           <hr />
           <SourcesList sources={sources} />

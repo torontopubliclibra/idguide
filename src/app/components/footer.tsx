@@ -40,7 +40,7 @@ export default function Footer({ locale }: { locale: string }) {
                 </div>
                 <div>
                     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
-                        <Image src='/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25}/>
+                        <Image src='/icon/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25}/>
                     </a>
                 </div>
             </div>

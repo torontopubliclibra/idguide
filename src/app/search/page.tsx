@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useMemo } from "react";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import index from "../index.json";
 import { useState, useCallback } from "react";
 
 interface SearchItem {
@@ -18,7 +19,6 @@ interface SearchItem {
 export default function Search() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [results, setResults] = useState<SearchItem[]>([]);
-  const [index, setIndex] = useState<SearchItem[] | null>(null);
 
   const pageLocale = useMemo(() => {
     if (typeof window === "undefined") return "en";
@@ -26,33 +26,6 @@ export default function Search() {
     if (subdomain === "fr") return "fr";
     if (window.navigator.language.startsWith("fr")) return "fr";
     return "en";
-  }, []);
-
-  // Load index.json on mount
-  useEffect(() => {
-    fetch("/search/index.json")
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((data) => setIndex(data))
-      .catch(() => {
-        // Try fallback path
-        fetch("/public/search/index.json")
-          .then((res) => {
-            if (!res.ok) throw new Error("Not found");
-            return res.json();
-          })
-          .then((data) => setIndex(data))
-          .catch((err) => {
-            setIndex([]);
-            // For debugging
-            if (typeof window !== "undefined") {
-              // eslint-disable-next-line no-console
-              console.error("Failed to load index.json", err);
-            }
-          });
-      });
   }, []);
 
   interface InputChangeEvent {
@@ -112,7 +85,7 @@ export default function Search() {
       .filter(Boolean) as (SearchItem & { _score: number })[];
     scored.sort((a, b) => b._score - a._score);
     setResults(scored);
-  }, [index]);
+  }, []);
 
   useEffect(() => {
     document.title = `${t("Pages.search", "Search", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;

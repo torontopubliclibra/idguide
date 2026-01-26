@@ -280,7 +280,7 @@
       "Registrar General"
     ],
     "images": [
-      "/on-birth-example.jpeg"
+      "/asset/on-birth-example.jpeg"
     ]
   },
   {
@@ -303,7 +303,7 @@
       "insurance"
     ],
     "images": [
-      "/on-health-example.jpeg"
+      "/asset/on-health-example.jpeg"
     ]
   },
   {
@@ -325,8 +325,8 @@
       "Service Ontario"
     ],
     "images": [
-      "/on-driveid-example.jpeg",
-      "/on-photoid-example.jpeg"
+      "/asset/on-driveid-example.jpeg",
+      "/asset/on-photoid-example.jpeg"
     ]
   },
   {
@@ -345,7 +345,7 @@
       "Registrar General"
     ],
     "images": [
-      "/on-name-example.jpeg"
+      "/asset/on-name-example.jpeg"
     ]
   },
   {

@@ -5,7 +5,7 @@
         "links": [
             {
                 "id": "dvs3132",
-                "href": "/dvs3132.pdf",
+                "href": "/download/dvs3132.pdf",
                 "label": "Alberta Name Change Application",
                 "description": "DVS3132 | English PDF download"
             }
@@ -18,13 +18,13 @@
         "links": [
             {
                 "id": "mbname",
-                "href": "/mb-application_change_of_name_adult.en.pdf",
+                "href": "/download/mb-application_change_of_name_adult.en.pdf",
                 "label": "Manitoba application for an adult legal change of name",
                 "description": "English PDF download"
             },
             {
                 "id": "mbname",
-                "href": "/mb-application_change_of_name_adult.fr.pdf",
+                "href": "/download/mb-application_change_of_name_adult.fr.pdf",
                 "label": "Demande de changement légal de nom d'un adulte au Manitoba",
                 "description": "Téléchargement PDF français"
             }
@@ -37,37 +37,37 @@
         "links": [
         {
                 "id": "11155",
-                "href": "/11155e.pdf",
+                "href": "/download/11155e.pdf",
                 "label": "Ontario application to change an adult's name",
                 "description": "11155e | English PDF download"
             },
         {
                 "id": "11155",
-                "href": "/11155f.pdf",
+                "href": "/download/11155f.pdf",
                 "label": "Demande de changement de nom d'une personne adulte en Ontario",
                 "description": "11155f | Téléchargement PDF français"
             },
         {
             "id": "11320",
-            "href": "/11320e.pdf",
+            "href": "/download/11320e.pdf",
             "label": "Request for Non-Publication in The Ontario Gazette",
             "description": "11320e | English PDF download"
         },
         {
             "id": "11320",
-            "href": "/11320f.pdf",
+            "href": "/download/11320f.pdf",
             "label": "Demande de non-publication dans la Gazette de l'Ontario",
             "description": "11320f | Téléchargement PDF français"
         },
         {
             "id": "5349",
-            "href": "/5349e.pdf",
+            "href": "/download/5349e.pdf",
             "label": "Requirements for a Police Record Check for a Change of Name",
             "description": "5349e | English PDF download"
         },
         {
             "id": "5349",
-            "href": "/5349f.pdf",
+            "href": "/download/5349f.pdf",
             "label": "Exigences relatives à une vérification de dossiers de police pour un changement de nom",
             "description": "5349f | Téléchargement PDF français"
         }
@@ -80,25 +80,25 @@
         "links": [
             {
                 "id": "11325",
-                "href": "/11325e.pdf",
+                "href": "/download/11325e.pdf",
                 "label": "Ontario Application for a Change of Sex Designation on a Birth Registration of an Adult",
                 "description": "11325e | English PDF download"
             },
             {
                 "id": "11325",
-                "href": "/11325f.pdf",
+                "href": "/download/11325f.pdf",
                 "label": "Demande de changement de la désignation du sexe sur l'enregistrement de naissance d'un adulte en Ontario",
                 "description": "11325f | Téléchargement PDF français"
             },
             {
                 "id": "11324",
-                "href": "/11324e.pdf",
+                "href": "/download/11324e.pdf",
                 "label": "Ontario Statutory Declaration for a Change of Sex Designation on a Birth Registration of an Adult",
                 "description": "11324e | English PDF download"
             },
             {
                 "id": "11324",
-                "href": "/11324f.pdf",
+                "href": "/download/11324f.pdf",
                 "label": "Ontario Déclaration solennelle pour un changement de la désignation du sexe sur l'enregistrement de naissance d'un adulte",
                 "description": "11324f | Téléchargement PDF français"
             }
@@ -111,13 +111,13 @@
         "links": [
             {
                 "id": "0280-82",
-                "href": "/0280-82e.pdf",
+                "href": "/download/0280-82e.pdf",
                 "label": "Ontario Health Card Change of Information Form",
                 "description": "0280-82e | English PDF download"
             },
             {
                 "id": "0280-82",
-                "href": "/0280-82f.pdf",
+                "href": "/download/0280-82f.pdf",
                 "label": "Demande de modification de la carte santé de l'Ontario",
                 "description": "0280-82f | Téléchargement PDF français"
             }
@@ -130,25 +130,25 @@
         "links": [
             {
                 "id": "pptc-153/4",
-                "href": "/pptc153.pdf",
+                "href": "/download/pptc153.pdf",
                 "label": "Adult General Passport Application",
                 "description": "PPTC-153 | English PDF download"
             },
             {
                 "id": "pptc-153/4",
-                "href": "/pptc154.pdf",
+                "href": "/download/pptc154.pdf",
                 "label": "Demande de passeport générale pour adulte",
                 "description": "PPTC-154 | Téléchargement PDF français"
             },
             {
                 "id": "pptc-643",
-                "href": "/pptc643e.pdf",
+                "href": "/download/pptc643e.pdf",
                 "label": "Canadian Passport Sex Identifier Update Form",
                 "description": "PPTC-643 | English PDF download"
             },
             {
                 "id": "pptc-643",
-                "href": "/pptc643f.pdf",
+                "href": "/download/pptc643f.pdf",
                 "label": "Demande de modification de l'identificateur de sexe sur le passeport canadien",
                 "description": "PPTC-643 | Téléchargement PDF français"
             }
@@ -161,13 +161,13 @@
         "links": [
             {
                 "id": "imm5644",
-                "href": "/imm5644e.pdf",
+                "href": "/download/imm5644e.pdf",
                 "label": "Permanent Resident Card Document Checklist",
                 "description": "IMM-5644 | English PDF download"
             },
             {
                 "id": "imm5644",
-                "href": "/imm5644f.pdf",
+                "href": "/download/imm5644f.pdf",
                 "label": "Liste de vérification des documents pour la carte de résident permanent",
                 "description": "IMM-5644 | Téléchargement PDF français"
             }
@@ -180,21 +180,21 @@
         "links": [
             {
                 "id": "tg-id-1025",
-                "href": "/tg-id-1025.pdf",
+                "href": "/download/tg-id-1025.pdf",
                 "label": "Ontario TG I.D. slideshow",
                 "description": "English PDF download"
             },
             {
                 "id": "tg-id-1025-1",
-                "href": "/tg-id-1025.odp",
+                "href": "/download/tg-id-1025.odp",
                 "label": "Ontario TG I.D. slideshow",
-                "description": "English ODP"
+                "description": "English ODP download"
             },
             {
                 "id": "tg-id-1025-1",
-                "href": "/tg-id-1025.pptx",
+                "href": "/download/tg-id-1025.pptx",
                 "label": "Ontario TG I.D. slideshow",
-                "description": "English PPTX"
+                "description": "English PPTX download"
             }
         ],
         "more": null

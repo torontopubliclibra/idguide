@@ -50,7 +50,7 @@ export default function OnHealth() {
           <p>Since August 2022, you can add French language characters to your name on your Ontario health card. To do this, visit ServiceOntario with documents that show your legal name with those characters. If your citizenship or immigration document doesn&#39;t show your name with French characters, you may be able to use another proof of residency or identity document.</p>
           <p>Since June 2016, Ontario health cards no longer display sex designation.</p>
           <div className={styles.imageContainer}>
-            <Image src="/on-health-example.jpeg" alt="Sample Ontario health card showing no sex designation" width={400} height={500} />
+            <Image src="/asset/on-health-example.jpeg" alt="Sample Ontario health card showing no sex designation" width={400} height={500} />
           </div>
           <hr />
           <SourcesList sources={sources} />

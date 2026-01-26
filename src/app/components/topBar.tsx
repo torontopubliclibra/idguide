@@ -60,7 +60,7 @@ export default function TopBar({ locale }: { locale: string }) {
                         }}
                     >
                         <Image
-                            src={isMobileNavOpen ? '/menu-open.svg' : '/menu.svg'}
+                            src={isMobileNavOpen ? '/icon/menu-open.svg' : '/icon/menu.svg'}
                             alt={t("TopBar.menuIconAlt", "Menu icon", locale)}
                             width={40}
                             height={40}

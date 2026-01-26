@@ -118,7 +118,7 @@ export default function OnName() {
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
           <p>As of 2026, change of name applications are taking 18-24 weeks to process. It also may take longer for single name or reclaimed name changes. If you were born in Ontario, you&#39;ll also get your updated birth certificate. If you were born elsewhere in Canada, notice of your name change is sent to the vital statistics office in your province or territory, and you&#39;ll likely need to apply there for a new birth certificate. Contact ServiceOntario if you have not received your certificate after 24 weeks.</p>
           <div className={styles.imageContainer}>
-            <Image src="/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
+            <Image src="/asset/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
           </div>
           <hr />
           <SourcesList sources={sources} />
