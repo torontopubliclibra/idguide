@@ -40,28 +40,30 @@ export default function PR() {
           <p>If you need to update the name on your permanent resident card, you must apply for a new card (reissued cards are not available for name changes). Complete the <Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-5445-applying-permanent-resident-card-card-first-application-replacement-renewal-change-gender-identifier" target="_blank" rel="noreferrer">PR Card Application (IMM-5445)</Link> to start the process. The fee is $50.</p>
 
           <h3 id="requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
-          <p>Use the <Link href="/downloads#pr">Permanent Resident Card Document Checklist (IMM-5644)</Link> to confirm which documents you need. Include the completed checklist with your application</p>
+          <p>Use the <Link href="/downloads#pr">Permanent Resident Card Document Checklist (IMM-5644)</Link> to confirm which documents you need. Include the completed checklist with your application, along with the following:</p>
           <ul>
             <li>Copy of the receipt showing the fees paid</li>
-            <li>Photos must meet the <Link href="https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/photospecs-e.pdf" target="_blank" rel="noreferrer">photo specifications (PDF)</Link><br />
+            <li>Photos, meeting the <Link href="https://www.canada.ca/content/dam/ircc/migration/ircc/english/pdf/photospecs-e.pdf" target="_blank" rel="noreferrer">photo specifications (PDF)</Link><br />
               <ul>
                 <li>If applying online: upload 1 photo (front and back) taken within 12 months. For digital photos, upload a confirmation from the photo studio if required</li>
                 <li>If applying by paper: provide two (2) identical photos taken within 12 months, in a small envelope with the applicant&#39;s name written on it (no staples or paper clips)</li>
               </ul>
             </li>
-            <li>Documents showing you meet the residency obligation for the past 5 years. See <Link href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/appendix-a-residency-obligation.html" target="_blank" rel="noreferrer">Appendix A: Residency Obligation</Link></li>
+            <li>Documents showing you meet the residency obligation for the past 5 years</li>
             <li>A copy of one of the following:
               <ul>
                 <li>Your valid passport or travel document</li>
                 <li>The passport or travel document you had when you became a permanent resident (include the page stamped on arrival, if applicable)</li>
                 <li>Certificate of identity or travel document issued by IRCC or a foreign country</li>
               </ul>
-              <em>The copy should show document type and number, issue and expiry date, your name, photo, and date of birth</em>
+              <em>(The copy should show document type and number, issue and expiry date, your name, photo, and date of birth.)</em>
             </li>
-            <li>Your current PR card (if renewing or replacing)</li>
             <li><Link href="/name">Change of name certificate</Link></li>
-            <li>If your PR card was lost, include a copy of a police report or incident number</li>
+            <li>Your current PR card (if renewing or replacing)</li>
           </ul>
+          <blockquote>
+            If your PR card was lost, include a copy of a police report or incident number.
+          </blockquote>
           <h4>{t("Subheadings.inExceptionalCases", "In exceptional cases", pageLocale)}</h4>
           <ul>
             <li>If you cannot obtain a primary identity document, provide:
@@ -93,7 +95,7 @@ export default function PR() {
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           <ul>
             <li>Temporary Residence Permits cannot be amended to reflect changes made in Canada (e.g., a name change completed in Ontario). Your temporary residence permit must match your passport.</li>
-            <li>If your name change document was issued outside of Canada, you must also provide a provincial ID in your new name (such as a driver&#39;s license, photo card, or health card).</li>
+            <li>If your name change document was issued outside of Canada, you must also provide a provincial ID in your new name (such as <Link href="/id">a driver&#39;s license, photo card</Link>, or <Link href="/health">health card</Link>).</li>
           </ul>
           <hr/>
           <h3 id="sources">{t("Subheadings.sources", "Sources", pageLocale)}</h3>
