@@ -1,11 +1,13 @@
 "use client";
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { usePageLocale } from '../../hooks/usePageLocale';
+import { useRenderCopy } from '../../hooks/useRenderCopy';
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
 import sources from './sources.json';
+import copy from './copy.json';
 import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
@@ -13,13 +15,7 @@ import SourcesList from '../../components/SourcesList';
 
 export default function OnHealth() {
   
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   useEffect(() => {
     document.title = `${t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
@@ -37,21 +33,19 @@ export default function OnHealth() {
             "sources"
           ]} />
           <hr />
+
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <p>There is no fee to get a new Ontario health card.</p>
-          <p>To change your name, visit a ServiceOntario location and bring a completed <Link href="/downloads#on-health">Change of Information form (0280-82e)</Link> plus an original copy of one of the following:</p>
-          <ol>
-            <li><Link href="/birth">Canadian birth certificate</Link></li>
-            <li>Canadian <Link href="/name">change of name</Link> certificate</li>
-            <li>Citizenship or immigration status document in your new name</li>
-          </ol>
+          {useRenderCopy()(copy["process"])}
+
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
-          <h4>{t("Subheadings.frenchLanguageCharacters", "French language characters", pageLocale)}</h4>
-          <p>Since August 2022, you can add French language characters to your name on your Ontario health card. To do this, visit ServiceOntario with documents that show your legal name with those characters. If your citizenship or immigration document doesn&#39;t show your name with French characters, you may be able to use another proof of residency or identity document.</p>
-          <p>Since June 2016, Ontario health cards no longer display sex designation.</p>
+          {useRenderCopy()(copy["importantConsiderations"])}
           <div className={styles.imageContainer}>
             <Image src="/asset/on-health-example.jpeg" alt="Sample Ontario health card showing no sex designation" width={400} height={500} />
           </div>
+
+          <h4>{t("Subheadings.frenchLanguageCharacters", "French language characters", pageLocale)}</h4>
+          {useRenderCopy()(copy["frenchLanguageCharacters"])}
+
           <hr />
           <SourcesList sources={sources} />
           <hr />

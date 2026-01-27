@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import index from "../index.json";
@@ -20,13 +21,7 @@ export default function Search() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [results, setResults] = useState<SearchItem[]>([]);
 
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   interface InputChangeEvent {
     target: { value: string };
@@ -44,7 +39,6 @@ export default function Search() {
       'Ontario', 'Manitoba', 'Alberta', 'Quebec', 'British Columbia', 'Saskatchewan', 'Nova Scotia', 'New Brunswick', 'Newfoundland', 'Prince Edward Island', 'Yukon', 'Nunavut', 'Northwest Territories', 'Canada'
     ];
     const isRegional = (item: SearchItem) => {
-      // Check if title or keywords contain a region name
       const title = item.title.toLowerCase();
       const keywordsString = (item.keywords ? item.keywords.join(' ') : '').toLowerCase();
       return regionList.some(region => title.includes(region.toLowerCase()) || keywordsString.includes(region.toLowerCase()));
@@ -54,7 +48,6 @@ export default function Search() {
         const title = item.title.toLowerCase();
         const keywordsString = item.keywords ? item.keywords.join(" ").toLowerCase() : "";
         const summary = item.summary.toLowerCase();
-        // Check if all words are in title, keywords, or summary
         const titleMatch = words.every(word => title.includes(word));
         const keywordMatch = words.every(word => keywordsString.includes(word));
         const summaryMatch = words.every(word => summary.includes(word));
@@ -78,7 +71,6 @@ export default function Search() {
           score += 0.5;
         }
 
-        // Lower score for regional pages
         if (score > 0 && isRegional(item)) score -= 0.5;
         return score > 0 ? { ...item, _score: score } : null;
       })

@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import { useState, useEffect, useMemo } from "react";
+import { usePageLocale } from "../hooks/usePageLocale";
 import Image from "next/image";
 import Link from "next/link";
 import { t } from "../lib/i18n";
@@ -12,18 +13,13 @@ import downloadData from '../downloads.json';
 import JumpTo from "../components/JumpTo";
 
 export default function Downloads() {
+
   const [openSection, setOpenSection] = useState<string | null>(null);
 
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   useEffect(() => {
-    document.title = `${t("Pages.downloads", "Downloads", pageLocale)} | ${t("Site.name", "Downloads", pageLocale)}`;
+    document.title = `${t("Pages.downloads", "Downloads", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
     if (typeof window === "undefined") return;
     const setSectionFromHash = () => {
       const hash = window.location.hash.replace('#', '');

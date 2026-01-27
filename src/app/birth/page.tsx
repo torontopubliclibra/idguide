@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import LastUpdated from "../components/LastUpdated";
@@ -9,13 +10,7 @@ import SeeAlso from "../components/SeeAlso";
 
 export default function Guides() {
   
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   useEffect(() => {
     document.title = `${t("Pages.birthCertificates", "Birth certificates", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;

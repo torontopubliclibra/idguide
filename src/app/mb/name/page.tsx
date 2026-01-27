@@ -1,24 +1,21 @@
 "use client";
 
 import Link from 'next/link';
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { usePageLocale } from '../../hooks/usePageLocale';
+import { useRenderCopy } from '../../hooks/useRenderCopy';
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import SourcesList from '../../components/SourcesList';
 import sources from './sources.json';
+import copy from './copy.json';
 import LastUpdated from "../../components/LastUpdated";
 
 export default function MbName() {
   
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   useEffect(() => {
     document.title = `${t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
@@ -38,22 +35,15 @@ export default function MbName() {
             "sources"
           ]} />
           <hr />
+
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
-          <p>To legally change your name in Manitoba, you must complete the <Link href="/downloads#mb-name">{t("NameChanges.manitobaApplicationName", "Manitoba application for an adult legal change of name", pageLocale)}</Link>. The fee is $100.</p>
+          {useRenderCopy()(copy["process"])}
+
           <h3 id="requirements">{t("Subheadings.requirements", "Requirements", pageLocale)}</h3>
+
           <h4>{t("Subheadings.eligibility", "Eligibility", pageLocale)}</h4>
-          <ul>
-            <li>Must have lived in Manitoba for at least 3 months before applying.</li>
-            <li>Applicants must be 18+ (or under 18 and married/in a common-law relationship, or a parent with custody).</li>
-            <li>To change a child&#39;s name, you must be the parent or legal guardian (with proper documentation and consents).</li>
-            <li>You cannot apply if you:
-              <ul>
-                <li>Have been convicted of a primary offence as defined in subsection 490.011(1) of the Criminal Code (Canada)</li>
-                <li>Are designated a dangerous offender (s.753) or long-term offender (s.753.1) under the Criminal Code</li>
-                <li>Are listed on the National Sex Offender Registry</li>
-              </ul>
-            </li>
-          </ul>
+          {useRenderCopy()(copy["eligibility"])}
+{/* 
           <h4>{t("Subheadings.informationYoullNeedToProvide", "Information you'll need to provide", pageLocale)}</h4>
           <ol>
             <li>Current legal name and new chosen name</li>
@@ -66,7 +56,7 @@ export default function MbName() {
             <li>All court documents for guardianship/custody (if applying for a child)</li>
             <li>All documents must be originals or confirmed copies (by eligible witness)</li>
             <li>Documents in other languages must be translated by a certified translator</li>
-          </ol>
+          </ol> */}
           <h3 id="commissioning">{t("Subheadings.commissioning", "Commissioning", pageLocale)}</h3>
           <p>Affidavits must be signed by a Commissioner for Oaths, RCMP, lawyer, notary, judge, or other authorized person (see The Evidence Act of Manitoba). Witnesses can also confirm photocopies of your documents by comparing originals and signing the copies.</p>
           <blockquote>

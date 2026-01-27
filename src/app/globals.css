@@ -110,7 +110,7 @@ ul, ol {
   padding-left: 20px;
 }
 
-ul li {
+ul li, ol li {
   margin: 0.5rem 0;
 }
 

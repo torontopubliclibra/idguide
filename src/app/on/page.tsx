@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
+import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import SeeAlso from "../components/SeeAlso";
@@ -9,17 +10,19 @@ import LastUpdated from "../components/LastUpdated";
 
 export default function Ontario() {
   
-  const pageLocale = useMemo(() => {
-    if (typeof window === "undefined") return "en";
-    const subdomain = window.location.hostname.split('.')[0];
-    if (subdomain === "fr") return "fr";
-    if (window.navigator.language.startsWith("fr")) return "fr";
-    return "en";
-  }, []);
+  const pageLocale = usePageLocale();
 
   useEffect(() => {
     document.title = `${t("Pages.ontario", "Ontario", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
   }, [pageLocale]);
+
+  const ontarioPages = [
+    { href: "/on/name", label: t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale) },
+    { href: "/on/birth", label: t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale) },
+    { href: "/on/health", label: t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale) },
+    { href: "/on/id", label: t("Pages.ontarioIDCards", "Ontario driver's licenses & I.D. cards", pageLocale) },
+    { href: "/on/resources", label: t("Pages.ontarioResources", "Ontario resources", pageLocale) },
+  ];
 
   return (
     <div className="page">
@@ -30,21 +33,11 @@ export default function Ontario() {
           <div className={styles.content}>
             <p>{t("Province.ontario", "This is a full list of pages specific to Ontario", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
-              <li>
-                <Link href="/on/name">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/on/birth">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/on/health">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/on/id">{t("Pages.ontarioIDCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</Link>
-              </li>
-              <li>
-                <Link href="/on/resources">{t("Pages.ontarioResources", "Ontario resources", pageLocale)}</Link>
-              </li>
+              {ontarioPages.map(page => (
+                <li key={page.href}>
+                  <Link href={page.href}>{page.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <hr />

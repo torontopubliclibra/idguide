@@ -5,9 +5,10 @@ import { t } from "../lib/i18n";
 interface LastUpdatedProps {
   page: string;
   pageLocale: string;
+  style?: React.CSSProperties | undefined;
 }
 
-export default function LastUpdated({ page, pageLocale }: LastUpdatedProps) {
+export default function LastUpdated({ page, pageLocale, style }: LastUpdatedProps) {
   const [formattedDate, setFormattedDate] = useState<string | null>(null);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function LastUpdated({ page, pageLocale }: LastUpdatedProps) {
 
   if (!formattedDate) return null;
   return (
-    <p style={{marginTop: '2.25rem', color: 'var(--white)'}}>
+    <p style={{marginTop: '2.25rem', color: 'var(--white)', ...style}}>
       {t("Site.lastUpdated", "This page was last updated on", pageLocale)} {formattedDate}.
     </p>
   );
