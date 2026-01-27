@@ -158,7 +158,7 @@ export default function Downloads() {
                                         {link.description ? (
                                           <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem', fontSize: '0.75rem' }}>
                                             {link.description}
-                                            <Image src="/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} />
+                                            <Image src="/icon/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} />
                                           </span>
                                         ) : ''}
                                       </span>
@@ -185,7 +185,7 @@ export default function Downloads() {
                             >
                               <span className={styles.linkTitle}>
                                 <span className="button-label" style={{ minWidth: "100%" }}>
-                                  {link.description ? <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>{link.description}<Image src="/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} /></span> : ''}
+                                  {link.description ? <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>{link.description}<Image src="/icon/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} /></span> : ''}
                                 </span>
                               </span>
                             </Link>
