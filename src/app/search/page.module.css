@@ -56,9 +56,15 @@
 @media (max-width: 1200px) {
   .search {
     padding-top: 20px;
-     min-height: calc(100vh - 403px);
+    min-height: calc(100vh - 403px);
   }
   .search .main {
     padding: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .search {
+    min-height: unset;
   }
 }
