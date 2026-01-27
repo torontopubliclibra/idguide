@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.1.2",
+    "date": "2026-01-27",
+    "changes": [
+      "Updated privacy policy and disclaimers, added back to top button functionality, reorganized footer links, and codebase upgrades"
+    ]
+  },
+  {
     "version": "1.1.1",
     "date": "2026-01-26",
     "changes": [

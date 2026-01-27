@@ -40,10 +40,10 @@ export default function Footer({ locale }: { locale: string }) {
             </div>
             <div className={styles.footerBottom}>
                 <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
-                    {t("Site.name", "I.D. Guide", locale)} <span>(<Link href="/about#changelog">v{changelogData[0].version}</Link>)</span> | <LanguageToggle locale={locale} />
+                    <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link><span> | </span><LanguageToggle locale={locale} />
                 </div>
                 <div>
-                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
+                    <a href="/about#license" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
                         <Image src='/icon/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25}/>
                     </a>
                 </div>

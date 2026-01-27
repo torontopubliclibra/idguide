@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
@@ -27,7 +28,7 @@ export default function Ontario() {
   return (
     <div className="page">
       <main className={styles.ontario}>
-        <h2 className="page-title">{t("Pages.ontario", "Ontario", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontario", "Ontario", pageLocale)}<Image src="/icon/region.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div className={styles.content}>

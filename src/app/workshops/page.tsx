@@ -2,6 +2,7 @@
 
 import styles from "./page.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import { marked } from "marked";
@@ -9,6 +10,7 @@ import { t } from "../lib/i18n";
 import workshops from './workshops.json';
 import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
+import BackToTop from "../components/BackToTop";
 
 export default function Workshops() {
 
@@ -20,8 +22,9 @@ export default function Workshops() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.workshops}>
-        <h2 className="page-title">{t("Pages.workshops", "Workshops", pageLocale)}{pageLocale === "fr" ? " (en anglais)" : ""}</h2>
+        <h2 className="page-title">{t("Pages.workshops", "Workshops", pageLocale)}{pageLocale === "fr" ? " (en anglais)" : ""}<Image src="/icon/workshop.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           

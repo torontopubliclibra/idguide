@@ -10,6 +10,7 @@ import { t } from "../lib/i18n";
 import LastUpdated from "../components/LastUpdated";
 import JumpTo from "../components/JumpTo";
 import SeeAlso from "../components/SeeAlso";
+import BackToTop from "../components/BackToTop";
 
 export default function Guides() {
   
@@ -21,6 +22,7 @@ export default function Guides() {
 
   return (
     <div className="page">
+      <BackToTop />
       <a href="#main" className="skip-link">{t("Site.skipToMain", "Skip to main content", pageLocale)}</a>
       <main id="main" className={styles.guides}>
         <h2 className="page-title">{t("Pages.guides", "Guides", pageLocale)}<Image src="/icon/guide.svg" alt={t("Pages.guides", "Guides", pageLocale)} width={30} height={30} /></h2>

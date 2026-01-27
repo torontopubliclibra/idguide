@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import SeeAlso from "../components/SeeAlso";
+import BackToTop from "../components/BackToTop";
 
 interface CheckboxProps {
   id: string;
@@ -99,6 +100,7 @@ export default function Start() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.start}>
         <h2 className="page-title">{t("Pages.start", undefined, pageLocale)}<Image src="/icon/start.svg" alt={t("Pages.start", "Start", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

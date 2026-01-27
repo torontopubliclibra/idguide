@@ -29,7 +29,7 @@ export default function LastUpdated({ page, pageLocale, style }: LastUpdatedProp
 
   if (!formattedDate) return null;
   return (
-    <p style={{fontSize: '0.95rem', width: '100%', textAlign: 'right', marginTop: '2.25rem', color: 'var(--white)', ...style}}>
+    <p style={{fontSize: '0.95rem', width: '100%', marginTop: '2.25rem', color: 'var(--white)', ...style}}>
       {t("Site.lastUpdated", "This page was last updated on", pageLocale)} {formattedDate}.
     </p>
   );

@@ -12,6 +12,7 @@ import LastUpdated from "../components/LastUpdated";
 import JumpTo from "../components/JumpTo";
 import SeeAlso from "../components/SeeAlso";
 import SourcesList from '../components/SourcesList';
+import BackToTop from "../components/BackToTop";
 
 export default function CRA() {
   
@@ -23,6 +24,7 @@ export default function CRA() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.cra}>
         <h2 className="page-title">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}<Image src="/icon/cra.svg" alt={t("Pages.cra", "Canada Revenue Agency", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

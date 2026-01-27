@@ -11,6 +11,7 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import ResourceList from '../../components/ResourceList';
+import BackToTop from "../../components/BackToTop";
 
 export default function OnResources() {
 
@@ -22,6 +23,7 @@ export default function OnResources() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.resources}>
         <h2 className="page-title">{t("Pages.ontarioResources", "Ontario resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

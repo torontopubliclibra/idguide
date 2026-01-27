@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import policy from './privacy.json'
 import LastUpdated from "../components/LastUpdated";
+import BackToTop from "../components/BackToTop";
 
 export default function Privacy() {
 
@@ -18,6 +19,7 @@ export default function Privacy() {
   
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.privacy}>
         <h2 className="page-title">{t("Pages.privacy", "Privacy policy", pageLocale)}</h2>
         <div className="stacks flipped"></div>

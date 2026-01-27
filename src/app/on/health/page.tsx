@@ -12,6 +12,7 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import SourcesList from '../../components/SourcesList';
+import BackToTop from "../../components/BackToTop";
 
 export default function OnHealth() {
   
@@ -23,6 +24,7 @@ export default function OnHealth() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.health}>
         <h2 className="page-title">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}<Image src="/icon/health-card.svg" alt={t("Pages.healthCards", "Health cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

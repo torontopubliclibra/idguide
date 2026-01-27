@@ -12,7 +12,7 @@
     "page": "about",
     "priority": 0.8,
     "changefreq": "weekly",
-    "lastUpdated": "2026-01-26",
+    "lastUpdated": "2026-01-27",
     "labelKey": "Pages.about",
     "isSection": false,
     "seoInclude": true
@@ -300,7 +300,7 @@
     "page": "privacy",
     "priority": 0.5,
     "changefreq": "monthly",
-    "lastUpdated": "2026-01-26",
+    "lastUpdated": "2026-01-27",
     "labelKey": "Pages.privacy",
     "isSection": false,
     "seoInclude": false

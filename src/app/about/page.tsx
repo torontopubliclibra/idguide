@@ -12,6 +12,7 @@ import sitemapData from '../sitemap.json';
 import attributions from './attributions.json';
 import disclaimers from './disclaimers.json';
 import LastUpdated from "../components/LastUpdated";
+import BackToTop from "../components/BackToTop";
 
 type ChangelogEntry = {
   version: string;
@@ -84,6 +85,7 @@ export default function About() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.about}>
         <h2 className="page-title">{t("Pages.about", "About", pageLocale)}<Image src="/icon/info.svg" alt={t("Pages.about", "About", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
@@ -100,20 +102,6 @@ export default function About() {
           {disclaimers.map((disc, idx) => (
             <div key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(disc) }}></div>
           ))}
-
-          <hr />
-          <h3>License</h3>
-          <p>
-            Unless otherwise noted, all original content on this site is licensed under <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</Link> (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). This means you are free to share and adapt the material for non-commercial purposes, as long as you give appropriate credit and share any changes under the same license.
-          </p>
-
-          <hr />
-          <h3>Attributions</h3>
-          <ul>
-            {attributions.map((attr, idx) => (
-              <li key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(attr) }}></li>
-            ))}
-          </ul>
 
           <hr />
           <h3 id='changelog'>{t("Pages.changelog", "Changelog", pageLocale)}</h3>
@@ -135,6 +123,20 @@ export default function About() {
           <div className={styles.sitemapContainer}>
             <SitemapList pageLocale={pageLocale} />
           </div>
+
+          <hr />
+          <h3 id="attributions">Attributions</h3>
+          <ul>
+            {attributions.map((attr, idx) => (
+              <li key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(attr) }}></li>
+            ))}
+          </ul>
+
+          <hr />
+          <h3 id="license">License</h3>
+          <p>
+            Unless otherwise noted, all original content on this site is licensed under <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</Link> (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). This means you are free to share and adapt the material for non-commercial purposes, as long as you give appropriate credit and share any changes under the same license.
+          </p>
 
         </div>
         <div className="stacks"></div>

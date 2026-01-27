@@ -12,6 +12,7 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from "../../components/SeeAlso";
 import SourcesList from '../../components/SourcesList';
+import BackToTop from "../../components/BackToTop";
 
 export default function AbName() {
   
@@ -23,6 +24,7 @@ export default function AbName() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.name}>
         <h2 className="page-title">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

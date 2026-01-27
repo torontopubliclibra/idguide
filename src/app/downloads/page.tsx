@@ -11,6 +11,7 @@ import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
 import downloadData from '../downloads.json';
 import JumpTo from "../components/JumpTo";
+import BackToTop from "../components/BackToTop";
 
 export default function Downloads() {
 
@@ -67,6 +68,7 @@ export default function Downloads() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.downloads}>
         <h2 className="page-title">{t("Pages.downloads", "Downloads", pageLocale)}<Image src="/icon/download.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

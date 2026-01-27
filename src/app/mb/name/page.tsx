@@ -13,6 +13,7 @@ import SourcesList from '../../components/SourcesList';
 import sources from './sources.json';
 import copy from './copy.json';
 import LastUpdated from "../../components/LastUpdated";
+import BackToTop from "../../components/BackToTop";
 
 export default function MbName() {
   
@@ -24,6 +25,7 @@ export default function MbName() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.name}>
         <h2 className="page-title">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

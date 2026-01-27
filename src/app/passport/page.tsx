@@ -13,6 +13,7 @@ import LastUpdated from "../components/LastUpdated";
 import JumpTo from '../components/JumpTo';
 import SeeAlso from '../components/SeeAlso';
 import SourcesList from '../components/SourcesList';
+import BackToTop from "../components/BackToTop";
 
 export default function Passport() {
   
@@ -24,6 +25,7 @@ export default function Passport() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.passport}>
         <h2 className="page-title">{t("Pages.passports", "Canadian passports", pageLocale)}<Image src="/icon/passport.svg" alt={t("Pages.passports", "Canadian passports", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

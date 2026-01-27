@@ -10,6 +10,7 @@ import resources from "../resources.json";
 import ResourceList from "../components/ResourceList";
 import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
+import BackToTop from "../components/BackToTop";
 
 export default function Resources() {
   
@@ -21,6 +22,7 @@ export default function Resources() {
   
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.resources}>
         <h2 className="page-title">{t("Pages.resources", "Resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

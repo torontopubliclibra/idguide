@@ -11,6 +11,7 @@ import ResourceList from "../../components/ResourceList";
 import LastUpdated from "../../components/LastUpdated";
 import JumpTo from "../../components/JumpTo";
 import SeeAlso from "../../components/SeeAlso";
+import BackToTop from "../../components/BackToTop";
 
 export default function AbResources() {
 
@@ -22,6 +23,7 @@ export default function AbResources() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.resources}>
         <h2 className="page-title">{t("Pages.albertaResources", "Alberta resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

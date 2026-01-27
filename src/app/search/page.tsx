@@ -8,6 +8,7 @@ import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import index from "../index.json";
 import { useState, useCallback } from "react";
+import BackToTop from "../components/BackToTop";
 
 interface SearchItem {
   route: string;
@@ -85,6 +86,7 @@ export default function Search() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.search}>
         <h2 className="page-title">{t("Pages.search", "Search", pageLocale)}<Image src="/icon/search.svg" alt={t("Pages.search", "Search", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>

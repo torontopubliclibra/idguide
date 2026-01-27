@@ -12,6 +12,7 @@ import SeeAlso from '../../components/SeeAlso';
 import sources from './sources.json';
 import copy from './copy.json';
 import SourcesList from '../../components/SourcesList';
+import BackToTop from "../../components/BackToTop";
 
 export default function BirthPage() {
   
@@ -23,6 +24,7 @@ export default function BirthPage() {
 
   return (
     <div className="page">
+      <BackToTop />
       <main className={styles.birth}>
         <h2 className="page-title">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}<Image src="/icon/birth-certificate.svg" alt={t("Pages.birthCertificates", "Birth certificates", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
