@@ -24,7 +24,7 @@ export default function BirthPage() {
   return (
     <div className="page">
       <main className={styles.birth}>
-        <h2 className="page-title">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}<Image src="/icon/birth-certificate.svg" alt={t("Pages.birthCertificates", "Birth certificates", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo pageLocale={pageLocale} sections={[

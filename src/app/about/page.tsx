@@ -1,12 +1,16 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
+import { marked } from 'marked';
 import changelogData from '../changelog.json';
 import sitemapData from '../sitemap.json';
+import attributions from './attributions.json';
+import disclaimers from './disclaimers.json';
 import LastUpdated from "../components/LastUpdated";
 
 type ChangelogEntry = {
@@ -81,7 +85,7 @@ export default function About() {
   return (
     <div className="page">
       <main className={styles.about}>
-        <h2 className="page-title">{t("Pages.about", "About", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.about", "About", pageLocale)}<Image src="/icon/info.svg" alt={t("Pages.about", "About", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p><span className={styles.strong}>{t("Site.name", "I.D. Guide", pageLocale)}</span> {t("AboutPage.about-1", "is a free, community-driven resource designed to help people navigate legal name, gender marker, and identity document changes in Canada. We aim to make this process less stressful and more accessible—especially for trans, non-binary, Two-Spirit, and gender non-conforming communities.", pageLocale)}</p>
@@ -93,15 +97,25 @@ export default function About() {
           <hr/>
 
           <h3 id='disclaimers'>{t("Pages.disclaimers", "Disclaimers", pageLocale)}</h3>
-          <p>{t("Disclaimers.disclaimer-1", "I.D. Guide is an independent project and is not affiliated with any government agency or official body. All information is provided in good faith, but users should always verify details with the relevant authorities.", pageLocale)}</p>
+          {disclaimers.map((disc, idx) => (
+            <div key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(disc) }}></div>
+          ))}
 
-          <p>{t("Disclaimers.disclaimer-2", "While we strive to keep all information up to date, laws and procedures can change. Please check official sources or contact the appropriate agency for the most current requirements. The content on this site is for informational purposes only and does not constitute legal advice. For legal advice specific to your situation, consult a qualified legal professional.", pageLocale)}</p>
-
-          <p>{t("Disclaimers.disclaimer-3", "If you spot an error, have a suggestion, or need information in a different format, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("Disclaimers.contactUs", "contact us", pageLocale)}</Link> {t("Disclaimers.forSupport", "for support.", pageLocale)}</p>
-
-          <p>{t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone. For details about how your information is handled, see our", pageLocale)} {t("Disclaimers.disclaimer-5", "For details about how your information is handled, see our ", pageLocale)} <Link href="/privacy">{t("Pages.privacy", "Privacy policy", pageLocale)}</Link>.</p>
           <hr />
+          <h3>License</h3>
+          <p>
+            Unless otherwise noted, all original content on this site is licensed under <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</Link> (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). This means you are free to share and adapt the material for non-commercial purposes, as long as you give appropriate credit and share any changes under the same license.
+          </p>
 
+          <hr />
+          <h3>Attributions</h3>
+          <ul>
+            {attributions.map((attr, idx) => (
+              <li key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(attr) }}></li>
+            ))}
+          </ul>
+
+          <hr />
           <h3 id='changelog'>{t("Pages.changelog", "Changelog", pageLocale)}</h3>
           <div className={styles.changelogContainer}>
             <ul className={styles.changelogList}>
@@ -115,13 +129,13 @@ export default function About() {
           </div>
           
           <hr />
-          
           <Link href="/sitemap.xml" style={{textDecoration: 'none'}}>
             <h3 id='sitemap'>{t("Pages.sitemap", "Sitemap", pageLocale)}</h3>
           </Link>
           <div className={styles.sitemapContainer}>
             <SitemapList pageLocale={pageLocale} />
           </div>
+
         </div>
         <div className="stacks"></div>
         <LastUpdated page="about" pageLocale={pageLocale} />

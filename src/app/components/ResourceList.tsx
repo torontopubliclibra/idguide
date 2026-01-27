@@ -4,9 +4,7 @@ import React from "react";
 interface Resource {
   name: string;
   url: string;
-  description?: string;
-  descriptionKey?: string;
-  defaultDescription?: string;
+  description?: string[];
 }
 
 interface RegionalResource {
@@ -47,13 +45,11 @@ const ResourceList: React.FC<ResourceListProps> = ({
                   </a>
                 </td>
                 <td>
-                  {resource.descriptionKey
-                    ? t(
-                        resource.descriptionKey,
-                        resource.defaultDescription || resource.description,
-                        pageLocale
-                      )
-                    : resource.description}
+                  {Array.isArray(resource.description)
+                    ? resource.description.join(", ")
+                    : typeof resource.description === "string"
+                    ? resource.description
+                    : null}
                 </td>
               </tr>
             ))}
@@ -82,13 +78,13 @@ const ResourceList: React.FC<ResourceListProps> = ({
                       </a>
                     </td>
                     <td>
-                      {resource.descriptionKey
-                        ? t(
-                            resource.descriptionKey,
-                            resource.defaultDescription || resource.description,
-                            pageLocale
-                          )
-                        : resource.description}
+                      {Array.isArray(resource.description)
+                        ? (resource.description.length > 1
+                            ? resource.description.join(", ")
+                            : resource.description[0])
+                        : typeof resource.description === "string"
+                        ? resource.description
+                        : null}
                     </td>
                   </tr>
                 ))}

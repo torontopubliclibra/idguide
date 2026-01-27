@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../../hooks/usePageLocale';
 import styles from "./page.module.css";
@@ -22,7 +23,7 @@ export default function OnResources() {
   return (
     <div className="page">
       <main className={styles.resources}>
-        <h2 className="page-title">{t("Pages.ontarioResources", "Ontario resources", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontarioResources", "Ontario resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p className={styles.intro}>

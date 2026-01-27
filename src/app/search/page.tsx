@@ -86,7 +86,7 @@ export default function Search() {
   return (
     <div className="page">
       <main className={styles.search}>
-        <h2 className="page-title">{t("Pages.search", "Search", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.search", "Search", pageLocale)}<Image src="/icon/search.svg" alt={t("Pages.search", "Search", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div className={styles.content}>
@@ -106,7 +106,6 @@ export default function Search() {
             <div className={styles.results} style={{marginBottom: '-1.75rem'}}>
               {searchInput && results.length === 0 && (
                 <>
-                  <hr />
                   <div style={{color: '#888', marginTop: '2rem', marginBottom: '1.5rem'}}>{t("Search.noResults", "No results for ", pageLocale)}&quot;{searchInput}&quot;{t("Search.noResults-2", " found", pageLocale)}.</div>
                 </>
               )}
@@ -140,7 +139,6 @@ export default function Search() {
               ))}
             </div>
           </div>
-          <hr />
         </div>
         <div className="stacks"></div>
       </main>

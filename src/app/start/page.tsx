@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePageLocale } from "../hooks/usePageLocale";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
 import SeeAlso from "../components/SeeAlso";
@@ -99,7 +100,7 @@ export default function Start() {
   return (
     <div className="page">
       <main className={styles.start}>
-        <h2 className="page-title">{t("Pages.start", undefined, pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.start", undefined, pageLocale)}<Image src="/icon/start.svg" alt={t("Pages.start", "Start", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>{t("StartPage.intro", undefined, pageLocale)}</p>

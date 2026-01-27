@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 import styles from "./page.module.css";
 import "./skip-link.css";
@@ -21,7 +22,7 @@ export default function Home({ locale }: { locale: string }) {
               {t("HomePage.intro1-1", undefined, locale)} <span className={styles.strong}>I.D. Guide</span> {t("HomePage.intro1-2", undefined, locale)} <Link href="/guides">{t("HomePage.guides", undefined, locale)}</Link>, <Link href="/downloads">{t("HomePage.downloads", undefined, locale)}</Link>, {t("HomePage.and", undefined, locale)} <Link href="/resources">{t("HomePage.resources", undefined, locale)}</Link> {t("HomePage.intro1-3", undefined, locale)}
             </p>
             <p>
-              <Link href="/start">{t("HomePage.getStarted", undefined, locale)}</Link>.
+              <Link href="/start">{t("HomePage.getStarted", undefined, locale)}</Link> <Image src="/icon/right.svg" style={{marginBottom: -7, filter: 'invert(1)'}} alt={t("HomePage.getStartedImageAlt", "Get started", locale)} width={30} height={30} />
             </p>
           </div>
           <div className={styles.group}>

@@ -24,7 +24,7 @@ export default function OnID() {
   return (
     <div className="page">
       <main className={styles.id}>
-        <h2 className="page-title">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}<Image src="/icon/photo-id.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo pageLocale={pageLocale} sections={[

@@ -204,12 +204,21 @@ h1 {
 }
 
 h2.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   font-size: 2rem;
   margin-bottom: 15px;
   color: var(--white);
   font-weight: 400;
   margin-top: -10px;
   padding-bottom: 80px;
+}
+
+.page-title img {
+  vertical-align: middle;
+  filter: invert(1);
 }
 
 h3 {

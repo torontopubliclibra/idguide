@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
@@ -19,7 +20,7 @@ export default function Guides() {
   return (
     <div className="page">
       <main className={styles.birth}>
-        <h2 className="page-title">{t("Pages.birthCertificates", "Birth certificates", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.birthCertificates", "Birth certificates", pageLocale)}<Image src="/icon/birth-certificate.svg" alt={t("Pages.birthCertificates", "Birth certificates", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <div>

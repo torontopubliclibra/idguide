@@ -52,11 +52,22 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li className={`${styles.dropdown}`}>
                     <Link href="/resources" title={t("Pages.resources", "Resources", locale)}>
                         {t("Pages.resources", "Resources", locale)}
                         <Image src="/icon/resources.svg" alt={t("Nav.resourcesIconAlt", "Resources icon", locale)} width={20} height={20} />
                     </Link>
+                    <ul className={styles.subNav}>
+                        <li>
+                            <Link href="/ab/resources">{t("Pages.abResources", "Alberta resources", locale)}</Link>
+                        </li>
+                        <li>
+                            <Link href="/mb/resources">{t("Pages.mbResources", "Manitoba resources", locale)}</Link>
+                        </li>
+                        <li>
+                            <Link href="/on/resources">{t("Pages.onResources", "Ontario resources", locale)}</Link>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <Link href="/search" title={t("Pages.search", "Search", locale)}>

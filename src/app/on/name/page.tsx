@@ -24,7 +24,7 @@ export default function OnName() {
   return (
     <div className="page">
       <main className={styles.name}>
-        <h2 className="page-title">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo pageLocale={pageLocale} sections={[

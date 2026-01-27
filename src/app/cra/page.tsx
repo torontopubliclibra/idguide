@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import { useRenderCopy } from "../hooks/useRenderCopy";
@@ -23,7 +24,7 @@ export default function CRA() {
   return (
     <div className="page">
       <main className={styles.cra}>
-        <h2 className="page-title">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.cra", "Canada Revenue Agency", pageLocale)}<Image src="/icon/cra.svg" alt={t("Pages.cra", "Canada Revenue Agency", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo pageLocale={pageLocale} sections={["process", "requirements", "sources"]} />

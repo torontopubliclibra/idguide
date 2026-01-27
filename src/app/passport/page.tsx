@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import { useRenderCopy } from '../hooks/useRenderCopy';
@@ -24,7 +25,7 @@ export default function Passport() {
   return (
     <div className="page">
       <main className={styles.passport}>
-        <h2 className="page-title">{t("Pages.passports", "Canadian passports", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.passports", "Canadian passports", pageLocale)}<Image src="/icon/passport.svg" alt={t("Pages.passports", "Canadian passports", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
 

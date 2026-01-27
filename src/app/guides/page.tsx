@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
@@ -22,7 +23,7 @@ export default function Guides() {
     <div className="page">
       <a href="#main" className="skip-link">{t("Site.skipToMain", "Skip to main content", pageLocale)}</a>
       <main id="main" className={styles.guides}>
-        <h2 className="page-title">{t("Pages.guides", "Guides", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.guides", "Guides", pageLocale)}<Image src="/icon/guide.svg" alt={t("Pages.guides", "Guides", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>{t("GuidesPage.intro", "This is a full list of our guides to legal name changes, birth certificate updates, health card updates, and more across different provinces and Canada-wide.", pageLocale)}</p>

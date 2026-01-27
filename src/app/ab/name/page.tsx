@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect } from "react";
 import { usePageLocale } from '../../hooks/usePageLocale';
 import { useRenderCopy } from "../../hooks/useRenderCopy";
@@ -24,7 +24,7 @@ export default function AbName() {
   return (
     <div className="page">
       <main className={styles.name}>
-        <h2 className="page-title">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo sections={["process", "requirements", "submitting", "sources"]} pageLocale={pageLocale} />

@@ -68,7 +68,7 @@ export default function Downloads() {
   return (
     <div className="page">
       <main className={styles.downloads}>
-        <h2 className="page-title">{t("Pages.downloads", "Downloads", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.downloads", "Downloads", pageLocale)}<Image src="/icon/download.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../../hooks/usePageLocale';
 import styles from "./page.module.css";
@@ -22,11 +23,11 @@ export default function AbResources() {
   return (
     <div className="page">
       <main className={styles.resources}>
-        <h2 className="page-title">{t("Pages.albertaResources", "Alberta resources", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.albertaResources", "Alberta resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <p className={styles.intro}>
-            {t("ResourcesPage.albertaIntro", "This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You&apos;ll find options for major cities, province-wide services, and online support.", pageLocale)}
+            {t("ResourcesPage.albertaIntro", "This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You'll find options for major cities, province-wide services, and online support.", pageLocale)}
           </p>
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <hr />

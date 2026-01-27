@@ -24,7 +24,7 @@ export default function OnHealth() {
   return (
     <div className="page">
       <main className={styles.health}>
-        <h2 className="page-title">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}</h2>
+        <h2 className="page-title">{t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale)}<Image src="/icon/health-card.svg" alt={t("Pages.healthCards", "Health cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={styles.main}>
           <JumpTo pageLocale={pageLocale} sections={[

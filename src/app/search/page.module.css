@@ -1,5 +1,6 @@
 .search {
   width: 100%;
+  min-height: calc(100vh - 453px);
 }
 
 .search .main {
@@ -55,6 +56,7 @@
 @media (max-width: 1200px) {
   .search {
     padding-top: 20px;
+     min-height: calc(100vh - 403px);
   }
   .search .main {
     padding: 30px;
