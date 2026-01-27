@@ -31,26 +31,29 @@ export default function Start() {
     document.title = `${t("Pages.start", undefined, pageLocale)} | ${t("Site.name", undefined, pageLocale)}`;
   }, [pageLocale]);
 
-  const [toggles, setToggles] = useState(() => {
+
+  const defaultToggles = {
+    name: true,
+    gender: true,
+    alberta: false,
+    manitoba: false,
+    ontario: false,
+    citizen: true,
+    pr: false,
+  };
+
+  const [toggles, setToggles] = useState<typeof defaultToggles>(() => {
     if (typeof window !== 'undefined') {
       const saved = window.localStorage.getItem('idguide-toggles');
       if (saved) {
         try {
-          return JSON.parse(saved);
+          return { ...defaultToggles, ...JSON.parse(saved) };
         } catch {
           // ignore parse error, fall back to default
         }
       }
     }
-    return {
-      name: true,
-      gender: true,
-      alberta: false,
-      manitoba: false,
-      ontario: false,
-      citizen: true,
-      pr: false,
-    };
+    return defaultToggles;
   });
 
   useEffect(() => {
@@ -59,52 +62,38 @@ export default function Start() {
     }
   }, [toggles]);
 
+
   function handleToggleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, checked } = event.target;
-    setToggles((prevToggles: typeof toggles) => {
-      if (name === 'citizen' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          pr: false,
-        };
-      }
-      if (name === 'pr' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          citizen: false,
-        };
-      }
-      if (name === 'alberta' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          ontario: false,
-          manitoba: false,
-        };
-      }
-      if (name === 'manitoba' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          ontario: false,
-          alberta: false,
-        };
-      }
-      if (name === 'ontario' && checked) {
-        return {
-          ...prevToggles,
-          [name]: checked,
-          alberta: false,
-          manitoba: false,
-        };
-      }
+    setToggles((prev: typeof toggles) => updateToggles(prev, name, checked));
+  }
+
+  function updateToggles(prev: typeof toggles, name: string, checked: boolean) {
+    const groupMap: Record<string, string[]> = {
+      province: ["alberta", "manitoba", "ontario"],
+      status: ["citizen", "pr"],
+    };
+    if (groupMap.province.includes(name) && checked) {
       return {
-        ...prevToggles,
-        [name]: checked,
+        ...prev,
+        alberta: false,
+        manitoba: false,
+        ontario: false,
+        [name]: true,
       };
-    });
+    }
+    if (groupMap.status.includes(name) && checked) {
+      return {
+        ...prev,
+        citizen: false,
+        pr: false,
+        [name]: true,
+      };
+    }
+    return {
+      ...prev,
+      [name]: checked,
+    };
   }
 
   return (
@@ -146,72 +135,47 @@ export default function Start() {
               </li>
           </ul>
           <h3>{t("StartPage.actionPlan", "Your action plan", pageLocale)}:</h3>
+
           <ol className={styles.actionPlanContainer}>
-            {toggles.name && !toggles.ontario && !toggles.alberta && !toggles.manitoba && (
-              <li>
-                <Link href="/name" target="_blank">{t("StartPage.action.changeLegalName", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.name && toggles.ontario && (
-              <li>
-                <Link href="/on/name" target="_blank">{t("StartPage.action.changeLegalNameOntario", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.name && toggles.alberta && (
-              <li>
-                <Link href="/ab/name" target="_blank">{t("StartPage.action.changeLegalNameAlberta", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.name && toggles.manitoba && (
-              <li>
-                <Link href="/mb/name" target="_blank">{t("StartPage.action.changeLegalNameManitoba", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.gender && (toggles.citizen) && (
-              <li>
-                <Link href="/birth" target="_blank">{t("StartPage.action.updateGenderBirthCertificate", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.name && !toggles.ontario && (
-              <li>
-                <Link href="/health" target="_blank">{t("StartPage.action.updateNameHealthCard", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {toggles.name && toggles.ontario && (
-              <li>
-                <Link href="/on/health" target="_blank">{t("StartPage.action.updateNameOntarioHealthCard", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && toggles.ontario && (
-              <li>
-                <Link href="/on/id" target="_blank">{t("StartPage.action.updateNameGenderOntarioID", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && !toggles.ontario && (
-              <li>
-                <Link href="/id" target="_blank">{t("StartPage.action.updateNameGenderID", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && toggles.pr && (
-              <li>
-                <Link href="/pr" target="_blank">{t("StartPage.action.updateNameGenderPR", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && (
-              <li>
-                <Link href="/sin" target="_blank">{t("StartPage.action.updateNameGenderSIN", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && (
-              <li>
-                <Link href="/cra" target="_blank">{t("StartPage.action.updateNameGenderCRA", undefined, pageLocale)}</Link>
-              </li>
-            )}
-            {(toggles.name || toggles.gender) && toggles.citizen && (
-              <li>
-                <Link href="/passport" target="_blank">{t("StartPage.action.updateNameGenderPassport", undefined, pageLocale)}</Link>
-              </li>
-            )}
+            {(() => {
+              const actions = [];
+              if (toggles.name) {
+                if (!toggles.ontario && !toggles.alberta && !toggles.manitoba) {
+                  actions.push({ href: "/name", label: t("StartPage.action.changeLegalName", undefined, pageLocale) });
+                }
+                if (toggles.ontario) actions.push({ href: "/on/name", label: t("StartPage.action.changeLegalNameOntario", undefined, pageLocale) });
+                if (toggles.alberta) actions.push({ href: "/ab/name", label: t("StartPage.action.changeLegalNameAlberta", undefined, pageLocale) });
+                if (toggles.manitoba) actions.push({ href: "/mb/name", label: t("StartPage.action.changeLegalNameManitoba", undefined, pageLocale) });
+              }
+              if (toggles.gender && toggles.citizen) {
+                actions.push({ href: "/birth", label: t("StartPage.action.updateGenderBirthCertificate", undefined, pageLocale) });
+              }
+              if (toggles.name) {
+                if (!toggles.ontario) actions.push({ href: "/health", label: t("StartPage.action.updateNameHealthCard", undefined, pageLocale) });
+                if (toggles.ontario) actions.push({ href: "/on/health", label: t("StartPage.action.updateNameOntarioHealthCard", undefined, pageLocale) });
+              }
+              if ((toggles.name || toggles.gender) && toggles.ontario) {
+                actions.push({ href: "/on/id", label: t("StartPage.action.updateNameGenderOntarioID", undefined, pageLocale) });
+              }
+              if ((toggles.name || toggles.gender) && !toggles.ontario) {
+                actions.push({ href: "/id", label: t("StartPage.action.updateNameGenderID", undefined, pageLocale) });
+              }
+              if ((toggles.name || toggles.gender) && toggles.pr) {
+                actions.push({ href: "/pr", label: t("StartPage.action.updateNameGenderPR", undefined, pageLocale) });
+              }
+              if (toggles.name || toggles.gender) {
+                actions.push({ href: "/sin", label: t("StartPage.action.updateNameGenderSIN", undefined, pageLocale) });
+                actions.push({ href: "/cra", label: t("StartPage.action.updateNameGenderCRA", undefined, pageLocale) });
+              }
+              if ((toggles.name || toggles.gender) && toggles.citizen) {
+                actions.push({ href: "/passport", label: t("StartPage.action.updateNameGenderPassport", undefined, pageLocale) });
+              }
+              return actions.map(({ href, label }, i) => (
+                <li key={href + i}>
+                  <Link href={href} target="_blank">{label}</Link>
+                </li>
+              ));
+            })()}
           </ol>
           {!(toggles.name) && !(toggles.gender) ? (
             <ul className={styles.startList}>

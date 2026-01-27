@@ -100,7 +100,7 @@ export default function Search() {
                 aria-label={t("Search.placeholder", "Type any keyword...", pageLocale)}
               />
               <button className={searchInput.length > 0 ? styles.active : styles.disabled} onClick={searchInput.length > 0 ? () => handleInputChange({target: {value: ""}}) : undefined} aria-label={t("Search.clear", "Clear search input", pageLocale)} title="Clear search input">
-                <Image src="/close.svg" alt="Site exit icon" width={30} height={30} />
+                <Image src="/icon/close.svg" alt="Site exit icon" width={30} height={30} />
               </button>
             </div>
             <div className={styles.results} style={{marginBottom: '-1.75rem'}}>
