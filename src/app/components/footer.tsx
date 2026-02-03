@@ -40,7 +40,8 @@ export default function Footer({ locale }: { locale: string }) {
             </div>
             <div className={styles.footerBottom}>
                 <div style={{alignItems: 'center', display: 'inline-flex', gap: '0.5rem'}}>
-                    <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link><span> | </span><LanguageToggle locale={locale} />
+                    {/* <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link><span> | </span><LanguageToggle locale={locale} /> */}
+                    <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link>
                 </div>
                 <div>
                     <a href="/about#license" style={{alignItems: 'center', display: 'inline-flex', gap: '0.5em'}}>
