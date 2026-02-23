@@ -179,21 +179,21 @@
         "title": "DownloadsPage.presentationMaterials",
         "links": [
             {
-                "id": "tg-id-1025",
-                "href": "/download/tg-id-1025.pdf",
-                "label": "Ontario TG I.D. slideshow",
+                "id": "idguide-0226",
+                "href": "/download/idguide-0226.pdf",
+                "label": "Ontario I.D. Guide slideshow",
                 "description": "English PDF download"
             },
             {
-                "id": "tg-id-1025-1",
-                "href": "/download/tg-id-1025.odp",
-                "label": "Ontario TG I.D. slideshow",
+                "id": "idguide-0226-1",
+                "href": "/download/idguide-0226.odp",
+                "label": "Ontario I.D. Guide slideshow",
                 "description": "English ODP download"
             },
             {
-                "id": "tg-id-1025-1",
-                "href": "/download/tg-id-1025.pptx",
-                "label": "Ontario TG I.D. slideshow",
+                "id": "idguide-0226-2",
+                "href": "/download/idguide-0226.pptx",
+                "label": "Ontario I.D. Guide slideshow",
                 "description": "English PPTX download"
             }
         ],
