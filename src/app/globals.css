@@ -1354,7 +1354,7 @@ th {
 
   body.mobile-options-open .pageNav.seeAlsoNav.withoutJumpTo,
   body.mobile-options-open .pageNav.textSizeNav.withoutJumpToOnly {
-    top: 80px;
+    top: 88px;
   }
 
   body.mobile-options-open .pageNav.seeAlsoNav.withJumpTo {
@@ -1499,8 +1499,19 @@ th {
   body.mobile-options-open.text-mode .jumpToNav .pageNavToggle,
   body.mobile-options-open.text-mode .pageNav.seeAlsoNav .pageNavToggle,
   body.mobile-options-open.text-mode .pageNav.textSizeNav .pageNavToggle,
-  body.text-mode nav li {
-    background: var(--black) !important;
+  body.text-mode nav li,
+  body.text-mode .top-bar a {
+    background: var(--semiwhite) !important;
+    color: var(--black) !important;
+  }
+
+  body.text-mode .top-bar h1 {
+    color: var(--white) !important;
+  }
+
+  body.text-mode .pageNavToggleIcon,
+  body.text-mode .top-bar a img {
+    filter: invert(0) !important;
   }
 
   body.mobile-options-open .jumpToNav,
