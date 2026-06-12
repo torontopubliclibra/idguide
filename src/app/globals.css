@@ -773,6 +773,18 @@ body.dark-mode ul li {
   color: var(--white) !important;
 }
 
+body.text-mode .pageNavToggle {
+  padding: 0 !important;
+}
+
+body.text-mode .pageNav ul {
+  padding: 16px 0 0 16px !important;
+}
+
+body.text-mode .textSizeOptions {
+  padding: 16px 16px 0px 0px !important;
+}
+
 body.dark-mode textarea,
 body.dark-mode table,
 body.dark-mode tbody,
