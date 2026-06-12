@@ -75,9 +75,9 @@ function SitemapList({ pageLocale }: { pageLocale: string }) {
 const changelog: ChangelogEntry[] = changelogData as ChangelogEntry[];
 
 export default function About() {
-  
+
   const pageLocale = usePageLocale();
-  
+
   useEffect(() => {
     document.title = `${t("Pages.about", "About", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
   }, [pageLocale]);
@@ -94,35 +94,30 @@ export default function About() {
 
           <p>{t("AboutPage.about-3", "The project is led by", pageLocale)} <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, {t("AboutPage.about-4", "a designer and web/software developer based in Toronto. Since 2021, Dana has delivered workshops on name and gender marker changes for organizations across Ontario. To learn more or book a presentation, visit our", pageLocale)} <Link href="/workshops">{t("AboutPage.workshopsPage", "workshops page", pageLocale)}</Link>. {t("AboutPage.about-5", "If you would like to help support Dana and her work, you can send her a tip", pageLocale)} <Link href="https://danateagle.com/paypal" target='_blank'>via PayPal</Link>.</p>
 
-          <hr/>
-
-          <h3 id='disclaimers'>{t("Pages.disclaimers", "Disclaimers", pageLocale)}</h3>
+          <h3 id='disclaimers' style={{ marginTop: '1.5rem' }}>{t("Pages.disclaimers", "Disclaimers", pageLocale)}</h3>
           {disclaimers.map((disc, idx) => (
             <div key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(disc) }}></div>
           ))}
 
-          <hr />
-          <h3 id='changelog'>{t("Pages.changelog", "Changelog", pageLocale)}</h3>
+          <h3 id='changelog' style={{ marginTop: '1.5rem' }}>{t("Pages.changelog", "Changelog", pageLocale)}</h3>
           <div className={`changelog ${styles.changelogContainer}`}>
             <ul className={styles.changelogList}>
               {changelog.map((entry) => (
                 <li key={entry.version}>
-                  <div style={{fontWeight: 'bold', marginBottom: '0.5em'}}>{'v' + entry.version}{entry.date ? <small> ({entry.date})</small> : ""}</div>
+                  <div style={{ fontWeight: 'bold', marginBottom: '0.5em' }}>{'v' + entry.version}{entry.date ? <small> ({entry.date})</small> : ""}</div>
                   {entry.changes.join("; ")}
                 </li>
               ))}
             </ul>
           </div>
-          
-          <hr />
-          <Link href="/sitemap.xml" style={{textDecoration: 'none'}}>
+
+          <Link href="/sitemap.xml" style={{ textDecoration: 'none' }}>
             <h3 id='sitemap'>{t("Pages.sitemap", "Sitemap", pageLocale)}</h3>
           </Link>
           <div className={`sitemap ${styles.sitemapContainer}`}>
             <SitemapList pageLocale={pageLocale} />
           </div>
 
-          <hr />
           <h3 id="attributions">Attributions</h3>
           <ul>
             {attributions.map((attr, idx) => (
@@ -130,7 +125,6 @@ export default function About() {
             ))}
           </ul>
 
-          <hr />
           <h3 id="license">License</h3>
           <p>
             Unless otherwise noted, all original content on this site is licensed under <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</Link> (Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International). This means you are free to share and adapt the material for non-commercial purposes, as long as you give appropriate credit and share any changes under the same license.
