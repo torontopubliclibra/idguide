@@ -22,7 +22,7 @@ export default function Guides() {
       <main className={styles.health}>
         <h2 className="page-title">{t("Pages.healthCards", "Health cards", pageLocale)}<Image src="/icon/health-card.svg" alt={t("Pages.healthCards", "Health cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("HealthCards.process", "The process for updating your health card will vary depending on your province or territory of residency", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
@@ -34,7 +34,6 @@ export default function Guides() {
               <small>{t("Site.workInProgress", "We're working to add more provinces and territories. Check back soon for expanded support across Canada.", pageLocale)}</small>
             </p>
           </div>
-          <hr />
           <SeeAlso pages={["start", "guides", "name", "birth", "id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

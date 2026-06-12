@@ -22,7 +22,7 @@ export default function Alberta() {
       <main className={styles.alberta}>
         <h2 className="page-title">{t("Pages.alberta", "Alberta", pageLocale)}<Image src="/icon/region.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("Province.alberta", "This is a full list of pages specific to Alberta", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
@@ -34,7 +34,6 @@ export default function Alberta() {
               </li>
             </ul>
           </div>
-          <hr />
           <SeeAlso pages={["start", "guides", "resources", "mb", "on"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

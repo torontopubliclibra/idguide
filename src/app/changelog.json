@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.2",
+    "date": "2026-05-18",
+    "changes": [
+      "Updated appearance of Jump to, See Also, and display options; Added Québec resources"
+    ]
+  },
+  {
     "version": "1.1.4",
     "date": "2026-05-18",
     "changes": [

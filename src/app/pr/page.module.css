@@ -10,6 +10,7 @@
   color: var(--black);
   font-size: 1.15rem;
   padding: 50px;
+  padding-top: 30px;
   max-width: 1500px;
   width: 100%;
 }

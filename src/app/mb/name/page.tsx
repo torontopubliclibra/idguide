@@ -13,7 +13,6 @@ import SourcesList from '../../components/SourcesList';
 import sources from './sources.json';
 import copy from './copy.json';
 import LastUpdated from "../../components/LastUpdated";
-import BackToTop from "../../components/BackToTop";
 
 export default function MbName() {
   
@@ -25,11 +24,10 @@ export default function MbName() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.name}>
         <h2 className="page-title">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={[
             "process",
             "requirements",
@@ -37,7 +35,6 @@ export default function MbName() {
             "submitting",
             "sources"
           ]} />
-          <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
@@ -76,7 +73,6 @@ export default function MbName() {
           <p>Your change of name certificate will show both your previous and new names. Use this certificate to update other documents, like your <Link href="/id">driver&#39;s license, photo card</Link>, or <Link href="/health">health card</Link>.</p>
           <hr />
           <SourcesList sources={sources} />
-          <hr />
           <SeeAlso pages={["start", "mb/resources"]} pageLocale={pageLocale}/>
         </div>
         <div className="stacks"></div>

@@ -12,7 +12,6 @@ import SeeAlso from '../../components/SeeAlso';
 import sources from './sources.json';
 import copy from './copy.json';
 import SourcesList from '../../components/SourcesList';
-import BackToTop from "../../components/BackToTop";
 
 export default function BirthPage() {
   
@@ -24,18 +23,16 @@ export default function BirthPage() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.birth}>
         <h2 className="page-title">{t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale)}<Image src="/icon/birth-certificate.svg" alt={t("Pages.birthCertificates", "Birth certificates", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={[
             "process",
             "requirements",
             "submitting",
             "sources"
           ]} />
-          <hr />
 
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
@@ -63,13 +60,12 @@ export default function BirthPage() {
           
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
           {useRenderCopy()(copy["deliveryTime"])}
-          <div className={styles.imageContainer}>
+          <div className={`imageContainer ${styles.imageContainer}`}>
             <Image src="/asset/on-birth-example.jpeg" alt="Sample Ontario birth certificate showing updated name and gender marker" width={350} height={500} />
           </div>
           
           <hr />
           <SourcesList sources={sources} />
-          <hr />
           <SeeAlso pages={["start", "on/resources", "on/name", "on/health", "on/id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

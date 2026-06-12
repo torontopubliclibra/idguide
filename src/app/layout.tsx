@@ -5,6 +5,8 @@ import "./globals.css";
 import TopBar from "./components/topBar";
 import Footer from "./components/footer";
 import Analytics from "./components/Analytics";
+import AppearanceFallback from "./components/AppearanceFallback";
+import MobileOptionsToggle from "./components/MobileOptionsToggle";
 import { Suspense } from "react";
 import { getLocaleFromHost } from "./lib/getLocale";
 import { headers as nextHeaders } from "next/headers";
@@ -65,7 +67,7 @@ export default async function RootLayout({
   const locale = getLocaleFromHost(host);
   
   return (
-    <html lang={locale} dir="ltr" className={locale}>
+    <html lang={locale} dir="ltr" className={locale} suppressHydrationWarning>
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-Y8RN4Q791P"
@@ -77,6 +79,51 @@ export default async function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-Y8RN4Q791P', { page_path: window.location.pathname });
+          `}
+        </Script>
+        <Script id="appearance-bootstrap" strategy="beforeInteractive">
+          {`
+            (() => {
+              const rootClassList = document.documentElement.classList;
+
+              try {
+                const textSize = window.localStorage.getItem("idguide-text-size");
+                const textMode = window.localStorage.getItem("idguide-text-mode") === "true";
+
+                rootClassList.remove("dark-mode", "high-contrast");
+                rootClassList.toggle("text-mode", textMode);
+
+                if (textSize === "small") {
+                  document.documentElement.style.fontSize = "14px";
+                } else if (textSize === "large") {
+                  document.documentElement.style.fontSize = "18px";
+                } else {
+                  document.documentElement.style.removeProperty("font-size");
+                }
+
+                const applyBodyClasses = () => {
+                  if (!document.body) {
+                    return false;
+                  }
+
+                  document.body.classList.remove("dark-mode", "high-contrast");
+                  document.body.classList.toggle("text-mode", textMode);
+                  return true;
+                };
+
+                if (!applyBodyClasses()) {
+                  const observer = new MutationObserver(() => {
+                    if (applyBodyClasses()) {
+                      observer.disconnect();
+                    }
+                  });
+
+                  observer.observe(document.documentElement, { childList: true });
+                }
+              } catch (_error) {
+                // Ignore localStorage bootstrap errors; default styles still apply.
+              }
+            })();
           `}
         </Script>
         <link
@@ -120,7 +167,9 @@ export default async function RootLayout({
           <Analytics />
         </Suspense>
         <TopBar locale={locale} />
+        <MobileOptionsToggle locale={locale} />
         {children}
+        <AppearanceFallback pageLocale={locale} />
         <Footer locale={locale} />
       </body>
     </html>

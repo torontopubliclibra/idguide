@@ -12,7 +12,6 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import SourcesList from '../../components/SourcesList';
-import BackToTop from "../../components/BackToTop";
 
 export default function OnName() {
   
@@ -24,18 +23,16 @@ export default function OnName() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.name}>
         <h2 className="page-title">{t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={[
             "process",
             "requirements",
             "submitting",
             "sources"
           ]} />
-          <hr />
 
           <h3 id='process'>{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
@@ -89,13 +86,12 @@ export default function OnName() {
 
           <h4>{t("Subheadings.deliveryTime", "Delivery time", pageLocale)}</h4>
           {useRenderCopy()(copy["deliveryTime"])}
-          <div className={styles.imageContainer}>
+          <div className="imageContainer">
             <Image src="/asset/on-name-example.jpeg" alt="Sample Ontario change of name certificate showing old and new names" width={1200} height={500} />
           </div>
 
           <hr />
           <SourcesList sources={sources} />
-          <hr />
           <SeeAlso pages={["start", "on/resources", "on/birth", "on/health", "on/id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

@@ -5,12 +5,10 @@ import Image from "next/image";
 import { useEffect } from "react";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
-import "../skip-link.css";
 import { t } from "../lib/i18n";
 import LastUpdated from "../components/LastUpdated";
 import JumpTo from "../components/JumpTo";
 import SeeAlso from "../components/SeeAlso";
-import BackToTop from "../components/BackToTop";
 
 export default function Guides() {
   
@@ -22,14 +20,11 @@ export default function Guides() {
 
   return (
     <div className="page">
-      <BackToTop />
-      <a href="#main" className="skip-link">{t("Site.skipToMain", "Skip to main content", pageLocale)}</a>
       <main id="main" className={styles.guides}>
         <h2 className="page-title">{t("Pages.guides", "Guides", pageLocale)}<Image src="/icon/guide.svg" alt={t("Pages.guides", "Guides", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <p>{t("GuidesPage.intro", "This is a full list of our guides to legal name changes, birth certificate updates, health card updates, and more across different provinces and Canada-wide.", pageLocale)}</p>
-          <hr />
           <JumpTo pageLocale={pageLocale} sections={["alberta", "manitoba", "ontario", "canada-wide"]} />
           <hr style={{margin: '0.5rem 0'}}/>
           <div>
@@ -85,7 +80,6 @@ export default function Guides() {
               </li>
             </ul>
           </div>
-          <hr style={{margin: '1rem 0'}}/>
           <SeeAlso pages={["start", "resources", "downloads"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

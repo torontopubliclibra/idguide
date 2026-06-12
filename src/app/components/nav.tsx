@@ -3,11 +3,11 @@ import Image from 'next/image';
 import styles from "./nav.module.css";
 import { t } from "../lib/i18n";
 
-export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => void, locale: string}) {
+export default function Nav(props: { mobileOpen: boolean, closeMobileNav: () => void, locale: string }) {
     const { locale } = props;
     return (
         <nav className={props.mobileOpen ? `${styles.mobileOpen} ${styles.navContainer}` : `${styles.navContainer}`} onClick={props.closeMobileNav}>
-            <ul className={styles.nav}>
+            <ul className={`nav ${styles.nav}`}>
                 <li>
                     <Link href="/start">
                         {t("Pages.start", "Start", locale)}
@@ -66,6 +66,9 @@ export default function Nav(props: {mobileOpen: boolean, closeMobileNav: () => v
                         </li>
                         <li>
                             <Link href="/on/resources">{t("Pages.onResources", "Ontario resources", locale)}</Link>
+                        </li>
+                        <li>
+                            <Link href="/qc/resources">{t("Pages.qcResources", "Québec resources", locale)}</Link>
                         </li>
                     </ul>
                 </li>

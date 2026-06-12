@@ -22,7 +22,7 @@ export default function Name() {
       <main className={styles.name}>
         <h2 className="page-title">{t("Pages.nameChanges", "Name changes", pageLocale)}<Image src="/icon/draft.svg" alt={t("Pages.nameChanges", "Name changes", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("NameChanges.process", "The process for changing your legal name will vary depending on your province or territory of residency", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
@@ -40,7 +40,6 @@ export default function Name() {
               <small>{t("Site.workInProgress", "We're working to add more provinces and territories. Check back soon for expanded support across Canada.", pageLocale)}</small>
             </p>
           </div>
-          <hr />
           <SeeAlso pages={["start", "guides", "birth", "health", "id"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

@@ -3,7 +3,7 @@
     "page": "",
     "priority": 1.0,
     "changefreq": "weekly",
-    "lastUpdated": "2026-01-26",
+    "lastUpdated": "2026-06-12",
     "labelKey": "Pages.home",
     "isSection": false,
     "seoInclude": true
@@ -12,7 +12,7 @@
     "page": "about",
     "priority": 0.8,
     "changefreq": "weekly",
-    "lastUpdated": "2026-01-27",
+    "lastUpdated": "2026-06-12",
     "labelKey": "Pages.about",
     "isSection": false,
     "seoInclude": true
@@ -21,7 +21,7 @@
     "page": "start",
     "priority": 0.9,
     "changefreq": "weekly",
-    "lastUpdated": "2026-01-26",
+    "lastUpdated": "2026-06-12",
     "labelKey": "Pages.getStarted",
     "isSection": false,
     "seoInclude": true
@@ -204,6 +204,15 @@
     "seoInclude": true
   },
   {
+    "page": "qc",
+    "priority": 0.7,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-06-12",
+    "labelKey": "Pages.quebec",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
     "page": "passport",
     "priority": 0.8,
     "changefreq": "monthly",
@@ -253,7 +262,8 @@
     "children": [
       "ab/resources",
       "mb/resources",
-      "on/resources"
+      "on/resources",
+      "qc/resources"
     ],
     "seoInclude": true
   },
@@ -283,6 +293,16 @@
     "changefreq": "monthly",
     "lastUpdated": "2026-01-26",
     "labelKey": "Pages.ontarioResources",
+    "parent": "resources",
+    "isSection": false,
+    "seoInclude": true
+  },
+  {
+    "page": "qc/resources",
+    "priority": 0.6,
+    "changefreq": "monthly",
+    "lastUpdated": "2026-06-12",
+    "labelKey": "Pages.quebecResources",
     "parent": "resources",
     "isSection": false,
     "seoInclude": true

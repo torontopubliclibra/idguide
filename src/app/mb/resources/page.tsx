@@ -11,7 +11,6 @@ import ResourceList from "../../components/ResourceList";
 import LastUpdated from "../../components/LastUpdated";
 import JumpTo from "../../components/JumpTo";
 import SeeAlso from "../../components/SeeAlso";
-import BackToTop from "../../components/BackToTop";
 
 export default function MbResources() {
   
@@ -23,19 +22,16 @@ export default function MbResources() {
   
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.resources}>
         <h2 className="page-title">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <p className={styles.intro}>
             {t("ResourcesPage.manitobaIntro", "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.", pageLocale)}
           </p>
-          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <hr />
           
           <JumpTo pageLocale={pageLocale} sections={["province-wide", "winnipeg"]} />
-          <hr />
 
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <ResourceList
@@ -53,6 +49,7 @@ export default function MbResources() {
             }))}
           />
           <hr />
+          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <SeeAlso pages={["start", "ab/resources", "on/resources", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

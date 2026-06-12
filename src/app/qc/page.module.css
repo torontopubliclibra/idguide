@@ -1,8 +1,8 @@
-.ontario {
+.quebec {
   width: 100%;
 }
 
-.ontario .main {
+.quebec .main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -15,16 +15,16 @@
   width: 100%;
 }
 
-.ontario .content ul {
+.quebec .content ul {
   margin-top: 0;
   margin-bottom: 2rem;
 }
 
-.ontario .content ul:last-of-type {
+.quebec .content ul:last-of-type {
   margin-bottom: 0;
 }
 
-.ontario .content ul li {
+.quebec .content ul li {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1.15rem;
@@ -33,15 +33,16 @@
   color: var(--black);
 }
 
-.ontario .content ul li:hover {
+.quebec .content ul li:hover {
   color: var(--dark3);
 }
 
 @media (max-width: 1200px) {
-  .ontario {
+  .quebec {
     padding-top: 20px;
   }
-  .ontario .main {
+
+  .quebec .main {
     padding: 30px;
   }
 }

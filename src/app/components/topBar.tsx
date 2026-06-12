@@ -2,29 +2,73 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import Nav from "./nav";
 import { t } from "../lib/i18n";
 import { ReturnToEnglish } from './ReturnToEnglish';
 
 export default function TopBar({ locale }: { locale: string }) {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-    const topBarRef = useRef<HTMLDivElement>(null);
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
     useEffect(() => {
-        if (!isMobileNavOpen) return;
-        function handleClickOutside(event: MouseEvent) {
-            if (topBarRef.current && !topBarRef.current.contains(event.target as Node)) {
+        function handleCloseMobileNav() {
+            setIsMobileNavOpen(false);
+        }
+
+        window.addEventListener('idguide:close-mobile-nav', handleCloseMobileNav);
+
+        return () => {
+            window.removeEventListener('idguide:close-mobile-nav', handleCloseMobileNav);
+        };
+    }, []);
+
+    useEffect(() => {
+        setIsMobileNavOpen((prev) => (prev ? false : prev));
+    }, [pathname, searchParams]);
+
+    useEffect(() => {
+        if (!isMobileNavOpen) {
+            return;
+        }
+
+        const onResize = () => {
+            if (window.innerWidth > 1200) {
                 setIsMobileNavOpen(false);
             }
-        }
-        document.addEventListener('mousedown', handleClickOutside);
+        };
+
+        const onHashChange = () => {
+            setIsMobileNavOpen(false);
+        };
+
+        const onKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                setIsMobileNavOpen(false);
+            }
+        };
+
+        window.addEventListener('resize', onResize);
+        window.addEventListener('hashchange', onHashChange);
+        window.addEventListener('keydown', onKeyDown);
+
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
+            window.removeEventListener('resize', onResize);
+            window.removeEventListener('hashchange', onHashChange);
+            window.removeEventListener('keydown', onKeyDown);
         };
     }, [isMobileNavOpen]);
 
     function toggleMobileNav() {
-        setIsMobileNavOpen(!isMobileNavOpen);
+        setIsMobileNavOpen((prev) => {
+            const next = !prev;
+            if (next) {
+                window.dispatchEvent(new Event('idguide:close-mobile-options'));
+            }
+            return next;
+        });
     }
 
     function closeMobileNav() {
@@ -33,7 +77,7 @@ export default function TopBar({ locale }: { locale: string }) {
 
     return (
         <>
-            <div className="top-bar" ref={topBarRef}>
+            <div className="top-bar">
                 <Link href="/" onClick={closeMobileNav}>
                     <h1>
                         {t("Site.name", "I.D. Guide", locale)}
@@ -42,33 +86,28 @@ export default function TopBar({ locale }: { locale: string }) {
                 <Nav mobileOpen={isMobileNavOpen} closeMobileNav={closeMobileNav} locale={locale} />
                 <button
                     onClick={toggleMobileNav}
-                    style={{
-                        background: 'none',
-                        border: 'none',
-                        padding: 0,
-                        cursor: 'pointer',
-                        outline: 'none',
-                    }}
+                    className={isMobileNavOpen ? "mobileMenuToggle isOpen" : "mobileMenuToggle"}
                     aria-label={isMobileNavOpen ? t("TopBar.closeMenu", "Close menu", locale) : t("TopBar.openMenu", "Open menu", locale)}
                 >
-                    <span
-                        style={{
-                            display: 'inline-block',
-                            transition: 'transform 0.3s ease',
-                            marginRight: '20px',
-                            transform: isMobileNavOpen ? 'rotate(90deg)' : 'rotate(0deg)',
-                        }}
-                    >
+                    <span className="mobileMenuToggleIconWrap">
                         <Image
                             src={isMobileNavOpen ? '/icon/menu-open.svg' : '/icon/menu.svg'}
                             alt={t("TopBar.menuIconAlt", "Menu icon", locale)}
                             width={40}
                             height={40}
-                            style={{ filter: 'invert(1)', transition: 'filter 0.3s' }}
+                            className="mobileMenuToggleIcon"
                         />
                     </span>
                 </button>
             </div>
+            {isMobileNavOpen && (
+                <button
+                    type="button"
+                    className="mobileMenuBackdrop"
+                    aria-label={t("TopBar.closeMenu", "Close menu", locale)}
+                    onClick={closeMobileNav}
+                />
+            )}
             {locale === "fr" && (
                 <div className="fr-disclaimer-bar">
                     La traduction française est actuellement une fonctionnalité bêta. Certaines sections du site peuvent être incomplètes ou mal traduites. <ReturnToEnglish />.

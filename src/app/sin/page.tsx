@@ -12,7 +12,6 @@ import LastUpdated from "../components/LastUpdated";
 import JumpTo from '../components/JumpTo';
 import SeeAlso from '../components/SeeAlso';
 import SourcesList from '../components/SourcesList';
-import BackToTop from "../components/BackToTop";
 
 export default function SIN() {
   
@@ -24,14 +23,11 @@ export default function SIN() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.sin}>
         <h2 className="page-title">{t("Pages.sin", "Social Insurance Registry", pageLocale)}<Image src="/icon/sin.svg" alt={t("Pages.sin", "Social Insurance Registry", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={["process", "important-considerations", "sources"]} />
-          <hr />
-
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
 
@@ -40,7 +36,6 @@ export default function SIN() {
 
           <hr/>
           <SourcesList sources={sources} />
-          <hr/>
           <SeeAlso pages={["cra", "passport", "pr"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

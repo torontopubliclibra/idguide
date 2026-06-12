@@ -13,7 +13,6 @@ import LastUpdated from "../components/LastUpdated";
 import JumpTo from '../components/JumpTo';
 import SeeAlso from '../components/SeeAlso';
 import SourcesList from '../components/SourcesList';
-import BackToTop from "../components/BackToTop";
 
 export default function Passport() {
   
@@ -25,19 +24,16 @@ export default function Passport() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.passport}>
         <h2 className="page-title">{t("Pages.passports", "Canadian passports", pageLocale)}<Image src="/icon/passport.svg" alt={t("Pages.passports", "Canadian passports", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
-
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={[
             "options",
             "process",
             "important-considerations",
             "sources"
           ]} />
-          <hr />
 
           <h3 id="options">{t("Subheadings.optionsForGenderSexIdentifier", "Options for gender/sex identifier", pageLocale)}</h3>
           {useRenderCopy()(copy["options"])}
@@ -54,7 +50,6 @@ export default function Passport() {
 
           <hr />
           <SourcesList sources={sources} />
-          <hr />
           <SeeAlso pages={["pr", "sin", "cra"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

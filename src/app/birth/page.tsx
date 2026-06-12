@@ -22,7 +22,7 @@ export default function Guides() {
       <main className={styles.birth}>
         <h2 className="page-title">{t("Pages.birthCertificates", "Birth certificates", pageLocale)}<Image src="/icon/birth-certificate.svg" alt={t("Pages.birthCertificates", "Birth certificates", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <div>
             <p>{t("birthCertificates.process", "The process for updating your birth certificate will vary depending on the province or territory in which you were born", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
@@ -34,7 +34,6 @@ export default function Guides() {
               <small>{t("Site.workInProgress", "We're working to add more provinces and territories. Check back soon for expanded support across Canada.", pageLocale)}</small>
             </p>
           </div>
-          <hr />
           <SeeAlso pages={["start", "guides", "name"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

@@ -14,7 +14,10 @@
     "workInProgress": "Nous travaillons à ajouter plus de provinces et territoires. Revenez bientôt pour un support étendu à travers le Canada.",
     "youAreHere": "vous êtes ici",
     "moreAbout": "Plus à propos de ",
-    "lastUpdated": "Cette page a été mise à jour pour la dernière fois le"
+    "lastUpdated": "Cette page a été mise à jour pour la dernière fois le",
+    "darkMode": "Mode sombre",
+    "highContrastMode": "Mode contraste élevé",
+    "textMode": "Mode texte simplifié"
   },
   "Pages": {
     "home": "Accueil",

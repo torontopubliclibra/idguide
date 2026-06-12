@@ -22,7 +22,7 @@ export default function Manitoba() {
       <main className={styles.manitoba}>
         <h2 className="page-title">{t("Pages.manitoba", "Manitoba", pageLocale)}<Image src="/icon/region.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("Province.manitoba", "This is a full list of pages specific to Manitoba", pageLocale)}:</p>
             <ul style={{margin: '1.5rem 0'}}>
@@ -34,7 +34,6 @@ export default function Manitoba() {
               </li>
             </ul>
           </div>
-          <hr />
           <SeeAlso pages={["start", "guides", "resources", "ab", "on"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

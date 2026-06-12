@@ -11,7 +11,6 @@ import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
 import downloadData from '../downloads.json';
 import JumpTo from "../components/JumpTo";
-import BackToTop from "../components/BackToTop";
 
 export default function Downloads() {
 
@@ -68,11 +67,10 @@ export default function Downloads() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.downloads}>
         <h2 className="page-title">{t("Pages.downloads", "Downloads", pageLocale)}<Image src="/icon/download.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <p>
             {t("DownloadsPage.intro", "Here you'll find the forms to help with name changes and gender marker updates, as well as presentation materials for past workshops. If you need help finding the right document, please check the sources at the bottom of the related guide, or", pageLocale)}{' '}
             <Link href="mailto:contact@idguide.ca">{t("DownloadsPage.contactUs", "contact us", pageLocale)}</Link>{' '}
@@ -86,7 +84,6 @@ export default function Downloads() {
               setOpenSection(id);
             }}
           />
-          <hr />
           {downloadData.map((section: {
             id: string;
             title: string;
@@ -96,7 +93,7 @@ export default function Downloads() {
             const isOpen = openSection === section.id;
             const groups = groupLinks(section.links);
             return (
-              <section key={section.id} className={styles.accordionSection}>
+              <section key={section.id} className={`accordionSection ${styles.accordionSection}`}>
                 <button
                   id={section.id}
                   className={styles.accordionButton + ' accordionBtn'}
@@ -109,7 +106,7 @@ export default function Downloads() {
                 </button>
                 <div
                   id={`panel-${section.id}`}
-                  className={styles.accordionPanel}
+                  className={`panel ${styles.accordionPanel}`}
                   style={{ display: isOpen ? 'block' : 'none', padding: isOpen ? '1rem' : 0 }}
                   aria-hidden={!isOpen}
                 >
@@ -147,7 +144,7 @@ export default function Downloads() {
                                   )}
                                   <Link
                                     id={link.id}
-                                    className={styles.downloadButton}
+                                    className={`downloadButton ${styles.downloadButton}`}
                                     href={link.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -175,20 +172,6 @@ export default function Downloads() {
                         return (
                           <li key={link.id + '-' + link.href} style={{ margin: '0', marginTop: '1rem' }} className={pageLocale === 'en' ? '' : styles.fr}>
                             <h4>{link.label}</h4>
-                            <Link
-                              id={link.id}
-                              className={styles.downloadButton}
-                              href={link.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              style={{ maxWidth: '100%', marginTop: '0.5rem' }}
-                            >
-                              <span className={styles.linkTitle}>
-                                <span className="button-label" style={{ minWidth: "100%" }}>
-                                  {link.description ? <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>{link.description}<Image src="/icon/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} /></span> : ''}
-                                </span>
-                              </span>
-                            </Link>
                             {link.href.endsWith('.pdf') && (
                               <div className={styles.pdfPreview + ' ' + styles.single}>
                                 <iframe
@@ -201,6 +184,20 @@ export default function Downloads() {
                                 />
                               </div>
                             )}
+                            <Link
+                              id={link.id}
+                              className={`downloadButton ${styles.downloadButton}`}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              style={{ maxWidth: '100%', marginTop: '0.5rem' }}
+                            >
+                              <span className={styles.linkTitle}>
+                                <span className="button-label" style={{ minWidth: "100%" }}>
+                                  {link.description ? <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>{link.description}<Image src="/icon/download.svg" alt="Download" className={styles.downloadIcon} width={20} height={20} style={{ width: '20px' }} /></span> : ''}
+                                </span>
+                              </span>
+                            </Link>
                             {groupIdx < groups.length - 1 && <hr style={{ margin: '1rem 0', border: '1px dashed var(--black)' }} />}
                           </li>
                         );
@@ -211,7 +208,6 @@ export default function Downloads() {
               </section>
             );
           })}
-          <hr />
           <SeeAlso pages={["start", "guides", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

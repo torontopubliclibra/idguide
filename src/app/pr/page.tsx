@@ -12,7 +12,6 @@ import LastUpdated from "../components/LastUpdated";
 import JumpTo from '../components/JumpTo';
 import SeeAlso from '../components/SeeAlso';
 import SourcesList from '../components/SourcesList';
-import BackToTop from "../components/BackToTop";
 
 export default function PR() {
   
@@ -24,13 +23,11 @@ export default function PR() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.pr}>
         <h2 className="page-title">{t("Pages.prCards", "Permanent resident cards", pageLocale)}<Image src="/icon/passport.svg" alt={t("Pages.passports", "Canadian passports", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={["process", "requirements", "important-considerations", "sources"]} />
-          <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
@@ -51,7 +48,6 @@ export default function PR() {
 
           <hr/>
           <SourcesList sources={sources} />
-          <hr/>
           <SeeAlso pages={["passport", "sin", "cra"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

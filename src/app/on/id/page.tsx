@@ -12,7 +12,6 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import SourcesList from '../../components/SourcesList';
-import BackToTop from "../../components/BackToTop";
 
 export default function OnID() {
   
@@ -24,17 +23,15 @@ export default function OnID() {
   
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.id}>
         <h2 className="page-title">{t("Pages.ontarioIdCards", "Ontario driver's licenses & I.D. cards", pageLocale)}<Image src="/icon/photo-id.svg" alt={t("Pages.idCards", "Driver's licenses & I.D. cards", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <JumpTo pageLocale={pageLocale} sections={[
             "process",
             "important-considerations",
             "sources"
           ]} />
-          <hr />
 
           <h3 id="process">{t("Subheadings.process", "Process", pageLocale)}</h3>
           {useRenderCopy()(copy["process"])}
@@ -47,14 +44,13 @@ export default function OnID() {
 
           <h3 id="important-considerations">{t("Subheadings.importantConsiderations", "Important considerations", pageLocale)}</h3>
           {useRenderCopy()(copy["importantConsiderations"])}
-          <div className={styles.imageContainer}>
+          <div className="imageContainer double">
             <Image src="/asset/on-driveid-example.jpeg" alt="Sample Ontario driver's license" width={300} height={500} />
             <Image src="/asset/on-photoid-example.jpeg" alt="Sample Ontario photo ID card" width={300} height={500} />
           </div>
           
           <hr />
           <SourcesList sources={sources} />
-          <hr />
           <SeeAlso pages={["start", "on/resources", "on/name", "on/birth", "on/health"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

@@ -3,44 +3,66 @@
         {
             "name": "JusticeTrans",
             "url": "https://justicetrans.org/",
-            "description": ["Legal information"]
+            "description": [
+                "Legal information"
+            ]
         },
         {
             "name": "Egale Canada",
             "url": "https://egale.ca/",
-            "description": ["Advocacy", "research", "2SLGBTQI rights"]
+            "description": [
+                "Advocacy",
+                "research",
+                "2SLGBTQI rights"
+            ]
         },
         {
             "name": "Trans Lifeline",
             "url": "https://translifeline.org/",
-            "description": ["Peer support", "hotline"]
+            "description": [
+                "Peer support",
+                "hotline"
+            ]
         }
     ],
     "abResources": [
         {
             "name": "Skipping Stone",
             "url": "https://www.skippingstone.ca/",
-            "description": ["Peer support", "drop-ins"]
+            "description": [
+                "Peer support",
+                "drop-ins"
+            ]
         },
         {
             "name": "Alberta Human Rights Commission",
             "url": "https://albertahumanrights.ab.ca/",
-            "description": ["Human rights", "advocacy"]
+            "description": [
+                "Human rights",
+                "advocacy"
+            ]
         },
         {
             "name": "Trans Wellness Initiative",
             "url": "https://www.transwellnessinitiative.ca/",
-            "description": ["Medical resources", "community resources"]
+            "description": [
+                "Medical resources",
+                "community resources"
+            ]
         },
         {
             "name": "Connect Fund",
             "url": "https://www.connectfund.org/",
-            "description": ["Medical funding"]
+            "description": [
+                "Medical funding"
+            ]
         },
         {
             "name": "Foria Clinic",
             "url": "https://www.foriaclinic.com/",
-            "description": ["Virtual healthcare"]
+            "description": [
+                "Virtual healthcare"
+            ]
         },
         {
             "region": "Edmonton",
@@ -49,12 +71,18 @@
                 {
                     "name": "Student Legal Services of Edmonton Trans I.D. Clinic",
                     "url": "https://www.slsedmonton.com/trans-id-project",
-                    "description": ["Legal services", "I.D. clinics"]
+                    "description": [
+                        "Legal services",
+                        "I.D. clinics"
+                    ]
                 },
                 {
                     "name": "Pride Centre of Edmonton",
                     "url": "https://pridecentreofedmonton.ca/",
-                    "description": ["Peer support", "groups"]
+                    "description": [
+                        "Peer support",
+                        "groups"
+                    ]
                 }
             ]
         },
@@ -65,17 +93,25 @@
                 {
                     "name": "Skipping Stone I.D. clinics",
                     "url": "https://www.skippingstone.ca/id-clinics",
-                    "description": ["I.D. clinics", "legal support"]
+                    "description": [
+                        "I.D. clinics",
+                        "legal support"
+                    ]
                 },
                 {
                     "name": "Calgary Legal Guidance",
                     "url": "https://clg.ab.ca/",
-                    "description": ["Legal services"]
+                    "description": [
+                        "Legal services"
+                    ]
                 },
                 {
                     "name": "Calgary Outlink",
                     "url": "https://www.calgaryoutlink.ca/",
-                    "description": ["Peer support", "groups"]
+                    "description": [
+                        "Peer support",
+                        "groups"
+                    ]
                 }
             ]
         }
@@ -84,17 +120,27 @@
         {
             "name": "Manitoba Human Rights Commission",
             "url": "https://www.manitobahumanrights.ca/",
-            "description": ["Human rights", "advocacy"]
+            "description": [
+                "Human rights",
+                "advocacy"
+            ]
         },
         {
             "name": "JusticeTrans 2S Trans+ Self Advocacy Workbook",
             "url": "https://justicetrans.org/projects/2s-trans-self-advocacy-workbook/",
-            "description": ["Self-advocacy", "workbook"]
+            "description": [
+                "Self-advocacy",
+                "workbook"
+            ]
         },
         {
             "name": "Trans Health Klinic Community Health",
             "url": "https://klinic.mb.ca/all-services/trans-health-trans-health-klinic/",
-            "description": ["Medical care", "psychosocial care", "peer support"]
+            "description": [
+                "Medical care",
+                "psychosocial care",
+                "peer support"
+            ]
         },
         {
             "region": "Winnipeg",
@@ -103,17 +149,27 @@
                 {
                     "name": "Rainbow Resource Centre",
                     "url": "https://rainbowresourcecentre.org/",
-                    "description": ["I.D. clinics", "support programs", "drop-ins"]
+                    "description": [
+                        "I.D. clinics",
+                        "support programs",
+                        "drop-ins"
+                    ]
                 },
                 {
                     "name": "Sunshine House",
                     "url": "https://www.sunshinehousewpg.org/",
-                    "description": ["Peer support", "drop-ins"]
+                    "description": [
+                        "Peer support",
+                        "drop-ins"
+                    ]
                 },
                 {
                     "name": "Sunshine House 2S/Trans ID Peer Support",
                     "url": "https://www.sunshinehousewpg.org/2s-trans-id-peer-support",
-                    "description": ["I.D. clinics", "I.D. peer support"]
+                    "description": [
+                        "I.D. clinics",
+                        "I.D. peer support"
+                    ]
                 }
             ]
         }
@@ -122,42 +178,61 @@
         {
             "name": "I.D. Guide Workshops",
             "url": "/workshops",
-            "description": ["I.D. clinics"]
+            "description": [
+                "I.D. clinics"
+            ]
         },
         {
             "name": "Legal Aid Ontario",
             "url": "https://www.legalaid.on.ca/legal-clinics/",
-            "description": ["Legal clinics"]
+            "description": [
+                "Legal clinics"
+            ]
         },
         {
             "name": "LGBT YouthLine",
             "url": "https://www.youthline.ca/",
-            "description": ["Peer support", "helpline"]
+            "description": [
+                "Peer support",
+                "helpline"
+            ]
         },
         {
             "name": "Rainbow Health Ontario",
             "url": "https://www.rainbowhealthontario.ca/",
-            "description": ["Healthcare resources"]
+            "description": [
+                "Healthcare resources"
+            ]
         },
         {
             "name": "Connect Fund",
             "url": "https://www.connectfund.org/",
-            "description": ["Medical funding"]
+            "description": [
+                "Medical funding"
+            ]
         },
         {
             "name": "Foria Clinic",
             "url": "https://www.foriaclinic.com/",
-            "description": ["Virtual healthcare"]
+            "description": [
+                "Virtual healthcare"
+            ]
         },
         {
             "name": "Ontario Human Rights Commission",
             "url": "https://www.ohrc.on.ca/en",
-            "description": ["Human rights", "advocacy"]
+            "description": [
+                "Human rights",
+                "advocacy"
+            ]
         },
         {
             "name": "HIV AIDS Legal Clinic of Ontario (HALCO)",
             "url": "https://www.halco.org/",
-            "description": ["Legal support", "HIV/AIDS"]
+            "description": [
+                "Legal support",
+                "HIV/AIDS"
+            ]
         },
         {
             "region": "Greater Toronto Area",
@@ -166,37 +241,54 @@
                 {
                     "name": "The 519 Trans I.D. Clinic",
                     "url": "https://www.the519.org/programs/trans-id-clinic/",
-                    "description": ["I.D. clinics", "legal services"]
+                    "description": [
+                        "I.D. clinics",
+                        "legal services"
+                    ]
                 },
                 {
                     "name": "West Toronto Community Legal Services",
                     "url": "https://www.wtcls.org/",
-                    "description": ["Legal services"]
+                    "description": [
+                        "Legal services"
+                    ]
                 },
                 {
                     "name": "Maggie's Toronto",
                     "url": "https://www.maggiestoronto.org/",
-                    "description": ["Legal support", "sex workers"]
+                    "description": [
+                        "Legal support",
+                        "sex workers"
+                    ]
                 },
                 {
                     "name": "Aboriginal Legal Services of Toronto",
                     "url": "https://www.aboriginallegal.ca/",
-                    "description": ["Legal services", "Indigenous legal services"]
+                    "description": [
+                        "Legal services",
+                        "Indigenous legal services"
+                    ]
                 },
                 {
                     "name": "Friends of Ruby",
                     "url": "https://www.friendsofruby.ca/",
-                    "description": ["Social support"]
+                    "description": [
+                        "Social support"
+                    ]
                 },
                 {
                     "name": "Sherbourne Health",
                     "url": "https://sherbourne.on.ca/primary-and-family-health-care/2slgbtq-health/",
-                    "description": ["Healthcare services"]
+                    "description": [
+                        "Healthcare services"
+                    ]
                 },
                 {
                     "name": "Mississauga Legal Clinic",
                     "url": "https://www.mississaugalegalclinic.ca/",
-                    "description": ["Legal services"]
+                    "description": [
+                        "Legal services"
+                    ]
                 }
             ]
         },
@@ -207,7 +299,10 @@
                 {
                     "name": "Trans Wellness Ontario",
                     "url": "https://www.transwellness.ca/",
-                    "description": ["Peer support", "groups"]
+                    "description": [
+                        "Peer support",
+                        "groups"
+                    ]
                 }
             ]
         },
@@ -218,7 +313,9 @@
                 {
                     "name": "Hamilton Trans Health Coalition",
                     "url": "https://hamiltontranshealth.ca/",
-                    "description": ["Healthcare services"]
+                    "description": [
+                        "Healthcare services"
+                    ]
                 }
             ]
         },
@@ -229,12 +326,17 @@
                 {
                     "name": "Kindspace",
                     "url": "https://www.kindspace.ca/",
-                    "description": ["Peer support", "groups"]
+                    "description": [
+                        "Peer support",
+                        "groups"
+                    ]
                 },
                 {
                     "name": "Centretown Community Health Centre",
                     "url": "https://www.centretownchc.org/trans-health",
-                    "description": ["Healthcare services"]
+                    "description": [
+                        "Healthcare services"
+                    ]
                 }
             ]
         },
@@ -245,7 +347,10 @@
                 {
                     "name": "OK2BME",
                     "url": "https://www.ok2bme.ca/",
-                    "description": ["Peer support", "groups"]
+                    "description": [
+                        "Peer support",
+                        "groups"
+                    ]
                 }
             ]
         },
@@ -256,7 +361,33 @@
                 {
                     "name": "NorWest Community Health Centres",
                     "url": "https://norwestchc.org/programs-services/2slgbtqia/",
-                    "description": ["Healthcare services"]
+                    "description": [
+                        "Healthcare services"
+                    ]
+                }
+            ]
+        }
+    ],
+    "qcResources": [
+        {
+            "name": "Juritrans",
+            "url": "https://juritrans.ca/qc/en/",
+            "description": [
+                "I.D. clinics",
+                "legal services"
+            ]
+        },
+        {
+            "region": "Montreal",
+            "id": "montreal",
+            "resources": [
+                {
+                    "name": "Juritrans In-Person I.D. Clinics",
+                    "url": "https://juritrans.ca/qc/en/in-person-trans-id-clinic/",
+                    "description": [
+                        "I.D. clinics",
+                        "legal services"
+                    ]
                 }
             ]
         }

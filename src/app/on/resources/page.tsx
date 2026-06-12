@@ -11,7 +11,6 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from '../../components/JumpTo';
 import SeeAlso from '../../components/SeeAlso';
 import ResourceList from '../../components/ResourceList';
-import BackToTop from "../../components/BackToTop";
 
 export default function OnResources() {
 
@@ -23,19 +22,13 @@ export default function OnResources() {
 
   return (
     <div className="page">
-      <BackToTop />
       <main className={styles.resources}>
         <h2 className="page-title">{t("Pages.ontarioResources", "Ontario resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
-        <div className={styles.main}>
+        <div className={`main ${styles.main}`}>
           <p className={styles.intro}>
             {t("ResourcesPage.ontarioIntro", "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Ontario.", pageLocale)}
           </p>
-          <p>
-            {t("ResourcesPage.suggestion", "If you have a resource to suggest, please", pageLocale)}{" "}
-            <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.
-          </p>
-          <hr />
           <JumpTo pageLocale={pageLocale} sections={[
             "province-wide",
             "gta",
@@ -63,6 +56,7 @@ export default function OnResources() {
             }))}
           />
           <hr />
+          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <SeeAlso pages={["start", "ab/resources", "mb/resources", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>

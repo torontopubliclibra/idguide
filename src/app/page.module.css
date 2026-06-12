@@ -1,3 +1,13 @@
+.page {
+  width: 100vw;
+  max-width: 85vw;
+  margin: 80px auto;
+  margin-bottom: 0;
+  padding: 50px 30px 70px;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+
 .main {
   display: flex;
   width: 100%;
@@ -6,8 +16,7 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 0;
-  margin: 20px 0;
-  margin-bottom: 40px;
+  margin: 20px auto 40px;
 }
 
 .intro {
@@ -54,7 +63,7 @@
   padding: 50px;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.05);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
 }
 
 .intro .group {
@@ -74,11 +83,24 @@
   font-size: 1.3rem;
 }
 
+.intro .guides ul {
+  list-style: none;
+  padding: 0;
+}
+
 .intro .guides ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 15px;
   font-size: 1.4rem;
   transition: color 0.3s;
   color: var(--black);
+}
+
+.intro .guides ul li img {
+  width: 25px;
+  height: 25px;
 }
 
 .intro .guides ul li a {
@@ -86,7 +108,7 @@
 }
 
 .intro .guides ul li:hover {
-  color: var(--dark3);
+  text-decoration: underline;
 }
 
 a.primary {
@@ -101,7 +123,12 @@ a.secondary {
 
 @media (max-width: 1200px) {
   .page {
+    width: 100%;
+    max-width: 100%;
+    margin: 80px auto 0;
     padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-bottom: 20px;
   }
 
