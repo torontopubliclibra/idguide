@@ -37,7 +37,6 @@ export default function Resources() {
             resources={resources.resources.filter(r => typeof r.name === 'string' && (!('region' in r) || !r.region))}
             pageLocale={pageLocale}
           />
-          <hr />
           <h3>{t("ResourcesPage.byRegion", "Resources by region", pageLocale)}</h3>
           <ul>
             <li>

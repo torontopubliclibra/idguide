@@ -13,13 +13,13 @@ import JumpTo from "../../components/JumpTo";
 import SeeAlso from "../../components/SeeAlso";
 
 export default function MbResources() {
-  
+
   const pageLocale = usePageLocale();
 
   useEffect(() => {
     document.title = `${t("Pages.manitobaResources", "Manitoba resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
   }, [pageLocale]);
-  
+
   return (
     <div className="page">
       <main className={styles.resources}>
@@ -29,8 +29,7 @@ export default function MbResources() {
           <p className={styles.intro}>
             {t("ResourcesPage.manitobaIntro", "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.", pageLocale)}
           </p>
-          <hr />
-          
+
           <JumpTo pageLocale={pageLocale} sections={["province-wide", "winnipeg"]} />
 
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
@@ -48,7 +47,6 @@ export default function MbResources() {
               resources: region.resources || []
             }))}
           />
-          <hr />
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <SeeAlso pages={["start", "ab/resources", "on/resources", "resources"]} pageLocale={pageLocale} />
         </div>

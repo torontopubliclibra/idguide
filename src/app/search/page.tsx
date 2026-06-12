@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { usePageLocale } from '../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../lib/i18n";
@@ -20,15 +21,11 @@ interface SearchItem {
 export default function Search() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [results, setResults] = useState<SearchItem[]>([]);
+  const searchParams = useSearchParams();
 
   const pageLocale = usePageLocale();
 
-  interface InputChangeEvent {
-    target: { value: string };
-  }
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement> | InputChangeEvent) => {
-    const value = e.target.value;
+  const runSearch = useCallback((value: string) => {
     setSearchInput(value);
     if (!index || !value.trim()) {
       setResults([]);
@@ -79,6 +76,15 @@ export default function Search() {
     setResults(scored);
   }, []);
 
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    runSearch(e.target.value);
+  }, [runSearch]);
+
+  useEffect(() => {
+    const query = searchParams.get("q") ?? "";
+    runSearch(query);
+  }, [searchParams, runSearch]);
+
   useEffect(() => {
     document.title = `${t("Pages.search", "Search", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
   }, [pageLocale]);
@@ -99,21 +105,21 @@ export default function Search() {
                 onChange={handleInputChange}
                 aria-label={t("Search.placeholder", "Type any keyword...", pageLocale)}
               />
-              <button className={searchInput.length > 0 ? styles.active : styles.disabled} onClick={searchInput.length > 0 ? () => handleInputChange({target: {value: ""}}) : undefined} aria-label={t("Search.clear", "Clear search input", pageLocale)} title="Clear search input">
+              <button className={searchInput.length > 0 ? styles.active : styles.disabled} onClick={searchInput.length > 0 ? () => runSearch("") : undefined} aria-label={t("Search.clear", "Clear search input", pageLocale)} title="Clear search input">
                 <Image src="/icon/close.svg" alt="Site exit icon" width={30} height={30} />
               </button>
             </div>
-            <div className={styles.results} style={{marginBottom: '-1.75rem'}}>
+            <div className={styles.results} style={{ marginBottom: '-1.75rem' }}>
               {searchInput && results.length === 0 && (
                 <>
-                  <div style={{color: '#888', marginTop: '2rem', marginBottom: '1.5rem'}}>{t("Search.noResults", "No results for ", pageLocale)}&quot;{searchInput}&quot;{t("Search.noResults-2", " found", pageLocale)}.</div>
+                  <div style={{ color: '#888', marginTop: '2rem', marginBottom: '1.5rem' }}>{t("Search.noResults", "No results for ", pageLocale)}&quot;{searchInput}&quot;{t("Search.noResults-2", " found", pageLocale)}.</div>
                 </>
               )}
               {results.map((item, index) => (
-                <div key={item.route} style={{margin: '1.5rem 0'}}>
-                  <hr className={styles.resultSeparator} style={{marginBottom: '1.5rem', opacity: index === 0 ? 1 : 0.3}}/>
-                  <Link href={item.route} style={{fontFamily: 'var(--font-special-gothic-expanded-one)', fontSize: '1.5rem'}}>{item.title}</Link>
-                  <div style={{marginTop: '0.5rem', fontSize: '0.9em'}}>{item.summary}</div>
+                <div key={item.route} style={{ margin: '1.5rem 0' }}>
+                  <hr className={styles.resultSeparator} style={{ marginBottom: '1.5rem', opacity: index === 0 ? 1 : 0.3 }} />
+                  <Link href={item.route} style={{ fontFamily: 'var(--font-special-gothic-expanded-one)', fontSize: '1.5rem' }}>{item.title}</Link>
+                  <div style={{ marginTop: '0.5rem', fontSize: '0.9em' }}>{item.summary}</div>
                   {Array.isArray(item.images) && item.images.length > 0 && (
                     <div style={{
                       display: 'flex',

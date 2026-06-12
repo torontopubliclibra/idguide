@@ -38,7 +38,6 @@ export default function OnResources() {
             "kitchener-waterloo",
             "thunder-bay"
           ]} />
-          <hr />
 
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <ResourceList
@@ -55,7 +54,6 @@ export default function OnResources() {
               resources: region.resources || []
             }))}
           />
-          <hr />
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <SeeAlso pages={["start", "ab/resources", "mb/resources", "resources"]} pageLocale={pageLocale} />
         </div>

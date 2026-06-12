@@ -394,6 +394,10 @@ hr {
   border-width: 1px 2px 2px 1px !important;
 }
 
+.text-mode .pageNav.textSizeNav.withoutJumpToOnly {
+  padding: 20px;
+}
+
 .jumpToNav,
 .pageNav.seeAlsoNav.withoutJumpTo,
 .pageNav.textSizeNav.withoutJumpToOnly {
@@ -1166,6 +1170,7 @@ th {
     margin: 80px auto 0;
     width: 100%;
     max-width: 1400px;
+    min-height: unset;
     padding: 20px;
     padding-bottom: 50px;
   }

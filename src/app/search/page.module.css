@@ -49,15 +49,16 @@
   font-size: 1.2rem;
   background-color: var(--grey);
   color: var(--black);
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1) inset;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1) inset;
   border: 1px solid var(--black);
 }
 
 @media (max-width: 1200px) {
   .search {
     padding-top: 20px;
-    min-height: calc(100vh - 403px);
+    min-height: unset;
   }
+
   .search .main {
     padding: 30px;
   }
