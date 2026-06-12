@@ -711,6 +711,14 @@ html.dark-mode .imageContainer.double {
   color: var(--white);
 }
 
+html.text-mode .footerLogo {
+  color: var(--white) !important;
+}
+
+html.text-mode footer img {
+  filter: invert(1) !important;
+}
+
 body.dark-mode .page div.sitemap,
 body.dark-mode .page div.changelog,
 body.dark-mode .page div.changelog div {
