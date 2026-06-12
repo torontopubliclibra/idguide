@@ -1200,6 +1200,7 @@ th {
   }
 
   .top-bar h1 {
+    font-size: 2rem;
     position: absolute;
     margin-top: -32px;
     left: 50%;
