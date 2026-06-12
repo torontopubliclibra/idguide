@@ -569,6 +569,11 @@ hr {
 
 .homeAppearanceNav .textSizeOptions {
   margin-bottom: -12px !important;
+  padding: 6px 0 0 !important;
+}
+
+body.text-mode .homeAppearanceNav .textSizeOptions {
+  padding: 6px 16px 0 0 !important;
 }
 
 .mobileOptionsToggle,
