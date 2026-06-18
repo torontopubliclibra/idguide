@@ -1352,12 +1352,6 @@ th {
     text-decoration: none;
   }
 
-  body.mobile-options-open .jumpToNav li,
-  body.mobile-options-open .pageNav.seeAlsoNav li,
-  body.mobile-options-open .pageNav.textSizeNav .textSizeOptions {
-    background: var(--semiwhite);
-  }
-
   body.mobile-options-open.dark-mode .jumpToNav li,
   body.mobile-options-open.dark-mode .pageNav.seeAlsoNav li,
   body.mobile-options-open.dark-mode .pageNav.textSizeNav .textSizeOptions {
@@ -1498,6 +1492,10 @@ th {
     padding-bottom: 0 !important;
   }
 
+  body.mobile-options-open.text-mode .page main .pageNav .textSizeOptions {
+    padding-top: 0 !important;
+  }
+
   body.mobile-options-open .pageNavToggleIcon,
   body.mobile-options-open .homeAppearanceOptionsIcon {
     width: 28px !important;
@@ -1567,6 +1565,7 @@ th {
     background: var(--semiwhite) !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 0 !important;
   }
 
   body.mobile-options-open.dark-mode .jumpToNav ul,
