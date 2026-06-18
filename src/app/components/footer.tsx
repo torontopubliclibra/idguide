@@ -41,9 +41,12 @@ export default function Footer({ locale }: { locale: string }) {
             <div className={styles.footerBottom}>
                 <div style={{ alignItems: 'center', display: 'inline-flex', gap: '0.5rem' }}>
                     {/* <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link><span> | </span><LanguageToggle locale={locale} /> */}
-                    <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link>
+                    <Link href="/about#changelog">v{changelogData[0].version}</Link><span> | </span><Link href="/about#disclaimers">{t("Site.disclaimers", "Disclaimers", locale)}</Link><span> | </span><Link href="/privacy">{t("Site.privacyPolicy", "Privacy", locale)}</Link> | <a href="https://instagram.com/idguide.ca" target='_blank' rel='noopener noreferrer' style={{ alignItems: 'center', display: 'inline-flex', gap: '0.5rem' }}>
+                        Instagram
+                        <Image src="/icon/instagram.svg" alt="Instagram logo" width={20} height={20} style={{ filter: 'invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(105%) contrast(105%)' }} />
+                    </a>
                 </div>
-                <div>
+                <div className={styles.license}>
                     <a href="/about#license" style={{ alignItems: 'center', display: 'inline-flex', gap: '0.5em' }}>
                         <Image src='/icon/by-nc-sa.svg' alt="Creative Commons BY-NC-SA logo" width={70} height={25} />
                     </a>

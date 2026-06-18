@@ -94,6 +94,8 @@ export default function About() {
 
           <p>{t("AboutPage.about-3", "The project is led by", pageLocale)} <Link href="https://danateagle.com" target="_blank" rel="noreferrer">Dana Rosamund Teagle</Link>, {t("AboutPage.about-4", "a designer and web/software developer based in Toronto. Since 2021, Dana has delivered workshops on name and gender marker changes for organizations across Ontario. To learn more or book a presentation, visit our", pageLocale)} <Link href="/workshops">{t("AboutPage.workshopsPage", "workshops page", pageLocale)}</Link>. {t("AboutPage.about-5", "If you would like to help support Dana and her work, you can send her a tip", pageLocale)} <Link href="https://danateagle.com/paypal" target='_blank'>via PayPal</Link>.</p>
 
+          <p>{t("AboutPage.about-6", "To stay up to date with the latest updates, follow our Instagram page at", pageLocale)} <Link href="https://instagram.com/idguide.ca" target='_blank' rel='noopener noreferrer'>@idguide.ca</Link>.</p>
+
           <h3 id='disclaimers' style={{ marginTop: '1.5rem' }}>{t("Pages.disclaimers", "Disclaimers", pageLocale)}</h3>
           {disclaimers.map((disc, idx) => (
             <div key={idx} dangerouslySetInnerHTML={{ __html: marked.parse(disc) }}></div>
