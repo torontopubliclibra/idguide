@@ -398,6 +398,18 @@ hr {
   padding: 20px;
 }
 
+body.text-mode .page.homePage .pageNav.textSizeNav.withoutJumpToOnly {
+  padding: 0;
+}
+
+body.text-mode .page.homePage .pageNav.textSizeNav.withoutJumpToOnly.isExpanded {
+  padding: 6px 7px 7px 16px !important;
+}
+
+/* body.text-mode .page.homePage .pageNav.textSizeNav.withoutJumpToOnly .textSizeOptions {
+  padding: 20px !important;
+} */
+
 .jumpToNav,
 .pageNav.seeAlsoNav.withoutJumpTo,
 .pageNav.textSizeNav.withoutJumpToOnly {
