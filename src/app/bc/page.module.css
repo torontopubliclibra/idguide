@@ -1,8 +1,8 @@
-.manitoba {
+.britishColumbia {
   width: 100%;
 }
 
-.manitoba .main {
+.britishColumbia .main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -15,24 +15,27 @@
   width: 100%;
 }
 
-.manitoba .content ul:last-of-type {
+.britishColumbia .content ul:last-of-type {
   margin-bottom: 0;
 }
 
-.manitoba .content ul li {
+.britishColumbia .content ul li {
   margin: 0;
+  font-size: 1.15rem;
+  transition: all 0.3s;
+  color: var(--black);
 }
 
-.manitoba .content ul li:hover {
+.britishColumbia .content ul li:hover {
   color: var(--dark3);
 }
 
 @media (max-width: 1200px) {
-  .manitoba {
+  .britishColumbia {
     padding-top: 20px;
   }
 
-  .manitoba .main {
+  .britishColumbia .main {
     padding: 30px;
   }
 }

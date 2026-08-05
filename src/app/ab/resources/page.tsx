@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { usePageLocale } from '../../hooks/usePageLocale';
 import styles from "./page.module.css";
 import { t } from "../../lib/i18n";
 import resources from "../../resources.json";
-import ResourceList from "../../components/ResourceList";
+import ResourceList, { collectResourceTags, ResourceTagFilters } from "../../components/ResourceList";
 import LastUpdated from "../../components/LastUpdated";
 import JumpTo from "../../components/JumpTo";
 import SeeAlso from "../../components/SeeAlso";
@@ -15,6 +15,24 @@ import SeeAlso from "../../components/SeeAlso";
 export default function AbResources() {
 
   const pageLocale = usePageLocale();
+  const [activeTag, setActiveTag] = useState<string | null>(null);
+
+  const provinceWideResources = useMemo(
+    () => resources.abResources.filter(r => typeof r.name === 'string' && !r.region),
+    []
+  );
+  const regionalResources = useMemo(
+    () => resources.abResources.filter(r => typeof r.region === 'string').map(region => ({
+      region: region.region || "",
+      id: region.id || '',
+      resources: region.resources || []
+    })),
+    []
+  );
+  const availableTags = useMemo(
+    () => collectResourceTags(provinceWideResources, regionalResources),
+    [provinceWideResources, regionalResources]
+  );
 
   useEffect(() => {
     document.title = `${t("Pages.albertaResources", "Alberta resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
@@ -29,22 +47,22 @@ export default function AbResources() {
           <p className={styles.intro}>
             {t("ResourcesPage.albertaIntro", "This table lists organizations offering trans I.D. clinics, legal support, peer groups, and other resources for 2SLGBTQ+ people in Alberta. You'll find options for major cities, province-wide services, and online support.", pageLocale)}
           </p>
-          <p>{t("ResourcesPage.suggestion", "If you have a suggestion for this page, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>.</p>
           <JumpTo pageLocale={pageLocale} sections={["province-wide", "edmonton", "calgary"]} />
+          <ResourceTagFilters tags={availableTags} pageLocale={pageLocale} activeTag={activeTag} onTagChange={setActiveTag} />
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <ResourceList
-            resources={resources.abResources.filter(r => typeof r.name === 'string' && !r.region)}
+            resources={provinceWideResources}
             pageLocale={pageLocale}
+            activeTag={activeTag}
+            onTagChange={setActiveTag}
           />
           <ResourceList
             resources={[]}
             pageLocale={pageLocale}
             showRegionHeaders={true}
-            regionalResources={resources.abResources.filter(r => typeof r.region === 'string').map(region => ({
-              region: region.region || "",
-              id: region.id || '',
-              resources: region.resources || []
-            }))}
+            regionalResources={regionalResources}
+            activeTag={activeTag}
+            onTagChange={setActiveTag}
           />
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
           <SeeAlso pages={["start", "mb/resources", "on/resources", "resources"]} pageLocale={pageLocale} />

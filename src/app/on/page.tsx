@@ -10,7 +10,7 @@ import SeeAlso from "../components/SeeAlso";
 import LastUpdated from "../components/LastUpdated";
 
 export default function Ontario() {
-  
+
   const pageLocale = usePageLocale();
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Ontario() {
         <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("Province.ontario", "This is a full list of pages specific to Ontario", pageLocale)}:</p>
-            <ul style={{margin: '1.5rem 0'}}>
+            <ul className="button-list">
               {ontarioPages.map(page => (
                 <li key={page.href}>
                   <Link href={page.href}>{page.label}</Link>

@@ -12,19 +12,19 @@ import LastUpdated from "../../components/LastUpdated";
 import JumpTo from "../../components/JumpTo";
 import SeeAlso from "../../components/SeeAlso";
 
-export default function MbResources() {
+export default function BcResources() {
 
   const pageLocale = usePageLocale();
   const [activeTag, setActiveTag] = useState<string | null>(null);
 
   const provinceWideResources = useMemo(
-    () => resources.mbResources.filter(r => typeof r.name === 'string' && !r.region),
+    () => resources.bcResources.filter(r => typeof r.name === 'string' && !r.region),
     []
   );
   const regionalResources = useMemo(
-    () => resources.mbResources.filter(r => typeof r.region === 'string').map(region => ({
-      id: region.id || '',
+    () => resources.bcResources.filter(r => typeof r.region === 'string').map(region => ({
       region: region.region || "",
+      id: region.id || '',
       resources: region.resources || []
     })),
     []
@@ -35,21 +35,19 @@ export default function MbResources() {
   );
 
   useEffect(() => {
-    document.title = `${t("Pages.manitobaResources", "Manitoba resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
+    document.title = `${t("Pages.britishColumbiaResources", "British Columbia resources", pageLocale)} | ${t("Site.name", "I.D. Guide", pageLocale)}`;
   }, [pageLocale]);
 
   return (
     <div className="page">
       <main className={styles.resources}>
-        <h2 className="page-title">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
+        <h2 className="page-title">{t("Pages.bcResources", "British Columbia resources", pageLocale)}<Image src="/icon/resources.svg" alt={t("Pages.downloads", "Downloads", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={`main ${styles.main}`}>
           <p className={styles.intro}>
-            {t("ResourcesPage.manitobaIntro", "This table lists organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.", pageLocale)}
+            {t("ResourcesPage.bcIntro", "This table lists organizations offering resources and services for 2SLGBTQ+ people in British Columbia. You'll find options for major cities, province-wide services, and online support.", pageLocale)}
           </p>
-
-          <JumpTo pageLocale={pageLocale} sections={["province-wide", "winnipeg"]} />
-
+          <JumpTo pageLocale={pageLocale} sections={["province-wide", "vancouver", "victoria"]} />
           <ResourceTagFilters tags={availableTags} pageLocale={pageLocale} activeTag={activeTag} onTagChange={setActiveTag} />
           <h3 id="province-wide">{t("Subheadings.provinceWide", "Province-wide", pageLocale)}</h3>
           <ResourceList
@@ -67,10 +65,10 @@ export default function MbResources() {
             onTagChange={setActiveTag}
           />
           <p>{t("ResourcesPage.suggestion", "If you have a suggestion for a resource to add, or you spot an error, please", pageLocale)} <Link href="mailto:contact@idguide.ca">{t("ResourcesPage.contactUs", "contact us", pageLocale)}</Link>. {t("Disclaimers.disclaimer-4", "Your feedback helps keep this resource accurate and useful for everyone.", pageLocale)}</p>
-          <SeeAlso pages={["start", "ab/resources", "on/resources", "resources"]} pageLocale={pageLocale} />
+          <SeeAlso pages={["start", "mb/resources", "on/resources", "resources"]} pageLocale={pageLocale} />
         </div>
         <div className="stacks"></div>
-        <LastUpdated page="mb/resources" pageLocale={pageLocale} />
+        <LastUpdated page="bc/resources" pageLocale={pageLocale} />
       </main>
     </div>
   );

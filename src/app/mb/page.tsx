@@ -10,7 +10,7 @@ import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
 
 export default function Manitoba() {
-  
+
   const pageLocale = usePageLocale();
 
   useEffect(() => {
@@ -25,12 +25,12 @@ export default function Manitoba() {
         <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("Province.manitoba", "This is a full list of pages specific to Manitoba", pageLocale)}:</p>
-            <ul style={{margin: '1.5rem 0'}}>
+            <ul className="button-list">
               <li>
                 <Link href="/mb/name">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)}</Link>
               </li>
               <li>
-                <Link href="/mb/resources">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}</Link>
+                <Link href="/mb/resources">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}  <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" /></Link>
               </li>
             </ul>
           </div>

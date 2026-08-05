@@ -1,0 +1,147 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.filterLabel {
+    font-family: 'Special Gothic Expanded One';
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.filterButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filterButton,
+.tag {
+    background: rgba(255, 255, 255, 0.9);
+    color: inherit;
+    font: inherit;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.tag {
+    font-size: 0.9rem;
+}
+
+.filterButton {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.9rem;
+}
+
+.filterButtonActive,
+.tagActive {
+    background: var(--dark4);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+.filterSummary {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.85rem 0.75rem;
+    vertical-align: top;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.table th {
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+}
+
+.titleCell {
+    font-weight: 700;
+}
+
+.urlCell {
+    word-break: break-word;
+}
+
+.tagList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    padding: 0.32rem 0.7rem;
+}
+
+.emptyCell,
+.emptyState {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.emptyState {
+    margin: 0;
+    padding: 0;
+}
+
+.regionSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.regionHeading {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+
+    .table,
+    .table thead,
+    .table tbody,
+    .table tr,
+    .table th,
+    .table td {
+        display: block;
+    }
+
+    .table thead {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .table tr {
+        padding: 0.6rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .table td {
+        border-bottom: 0;
+        padding: 0.35rem 0;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.2rem;
+    }
+}

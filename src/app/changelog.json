@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3",
+    "date": "2026-08-04",
+    "changes": [
+      "Added homepage map, improved start page, added Saskatchewan and British Columbia resources, and updated Québec resources, and overall resource filtering"
+    ]
+  },
+  {
     "version": "1.2",
     "date": "2026-05-18",
     "changes": [
