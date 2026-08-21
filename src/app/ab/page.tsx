@@ -10,7 +10,7 @@ import LastUpdated from "../components/LastUpdated";
 import SeeAlso from "../components/SeeAlso";
 
 export default function Alberta() {
-  
+
   const pageLocale = usePageLocale();
 
   useEffect(() => {
@@ -25,12 +25,12 @@ export default function Alberta() {
         <div className={`main ${styles.main}`}>
           <div className={styles.content}>
             <p>{t("Province.alberta", "This is a full list of pages specific to Alberta", pageLocale)}:</p>
-            <ul style={{margin: '1.5rem 0'}}>
+            <ul className="button-list">
               <li>
-                <Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</Link>
+                <Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/draft.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
               <li>
-                <Link href="/ab/resources">{t("Pages.albertaResources", "Alberta resources", pageLocale)}</Link>
+                <Link href="/ab/resources">{t("Pages.albertaResources", "Alberta resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
             </ul>
           </div>

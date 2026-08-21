@@ -1,8 +1,8 @@
-.manitoba {
+.saskatchewan {
   width: 100%;
 }
 
-.manitoba .main {
+.saskatchewan .main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -15,24 +15,27 @@
   width: 100%;
 }
 
-.manitoba .content ul:last-of-type {
+.saskatchewan .content ul:last-of-type {
   margin-bottom: 0;
 }
 
-.manitoba .content ul li {
+.saskatchewan .content ul li {
   margin: 0;
+  font-size: 1.15rem;
+  transition: all 0.3s;
+  color: var(--black);
 }
 
-.manitoba .content ul li:hover {
+.saskatchewan .content ul li:hover {
   color: var(--dark3);
 }
 
 @media (max-width: 1200px) {
-  .manitoba {
+  .saskatchewan {
     padding-top: 20px;
   }
 
-  .manitoba .main {
+  .saskatchewan .main {
     padding: 30px;
   }
 }

@@ -1,8 +1,8 @@
-.manitoba {
+.resources {
   width: 100%;
 }
 
-.manitoba .main {
+.resources .main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -10,29 +10,25 @@
   color: var(--black);
   font-size: 1.15rem;
   padding: 50px;
-  padding-bottom: 30px;
   max-width: 1500px;
   width: 100%;
 }
 
-.manitoba .content ul:last-of-type {
-  margin-bottom: 0;
+.resources th {
+  text-align: left;
+  padding-bottom: 0.5rem;
 }
 
-.manitoba .content ul li {
-  margin: 0;
-}
-
-.manitoba .content ul li:hover {
-  color: var(--dark3);
+.resources tbody tr{
+  padding-top: 1rem;
+  line-height: 2rem;
 }
 
 @media (max-width: 1200px) {
-  .manitoba {
+  .resources {
     padding-top: 20px;
   }
-
-  .manitoba .main {
+  .resources .main {
     padding: 30px;
   }
 }

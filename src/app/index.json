@@ -161,8 +161,7 @@
       "Manitoba",
       "Canada"
     ],
-    "images": [
-    ]
+    "images": []
   },
   {
     "route": "/guides",
@@ -239,6 +238,48 @@
     "summary": "Here you'll find organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Manitoba.",
     "keywords": [
       "Manitoba",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
+    ],
+    "images": []
+  },
+  {
+    "route": "/qc/resources",
+    "title": "Québec resources",
+    "summary": "Here you'll find organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Québec.",
+    "keywords": [
+      "Québec",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
+    ],
+    "images": []
+  },
+  {
+    "route": "/bc/resources",
+    "title": "British Columbia resources",
+    "summary": "Here you'll find organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in British Columbia.",
+    "keywords": [
+      "Québec",
+      "Resources",
+      "Healthcare",
+      "Legal support",
+      "Peer groups",
+      "2SLGBTQ+"
+    ],
+    "images": []
+  },
+  {
+    "route": "/sk/resources",
+    "title": "Saskatchewan resources",
+    "summary": "Here you'll find organizations offering trans I.D. clinics, legal support, healthcare, peer groups, and other resources for 2SLGBTQ+ people in Saskatchewan.",
+    "keywords": [
+      "Saskatchewan",
       "Resources",
       "Healthcare",
       "Legal support",
@@ -386,7 +427,6 @@
       "passport renewal",
       "international travel",
       "travel"
-      
     ],
     "images": []
   },
