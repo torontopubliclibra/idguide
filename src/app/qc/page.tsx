@@ -30,7 +30,7 @@ export default function Quebec() {
                 <Link href="/qc/name">{t("Pages.quebecNameChanges", "Québec name changes", pageLocale)}</Link>
               </li> */}
               <li>
-                <Link href="/qc/resources">{t("Pages.quebecResources", "Québec resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" /></Link>
+                <Link href="/qc/resources">{t("Pages.quebecResources", "Québec resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
             </ul>
           </div>

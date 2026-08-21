@@ -153,6 +153,17 @@ button,
   box-shadow: 2px 2px 5px #00000014;
 }
 
+@media (max-width: 900px) {
+  .button-list li {
+    width: 100%
+  }
+
+  .button-list li a {
+    font-size: 1rem;
+    justify-content: space-between;
+  }
+}
+
 ul {
   list-style-type: square;
 }

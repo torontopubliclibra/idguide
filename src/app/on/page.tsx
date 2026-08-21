@@ -18,11 +18,11 @@ export default function Ontario() {
   }, [pageLocale]);
 
   const ontarioPages = [
-    { href: "/on/name", label: t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale) },
-    { href: "/on/birth", label: t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale) },
-    { href: "/on/health", label: t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale) },
-    { href: "/on/id", label: t("Pages.ontarioIDCards", "Ontario driver's licenses & I.D. cards", pageLocale) },
-    { href: "/on/resources", label: t("Pages.ontarioResources", "Ontario resources", pageLocale) },
+    { href: "/on/name", label: t("Pages.ontarioNameChanges", "Ontario name changes", pageLocale), icon: "/icon/draft.svg" },
+    { href: "/on/birth", label: t("Pages.ontarioBirthCertificates", "Ontario birth certificates", pageLocale), icon: "/icon/birth-certificate.svg" },
+    { href: "/on/health", label: t("Pages.ontarioHealthCards", "Ontario health cards", pageLocale), icon: "/icon/health-card.svg" },
+    { href: "/on/id", label: t("Pages.ontarioIDCards", "Ontario driver's licenses & I.D. cards", pageLocale), icon: "/icon/photo-id.svg" },
+    { href: "/on/resources", label: t("Pages.ontarioResources", "Ontario resources", pageLocale), icon: "/icon/resources.svg" },
   ];
 
   return (
@@ -36,7 +36,7 @@ export default function Ontario() {
             <ul className="button-list">
               {ontarioPages.map(page => (
                 <li key={page.href}>
-                  <Link href={page.href}>{page.label}</Link>
+                  <Link href={page.href}>{page.label} <Image alt="" width={20} height={20} src={page.icon} style={{ filter: "invert(1)" }} /></Link>
                 </li>
               ))}
             </ul>

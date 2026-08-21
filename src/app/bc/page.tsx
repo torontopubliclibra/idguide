@@ -27,7 +27,7 @@ export default function BritishColumbia() {
             <p>{t("Province.britishColumbia", "This is a full list of pages specific to British Columbia", pageLocale)}:</p>
             <ul className="button-list">
               <li>
-                <Link href="/bc/resources">{t("Pages.britishColumbiaResources", "British Columbia resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" /></Link>
+                <Link href="/bc/resources">{t("Pages.britishColumbiaResources", "British Columbia resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
             </ul>
           </div>
