@@ -14,7 +14,7 @@ import SeeAlso from '../../components/SeeAlso';
 import SourcesList from '../../components/SourcesList';
 
 export default function OnName() {
-  
+
   const pageLocale = usePageLocale();
 
   useEffect(() => {
@@ -71,7 +71,7 @@ export default function OnName() {
           {useRenderCopy()(copy["byMail-1"])}
 
           <textarea readOnly name="address" id="address" value={
-            `ServiceOntario, Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0`}
+            `ServiceOntario, Office of the Registrar General, P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 0B3`}
           />
           {useRenderCopy()(copy["byMail-2"])}
 
