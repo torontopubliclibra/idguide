@@ -1,5 +1,12 @@
 [
   {
+    "version": "1.3.1",
+    "date": "2026-08-21",
+    "changes": [
+      "Updated Ontario name change postal code to P7B 0B3"
+    ]
+  },
+  {
     "version": "1.3",
     "date": "2026-08-04",
     "changes": [
