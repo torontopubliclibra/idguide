@@ -27,10 +27,10 @@ export default function Manitoba() {
             <p>{t("Province.manitoba", "This is a full list of pages specific to Manitoba", pageLocale)}:</p>
             <ul className="button-list">
               <li>
-                <Link href="/mb/name">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)}</Link>
+                <Link href="/mb/name">{t("Pages.manitobaNameChanges", "Manitoba name changes", pageLocale)} <Image alt="Name changes icon" width={20} height={20} src="/icon/draft.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
               <li>
-                <Link href="/mb/resources">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)}  <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" /></Link>
+                <Link href="/mb/resources">{t("Pages.manitobaResources", "Manitoba resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
             </ul>
           </div>

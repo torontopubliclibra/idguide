@@ -308,6 +308,8 @@ a.secondary {
 
   .intro a {
     font-size: 1.25rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .getStartedRow {

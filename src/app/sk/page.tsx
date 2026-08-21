@@ -27,7 +27,7 @@ export default function Saskatchewan() {
             <p>{t("Province.saskatchewan", "This is a full list of pages specific to Saskatchewan", pageLocale)}:</p>
             <ul className="button-list">
               <li>
-                <Link href="/sk/resources">{t("Pages.saskatchewanResources", "Saskatchewan resources", pageLocale)}</Link>
+                <Link href="/sk/resources">{t("Pages.saskatchewanResources", "Saskatchewan resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
               </li>
             </ul>
           </div>
