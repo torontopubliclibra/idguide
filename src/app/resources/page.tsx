@@ -60,6 +60,9 @@ export default function Resources() {
             <li>
               <Link href="/qc/resources">{t("ResourcesPage.qc", "Québec resources", pageLocale)}</Link>
             </li>
+            <li>
+              <Link href="/sk/resources">{t("ResourcesPage.sk", "Saskatchewan resources", pageLocale)}</Link>
+            </li>
           </ul>
           <br />
           <p>
