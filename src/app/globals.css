@@ -341,6 +341,17 @@ body.text-mode .mapSection {
   margin-bottom: -3rem;
 }
 
+body.text-mode .button-list li a {
+  background: var(--white) !important;
+  color: var(--black) !important;
+  border: solid var(--black) 2px !important;
+  border-width: 1px 2px 2px 1px !important;
+}
+
+body.text-mode .button-list li a img {
+  filter: invert(0) !important;
+}
+
 body.text-mode .actionButton {
   background: var(--white) !important;
   color: var(--black) !important;
