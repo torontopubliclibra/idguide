@@ -71,10 +71,10 @@ export default function Nav(props: { mobileOpen: boolean, closeMobileNav: () => 
                             <Link href="/on/resources">{t("Pages.onResources", "Ontario resources", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/sk/resources">{t("Pages.skResources", "Saskatchewan resources", locale)}</Link>
+                            <Link href="/qc/resources">{t("Pages.qcResources", "Québec resources", locale)}</Link>
                         </li>
                         <li>
-                            <Link href="/qc/resources">{t("Pages.qcResources", "Québec resources", locale)}</Link>
+                            <Link href="/sk/resources">{t("Pages.skResources", "Saskatchewan resources", locale)}</Link>
                         </li>
                     </ul>
                 </li>

@@ -52,10 +52,10 @@ export default function Resources() {
               <Link href="/bc/resources">{t("ResourcesPage.bc", "British Columbia resources", pageLocale)}</Link>
             </li>
             <li>
-              <Link href="/on/resources">{t("ResourcesPage.on", "Ontario resources", pageLocale)}</Link>
+              <Link href="/mb/resources">{t("ResourcesPage.mb", "Manitoba resources", pageLocale)}</Link>
             </li>
             <li>
-              <Link href="/mb/resources">{t("ResourcesPage.mb", "Manitoba resources", pageLocale)}</Link>
+              <Link href="/on/resources">{t("ResourcesPage.on", "Ontario resources", pageLocale)}</Link>
             </li>
             <li>
               <Link href="/qc/resources">{t("ResourcesPage.qc", "Québec resources", pageLocale)}</Link>
