@@ -11,7 +11,7 @@
     "exit": "Exit",
     "getInTouch": "Get in touch",
     "aboutTheProject": "About the project",
-    "workInProgress": "We're working to add more provinces and territories. Check back soon for expanded support across Canada.",
+    "workInProgress": "We're working to add full support for more provinces and territories. Check back soon for expanded support across Canada.",
     "youAreHere": "you are here",
     "moreAbout": "More about ",
     "lastUpdated": "This page was last updated on",
@@ -136,7 +136,7 @@
   },
   "StartPage": {
     "intro": "To get started, use the checkboxes below to customize an action plan. The steps will update automatically based on your selections.",
-    "introWizard": "Answer three quick questions to build your personalized action plan.",
+    "introWizard": "Answer a few quick questions to build your personalized action plan.",
     "youWantTo": "You want to",
     "imLookingTo": "You're looking to update:",
     "changeLegalName": "your legal name only",
@@ -147,6 +147,7 @@
     "otherProvinceTerritory": "another province or territory",
     "citizenshipStatus": "Your citizenship status is",
     "selectCitizenshipStatus": "You are a:",
+    "selectBirthplace": "You were born in:",
     "canadianCitizen": "Canadian citizen",
     "permanentResident": "Permanent resident",
     "stepLabel": "Step",
@@ -161,6 +162,7 @@
       "changeLegalNameAlberta": "Change your legal name with the Alberta Vital Statistics Agency",
       "changeLegalNameManitoba": "Change your legal name with the Manitoba Vital Statistics Agency",
       "updateGenderBirthCertificate": "Update the gender marker on your birth certificate",
+      "updateGenderBirthCertificateOntario": "Update the gender marker on your Ontario birth certificate",
       "updateNameOntarioID": "Update the name on your Ontario driver's license or I.D. card",
       "updateNameID": "Update the name on your driver's license or I.D. card",
       "updateNamePassport": "Update the name on your Canadian passport",
@@ -250,6 +252,7 @@
     "ontarioApplicationName": "Ontario application to change an adult's name"
   },
   "birthCertificates": {
+    "additionalResources": "Additional resources by province",
     "process": "The process for updating your birth certificate will vary depending on the province or territory in which you were born"
   },
   "HealthCards": {

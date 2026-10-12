@@ -14,9 +14,19 @@
   width: 100%;
 }
 
+.name h3 {
+  margin-top: 1.5rem;
+}
+
 .name .content ul {
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+.name ul {
+  list-style-type: disclosure-closed;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .name .content ul:last-of-type {
@@ -32,14 +42,11 @@
   color: var(--black);
 }
 
-.name .content ul li:hover {
-  color: var(--dark3);
-}
-
 @media (max-width: 1200px) {
   .name {
     padding-top: 20px;
   }
+
   .name .main {
     padding: 30px;
   }

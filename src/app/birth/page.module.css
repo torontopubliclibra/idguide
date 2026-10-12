@@ -14,6 +14,16 @@
   width: 100%;
 }
 
+.birth h3 {
+  margin-top: 1.5rem;
+}
+
+.birth ul {
+  list-style-type: disclosure-closed;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 .birth .content ul {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -36,6 +46,7 @@
   .birth {
     padding-top: 20px;
   }
+
   .birth .main {
     padding: 30px;
   }

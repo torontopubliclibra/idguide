@@ -11,11 +11,13 @@ import SeeAlso from "../components/SeeAlso";
 type Goal = "name" | "gender" | "both" | null;
 type Province = "alberta" | "manitoba" | "ontario" | "other" | null;
 type CitizenshipStatus = "citizen" | "pr" | null;
+type Birthplace = "ontario" | "other" | null;
 
 interface StartSelections {
   goal: Goal;
   province: Province;
   status: CitizenshipStatus;
+  birthplace: Birthplace;
 }
 
 interface ActionItem {
@@ -79,6 +81,7 @@ function buildActionPlan(selections: StartSelections, pageLocale: string): Actio
   const isManitoba = selections.province === "manitoba";
   const isCitizen = selections.status === "citizen";
   const isPR = selections.status === "pr";
+  const isOntarioBorn = selections.birthplace === "ontario";
 
   const actions: ActionItem[] = [];
 
@@ -92,7 +95,11 @@ function buildActionPlan(selections: StartSelections, pageLocale: string): Actio
   }
 
   if (gender && isCitizen) {
-    actions.push({ href: "/birth", label: t("StartPage.action.updateGenderBirthCertificate", undefined, pageLocale) });
+    if (isOntario && isOntarioBorn) {
+      actions.push({ href: "/on/birth", label: t("StartPage.action.updateGenderBirthCertificateOntario", undefined, pageLocale) });
+    } else {
+      actions.push({ href: "/birth", label: t("StartPage.action.updateGenderBirthCertificate", undefined, pageLocale) });
+    }
   }
 
   if (name) {
@@ -201,6 +208,7 @@ export default function Start() {
     goal: null,
     province: null,
     status: null,
+    birthplace: null,
   };
 
   const [selections, setSelections] = useState<StartSelections>(() => {
@@ -218,6 +226,9 @@ export default function Start() {
   const [hasHydratedSelections] = useState<boolean>(true);
 
   const [step, setStep] = useState<number>(1);
+  const asksBirthplace = selections.province === "ontario" && selections.status === "citizen";
+  const actionPlanStep = asksBirthplace ? 5 : 4;
+  const totalQuestions = asksBirthplace ? 4 : 3;
 
   useEffect(() => {
     if (typeof window === 'undefined' || !hasHydratedSelections) return;
@@ -228,7 +239,8 @@ export default function Start() {
     (step === 1 && Boolean(selections.goal)) ||
     (step === 2 && Boolean(selections.province)) ||
     (step === 3 && Boolean(selections.status)) ||
-    step === 4;
+    (step === 4 && asksBirthplace && Boolean(selections.birthplace)) ||
+    step === actionPlanStep;
 
   const actionPlan = buildActionPlan(selections, pageLocale);
 
@@ -250,9 +262,14 @@ export default function Start() {
     { id: "status-pr", value: "pr", label: t("StartPage.permanentResident", "Permanent resident", pageLocale) },
   ];
 
+  const birthplaceOptions: ChoiceOption<Exclude<Birthplace, null>>[] = [
+    { id: "birthplace-ontario", value: "ontario", label: t("Site.ontario", "Ontario", pageLocale) },
+    { id: "birthplace-other", value: "other", label: t("StartPage.otherProvinceTerritory", "Another province or territory", pageLocale) },
+  ];
+
   function goNext() {
-    if (!canProceed || step >= 4) return;
-    setStep((prev) => Math.min(prev + 1, 4));
+    if (!canProceed || step >= actionPlanStep) return;
+    setStep((prev) => prev + 1);
   }
 
   function goBack() {
@@ -271,11 +288,11 @@ export default function Start() {
         <h2 className="page-title">{t("Pages.start", undefined, pageLocale)}<Image src="/icon/start.svg" alt={t("Pages.start", "Start", pageLocale)} width={30} height={30} /></h2>
         <div className="stacks flipped"></div>
         <div className={`main ${styles.main}`}>
-          {step < 4 && (
+          {step < actionPlanStep && (
             <>
-              <p>{t("StartPage.introWizard", "Answer three quick questions to build your personalized action plan.", pageLocale)}</p>
+              <p>{t("StartPage.introWizard", "Answer a few quick questions to build your personalized action plan.", pageLocale)}</p>
               <p className={styles.stepStatus}>
-                {t("StartPage.stepLabel", "Step", pageLocale)} {step} {t("StartPage.ofLabel", "of", pageLocale)} 3
+                {t("StartPage.stepLabel", "Step", pageLocale)} {step} {t("StartPage.ofLabel", "of", pageLocale)} {totalQuestions}
               </p>
             </>
           )}
@@ -298,7 +315,7 @@ export default function Start() {
               name="province"
               options={provinceOptions}
               selected={selections.province}
-              onSelect={(province) => setSelections((prev) => ({ ...prev, province }))}
+              onSelect={(province) => setSelections((prev) => ({ ...prev, province, birthplace: null }))}
             />
           )}
 
@@ -309,13 +326,24 @@ export default function Start() {
               name="status"
               options={statusOptions}
               selected={selections.status}
-              onSelect={(status) => setSelections((prev) => ({ ...prev, status }))}
+              onSelect={(status) => setSelections((prev) => ({ ...prev, status, birthplace: null }))}
             />
           )}
 
-          {step === 4 && (
-            <section className={styles.stepSection} aria-labelledby="start-step-4">
-              <h3 id="start-step-4" style={{ marginTop: 0 }}>{t("StartPage.actionPlan", "Your action plan", pageLocale)}:</h3>
+          {step === 4 && asksBirthplace && (
+            <ChoiceStepSection
+              sectionId="start-step-4"
+              heading={t("StartPage.selectBirthplace", "You were born in:", pageLocale)}
+              name="birthplace"
+              options={birthplaceOptions}
+              selected={selections.birthplace}
+              onSelect={(birthplace) => setSelections((prev) => ({ ...prev, birthplace }))}
+            />
+          )}
+
+          {step === actionPlanStep && (
+            <section className={styles.stepSection} aria-labelledby={`start-step-${actionPlanStep}`}>
+              <h3 id={`start-step-${actionPlanStep}`} style={{ marginTop: 0 }}>{t("StartPage.actionPlan", "Your action plan", pageLocale)}:</h3>
               <ol className={styles.actionPlanContainer + " actionPlanContainer"}>
                 {actionPlan.map(({ href, label }, i) => (
                   <li key={href + i}>
@@ -331,12 +359,12 @@ export default function Start() {
             <button type="button" className={styles.secondaryButton + " actionButton"} onClick={goBack} disabled={step === 1}>
               {t("StartPage.back", "Back", pageLocale)}
             </button>
-            {step < 4 && (
+            {step < actionPlanStep && (
               <button type="button" className={styles.primaryButton + " actionButton"} onClick={goNext} disabled={!canProceed}>
                 {t("StartPage.next", "Next", pageLocale)}
               </button>
             )}
-            {step === 4 && (
+            {step === actionPlanStep && (
               <button type="button" className={styles.primaryButton + " actionButton"} onClick={resetWizard}>
                 {t("StartPage.startOver", "Start over", pageLocale)}
               </button>

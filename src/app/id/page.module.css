@@ -14,6 +14,16 @@
   width: 100%;
 }
 
+.id h3 {
+  margin-top: 1.5rem;
+}
+
+.id ul {
+  list-style-type: disclosure-closed;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
 .id .content ul {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -36,6 +46,7 @@
   .id {
     padding-top: 20px;
   }
+
   .id .main {
     padding: 30px;
   }

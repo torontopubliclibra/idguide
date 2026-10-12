@@ -131,7 +131,7 @@
   },
   "StartPage": {
     "intro": "Pour commencer, utilisez les cases à cocher ci-dessous pour personnaliser un plan d'action. Les étapes se mettront à jour automatiquement en fonction de vos sélections.",
-    "introWizard": "Répondez à trois questions rapides pour créer votre plan d'action personnalisé.",
+    "introWizard": "Répondez à quelques questions rapides pour créer votre plan d'action personnalisé.",
     "youWantTo": "Vous le souhaitez",
     "imLookingTo": "Je souhaite :",
     "changeLegalName": "Changer votre nom légal",
@@ -142,6 +142,7 @@
     "otherProvinceTerritory": "Une autre province ou un territoire",
     "citizenshipStatus": "Votre statut de citoyenneté est",
     "selectCitizenshipStatus": "Sélectionnez votre statut de citoyenneté :",
+    "selectBirthplace": "Vous êtes né·e en :",
     "canadianCitizen": "Citoyen canadien",
     "permanentResident": "Résident permanent",
     "stepLabel": "Étape",
@@ -244,6 +245,7 @@
     "ontarioApplicationName": "Demande de changement de nom d'un adulte en Ontario"
   },
   "birthCertificates": {
+    "additionalResources": "Ressources supplémentaires par province",
     "process": "Le processus de mise à jour de votre certificat de naissance variera en fonction de la province ou du territoire dans lequel vous êtes né"
   },
   "HealthCards": {

@@ -34,6 +34,14 @@
             ]
         },
         {
+            "name": "Skipping Stone's I.D. Amendment Guide (3rd ed., Feb 2023)",
+            "url": "https://www.idguide.ca/download/Trans+ID+Alberta+(third+edition).pdf",
+            "description": [
+                "Guide",
+                "I.D. changes"
+            ]
+        },
+        {
             "name": "Alberta Human Rights Commission",
             "url": "https://albertahumanrights.ab.ca/",
             "description": [
@@ -72,7 +80,7 @@
                     "url": "https://www.slsedmonton.com/trans-id-project",
                     "description": [
                         "Legal services",
-                        "I.D. clinics"
+                        "I.D. changes"
                     ]
                 },
                 {
@@ -92,7 +100,7 @@
                     "name": "Skipping Stone I.D. clinics",
                     "url": "https://www.skippingstone.ca/id-clinics",
                     "description": [
-                        "I.D. clinics",
+                        "I.D. changes",
                         "Legal services"
                     ]
                 },
@@ -162,7 +170,7 @@
                     "name": "Sunshine House 2S/Trans ID Peer Support",
                     "url": "https://www.sunshinehousewpg.org/2s-trans-id-peer-support",
                     "description": [
-                        "I.D. clinics",
+                        "I.D. changes",
                         "Peer support"
                     ]
                 }
@@ -237,7 +245,7 @@
                     "name": "The 519 Trans I.D. Clinic",
                     "url": "https://www.the519.org/programs/trans-id-clinic/",
                     "description": [
-                        "I.D. clinics",
+                        "I.D. changes",
                         "Legal services"
                     ]
                 },
@@ -296,7 +304,7 @@
                     "url": "https://www.transwellness.ca/",
                     "description": [
                         "Peer support",
-                        "I.D. clinics"
+                        "I.D. changes"
                     ]
                 }
             ]
@@ -363,6 +371,14 @@
     ],
     "bcResources": [
         {
+            "name": "Trans Care BC's I.D. Change Guide",
+            "url": "https://www.transcarebc.ca/explore-transition/id-change",
+            "description": [
+                "Guide",
+                "I.D. changes"
+            ]
+        },
+        {
             "name": "Connect Fund",
             "url": "https://www.connectfund.org/",
             "description": [
@@ -414,7 +430,7 @@
             "name": "Juritrans",
             "url": "https://juritrans.ca/qc/en/",
             "description": [
-                "I.D. clinics",
+                "I.D. changes",
                 "Legal services"
             ]
         },
@@ -426,7 +442,7 @@
                     "name": "Juritrans In-Person I.D. Clinics",
                     "url": "https://juritrans.ca/qc/en/in-person-trans-id-clinic/",
                     "description": [
-                        "I.D. clinics",
+                        "I.D. changes",
                         "Legal services"
                     ]
                 }
