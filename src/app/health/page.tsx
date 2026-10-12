@@ -43,7 +43,7 @@ export default function Guides() {
           <hr style={{ marginTop: '1.5rem' }} />
           <ul style={{ lineHeight: '2rem', fontSize: '1.1rem' }}>
             <li>
-              For assistance with Alberta health cards check out <a href="/public/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
+              For assistance with Alberta health cards check out <a href="/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
                 Skipping Stone&apos;s Trans I.D. Alberta Guide (3rd edition, Feb 2023)
               </a> and our <Link href="/ab/resources" >
                 Alberta Resources

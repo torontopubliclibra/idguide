@@ -31,7 +31,7 @@ export default function Name() {
                 <Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</Link>
               </li>
               <li style={{ marginLeft: '1.5rem', textDecoration: "none" }}>
-                For further assistance with Alberta name changes check out <a href="/public/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
+                For further assistance with Alberta name changes check out <a href="/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
                   Skipping Stone&apos;s Trans I.D. Alberta Guide (3rd edition, Feb 2023)
                 </a> and our <Link href="/ab/resources" >
                   Alberta Resources
