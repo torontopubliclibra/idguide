@@ -34,7 +34,7 @@ export default function Name() {
                 For further assistance with Alberta name changes check out <a href="/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
                   Skipping Stone&apos;s Trans I.D. Alberta Guide (3rd edition, Feb 2023)
                 </a> and our <Link href="/ab/resources" >
-                  Alberta Resources
+                  Alberta resources
                 </Link>.
               </li>
             </ul>
@@ -45,7 +45,7 @@ export default function Name() {
               </li>
               <li style={{ marginLeft: '1.5rem', textDecoration: "none" }}>
                 For further assistance with Manitoba name changes check out our <Link href="/mb/resources" >
-                  Manitoba Resources
+                  Manitoba resources
                 </Link>.
               </li>
             </ul>
@@ -56,7 +56,7 @@ export default function Name() {
               </li>
               <li style={{ marginLeft: '1.5rem', textDecoration: "none" }}>
                 For further assistance with Ontario name changes check out our <Link href="/on/resources" >
-                  Ontario Resources
+                  Ontario resources
                 </Link>.
               </li>
             </ul>

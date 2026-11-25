@@ -27,10 +27,15 @@ export default function Alberta() {
             <p>{t("Province.alberta", "This is a full list of pages specific to Alberta", pageLocale)}:</p>
             <ul className="button-list">
               <li>
-                <Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/draft.svg" style={{ filter: "invert(1)" }} /></Link>
+                <Link href="/ab/name">{t("Pages.albertaNameChanges", "Alberta name changes", pageLocale)}</Link>
+              </li>
+              <li className="sub-item">
+                For further assistance with Alberta name changes check out <a href="/download/Trans+ID+Alberta+(third+edition).pdf" target="_blank" rel="noreferrer">
+                  Skipping Stone&apos;s Trans I.D. Alberta Guide (3rd edition, Feb 2023)
+                </a>.
               </li>
               <li>
-                <Link href="/ab/resources">{t("Pages.albertaResources", "Alberta resources", pageLocale)} <Image alt="Resources icon" width={20} height={20} src="/icon/resources.svg" style={{ filter: "invert(1)" }} /></Link>
+                <Link href="/ab/resources">{t("Pages.albertaResources", "Alberta resources", pageLocale)}</Link>
               </li>
             </ul>
           </div>

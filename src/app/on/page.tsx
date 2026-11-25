@@ -36,7 +36,7 @@ export default function Ontario() {
             <ul className="button-list">
               {ontarioPages.map(page => (
                 <li key={page.href}>
-                  <Link href={page.href}>{page.label} <Image alt="" width={20} height={20} src={page.icon} style={{ filter: "invert(1)" }} /></Link>
+                  <Link href={page.href}>{page.label}</Link>
                 </li>
               ))}
             </ul>
